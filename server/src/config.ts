@@ -4,9 +4,10 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-export const config = {
-  port: parseInt(process.env.port || '3000'),
+const config = {
+  port: parseInt(process.env.PORT || '3000'),
   env: process.env.NODE_ENV || 'development',
-  mongoURI: process.env.MONGO_URI || 'mongoDB://localhost:27017/the_garden_of_now'
+  mongoURI: process.env.MONGO_URI || 'mongodb://localhost:27017/the_garden_of_now'
 };
 
+export default config;
