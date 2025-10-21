@@ -1,6 +1,6 @@
 'use strict';
 
-import {Context} from 'koa';
+import type {Context} from 'koa';
 
 const getRecipes = async function (ctx: Context) {
   console.log('Here are your recipes');

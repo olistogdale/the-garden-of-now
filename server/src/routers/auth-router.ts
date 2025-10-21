@@ -2,7 +2,7 @@
 
 import Router from 'koa-router';
 
-import {getAuth} from '../controllers/auth-controller';
+import {getAuth} from '../controllers/auth-controller.ts';
 
 const authRouter = new Router();
 

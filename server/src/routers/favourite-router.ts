@@ -2,7 +2,7 @@
 
 import Router from 'koa-router';
 
-import {getFavourites} from '../controllers/favourite-controller';
+import {getFavourites} from '../controllers/favourite-controller.ts';
 
 const favouriteRouter = new Router();
 

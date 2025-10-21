@@ -1,6 +1,6 @@
 'use strict';
 
-import {Context} from 'koa';
+import type {Context} from 'koa';
 
 const getFavourites = async function (ctx: Context) {
   console.log('Here are your favourites');

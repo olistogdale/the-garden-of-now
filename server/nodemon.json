@@ -1,5 +1,0 @@
-{
-  "exec": "ts-node --transpile-only --compiler-options '{\"module\":\"CommonJS\"}' src/index.ts",
-  "ext": "ts,json",
-  "watch": ["src"]
-}

@@ -4,11 +4,11 @@ import Koa from 'koa';
 import bodyParser from 'koa-bodyparser';
 import cors from '@koa/cors';
 
-import authRouter from './routers/auth-router';
-import ingredientRouter from './routers/ingredient-router';
-import recipeRouter from './routers/recipe-router';
-import favouriteRouter from './routers/favourite-router';
-import config from './config';
+import authRouter from './routers/auth-router.ts';
+import ingredientRouter from './routers/ingredient-router.ts';
+import recipeRouter from './routers/recipe-router.ts';
+import favouriteRouter from './routers/favourite-router.ts';
+import config from './config.ts';
 
 const app = new Koa();
 const PORT = config.port;
