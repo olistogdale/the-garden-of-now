@@ -31,3 +31,4 @@ const extractIngredients = function (array) {
 const ingredientsSorted = extractIngredients(recipes).toSorted();
 
 ingredientsSorted.forEach(el => console.log(el));
+console.log(`Total unique ingredients: ${ingredientsSorted.length}`);
