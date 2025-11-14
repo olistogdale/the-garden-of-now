@@ -1,0 +1,245 @@
+[
+  {
+    "name": "Peanut hummus with fruit & veg sticks",
+    "description": "This healthy, nutty dip, with tahini and smoked paprika, is perfect for spreading – eat with apple slices and vegetables for a quick lunch or snack",
+    "image": [
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/peanut-houmous-f72be3e-scaled.jpg?resize=768,698",
+        "width": 768,
+        "height": 698
+      },
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/peanut-houmous-f72be3e-scaled.jpg?resize=1366,1242",
+        "width": 1366,
+        "height": 1242
+      }
+    ],
+    "url": "https://www.bbcgoodfood.com/recipes/peanut-houmous-fruit-veg-sticks",
+    "keywords": "4 of 5-a-day, 7-day-summer diet plan, clean eating, Dip, Good for you, goodhealth, Natural, Nut dip, Sara Buenfeld, Summer, Summer clean eating plan",
+    "prepTime": "PT10M",
+    "totalTime": "PT10M",
+    "recipeYield": 2,
+    "nutrition": {
+      "calories": "336 calories",
+      "fatContent": "16 grams fat",
+      "saturatedFatContent": "2 grams saturated fat",
+      "carbohydrateContent": "35 grams carbohydrates",
+      "sugarContent": "16 grams sugar",
+      "fiberContent": "13 grams fiber",
+      "proteinContent": "15 grams protein",
+      "sodiumContent": "0.8 milligram of sodium"
+    },
+    "recipeCategory": "Buffet, Lunch, Side dish, Snack, Supper",
+    "recipeIngredients": [
+      "380g carton chickpeas",
+      "zest and juice 0.5 lemon (use the other 1/2 to squeeze over the apple to stop it browning, if you like)",
+      "1 tbsp tahini",
+      "0.5-1 tsp smoked paprika",
+      "2 tbsp roasted unsalted peanuts",
+      "1 tsp rapeseed oil",
+      "2 crisp red apples cored and cut into slices",
+      "2 carrots cut into sticks",
+      "4 celery sticks, cut into batons lengthways"
+    ],
+    "recipeInstructions": [
+      {
+        "text": "Drain the chickpeas, reserving the liquid. Tip three-quarters of the chickpeas into a food processor and add the lemon zest and juice, tahini, paprika, peanuts and oil with 3 tbsp chickpea liquid. Blitz in a food processor until smooth, then stir in the reserved chickpeas. Serve with the fruit and veg sticks."
+      }
+    ],
+    "skillLevel": "Easy",
+    "forcedURL": "https://www.bbcgoodfood.com/recipes/peanut-houmous-fruit-veg-sticks"
+  },
+  {
+    "name": "Cheesy omelette burgers",
+    "description": "Fill bread rolls with chilli jam and chunky wedges of cheddar and pea omelette for a quick yet substantial vegetarian burger",
+    "image": [
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/cheesy-omelette-burgers-46aa9c2-scaled.jpg?resize=768,698",
+        "width": 768,
+        "height": 698
+      },
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/cheesy-omelette-burgers-46aa9c2-scaled.jpg?resize=1366,1242",
+        "width": 1366,
+        "height": 1242
+      }
+    ],
+    "url": "https://www.bbcgoodfood.com/recipes/cheesy-omelette-burgers",
+    "keywords": "10-30 minutes, 4 servings, 600 kcal or less, Calcium, Cassie Best, Iron, Mains, omelet burgers, Spring, tortilla recipe, Vegetarian burger",
+    "prepTime": "PT15M",
+    "cookTime": "PT15M",
+    "totalTime": "PT30M",
+    "recipeYield": 4,
+    "nutrition": {
+      "calories": "558 calories",
+      "fatContent": "26 grams fat",
+      "saturatedFatContent": "9 grams saturated fat",
+      "carbohydrateContent": "49 grams carbohydrates",
+      "sugarContent": "7 grams sugar",
+      "fiberContent": "5 grams fiber",
+      "proteinContent": "29 grams protein",
+      "sodiumContent": "2.1 milligram of sodium"
+    },
+    "recipeCategory": "Dinner, Lunch, Supper",
+    "recipeIngredients": [
+      "1 tbsp olive or rapeseed oil",
+      "8 large eggs beaten",
+      "200g frozen peas",
+      "85g mature cheddar grated",
+      "4 large burger buns toasted",
+      "4 tbsp onion chutney or chilli jam",
+      "handful salad leaves (we used rocket), to serve",
+      "slices of tomato (optional), to serve",
+      "sweet potato wedges (optional), to serve"
+    ],
+    "recipeInstructions": [
+      {
+        "text": "Heat the oil in a frying pan (roughy 20cm wide) and heat the grill to high. Season the eggs and add to the pan along with the peas. Quickly mix, then leave for 8 mins over a low-medium heat until the underside is set and just turning golden. Scatter over the cheese and grill for 3 mins until the surface is set and the cheese is bubbling."
+      },
+      {
+        "text": "Meanwhile, spread each burger bun with chutney or chilli jam. Cut the omelette into 4 wedges and sandwich between the buns, add a handful of leaves and a few slices of tomato, and serve with sweet potato wedges, if you like."
+      }
+    ],
+    "skillLevel": "Easy",
+    "forcedURL": "https://www.bbcgoodfood.com/recipes/cheesy-omelette-burgers"
+  },
+  {
+    "name": "Potato & pesto pizza",
+    "description": "A shop-bought ciabatta bread mix makes the perfect cheat's pizza dough for this speedy supper for two",
+    "image": [
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/potato-pesto-pizza-39bb628.jpg?resize=440,400",
+        "width": 440,
+        "height": 400
+      }
+    ],
+    "url": "https://www.bbcgoodfood.com/recipes/potato-pesto-pizza",
+    "keywords": "2 servings, 30-60 minutes, 600 kcal or less, Calcium, Ciabatta, easy dough, Emily Kydd, homemade dough, Mains, Pizza dough, Quick, quick dough, Spring",
+    "prepTime": "PT15M",
+    "cookTime": "PT35M",
+    "totalTime": "PT50M",
+    "recipeYield": 2,
+    "nutrition": {
+      "calories": "522 calories",
+      "fatContent": "26 grams fat",
+      "saturatedFatContent": "11 grams saturated fat",
+      "carbohydrateContent": "49 grams carbohydrates",
+      "sugarContent": "3 grams sugar",
+      "fiberContent": "3 grams fiber",
+      "proteinContent": "22 grams protein",
+      "sodiumContent": "2.1 milligram of sodium"
+    },
+    "recipeCategory": "Dinner, Lunch, Main course, Supper",
+    "recipeIngredients": [
+      "200g baby potatoes",
+      "145g pack ciabatta bread mix",
+      "1 tsp olive oil plus extra for greasing",
+      "2 tbsp green pesto",
+      "125g ball mozzarella grated",
+      "large handful rocket"
+    ],
+    "recipeInstructions": [
+      {
+        "text": "Bring a pan of salted water to the boil, drop in the potatoes and simmer for 15 mins or until tender. Drain and leave to cool a little, then slice."
+      },
+      {
+        "text": "Meanwhile, heat oven to 220C/200C fan/ gas 7. Prepare the bread mix following pack instructions. Roll out into a rough circle, about 28cm diameter, then transfer to an oiled baking tray. Set aside for 15 mins."
+      },
+      {
+        "text": "Spread the pesto over the pizza base. Scatter over half the mozzarella. Top with the potatoes and remaining cheese. Drizzle the oil over the potatoes and bake for 15-18 mins or until the crust is golden and the cheese bubbling. Scatter over the rocket and a good grinding of black pepper before serving."
+      }
+    ],
+    "skillLevel": "Easy",
+    "forcedURL": "https://www.bbcgoodfood.com/recipes/potato-pesto-pizza"
+  },
+  {
+    "name": "Veggie spiral pie with spiced tomato sauce & chopped salad",
+    "description": "Rice, feta and spinach make the filling for a savoury twist on the Moroccan dish M'hanncha - perfect for entertaining outdoors",
+    "image": [
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/veggie-spiral-pie-with-spiced-tomato-sauce-chopped-salad-49d8d9f.jpg?resize=440,400",
+        "width": 440,
+        "height": 400
+      }
+    ],
+    "url": "https://www.bbcgoodfood.com/recipes/veggie-spiral-pie-spiced-tomato-sauce-chopped-salad",
+    "keywords": "Calcium, Cassie Best, Fibre, Filo pastry, Folate, Iron, PASTRY, Spring, Vit C, Vitamin c",
+    "prepTime": "PT50M",
+    "cookTime": "PT1H30M",
+    "totalTime": "PT2H20M",
+    "recipeYield": 10,
+    "nutrition": {
+      "calories": "545 calories",
+      "fatContent": "24 grams fat",
+      "saturatedFatContent": "10 grams saturated fat",
+      "carbohydrateContent": "63 grams carbohydrates",
+      "sugarContent": "9 grams sugar",
+      "fiberContent": "6 grams fiber",
+      "proteinContent": "17 grams protein",
+      "sodiumContent": "1.6 milligram of sodium"
+    },
+    "recipeCategory": "Buffet, Dinner, Lunch, Main course, Starter, Supper",
+    "recipeIngredients": [
+      "1 tbsp cumin seeds",
+      "1 tbsp coriander seeds",
+      "3 tbsp olive or rapeseed oil",
+      "2 onions halved and thinly sliced",
+      "100g green lentils",
+      "300g basmati rice",
+      "4 garlic cloves crushed",
+      "1 nutmeg",
+      "½ tsp ground turmeric",
+      "½ tsp allspice",
+      "400g spinach",
+      "small bunch dill finely chopped",
+      "small bunch parsley finely chopped",
+      "small bunch mint finely chopped",
+      "zest 2 lemon plus juice of 1",
+      "200g pack feta (check pack label to find a vegetarian brand), crumbled",
+      "2 x 270g packs filo pastry (12 sheets in total)",
+      "100g butter melted",
+      "1 egg beaten",
+      "1 tsp black sesame seed (or regular sesame seeds)",
+      "Greek yogurt to serve",
+      "2 x cans chopped tomato",
+      "1 tbsp red wine vinegar",
+      "2 tsp sugar (any will do)",
+      "1 tsp ground cinnamon",
+      "2 tbsp olive oil",
+      "1 cucumber",
+      "1 onion finely chopped",
+      "2 large tomatoes finely chopped",
+      "handful parsley chopped",
+      "1 tbsp red wine vinegar",
+      "2 tbsp extra virgin olive oil"
+    ],
+    "recipeInstructions": [
+      {
+        "text": "Heat a large saucepan, tip in the cumin and coriander seeds and toast for a few mins until you can smell their fragrance and they turn a shade darker, then tip into a pestle and mortar. Add the oil to the pan, then tip in the onions and cook slowly until golden and caramelised – this will take 15-20 mins. Meanwhile, bring 2 pans of water to the boil. Add the lentils to 1 pan and cook for 20 mins. Put the rice and a pinch of salt in the other pan and cook for 5 mins (it should still have a little bite). Drain both pans, and leave the lentils and rice to steam-dry."
+      },
+      {
+        "text": "Boil the kettle. Stir the garlic into the onions and cook for 1-2 mins over a low heat. Grind the whole spices in the pestle and mortar to a fine powder and add these to the onion mixture. Grate half of the nutmeg and add to the onions with the turmeric and allspice."
+      },
+      {
+        "text": "Put the spinach in a colander in the sink, pour over a kettle of boiling water, then rinse under cold water. Use your hands to squeeze out as much liquid as possible. Finely chop the spinach and add to the onions with the herbs, lemon zest and juice and the rice, lentils and plenty of seasoning. Leave to cool before stirring through the feta."
+      },
+      {
+        "text": "To assemble the pie, you’ll need plenty of space on your work surface – about 1 metre. Unwrap the filo and cover with a damp tea towel. Have your bowls of melted butter and beaten egg to hand, as well as a pastry brush for each. Working quickly, lay 4 sheets of filo end to end, running along the length of your work surface, and butter each piece generously, overlapping each sheet by about 10cm. Top with another 4 sheets, butter well, then repeat with 3 final sheets of filo (save the last one to cover any cracks later on.)"
+      },
+      {
+        "text": "Spoon the rice filling down the centre of the filo, leaving 5cm free on either end. Brush the egg around the edges and tuck the ends in to cover the filling. Starting from one end, roll the filo over the filling, working your way along until you have a long filo sausage. From one end, start to coil the sausage back on itself – if the pastry cracks, patch it over the hole with your reserved piece of filo. When the coil is complete, slide onto a tray lined with baking parchment, brush the top with beaten egg and sprinkle over the sesame seeds. You can now cover it loosely with cling film and chill for up to 24 hrs."
+      },
+      {
+        "text": "When you’re ready to bake, heat oven to 200C/180C fan/gas 6. Place the pie on the middle shelf and bake for 45 mins until golden and crisp. Meanwhile, tip the ingredients for the tomato sauce into a pan, season and bubble for 30 mins until rich and thick."
+      },
+      {
+        "text": "For the salad, halve the cucumber through the centre, then cut in half lengthways and chop into small cubes. Put in a bowl, add the remaining ingredients and season well. Set aside until ready to serve."
+      },
+      {
+        "text": "Leave the pie to cool for 20 mins before serving with the sauce, salad and a large bowl of yogurt."
+      }
+    ],
+    "skillLevel": "A challenge",
+    "forcedURL": "https://www.bbcgoodfood.com/recipes/veggie-spiral-pie-spiced-tomato-sauce-chopped-salad"
+  }
+]

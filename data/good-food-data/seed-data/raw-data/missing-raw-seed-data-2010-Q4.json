@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Reindeer cupcakes",
+    "description": "Get the kids into the kitchen to decorate these individual Christmas chocolate cupcakes with frosting and sweets",
+    "image": [
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1159555_11-69a0fee.jpg?resize=440,400",
+        "width": 440,
+        "height": 400
+      }
+    ],
+    "url": "https://www.bbcgoodfood.com/recipes/rudolph-cupcakes",
+    "keywords": " Josh Eagleton, 600 kcal or less, Cake decoration, Cassie Best, Children christmas, Chocolate cake, Cooking with kids, Fairy cakes, Kids christmas, Kids cooking, Make ahead, Over an hour",
+    "prepTime": "PT35M",
+    "cookTime": "PT30M",
+    "totalTime": "PT1H5M",
+    "recipeYield": "Makes 12",
+    "nutrition": {
+      "calories": "494 calories",
+      "fatContent": "29 grams fat",
+      "saturatedFatContent": "17 grams saturated fat",
+      "carbohydrateContent": "54 grams carbohydrates",
+      "sugarContent": "41 grams sugar",
+      "fiberContent": "2 grams fiber",
+      "proteinContent": "5 grams protein",
+      "sodiumContent": "0.5 milligram of sodium"
+    },
+    "recipeCategory": "Dessert",
+    "recipeIngredients": [
+      "200g butter cubed",
+      "200g plain chocolate broken into squares",
+      "200g light soft brown sugar",
+      "2 large eggs beaten",
+      "1 tsp vanilla extract",
+      "250g self-raising flour",
+      "200g plain chocolate broken into squares",
+      "100ml double cream not fridge-cold",
+      "50g icing sugar",
+      "12 large milk chocolate buttons (we used Cadbury Dairy Milk Giant Buttons)",
+      "24 white  chocolate buttons",
+      "12 red sugar-coated chocolate buttons",
+      "black  icing pens",
+      "mini  pretzels carefully cut in half horizontally"
+    ],
+    "recipeInstructions": [
+      {
+        "text": "Get started: Heat oven to 160C/140C fan/gas 3. Line a 12-hole muffin tin with paper cases. Gently melt the butter, chocolate, sugar and 100ml hot water together in a large saucepan, stirring occasionally. Set aside to cool a little while you weigh the other ingredients."
+      },
+      {
+        "text": "Make your cakes: Stir the eggs and vanilla into the chocolate mixture. Put the flour in a large mixing bowl, and stir in the chocolate mixture until smooth. Spoon into the cases until just over three-quarters full. Bake on a low shelf in the oven for 20-22 mins. Leave to cool."
+      },
+      {
+        "text": "Ice the tops: To make the icing, melt the chocolate in a heatproof bowl over a pan of barely simmering water. Once melted, turn off the heat, stir in the double cream, sift in the icing sugar and mix well. When spreadable, top each cake with some icing."
+      },
+      {
+        "text": "Have fun decorating: Position a milk chocolate button on top of each cake, then 2 white chocolate buttons above it. Use a little icing as glue to stick a red chocolate button onto the milk chocolate button for a nose. Then use your icing pens to draw black dots on the white buttons for eyes. Stick 2 pretzel top halves into the top of each cake for antlers, and stick the bottom half of a pretzel under the red nose for a mouth. These cakes will keep in a sealed container for up to 3 days, but we doubt they’ll last that long!"
+      }
+    ],
+    "skillLevel": "Easy",
+    "forcedURL": "https://www.bbcgoodfood.com/recipes/reindeer-cupcakes"
+  }
+]
