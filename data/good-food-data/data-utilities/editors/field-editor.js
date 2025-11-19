@@ -11,11 +11,11 @@ const inputPath = path.join(__dirname, '../../seed-data/clean-data/clean-seed-da
 const recipes = JSON.parse(fs.readFileSync(inputPath, 'utf8'));
 
 const abbrevUnits = '(?:cm|mg|g|kg|ml|cl|l)';
-const units = '(?:millilit(?:er|re)s?|centilit(?:er|re)s?|lit(?:er|re)s?|milligram(?:me)?s?|gram(?:me)?s?|kilogram(?:me)?s?|tablespoons?|teaspoons?|tbsps?|tsps?|mugs?|cups?|shots?|pots?|bowls?|plates?|slices?|pieces?|squares?|bars?|burgers?|cakes?|tarts?|biscuits?|rolls?|skewers?|kebabs?|portions?|loa(?:f|ves)|glass(?:es)?)|(?:jam )?jars?';
+const units = '(?:millilit(?:er|re)s?|centilit(?:er|re)s?|lit(?:er|re)s?|milligram(?:me)?s?|gram(?:me)?s?|kilogram(?:me)?s?|tablespoons?|teaspoons?|tbsps?|tsps?|mugs?|cups?|shots?|pots?|bowls?|plates?|slices?|pieces?|squares?|bars?|burgers?|cakes?|tarts?|puddings?|biscuits?|cookies?|rolls?|skewers?|kebabs?|portions?|meals?|batch(?:es)?|loa(?:f|ves)|glass(?:es)?)|(?:jam )?jars?';
 const imperialUnits = '(?:oz|lbs?|fl oz|pints?)'
 const modifiers = '(?:large|small|medium|big|little|thick|thin|generous|normal|standard)';
-const quantityRegExp = new RegExp(
-  String.raw`\b(?<amount>\d+(?:\s*(?:-|\.|x|×)\s*\d+)?)(?:(?<abbrev>${abbrevUnits})(?:/\d+(.\d+)?(?<imperial>${imperialUnits}))*\s*(?<unit>${units})?|(?:\s+(?<modifier>${modifiers}))?\s+(?<unit>${units}))?`,
+const quantityRegExp = new RegExp( // Add onto the end of the line below (18) an additional capture [ (?<secondUnit>${units})? ]that captures the use of a second 'unit' - e.g. in this string "makes 2 x 1.2 litre puddings, each pudding serves 6"
+  String.raw`\b(?<amount>\d+(?:\s*(?:-|\.|x|×)\s*\d+(.\d+)?)?)(?:(?<abbrev>${abbrevUnits})(?:/\d+(.\d+)?(?<imperial>${imperialUnits}))*\s*(?<unit>${units})?|(?:\s+(?<modifier>${modifiers}))?\s+(?<unit>${units}))?`, 
   'i'
 );
 const familyRegExp = new RegExp(
@@ -57,6 +57,7 @@ for (let recipe of recipes) {
       if (quantityMatch) {
         const { amount, abbrev, modifier, unit } = quantityMatch.groups ?? {};
         let newQuantity = amount;
+        // Add into the logic in the following 5 lines a further clause which includes a second unit on the end of the newQuantity string in the event that the initial string contains one e.g. for this string - "makes 2 x 1.2 litre puddings, each pudding serves 6"
         if (abbrev) {
           newQuantity = unit ? `${amount}${abbrev} ${unit}` : `${amount}${abbrev}`;
         } else if (unit) {
