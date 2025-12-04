@@ -76,10 +76,22 @@ const metricUnits = '(?:centimet(?:er|re)s?|millilit(?:er|re)s?|centilit(?:er|re
 const metricUnitsAbbrev = '(?:cm|mg|g|kg|ml|cl|l)';
 const imperialUnits = '(?:oz|lbs?|fl oz|pints?|gallons?)';
 const modifiers = '(?:large|small|medium|medium-sized?|big|little|thick|thin|slim|generous|normal|standard|heaped|flat|thumb-sized?)';
-const quantities = '(tablespoons?|teaspoons?|tbsps?|tsps?|mugs?|cups?|bottles?|cans?|packs?|shots?|pots?|bowls?|bags?|slices?|pieces?|cubes?|slabs?|sheets?|squares?|rolls?|portions?|handfuls?|fistfuls?|fists?|pinch(?:es)?|fingers?|bulbs?|heads?|loa(?:f|ves)|lea(?:f|ves)|glass(?:es)?|knobs?|bunch(?:es)?|(?:jam )?jars?)';
+const quantities = '(tablespoons?|teaspoons?|tbsps?|tsps?|mugs?|cups?|bottles?|cans?|packs?|shots?|pots?|bowls?|bags?|slices?|pieces?|cubes?|slabs?|sheets?|squares?|rolls?|portions?|handfuls?|fistfuls?|fists?|pinch(?:es)?|fingers?|bulbs?|heads?|stalks?|sprigs?|branch(?:es)?|pouch(?:es)?|loa(?:f|ves)|lea(?:f|ves)|glass(?:es)?|knobs?|bunch(?:es)?|(?:jam )?jars?)';
+
+const indefiniteArticles = '(?:a|an|some|a few|a couple of)';
+const nonNumericQuantity = `(?:${indefiniteArticles}\\s+(?:${quantities}))`;
+
+// const quantityRegExp = new RegExp(
+//   String.raw`\b(?:\d+(?:\s*(?:-|\.|x|×)\s*\d+(?:\.\d+)?)?)(?:((?:\s*(?:${metricUnits})\b)|(?:\s*(?:${metricUnitsAbbrev})\b))?(?:/\s*(?:\d+(?:\.\d+)?\s*(?:${imperialUnits}))+\b)?(?:\s*(?:${modifiers})\b)?(?:\s*(?:${quantities})\b)?)?`,
+//   'i'
+// );
 
 const quantityRegExp = new RegExp(
-  String.raw`\b(?:\d+(?:\s*(?:-|\.|x|×)\s*\d+(?:\.\d+)?)?)(?:((?:\s*(?:${metricUnits})\b)|(?:\s*(?:${metricUnitsAbbrev})\b))?(?:/\s*(?:\d+(?:\.\d+)?\s*(?:${imperialUnits}))+\b)?(?:\s*(?:${modifiers})\b)?(?:\s*(?:${quantities})\b)?)?`,
+  String.raw`\b(?:\d+(?:\s*(?:-|\.|x|×)\s*\d+(?:\.\d+)?)?|${nonNumericQuantity})` +
+  String.raw`(?:((?:\s*(?:${metricUnits})\b)|(?:\s*(?:${metricUnitsAbbrev})\b))?` +
+  String.raw`(?:/\s*(?:\d+(?:\.\d+)?\s*(?:${imperialUnits}))+\b)?` +
+  String.raw`(?:\s*(?:${modifiers})\b)?` +
+  String.raw`(?:\s*(?:${quantities})\b)?)?`,
   'i'
 );
 
@@ -87,6 +99,11 @@ const optionalRegExp = new RegExp(
   String.raw`(?:optional|to serve)`,
   'i'
 )
+
+const leadingArticleBeforeNumber = new RegExp(
+  `^${indefiniteArticles}\\s+(?=\\d)`,
+  'i'
+);
 
 function makeIngredientRegExp(name) {
   return new RegExp(
@@ -112,12 +129,21 @@ function cleanIngredientLine(string, boolean) {
 function splitIngredientOptions(string) {
   const substrings = string.split(/\s+or\s+/i).map(substring => substring.trim());
 
-  const quantityStartRegExp = /^\d+([.,]\d+)?(\s*[x×-]\s*\d+([.,]\d+)?)?/i;
+  const quantityStartRegExp = new RegExp(
+    String.raw`^(?:(?:${indefiniteArticles}\s+)?\d+(?:[.,]\d+)?(?:\s*[x×-]\s*\d+(?:[.,]\d+)?)?|${nonNumericQuantity})`,
+    'i'
+  );
 
   const groupedSubstrings = [];
   let current = null;
 
-  for (const substring of substrings) {
+  for (let substring of substrings) {
+    
+    substring = substring.replace(
+      leadingArticleBeforeNumber,
+      ''
+    ).trim();
+    
     const startsWithQuantity = quantityStartRegExp.test(substring);
 
     if (startsWithQuantity) {
@@ -224,7 +250,7 @@ function extractQuantity(head, tail) {
 
 // }
 
-for (let el = 10; el < 19; el++) {
+for (let el = 0; el < 9; el++) {
   let remove = false;
   for (let ingredientLine of recipes[el].ingredients) {
     if (optionalRegExp.test(ingredientLine) && !ingredientLine.includes('plus')) {
