@@ -5,7 +5,7 @@ import path from 'node:path';
 import { decode } from 'html-entities';
 import pluralize from 'pluralize';
 
-import recipes from '../../seed-data/clean-data/clean-seed-data-total-yield-edited.json' with { type: 'json' };
+import recipes from '../../seed-data/clean-data/clean-seed-data-mocks.json' with { type: 'json' };
 import seasonalIngredients from '../../../ingredients-data/seed-data/clean-data/seasonal-ingredients.json' with { type: 'json'};
 import seasonalIngredientProducts from '../../../ingredients-data/seed-data/clean-data/seasonal-ingredient-products-nested.json' with { type: "json"};
 import seasonalIngredientFallbacks from '../../../ingredients-data/seed-data/clean-data/seasonal-ingredient-fallbacks.json' with { type: "json"};
@@ -47,28 +47,24 @@ for (let foodGroup of Object.values(nonSeasonalIngredients)) {
   }
 }
 
-let totalIngredientNames = [...seasonalIngredientNames, ...seasonalIngredientProductNames, ...seasonalIngredientFallbackNames, ...nonSeasonalIngredientNames]
+const ingredientNames = [
+  ...seasonalIngredientNames,
+  ...seasonalIngredientProductNames,
+  ...seasonalIngredientFallbackNames,
+  ...nonSeasonalIngredientNames
+].sort((a, b) => b.length - a.length);
 
-let totalIngredientNamesInitialToken = new Set()
+let ingredientNameInitialTokens = new Set();
+let ingredientNameFinalTokens   = new Set();
 
-for (let ingredientName of totalIngredientNames) {
-  const tokens = ingredientName.split(' ');
-  if (!totalIngredientNamesInitialToken.has(tokens[0])) {
-    totalIngredientNamesInitialToken.add(tokens[0])
-  }
+for (const name of ingredientNames) {
+  const tokens = name.trim().split(/\s+/);
+  ingredientNameInitialTokens.add(tokens[0]);
+  ingredientNameFinalTokens.add(tokens[tokens.length - 1]);
 }
 
-let totalIngredientNamesFinalToken = new Set()
-
-for (let ingredientName of totalIngredientNames) {
-  const tokens = ingredientName.split(' ');
-  if (!totalIngredientNamesFinalToken.has(tokens[tokens.length-1])) {
-    totalIngredientNamesFinalToken.add(tokens[tokens.length-1])
-  }
-}
-
-totalIngredientNamesInitialToken = [...totalIngredientNamesInitialToken].sort((a,b) => b.length - a.length)
-totalIngredientNamesFinalToken = [...totalIngredientNamesFinalToken].sort((a,b) => b.length - a.length)
+ingredientNameInitialTokens = [...ingredientNameInitialTokens].sort((a, b) => b.length - a.length);
+ingredientNameFinalTokens   = [...ingredientNameFinalTokens].sort((a, b) => b.length - a.length);
 
 pluralize.addIrregularRule('chilli', 'chillies')
 
@@ -76,7 +72,7 @@ const metricUnits = '(?:centimet(?:er|re)s?|millilit(?:er|re)s?|centilit(?:er|re
 const metricUnitsAbbrev = '(?:cm|mg|g|kg|ml|cl|l)';
 const imperialUnits = '(?:oz|lbs?|fl oz|pints?|gallons?)';
 const modifiers = '(?:large|small|medium|medium-sized?|big|little|thick|thin|slim|generous|normal|standard|heaped|flat|thumb-sized?)';
-const quantities = '(tablespoons?|teaspoons?|tbsps?|tsps?|mugs?|cups?|bottles?|cans?|packs?|shots?|pots?|bowls?|bags?|slices?|pieces?|cubes?|slabs?|sheets?|squares?|rolls?|portions?|handfuls?|fistfuls?|fists?|pinch(?:es)?|fingers?|bulbs?|heads?|stalks?|sprigs?|branch(?:es)?|pouch(?:es)?|loa(?:f|ves)|lea(?:f|ves)|glass(?:es)?|knobs?|bunch(?:es)?|(?:jam )?jars?)';
+const quantities = '(tablespoons?|teaspoons?|tbsps?|tsps?|mugs?|cups?|bottles?|cans?|packs?|packets?|cartons?|logs?|shots?|pots?|bowls?|bags?|slices?|strips?|pieces?|cubes?|slabs?|sheets?|squares?|balls?|rolls?|portions?|handfuls?|fistfuls?|fists?|pinch(?:es)?|fingers?|bulbs?|heads?|stalks?|sprigs?|branch(?:es)?|pouch(?:es)?|loa(?:f|ves)|lea(?:f|ves)|glass(?:es)?|knobs?|bunch(?:es)?|(?:jam )?jars?)';
 
 const indefiniteArticles = '(?:a|an|some|a few|a couple of)';
 const nonNumericQuantity = `(?:${indefiniteArticles}\\s+(?:${quantities}))`;
@@ -114,6 +110,35 @@ function makeIngredientRegExp(name) {
 
 function cleanIngredientLine(string, boolean) {
   let text = decode(string.toLowerCase());
+  
+  const unicodeFractions = {
+    '½': '1/2',
+    '⅓': '1/3',
+    '⅔': '2/3',
+    '¼': '1/4',
+    '¾': '3/4',
+    '⅕': '1/5',
+    '⅖': '2/5',
+    '⅗': '3/5',
+    '⅘': '4/5',
+    '⅙': '1/6',
+    '⅚': '5/6',
+    '⅛': '1/8',
+    '⅜': '3/8',
+    '⅝': '5/8',
+    '⅞': '7/8'
+  };
+
+  text = text.replace(
+    /[½⅓⅔¼¾⅕⅖⅗⅘⅙⅚⅛⅜⅝⅞]/g,
+    m => unicodeFractions[m]
+  );
+
+  text = text.replace(
+    /(\d)\s*(1\/2|1\/3|2\/3|1\/4|3\/4|1\/5|2\/5|3\/5|4\/5|1\/6|5\/6|1\/8|3\/8|5\/8|7\/8)/g,
+    (_, whole, frac) => `${whole} ${frac}`
+  ); 
+  
   if (boolean) {
   return text
     .replace(/\s+/g, " ")
@@ -129,11 +154,6 @@ function cleanIngredientLine(string, boolean) {
 function splitIngredientOptions(string) {
   const substrings = string.split(/\s+or\s+/i).map(substring => substring.trim());
 
-  const quantityStartRegExp = new RegExp(
-    String.raw`^(?:(?:${indefiniteArticles}\s+)?\d+(?:[.,]\d+)?(?:\s*[x×-]\s*\d+(?:[.,]\d+)?)?|${nonNumericQuantity})`,
-    'i'
-  );
-
   const groupedSubstrings = [];
   let current = null;
 
@@ -144,7 +164,7 @@ function splitIngredientOptions(string) {
       ''
     ).trim();
     
-    const startsWithQuantity = quantityStartRegExp.test(substring);
+    const startsWithQuantity = quantityRegExp.test(substring);
 
     if (startsWithQuantity) {
       if (current) groupedSubstrings.push(current);
@@ -163,13 +183,10 @@ function splitIngredientOptions(string) {
   return groupedSubstrings;
 }
 
-function groupString(string) {
-  let initialBoundary = Infinity;
-  let initialToken;
+function finalIndex(string, tokenArray) {
   let finalBoundary = 0;
-  let finalToken;
-
-  for (let token of totalIngredientNamesFinalToken) {
+  let finalToken;  
+  for (let token of tokenArray) {
     let tokenPlural = pluralize(token)
     let indexPlural = findFinalIndex(string, tokenPlural)
     let index = findFinalIndex(string, token);
@@ -181,14 +198,16 @@ function groupString(string) {
       finalToken = token;
     }
   }
+  return finalBoundary;
+}
 
-  let headAndBody = string.slice(0, finalBoundary);
-  let tail = string.slice(finalBoundary);
-
-  for (let token of totalIngredientNamesInitialToken) {        
-    let tokenPlural = pluralize(token);
-    let indexPlural = findInitialIndex(headAndBody, tokenPlural);
-    let index = findInitialIndex(headAndBody, token);
+function initialIndex(string, tokenArray) {
+  let initialBoundary = Infinity;
+  let initialToken;
+  for (let token of tokenArray) {
+    let tokenPlural = pluralize(token)
+    let indexPlural = findInitialIndex(string, tokenPlural)
+    let index = findInitialIndex(string, token);
     if (indexPlural !== -1 && indexPlural < initialBoundary) {
       initialBoundary = indexPlural;
       initialToken = tokenPlural;
@@ -197,9 +216,36 @@ function groupString(string) {
       initialToken = token;
     }
   }
+  return initialBoundary;
+}
+
+function groupString(string) {
+
+  let finalBoundary = finalIndex(string, ingredientNames)
+
+  let headAndBody = string.slice(0, finalBoundary);
+  let tail = string.slice(finalBoundary);
+
+  if (tail.trim().startsWith('and/or') || tail.trim().startsWith('and') || tail.trim().startsWith('or')) {
+    finalBoundary = finalIndex(tail, ingredientNameFinalTokens);
+    if (finalBoundary) {
+      headAndBody = headAndBody + tail.slice(0, finalBoundary);
+      tail = tail.slice(finalBoundary);
+    }
+  }
+
+  let initialBoundary = initialIndex(string, ingredientNames)
 
   let head = headAndBody.slice(0, initialBoundary);
   let body = headAndBody.slice(initialBoundary);
+
+  if (head.trim().endsWith("and/or") || head.trim().endsWith("and") || head.trim().endsWith("or")) {
+    initialBoundary = initialIndex(head, ingredientNameInitialTokens);
+    if (initialBoundary) {
+      body = head.slice(initialBoundary) + body;
+      head = head.slice(0, initialBoundary);
+    }
+  }
 
   return {head, tail, body, initialBoundary, finalBoundary}
 }
@@ -250,7 +296,7 @@ function extractQuantity(head, tail) {
 
 // }
 
-for (let el = 0; el < 9; el++) {
+for (let el = 0; el < 99; el++) {
   let remove = false;
   for (let ingredientLine of recipes[el].ingredients) {
     if (optionalRegExp.test(ingredientLine) && !ingredientLine.includes('plus')) {

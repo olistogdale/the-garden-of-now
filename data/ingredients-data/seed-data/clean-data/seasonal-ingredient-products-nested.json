@@ -375,7 +375,10 @@
         ]
       },
       {
-        "name": "lamb liver"
+        "name": "lamb liver",
+        "altnames": [
+          "lamb's liver"
+        ]
       },
       {
         "name": "lamb heart"
@@ -701,6 +704,9 @@
       },
       {
         "name": "chicken giblet"
+      },
+      {
+        "name": "chicken fillet"
       }
     ],
     "duck": [
@@ -803,6 +809,9 @@
       },
       {
         "name": "turkey mince"
+      },
+      {
+        "name": "turkey fillet"
       }
     ]
   },

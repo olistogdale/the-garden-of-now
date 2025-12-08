@@ -71,7 +71,7 @@
       "name": "brie"
     },
     {
-      "name": "goat’s cheese"
+      "name": "goat's cheese"
     },
     {
       "name": "cheshire"
@@ -200,7 +200,8 @@
       "name": "caramelised onion chutney",
       "altnames": [
         "caramelised red onion chutney",
-        "red onion chutney"
+        "red onion chutney",
+        "onion chutney"
       ]
     },
     {
@@ -295,6 +296,12 @@
       "name": "oyster sauce"
     },
     {
+      "name": "soy sauce",
+      "altnames":[
+        "soya sauce"
+      ]
+    },
+    {
       "name": "salad dressing"
     },
     {
@@ -386,6 +393,9 @@
       "name": "curry paste"
     },
     {
+      "name": "curry powder"
+    },
+    {
       "name": "fennel seed"
     },
     {
@@ -394,9 +404,9 @@
     {
       "name": "five spice",
       "altnames": [
-        "chinese five spice",
         "five-spice",
-        "chinese five spice"
+        "five spice powder",
+        "five-spice powder"
       ]
     },
     {
@@ -619,6 +629,9 @@
       "name": "sundried tomato"
     },
     {
+      "name": "roasted pepper"
+    },
+    {
       "name": "tomato passata",
       "altnames": [
         "passata"
@@ -737,6 +750,7 @@
     {
       "name": "brown rice",
       "altnames": [
+        "brown basmati rice",
         "wild rice"
       ]
     },
@@ -891,19 +905,24 @@
   ],
   "biscuits": [
     {
-      "name": "digestive",
+      "name": "digestive biscuit",
       "altnames": [
-        "chocolate digestive"
+        "chocolate digestive biscuit",
+        "chocolate digestive",
+        "digestive"
       ]
     },
     {
       "name": "oatcake",
       "altnames": [
-        "oat biscuits"
+        "oat biscuit"
       ]
     },
     {
-      "name": "gingernut"
+      "name": "gingernut biscuit",
+      "altnames": [
+        "gingernuts"
+      ]
     },
     {
       "name": "chocolate chip cookie",
@@ -1040,7 +1059,9 @@
       "name": "egg",
       "altnames": [
         "chicken’s egg",
-        "chickens’ egg"
+        "chickens’ egg",
+        "egg white",
+        "egg yolk"
       ]
     },
     {
@@ -1383,9 +1404,6 @@
       "name": "gin"
     },
     {
-      "name": "brandy"
-    },
-    {
       "name": "sherry"
     },
     {
@@ -1483,6 +1501,15 @@
     },
     {
       "name": "limoncello"
+    },
+    {
+      "name": "frangelico"
+    },
+    {
+      "name": "kirsch",
+      "altnames": [
+        "cherry liquer"
+      ]
     }
   ],
   "water": [

@@ -589,6 +589,9 @@
     },
         {
       "name": "bay",
+      "altnames": [
+        "bay leaf"
+      ],
       "seasonality": [
         "january",
         "february",
@@ -659,6 +662,9 @@
     },
     {
       "name": "marjoram",
+      "altnames": [
+        "marjoram sprig"
+      ],
       "seasonality": [
         "may",
         "june",
@@ -734,7 +740,7 @@
     {
       "name": "rosemary",
       "altnames": [
-        "rosemary sprig"
+        "rosemary sprigs"
       ],
       "seasonality": [
         "january",
@@ -753,6 +759,9 @@
     },
     {
       "name": "sage",
+      "altnames": [
+        "sage leaf"
+      ],
       "seasonality": [
         "january",
         "february",
@@ -1528,6 +1537,9 @@
     },
     {
       "name": "celery",
+      "altnames": [
+        "celery stick"
+      ],
       "seasonality": [
         "june",
         "july",
