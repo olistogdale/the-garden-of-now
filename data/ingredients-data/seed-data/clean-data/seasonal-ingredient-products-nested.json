@@ -357,6 +357,12 @@
         ]
       },
       {
+        "name": "lamb cannon",
+        "altnames": [
+          "cannon of lamb"
+        ]
+      },
+      {
         "name": "lamb rump",
         "altnames": [
           "rump of lamb"
@@ -387,7 +393,10 @@
         "name": "lamb mince"
       },
       {
-        "name": "lamb neck"
+        "name": "lamb neck",
+        "altnames": [
+          "lamb neck fillet"
+        ]
       },
       {
         "name": "lamb steak"
@@ -574,6 +583,12 @@
         ]
       },
       {
+        "name": "polish sausage",
+        "altnames": [
+          "kabanos"
+        ]
+      },
+      {
         "name": "pork meatball"
       },
       {
@@ -685,7 +700,10 @@
         "name": "chicken wing"
       },
       {
-        "name": "chicken breast"
+        "name": "chicken breast",
+        "altnames": [
+          "chicken breast fillet"
+        ]
       },
       {
         "name": "chicken drumstick"
@@ -717,7 +735,10 @@
         "name": "duck leg"
       },
       {
-        "name": "duck breast"
+        "name": "duck breast",
+        "altnames": [
+          "duck breast fillet"
+        ]
       },
       {
         "name": "duck liver"
@@ -802,7 +823,10 @@
         "name": "turkey drumsticks"
       },
       {
-        "name": "turkey breast"
+        "name": "turkey breast",
+        "altnames": [
+          "turkey breast fillet"
+        ]
       },
       {
         "name": "turkey leg"

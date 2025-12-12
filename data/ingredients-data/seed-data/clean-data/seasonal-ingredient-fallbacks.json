@@ -71,6 +71,9 @@
   },
   {
     "name": "sausage",
+    "altnames": [
+      "cocktail sausage"
+    ],
     "parentIngredients": [
       "beef",
       "pork",

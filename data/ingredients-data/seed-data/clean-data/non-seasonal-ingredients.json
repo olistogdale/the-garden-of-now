@@ -118,6 +118,9 @@
       "name": "groundnut oil"
     },
     {
+      "name": "walnut oil"
+    },
+    {
       "name": "sunflower oil"
     },
     {
@@ -253,6 +256,9 @@
       "name": "cranberry sauce"
     },
     {
+      "name": "redcurrant jelly"
+    },
+    {
       "name": "tartare sauce"
     },
     {
@@ -356,10 +362,17 @@
       "name": "celery salt"
     },
     {
-      "name": "chilli",
+      "name": "red chilli",
       "altnames": [
-        "chilli flakes"
+        "chilli"
       ]
+    },
+    {
+      "name": "green chilli"
+
+    },
+    {
+      "name": "chilli flakes"
     },
     {
       "name": "chilli powder",
@@ -373,9 +386,6 @@
       "altnames": [
         "cinnamon stick"
       ]
-    },
-    {
-      "name": "clove"
     },
     {
       "name": "coriander seed"
@@ -404,9 +414,7 @@
     {
       "name": "five spice",
       "altnames": [
-        "five-spice",
-        "five spice powder",
-        "five-spice powder"
+        "five-spice"
       ]
     },
     {
@@ -521,22 +529,22 @@
     {
       "name": "lemon",
       "altnames": [
-        "lemon zest",
-        "lemon juice"
+        "lemon juice",
+        "lemon zest"
       ]
     },
     {
       "name": "lime",
       "altnames": [
-        "lime zest",
-        "lime juice"
+        "lime juice",
+        "lime zest"
       ]
     },
     {
       "name": "orange",
       "altnames": [
-        "orange zest",
-        "orange juice"
+        "orange juice",
+        "orange zest"
       ]
     }
   ],
@@ -563,7 +571,8 @@
       "name": "chicken stock",
       "altnames": [
         "chicken stock cube",
-        "stock"
+        "stock",
+        "stock cube"
       ]
     },
     {
@@ -703,7 +712,10 @@
       "name": "peanut"
     },
     {
-      "name": "cashew"
+      "name": "cashew",
+      "altnames": [
+        "cashew nut"
+      ]
     },
     {
       "name": "almond"
@@ -712,10 +724,16 @@
       "name": "pine nut"
     },
     {
-      "name": "pistachio"
+      "name": "pistachio",
+      "altnames": [
+        "pistachio nut"
+      ]
     },
     {
-      "name": "pecan"
+      "name": "pecan",
+      "altnames": [
+        "pecan nut"
+      ]
     },
     {
       "name": "brazil nut"
@@ -807,7 +825,8 @@
     {
       "name": "white bread",
       "altnames": [
-        "white loaf"
+        "white loaf",
+        "bread"
       ]
     },
     {
@@ -1128,6 +1147,9 @@
       "name": "bread flour"
     },
     {
+      "name": "bread mix"
+    },
+    {
       "name": "’00’ flour",
       "altnames": [
         "’00’ pasta flour"
@@ -1357,6 +1379,15 @@
     },
     {
       "name": "marshmallow"
+    },
+    {
+      "name": "chocolate mint thin",
+      "altnames": [
+        "after eight"
+      ]
+    },
+    {
+      "name": "hazelnut chocolate"
     }
   ],
   "alcohol": [
@@ -1493,7 +1524,7 @@
       ]
     },
     {
-      "name": "coffee liquer",
+      "name": "coffee liqueur",
       "altnames": [
         "kahlúa",
         "kahlua"
@@ -1510,6 +1541,11 @@
       "altnames": [
         "cherry liquer"
       ]
+    }
+  ],
+  "juice": [
+    {
+      "name": "apple juice"
     }
   ],
   "water": [
