@@ -92,7 +92,8 @@
       "hake",
       "whiting",
       "coley"
-    ]
+    ],
+    "fallbackType": "ambiguous"
   },
   {
     "name": "oily fish",
@@ -102,6 +103,7 @@
       "herring",
       "sardine",
       "sprat"
-    ]
+    ],
+    "fallbackType": "ambiguous"
   }
 ]

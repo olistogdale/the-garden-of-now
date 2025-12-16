@@ -6,15 +6,18 @@ export type SeasonalIngredient = {
   seasonality: string[]
 }
 
+export type SeasonalIngredientCategories =
+  | "fish"
+  | "fruit"
+  | "herbs"
+  | "meat"
+  | "nuts"
+  | "poultry"
+  | "shellfish"
+  | "vegetables"
+
 export type SeasonalIngredientDatabase = {
-  fish: SeasonalIngredient[],
-  fruit: SeasonalIngredient[],
-  herbs: SeasonalIngredient[],
-  meat: SeasonalIngredient[],
-  nuts: SeasonalIngredient[],
-  poultry: SeasonalIngredient[],
-  shellfish: SeasonalIngredient[],
-  vegetables: SeasonalIngredient[]
+  [category in SeasonalIngredientCategories]: SeasonalIngredient[]
 }
 
 export type SeasonalIngredientProduct = {
@@ -23,51 +26,61 @@ export type SeasonalIngredientProduct = {
   parentIngredient: string
 }
 
+export type SeasonalIngredientProductCategories =
+  | "fish"
+  | "meat"
+  | "poultry"
+  | "shellfish"
+
 export type SeasonalIngredientProductDatabase = {
-  fish: SeasonalIngredientProduct[],
-  meat: SeasonalIngredientProduct[],
-  poultry: SeasonalIngredientProduct[],
-  shellfish: SeasonalIngredientProduct[]
+  [category in SeasonalIngredientProductCategories]: SeasonalIngredientProduct[]
 }
+
+export type FallbackType = 
+  | "ambiguous"
+  | "specific"
 
 export type SeasonalIngredientFallback = {
   name: string,
   altNames?: string[],
   parentIngredients: string[],
-  fallbackType: string
+  fallbackType: FallbackType
 }
 
 export type SeasonalIngredientFallbackDatabase = SeasonalIngredientFallback[]
 
 export type NonSeasonalIngredient = {
   name: string,
-  altNames: string[]
+  altNames?: string[]
 }
 
+export type NonSeasonalIngredientCategories =
+  | "curedMeat"
+  | "curedFish"
+  | "cheese"
+  | "oil"
+  | "vinegar"
+  | "condiments"
+  | "herbsAndSpices"
+  | "stocksAndGravies"
+  | "cannedVegetables"
+  | "noodles"
+  | "nuts"
+  | "grains"
+  | "pulses"
+  | "breads"
+  | "biscuits"
+  | "crisps"
+  | "dairy"
+  | "eggs"
+  | "baking"
+  | "spreads"
+  | "teaAndCoffee"
+  | "confectionery"
+  | "alcohol"
+  | "juice"
+  | "water"
+
 export type NonSeasonalIngredientDatabase = {
-  curedMeat: NonSeasonalIngredient[],
-  curedFish: NonSeasonalIngredient[],
-  cheese: NonSeasonalIngredient[],
-  oil: NonSeasonalIngredient[],
-  vinegar: NonSeasonalIngredient[],
-  condiments: NonSeasonalIngredient[],
-  herbsAndSpices: NonSeasonalIngredient[],
-  stocksAndGravies: NonSeasonalIngredient[],
-  cannedVegetables: NonSeasonalIngredient[],
-  noodles: NonSeasonalIngredient[],
-  nuts: NonSeasonalIngredient[],
-  grains: NonSeasonalIngredient[],
-  pulses: NonSeasonalIngredient[],
-  breads: NonSeasonalIngredient[],
-  biscuits: NonSeasonalIngredient[],
-  crisps: NonSeasonalIngredient[],
-  dairy: NonSeasonalIngredient[],
-  eggs: NonSeasonalIngredient[],
-  baking: NonSeasonalIngredient[],
-  spreads: NonSeasonalIngredient[],
-  teaAndCoffee: NonSeasonalIngredient[],
-  confectionery: NonSeasonalIngredient[],
-  alcohol: NonSeasonalIngredient[],
-  juice: NonSeasonalIngredient[],
-  water: NonSeasonalIngredient[]
+  [category in NonSeasonalIngredientCategories]: NonSeasonalIngredient[]
 }

@@ -341,7 +341,7 @@
     },
     {
       "name": "skate",
-      "xames": [
+      "altNames": [
         "ray"
       ],
       "seasonality": [
@@ -1575,7 +1575,7 @@
     },
     {
       "name": "chard",
-      "seasnsality": [
+      "seasonality": [
         "april",
         "may",
         "june",
