@@ -1,0 +1,374 @@
+[
+  {
+    "name": "Crispy layered thyme potatoes",
+    "description": "Thinly slice then oven bake your spuds for an impressive side dish to serve with your Easter roast or Sunday lunch",
+    "image": [
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/crispy-layered-thyme-potatoes-16e93b2.jpg?resize=440,400",
+        "width": 440,
+        "height": 400
+      }
+    ],
+    "url": "https://www.bbcgoodfood.com/recipes/crispy-layered-thyme-potatoes",
+    "keywords": "6 servings, 600 kcal or less, Comfort Food, Fibre, James Martin, Over an hour, potato bake recipe, Potato dauphinoise, Potato gratin, potato side, Side dish, Spring",
+    "prepTime": "PT30M",
+    "cookTime": "PT50M",
+    "totalTime": "PT1H20M",
+    "recipeYield": 6,
+    "nutrition": {
+      "calories": "440 calories",
+      "fatContent": "20 grams fat",
+      "saturatedFatContent": "12 grams saturated fat",
+      "carbohydrateContent": "55 grams carbohydrates",
+      "sugarContent": "2 grams sugar",
+      "fiberContent": "6 grams fiber",
+      "proteinContent": "7 grams protein",
+      "sodiumContent": "0.4 milligram of sodium"
+    },
+    "recipeCategory": "Side dish",
+    "recipeIngredients": [
+      "2kg white potatoes",
+      "140g butter melted",
+      "small pack thyme leaves only",
+      "sea salt or rock salt (if you have it)"
+    ],
+    "recipeInstructions": [
+      {
+        "text": "Heat oven to 200C/180C fan/gas 6. Slice the peeled potatoes as finely as possible on a mandolin, with the fine slicing blade of a food processor, or with a very sharp knife. (The more finely you slice them, the quicker and more evenly they will cook.)"
+      },
+      {
+        "text": "Pat the potatoes dry with a clean tea towel and tip into a large bowl. Pour over the melted butter, sprinkle over the thyme and some salt (preferably sea salt or rock salt), and toss until each slice is coated in butter."
+      },
+      {
+        "text": "In a roasting tin, measuring about 20 x 20cm, assemble the potato slices vertically, tightly packed together like a deck of cards, until the dish is full and you’ve used all the potatoes. Sprinkle with a little more salt and place in the oven for 45-50 mins until crisp and cooked. Use a skewer or small sharp knife to check that the potatoes are completely soft and cooked in the centre. Serve from the tin alongside the lamb."
+      }
+    ],
+    "skillLevel": "More effort",
+    "forcedURL": "https://www.bbcgoodfood.com/recipes/parmesan-crusted-layered-potatoes"
+  },
+  {
+    "name": "Chocolate & banana French toast",
+    "description": "An indulgent treat for when you're in need of a sweet fix - chocolate and banana sandwiched in fried bread",
+    "image": [
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-931471_11-08404b4.jpg?resize=440,400",
+        "width": 440,
+        "height": 400
+      }
+    ],
+    "url": "https://www.bbcgoodfood.com/recipes/chocolate-banana-french-toast",
+    "keywords": "Autumn, Banana, Bananas, Bite, Chocolate sandwich, Dark and delicious, Decadent, Eggy bread, Fried bread, Good Food, In season, Indulgent, Milk chocolate, Treat for two",
+    "prepTime": "PT10M",
+    "cookTime": "PT8M",
+    "totalTime": "PT18M",
+    "recipeYield": 2,
+    "nutrition": {
+      "calories": "648 calories",
+      "fatContent": "38 grams fat",
+      "saturatedFatContent": "21 grams saturated fat",
+      "carbohydrateContent": "59 grams carbohydrates",
+      "sugarContent": "38 grams sugar",
+      "fiberContent": "2 grams fiber",
+      "proteinContent": "16 grams protein",
+      "sodiumContent": "0.9 milligram of sodium"
+    },
+    "recipeCategory": "Breakfast, Brunch, Snack, Treat",
+    "recipeIngredients": [
+      "1 ripe banana",
+      "75g milk chocolate chopped",
+      "4 slices crusty white bread from a round loaf",
+      "3 medium eggs",
+      "1 tbsp double cream",
+      "1 tbsp maple syrup",
+      "1 tsp vanilla extract",
+      "25g unsalted butter",
+      "ground cinnamon to serve",
+      "icing sugar or extra maple syrup, to serve (optional)"
+    ],
+    "recipeInstructions": [
+      {
+        "text": "Slice the banana into a small bowl and mash using a fork. Add the chopped chocolate and mix to combine."
+      },
+      {
+        "text": "Lay 2 slices of bread on the work surface. Divide the chocolate and banana mixture between them, spreading it almost to the edges. Top each with a second slice of bread and press together to make a sandwich."
+      },
+      {
+        "text": "In a shallow dish, whisk together the eggs, double cream, maple syrup and vanilla extract. Melt the butter in a large frying pan over a medium heat. Lay one sandwich into the egg mixture to coat one side, then carefully flip it over so that both sides of the sandwich are soaked in the egg. Lower the sandwich into the hot frying pan and cook for about 1 min on each side, until golden brown and the chocolate has started to melt. Repeat with the second sandwich. Cut the sandwiches in half to serve and sprinkle with a little ground cinnamon and either icing sugar or extra maple syrup if you’re feeling super-indulgent."
+      }
+    ],
+    "skillLevel": "Easy",
+    "forcedURL": "https://www.bbcgoodfood.com/recipes/toasted-chocolate-panettone-sandwiches"
+  },
+  {
+    "name": "Mimosa",
+    "description": "Mix a classic mimosa cocktail with orange juice and champagne – or use prosecco if you prefer a different bubbly. It's an easy fix when entertaining or for brunch.",
+    "image": [
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-459484_12-fba6969.jpg?resize=440,400",
+        "width": 440,
+        "height": 400
+      }
+    ],
+    "url": "https://www.bbcgoodfood.com/recipes/mimosa",
+    "keywords": "Alcohol, Brunch recipes, Buck's fizz recipe, Bucks fizz, Celebration, Champagne, Champagne cocktails, Cocktail recipes, Easy, Good Food, Homemade bucks fizz, How to make buck's fizz, Indulgent, Orange juice",
+    "prepTime": "PT5M",
+    "totalTime": "PT5M",
+    "recipeYield": 6,
+    "nutrition": {
+      "calories": "147 calories",
+      "carbohydrateContent": "20 grams carbohydrates",
+      "sugarContent": "20 grams sugar",
+      "proteinContent": "1 grams protein",
+      "sodiumContent": "0.02 milligram of sodium"
+    },
+    "recipeCategory": "Brunch, Cocktails, Drink",
+    "recipeIngredients": [
+      "1 bottle champagne or prosecco, chilled",
+      "1l freshly squeezed orange juice chilled"
+    ],
+    "recipeInstructions": [
+      {
+        "text": "Half-fill each of 6 glasses with champagne, then carefully pour in the orange juice until the glass is full."
+      }
+    ],
+    "skillLevel": "Easy",
+    "forcedURL": "https://www.bbcgoodfood.com/recipes/mince-pie-mimosa"
+  },
+  {
+    "name": "Croissant smoked salmon bake",
+    "description": "Use up day-old croissants in this simple bake that riffs on the classic combo of salmon and eggs. Enjoy it for a weekend breakfast or brunch",
+    "image": [
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2022/01/211217_CROISSANT_SMOKED_SALMON_BAKE_0166_2.8-bf14b07.jpg?resize=768,698",
+        "width": 768,
+        "height": 698
+      },
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2022/01/211217_CROISSANT_SMOKED_SALMON_BAKE_0166_2.8-bf14b07.jpg?resize=1366,1242",
+        "width": 1366,
+        "height": 1242
+      }
+    ],
+    "url": "https://www.bbcgoodfood.com/premium/croissant-smoked-salmon-bake",
+    "prepTime": "PT10M",
+    "cookTime": "PT20M",
+    "totalTime": "PT30M",
+    "recipeYield": 6,
+    "nutrition": {
+      "calories": "514 calories",
+      "fatContent": "33 grams fat",
+      "saturatedFatContent": "16 grams saturated fat",
+      "carbohydrateContent": "28 grams carbohydrates",
+      "sugarContent": "6 grams sugar",
+      "fiberContent": "2 grams fiber",
+      "proteinContent": "25 grams protein",
+      "sodiumContent": "1.99 milligram of sodium"
+    },
+    "recipeCategory": "Brunch",
+    "recipeIngredients": [
+      "6 large eggs",
+      "200ml whole milk",
+      "100ml single cream",
+      "½ bunch of chives finely sliced",
+      "1 lemon zested",
+      "200g soft cheese",
+      "½ tsp freshly ground black pepper plus extra for sprinkling",
+      "6 croissants split (use stale croissants, if you have them)",
+      "200g Specially Selected Himalayan Salt Aged Scottish Smoked Salmon"
+    ],
+    "recipeInstructions": [
+      {
+        "text": "Heat the oven to 180C/160C fan/gas 4. Whisk together the eggs, milk, cream, half the chives and some seasoning."
+      },
+      {
+        "text": "Combine most of the remaining chives with the lemon zest, soft cheese and black pepper in a separate bowl. Spread the soft cheese mixture over the bases of the croissants, then divide the Specially Selected Himalayan Salt Aged Scottish Smoked Salmon between them and sandwich back together with the croissant tops."
+      },
+      {
+        "text": "Pour the egg mixture into a 38 x 23cm baking dish. Nestle the croissant sandwiches, top-side down, in the egg mixture and leave to soak for 20 mins. After this time, carefully flip over, sprinkle with the remaining chives and black pepper, then bake for 20-25 mins until the tops are golden brown and the egg mixture is set. Leave to stand for a few minutes, then serve."
+      }
+    ],
+    "skillLevel": null,
+    "forcedURL": "https://www.bbcgoodfood.com/recipes/christmas-croissant-bake"
+  },
+  {
+    "name": "Ham, turkey & sprout pie",
+    "description": "Great for using up leftovers from Christmas dinner. If you don’t fancy turkey, use chicken instead.",
+    "image": [
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/ham-turkey-sprout-pie-0d10d95.jpg?resize=440,400",
+        "width": 440,
+        "height": 400
+      }
+    ],
+    "url": "https://www.bbcgoodfood.com/recipes/ham-turkey-sprout-pie",
+    "keywords": "Christmas, Good Food, Ham, Pie, Sprouts, Turkey",
+    "prepTime": "PT30M",
+    "cookTime": "PT55M",
+    "totalTime": "PT1H25M",
+    "recipeYield": 6,
+    "nutrition": {
+      "calories": "662 calories",
+      "fatContent": "38 grams fat",
+      "saturatedFatContent": "18 grams saturated fat",
+      "carbohydrateContent": "34 grams carbohydrates",
+      "sugarContent": "4 grams sugar",
+      "fiberContent": "3 grams fiber",
+      "proteinContent": "43 grams protein",
+      "sodiumContent": "2.6 milligram of sodium"
+    },
+    "recipeIngredients": [
+      "1 onion diced",
+      "1 celery stick diced",
+      "50g butter",
+      "50g plain flour",
+      "500ml turkey or chicken stock (or 100ml/31/2fl oz leftover gravy mixed with 400ml/14fl oz water)",
+      "175ml single, double, whipping or soured cream or crème fraîche – or a mixture",
+      "1 tbsp Dijon or wholegrain mustard",
+      "100g mature cheddar or Stilton, grated, plus 25g/1oz extra to sprinkle on top",
+      "400g turkey or chicken, cut into bite-sized chunks",
+      "200g ham diced slightly smaller than the turkey/chicken",
+      "100g brussels sprouts halved",
+      "320g sheet ready-rolled shortcrust pastry",
+      "splash of milk or beaten egg to glaze",
+      "mashed potato and greens, to serve (optional)"
+    ],
+    "recipeInstructions": [
+      {
+        "text": "Heat oven to 200C/180C fan/gas 6. In a large frying pan, soften the onion and celery in the butter for about 10 mins. Stir the flour into the veg until completely absorbed, then gradually stir in the stock. Simmer to a sauce consistency, then stir in the cream, mustard and cheese, followed by the turkey or chicken, ham and brussels sprouts. Take off the heat and season well."
+      },
+      {
+        "text": "Tip the pie filling into a baking dish. Unroll the shortcrust pastry and, if you need to, roll a little thinner until it’s big enough to cover the pie dish. Divide the pastry into 6 portions by pricking lines with the prongs of a fork. These pricked lines will also work as air holes for the steam to escape, so you don’t need to use a pie funnel. Lift the pastry onto the pie dish. Crimp or pinch the edges to seal the pastry to the dish, and glaze the top with a little milk or egg. Scatter with the extra cheese and bake for 30-40 mins until golden and crisp."
+      },
+      {
+        "text": "Leave the pie to cool for 5-10 mins, then serve with mash and greens, if you like."
+      }
+    ],
+    "skillLevel": "Easy",
+    "forcedURL": "https://www.bbcgoodfood.com/recipes/christmas-dinner-hand-pies"
+  },
+  {
+    "name": "Tom Collins",
+    "description": "Master the art of the classic Tom Collins cocktail, plus three twists. Gin, lemon, sugar syrup and soda water are the ingredients for your cocktail cupboard",
+    "image": [
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/tom-collins-04badba.jpg?resize=440,400",
+        "width": 440,
+        "height": 400
+      }
+    ],
+    "url": "https://www.bbcgoodfood.com/recipes/tom-collins",
+    "keywords": "Alice Lascelles, Cocktails, Drinks, tom collins",
+    "prepTime": "PT10M",
+    "cookTime": "PT2M",
+    "totalTime": "PT12M",
+    "recipeYield": 1,
+    "nutrition": {
+      "calories": "201 calories",
+      "carbohydrateContent": "17 grams carbohydrates",
+      "sugarContent": "17 grams sugar"
+    },
+    "recipeCategory": "Cocktails, Drink",
+    "recipeIngredients": [
+      "50ml gin",
+      "25ml lemon juice",
+      "25ml sugar syrup",
+      "125ml chilled soda water"
+    ],
+    "recipeInstructions": [
+      {
+        "text": "Build the drink over plenty of ice in a Collins glass, stir gently and garnish with a slice of lemon. 3 TWISTS Raspberry Collins Raspberries give this twist on the classic Collins a pretty splash of colour. Start by gently muddling a handful of raspberries in the bottom of an empty Collins glass, then add the ice, all the other ingredients and mix well with a long handled spoon. Garnish with an orange slice. Brandy Collins This is a really refreshing way to enjoy cognac. For best results, use a young-ish VS or VSOP cognac that’s nice and fruity. Just make the drink as normal, substituting cognac for gin, then garnish with a slice of ginger or a ribbon of lemon peel. Elderflower Collins Elderflower and lemon is a winning combination. You can make it with elderflower cordial or liqueur for something a touch more boozy. Mix the drink as normal, but use the liqueur or cordial in place of the sugar syrup. Garnish with a lemon slice."
+      }
+    ],
+    "skillLevel": "Easy",
+    "forcedURL": "https://www.bbcgoodfood.com/recipes/raspberri-collins"
+  },
+  {
+    "name": "Bramble",
+    "description": "Mix a classic bramble cocktail, essentially a gin sour spiked with an eye-catching shot of blackberry liqueur. We have three twists, too – ideal if you're entertaining",
+    "image": [
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/bramble-baa53ba.jpg?resize=440,400",
+        "width": 440,
+        "height": 400
+      }
+    ],
+    "url": "https://www.bbcgoodfood.com/recipes/bramble",
+    "keywords": "Alice Lascelles, Blackberry, Bramble, Cocktails, Drinks, Gin, Gluten free, Indulgent, Party, Vegan",
+    "prepTime": "PT5M",
+    "totalTime": "PT5M",
+    "recipeYield": 1,
+    "nutrition": {
+      "calories": "222 calories",
+      "carbohydrateContent": "14 grams carbohydrates",
+      "sugarContent": "14 grams sugar",
+      "sodiumContent": "0.1 milligram of sodium"
+    },
+    "recipeCategory": "Cocktails, Drink",
+    "recipeIngredients": [
+      "50ml gin",
+      "25ml lemon juice",
+      "¾tbsp sugar syrup",
+      "ice cubes",
+      "crushed ice",
+      "¾tbsp crème de mure",
+      "1 lemon slice and a blackberry (if in season) to serve"
+    ],
+    "recipeInstructions": [
+      {
+        "text": "Shake the gin, lemon juice and sugar syrup in a cocktail shaker with a good handful of ice cubes then strain into a rocks glass full of crushed ice. Drizzle the crème de mure over the top so it ‘bleeds’ into the drink. Garnish with the lemon slice and blackberry, if using. 3 TWISTS Fresh fruit bramble This drink is one to make when the hedgerows are groaning with ripe fruit. Start by muddling 6 blackberries in a rocks glass. Add 50ml gin, 25ml lemon juice, 25ml sugar syrup and fill the glass two thirds full with crushed ice. Mix with a long-handled spoon. Top with more crushed ice, a garnish and paper straws. Bramble royale Go glam with your bramble by adding a splash of champagne to the mix. Just make the drink as normal but reduce the amount of crushed ice by about a third to leave room for the fizz. Then top with 25-50ml of champagne, mix gently, add a bit more crushed ice, garnish and serve. Peach sour The classic ‘sour’ formula that the bramble sticks to is easy to adapt by switching out the liqueur. Try 12.5ml of crème de peche instead of crème de mure – it might not look quite as eye-catching as the bloodshot bramble but it will taste just as delicious."
+      }
+    ],
+    "skillLevel": "Easy",
+    "forcedURL": "https://www.bbcgoodfood.com/recipes/wild-berry-bramble"
+  },
+  {
+    "name": "Vegan waffles",
+    "description": "Make these easy plant-based waffles for a weekend breakfast or brunch",
+    "image": [
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2022/09/Vegane-Waffeln-54dccb8.jpg?resize=768,697",
+        "width": 768,
+        "height": 697
+      },
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2022/09/Vegane-Waffeln-54dccb8.jpg?resize=1299,1179",
+        "width": 1299,
+        "height": 1179
+      }
+    ],
+    "url": "https://www.bbcgoodfood.com/recipes/vegan-waffles",
+    "keywords": "belgian waffles, Breakfast, content exchange, healthy vegan breakfast, Vegan",
+    "prepTime": "PT5M",
+    "cookTime": "PT30M",
+    "totalTime": "PT35M",
+    "recipeYield": "makes 10-12 waffles",
+    "nutrition": {
+      "calories": "280 calories",
+      "fatContent": "9 grams fat",
+      "saturatedFatContent": "5 grams saturated fat",
+      "carbohydrateContent": "43 grams carbohydrates",
+      "sugarContent": "11 grams sugar",
+      "fiberContent": "2 grams fiber",
+      "proteinContent": "5 grams protein",
+      "sodiumContent": "0.61 milligram of sodium"
+    },
+    "recipeCategory": "Breakfast, Brunch",
+    "recipeIngredients": [
+      "500g plain flour",
+      "2tbsp baking powder",
+      "125g vegan butter plus extra for the waffle iron",
+      "125g caster sugar",
+      "250ml soy milk"
+    ],
+    "recipeInstructions": [
+      {
+        "text": "Mix the flour and baking powder with ½ tsp salt in a bowl. Mix the vegan butter with the caster sugar in a separate bowl. Combine the soy milk with 175 ml water in a jug. Pour this gradually into the dry ingredients, continually stirring, then add the butter and sugar mixture and keep stirring to form a smooth batter. Add a little more water or soy milk if the mixture is very thick – you should be able to spoon it out.  Heat the waffle iron. Butter both sides of the waffle iron."
+      },
+      {
+        "text": "Spoon about 3 tbsp of the batter into the hot waffle iron, close and cook for 4-6 mins until golden brown (the time will vary depending on your waffle iron). Remove the finished waffle and cook the rest of the batter in the same way. The dough makes about 10-12 vegan waffles. Serve straightaway with your favourite toppings."
+      }
+    ],
+    "skillLevel": "Easy",
+    "forcedURL": "https://www.bbcgoodfood.com/recipes/oat-cinnamon-waffles"
+  }
+]
