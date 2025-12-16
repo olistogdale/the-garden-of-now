@@ -9,7 +9,7 @@ import pluralize from 'pluralize';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-import recipes from '../../seed-data/clean-data/clean-seed-data-mocks.json' with { type: 'json' };
+import recipes from '../../seed-data/clean-data/clean-seed-data-total-yield-edited.json' with { type: 'json' };
 import seasonalIngredients from '../../../ingredients-data/seed-data/clean-data/seasonal-ingredients.json' with { type: 'json'};
 import seasonalIngredientProducts from '../../../ingredients-data/seed-data/clean-data/seasonal-ingredient-products-nested.json' with { type: "json"};
 import seasonalIngredientFallbacks from '../../../ingredients-data/seed-data/clean-data/seasonal-ingredient-fallbacks.json' with { type: "json"};
@@ -82,23 +82,23 @@ ingredientNameFinalTokens   = [...ingredientNameFinalTokens].sort((a, b) => b.le
 
 pluralize.addIrregularRule('chilli', 'chillies')
 
-const numericQuantityT = String.raw`(?:(?:\d+[\/⁄]\d+|\d+\s+\d+[\/⁄]\d+|\d+(?:\.\d+)?))`;
-const articlesT = String.raw`(?:some|a few|few|a couple of|an|a)`
-const qualifiersT = String.raw`(?:about|around|roughly|half|half of|quarter|quarter of)`
-const metricUnitsT = String.raw`(?:centimet(?:er|re)s?|millilit(?:er|re)s?|centilit(?:er|re)s?|lit(?:er|re)s?|milligram(?:me)?s?|gram(?:me)?s?|kilogram(?:me)?s?|cm|mg|g|kg|ml|cl|l)`
-const imperialUnitsT = String.raw`(?:inch|in|oz|lbs?|fl oz|pts?|pints?|gallons?)`
-const modifiersT = String.raw`(?:large|small|medium|medium-sized?|big|little|thick|thin|slim|generous|good|tiny|healthy|normal|standard|heaped|flat|thumb-sized?)`
-const quantitiesT = String.raw`(?:tablespoons?|teaspoons?|tbsps?|tsps?|drops?|mugs?|cups?|bottles?|cans?|packs?|packets?|cartons?|tubs?|logs?|shots?|pots?|bowls?|bags?|slices?|rashers?|strips?|sticks?|pieces?|cubes?|slabs?|sheets?|squeezes?|squares?|balls?|rolls?|portions?|handfuls?|fistfuls?|fists?|dash(?:es)?|pinch(?:es)?|fingers?|bulbs?|heads?|stalks?|sprigs?|branch(?:es)?|splash(?:es)?|pouch(?:es)?|loa(?:f|ves)|lea(?:f|ves)|glass(?:es)?|knobs?|bunch(?:es)?|(?:jam )?jars?)`;
+const numericQuantity = String.raw`(?:(?:\d+[\/⁄]\d+|\d+\s+\d+[\/⁄]\d+|\d+(?:\.\d+)?))`;
+const articles = String.raw`(?:some|a few|few|a couple of|an|a)`
+const qualifiers = String.raw`(?:about|around|roughly|half|half of|quarter|quarter of)`
+const metricUnits = String.raw`(?:centimet(?:er|re)s?|millilit(?:er|re)s?|centilit(?:er|re)s?|lit(?:er|re)s?|milligram(?:me)?s?|gram(?:me)?s?|kilogram(?:me)?s?|cm|mg|g|kg|ml|cl|l)`
+const imperialUnits = String.raw`(?:inch|in|oz|lbs?|fl oz|pts?|pints?|gallons?)`
+const modifiers = String.raw`(?:(?:large|small|medium|medium-sized?|big|little|thick|thin|slim|generous|good|tiny|healthy|normal|standard|heaped|flat|thumb-sized?)(?!-))`
+const quantities = String.raw`(?:tablespoons?|teaspoons?|tbsps?|tsps?|drops?|mugs?|cups?|bottles?|cans?|packs?|packets?|cartons?|tubs?|logs?|shots?|pots?|bowls?|bags?|slices?|rashers?|strips?|sticks?|pieces?|cubes?|slabs?|sheets?|squeezes?|squares?|balls?|rolls?|portions?|handfuls?|fistfuls?|fists?|dash(?:es)?|pinch(?:es)?|fingers?|bulbs?|heads?|stalks?|sprigs?|branch(?:es)?|splash(?:es)?|pouch(?:es)?|loa(?:f|ves)|lea(?:f|ves)|glass(?:es)?|knobs?|bunch(?:es)?|(?:jam )?jars?)`;
 
-const numericRange = String.raw`(?:${numericQuantityT}(?:\s*-\s*${numericQuantityT})?)`
+const numericRange = String.raw`(?:${numericQuantity}(?:\s*-\s*${numericQuantity})?)`
 
 const quantityRegExp = new RegExp(
   String.raw`(?:` +
-  String.raw`(?:(?:(?:${qualifiersT}\s*)?(?:${articlesT}\s*)?|(?:${numericRange}\s*)(?:(?:x|×)\s*)?)?(?:${numericRange}\s*)(?:(?:${metricUnitsT}|${imperialUnitsT})\s*)(?:[\/⁄]\s*(?:${numericRange}\s*)(?:${imperialUnitsT}\s*))?(?:${quantitiesT}\s*)?)\b` +
+  String.raw`(?:(?:(?:${qualifiers}\s*)?(?:${articles}\s*)?|(?:${numericRange}\s*)(?:(?:x|×)\s*)?)?(?:${numericRange}\s*)(?:(?:${metricUnits}|${imperialUnits})\s*)(?:[\/⁄]\s*(?:${numericRange}\s*)(?:${imperialUnits}\s*))?(?:${quantities}\s*)?)\b` +
   String.raw`|` +
-  String.raw`(?:(?:${qualifiersT}\s*)?(?:(?:${numericRange}|${articlesT})\s*)(?:${modifiersT}\s*)?(?:${quantitiesT}\s*)?)\b` +
+  String.raw`(?:(?:${qualifiers}\s*)?(?:(?:${numericRange}|${articles})\s*)(?:${modifiers}\s*)?(?:${quantities}\s*)?)\b` +
   String.raw`|` +
-  String.raw`(?:${articlesT}\s*|(?:(?:${modifiersT}\s*)?${quantitiesT}\s*)|${modifiersT}\s*)\b` +
+  String.raw`(?:${articles}\s*|(?:(?:${modifiers}\s*)?${quantities}\s*)|${modifiers}\s*)\b` +
   String.raw`)`,
   'i'
 )
