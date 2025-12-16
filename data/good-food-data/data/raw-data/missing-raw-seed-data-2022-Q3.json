@@ -1,0 +1,103 @@
+[
+  {
+    "name": "Five-spice powder",
+    "description": "An ancient spice mix used in Chinese cooking that combines sweet cinnamon and cloves, fennel seeds and star anise, and tongue-tingling Sichuan pepper",
+    "image": [
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2013/06/five-spice-powder-e9bc374.jpg?resize=768,698",
+        "width": 768,
+        "height": 698
+      },
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2013/06/five-spice-powder-e9bc374.jpg?resize=1097,997",
+        "width": 1097,
+        "height": 997
+      }
+    ],
+    "url": "https://www.bbcgoodfood.com/recipes/five-spice-mix",
+    "keywords": " Josh Eagleton, 200 kcal or less, Asian, Asian cooking, Cassie Best, Chinese cooking, Chinese cuisine, Mains, Make ahead, Pre-mix spice, Quick, Spice blend, Spice mix, Stir-fries, Under 10 minutes",
+    "totalTime": "PT5M",
+    "recipeYield": "Makes 1 small jar",
+    "recipeCategory": "Condiment, Dinner",
+    "recipeIngredients": [
+      "2 tbsp cinnamon or 2 cinnamon sticks",
+      "1 tbsp fennel seed",
+      "6 star anise",
+      "2 tsp Sichuan peppercorn",
+      "1 tsp whole clove"
+    ],
+    "recipeInstructions": [
+      {
+        "text": "Toast the whole spices in a small pan until they are aromatic and have turned a shade or two darker. Don’t be tempted to skip this stage, as it really enhances the flavours."
+      },
+      {
+        "text": "Tip into a spice grinder (or use a pestle and mortar), then add the ready-ground spices and dried herbs if required, and crush to a fine powder. Store in a sealed jar for up to six months."
+      }
+    ],
+    "skillLevel": "Easy",
+    "forcedURL": "https://www.bbcgoodfood.com/recipes/five-spice-powder"
+  },
+  {
+    "name": "Pomegranate brisket",
+    "description": "Add the sour-sweet notes of pomegranate molasses to bring amazing depth of flavour to this slow-cooked beef dish. This is a popular dish at Jewish festivals",
+    "image": [
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2021/09/pomegranate-brisket-1da6477.jpg?resize=768,713",
+        "width": 768,
+        "height": 713
+      },
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2021/09/pomegranate-brisket-1da6477.jpg?resize=900,836",
+        "width": 900,
+        "height": 836
+      }
+    ],
+    "url": "https://www.bbcgoodfood.com/recipes/pomegranate-brisket",
+    "keywords": "Beef brisket, Pomegranate, Pomegranate molasses, Sabbath",
+    "prepTime": "PT30M",
+    "cookTime": "PT3H",
+    "totalTime": "PT3H30M",
+    "recipeYield": "Serves 4 -6 ",
+    "nutrition": {
+      "calories": "612 calories",
+      "fatContent": "34 grams fat",
+      "saturatedFatContent": "10 grams saturated fat",
+      "carbohydrateContent": "19 grams carbohydrates",
+      "sugarContent": "16 grams sugar",
+      "fiberContent": "3 grams fiber",
+      "proteinContent": "56 grams protein",
+      "sodiumContent": "1.4 milligram of sodium"
+    },
+    "recipeCategory": "Dinner",
+    "recipeIngredients": [
+      "beef brisket (if rolled, unroll it)",
+      "red onions finely sliced",
+      "½ pomegranate seeds only",
+      "cooked giant couscous tossed through with 10g coriander leaves, a little urfa chilli, sliced cucumber and lemon zest (optional), to serve",
+      "120ml pomegranate molasses",
+      "60ml olive oil",
+      "2 tsp ras el hanout",
+      "4 garlic cloves finely chopped",
+      "1 tsp urfa chilli flakes"
+    ],
+    "recipeInstructions": [
+      {
+        "text": "Mix the marinade ingredients in a small bowl with ¾ tsp fine salt. Put the beef in a large, ovenproof dish. Pour half the marinade over the beef and spread evenly, then turn it over and pour the rest over the meat over the meat to coat. Cover and chill overnight."
+      },
+      {
+        "text": "Remove the meat from the fridge up to 1 hr before cooking to come up to room temperature. If it’s a hot day, you can reduce that to 30 mins. Heat the oven to 240C/220C fan/gas 9."
+      },
+      {
+        "text": "Turn the meat in the marinade to make sure it is well coated, leaving the fatty layer on the top. Put half the sliced onions underneath the meat and spread the rest over the top. Cover the dish loosely with foil, making sure it is properly covered."
+      },
+      {
+        "text": "Roast for 15 mins, then turn the oven down to 170C/150C fan/gas 3 and cook for a further 2 hrs 30 mins-3 hrs. Check it to see how tender it is – a fork should go in and come out easily and the meat should flake well, if not, put back in the oven for another 30 mins."
+      },
+      {
+        "text": "Rest the brisket for 15 mins, still covered with foil, then transfer to a board. Decorate with the pomegranate seeds. Serve with the giant couscous, if you like, or shred with two forks, then spoon over some of the pomegranate sauce, then serve with pitta bread and dips of your choice."
+      }
+    ],
+    "skillLevel": "Easy",
+    "forcedURL": "https://www.bbcgoodfood.com/recipes/pomegranate-brisket-2"
+  }
+]

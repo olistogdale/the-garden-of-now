@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Quick and easy fish stew",
+    "description": "This simple, speedy and healthy one-pot is packed with white fish fillets, king prawns, a rich tomato sauce and enough veg to count for 3 of your 5-a-day",
+    "image": [
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/simple-fish-stew-1d0b259.jpg?resize=440,400",
+        "width": 440,
+        "height": 400
+      }
+    ],
+    "url": "https://www.bbcgoodfood.com/recipes/simple-fish-stew",
+    "keywords": "3 of 5-a-day, Cod, Fibre, Fish stew, Folate, goodhealth, Haddock, healthy dinner ideas, healthy fish recipe, Pollack, Pollock, Quick healthy dinner, Sara Buenfeld, Spring, Vit C, Vitamin c, White fish",
+    "prepTime": "PT10M",
+    "cookTime": "PT25M",
+    "totalTime": "PT35M",
+    "recipeYield": 2,
+    "nutrition": {
+      "calories": "346 calories",
+      "fatContent": "8 grams fat",
+      "saturatedFatContent": "1 grams saturated fat",
+      "carbohydrateContent": "20 grams carbohydrates",
+      "sugarContent": "17 grams sugar",
+      "fiberContent": "11 grams fiber",
+      "proteinContent": "42 grams protein",
+      "sodiumContent": "1.7 milligram of sodium"
+    },
+    "recipeCategory": "Dinner, Fish Course, Lunch, Main course, Supper",
+    "recipeIngredients": [
+      "1 tbsp olive oil",
+      "1 tsp fennel seeds",
+      "2 carrots diced",
+      "2 celery sticks, diced",
+      "2 garlic cloves finely chopped",
+      "2 leeks thinly sliced",
+      "400g can chopped tomatoes",
+      "500ml hot fish stock heated to a simmer",
+      "2 skinless pollock fillets (about 200g), thawed if frozen, and cut into chunks",
+      "85g raw shelled king prawns"
+    ],
+    "recipeInstructions": [
+      {
+        "text": "Heat the oil in a large pan, add the fennel seeds, carrots, celery and garlic, and cook for 5 mins until starting to soften. Tip in the leeks, tomatoes and stock, season and bring to the boil, then cover and simmer for 15-20 mins until the vegetables are tender and the sauce has thickened and reduced slightly."
+      },
+      {
+        "text": "Add the fish, scatter over the prawns and cook for 2 mins more until lightly cooked. Ladle into bowls and serve with a spoon."
+      }
+    ],
+    "skillLevel": "Easy",
+    "forcedURL": "https://www.bbcgoodfood.com/recipes/flying-fish-red-pepper-sauce-cou-cou"
+  }
+]

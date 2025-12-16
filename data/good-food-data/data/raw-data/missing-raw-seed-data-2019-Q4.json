@@ -1,0 +1,49 @@
+[
+  {
+    "name": "Pink negroni",
+    "description": "Celebrate Valentine's Day on 14 February with a pink negroni, a brilliant blush-hued cocktail made with pink gin, Aperol and sweet white vermouth",
+    "image": [
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2023/01/Pink-negroni-3221e1e.jpg?resize=768,713",
+        "width": 768,
+        "height": 713
+      },
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2023/01/Pink-negroni-3221e1e.jpg?resize=900,836",
+        "width": 900,
+        "height": 836
+      }
+    ],
+    "url": "https://www.bbcgoodfood.com/recipes/pink-negroni-2",
+    "keywords": "Aperol, Cocktails, negroni, pink gin, sweet white vermouth",
+    "prepTime": "PT5M",
+    "totalTime": "PT5M",
+    "recipeYield": 1,
+    "nutrition": {
+      "calories": "140 calories",
+      "carbohydrateContent": "9 grams carbohydrates",
+      "sugarContent": "8 grams sugar",
+      "fiberContent": "0.2 grams fiber",
+      "proteinContent": "0.1 grams protein",
+      "sodiumContent": "0.02 milligram of sodium"
+    },
+    "recipeCategory": "Cocktails, Drink",
+    "recipeIngredients": [
+      "35ml pink gin",
+      "25ml rose or sweet white vermouth",
+      "15ml Aperol",
+      "ice",
+      "1 grapefruit or lemon wedge, and 1 basil leaf, to garnish"
+    ],
+    "recipeInstructions": [
+      {
+        "text": "Combine the gin, vermouth and Aperol in a tumbler along with a small handful of ice. Stir until the outside of the glass feels cold."
+      },
+      {
+        "text": "Garnish with a grapefruit or lemon wedge, and a basil leaf, if you like."
+      }
+    ],
+    "skillLevel": "Easy",
+    "forcedURL": "https://www.bbcgoodfood.com/recipes/pink-negroni"
+  }
+]

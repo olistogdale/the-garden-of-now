@@ -1,0 +1,2150 @@
+{
+  "fish": [
+    {
+      "name": "bream",
+      "seasonality": [
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "brill",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "cod",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "coley",
+      "seasonality": [
+        "january",
+        "february",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "dab",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june"
+      ]
+    },
+    {
+      "name": "dover sole",
+      "seasonality": [
+        "january",
+        "february",
+        "may",
+        "june",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "flounder",
+      "seasonality": [
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november"
+      ]
+    },
+    {
+      "name": "grey mullet",
+      "seasonality": [
+        "july",
+        "august",
+        "september",
+        "october",
+        "november"
+      ]
+    },
+    {
+      "name": "gurnard",
+      "seasonality": [
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "december"
+      ]
+    },
+    {
+      "name": "haddock",
+      "seasonality": [
+        "january",
+        "february",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "hake",
+      "seasonality": [
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "halibut",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "herring",
+      "seasonality": [
+        "january",
+        "february",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "john dory",
+      "seasonality": [
+        "april",
+        "may",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "lemon sole",
+      "seasonality": [
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "mackerel",
+      "seasonality": [
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november"
+      ]
+    },
+    {
+      "name": "megrim sole",
+      "seasonality": [
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"      
+      ]
+    },
+    {
+      "name": "monkfish",
+      "seasonality": [
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "pilchard",
+      "seasonality": [
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "plaice",
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "pollock",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "pouting",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "red mullet",
+      "seasonality": [
+        "january",
+        "february",
+        "september",
+        "october",
+        "november"
+      ]
+    },
+    {
+      "name": "salmon",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "sand sole",
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "sardine",
+      "seasonality": [
+        "january",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "sea bass",
+      "seasonality": [
+        "january",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "skate",
+      "xames": [
+        "ray"
+      ],
+      "seasonality": [
+        "january",
+        "february",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "sprat",
+      "seasonality": [
+        "february",
+        "march",
+        "april"
+      ]
+    },
+    {
+      "name": "trout",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "tuna",
+      "seasonality": [
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "turbot",
+      "seasonality": [
+        "april",
+        "may",
+        "june",
+        "september",
+        "october",
+        "november"
+      ]
+    },
+    {
+      "name": "whiting",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    }
+  ],
+  "fruit": [
+    {
+      "name": "apple",
+      "seasonality": [
+        "august",
+        "september",
+        "october",
+        "november",
+        "december",
+        "january"
+      ]
+    },
+    {
+      "name": "bilberry",
+      "seasonality": [
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november"
+      ]
+    },
+    {
+      "name": "blackberry",
+      "seasonality": [
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "blueberry",
+      "seasonality": [
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "cherry",
+      "seasonality": [
+        "july",
+        "august"
+      ]
+    },
+    {
+      "name": "damson",
+      "seasonality": [
+        "august",
+        "september"
+      ]
+    },
+    {
+      "name": "elderberry",
+      "seasonality": [
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "gooseberry",
+      "seasonality": [
+        "june",
+        "july"
+      ]
+    },
+    {
+      "name": "greengage",
+      "seasonality": [
+        "august",
+        "september"
+      ]
+    },
+    {
+      "name": "loganberry",
+      "seasonality": [
+        "july",
+        "august"
+      ]
+    },
+    {
+      "name": "medlar",
+      "seasonality": [
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "pear",
+      "seasonality": [
+        "january",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "plum",
+      "seasonality": [
+        "august",
+        "september"
+      ]
+    },
+    {
+      "name": "quince",
+      "seasonality": [
+        "october",
+        "november",
+        "december",
+        "january"
+      ]
+    },
+    {
+      "name": "raspberry",
+      "seasonality": [
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "redcurrant",
+      "seasonality": [
+        "june",
+        "july",
+        "august"
+      ]
+    },
+    {
+      "name": "rhubarb",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september"
+      ]
+    },
+    {
+      "name": "strawberry",
+      "seasonality": [
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    }
+  ],
+  "herbs": [
+    {
+      "name": "basil",
+      "altNames": [
+        "basil leaf"
+      ],
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "bay",
+      "altNames": [
+        "bay leaf"
+      ],
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "chervil",
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "chive",
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "coriander",
+      "altNames": [
+        "coriander leaf"
+      ],
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "dill",
+      "altNames": [
+        "dill leaf"
+      ],
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "elderflower",
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august"
+      ]
+    },
+    {
+      "name": "marjoram",
+      "altNames": [
+        "marjoram sprig",
+        "marjoram leaf"
+      ],
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "mint",
+      "altNames": [
+        "mint leaf"
+      ],
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "nasturtium",
+      "altNames": [
+        "nasturtium leaf"
+      ],
+      "seasonality": [
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "oregano",
+      "altNames": [
+        "oregano sprig",
+        "oregano leaf"
+      ],
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "flat-leaf parsley",
+      "altNames": [
+        "parsley",
+        "flat-leaf parsley leaf",
+        "parsley leaf"
+      ],
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "curly parsley",
+      "altNames": [
+        "curly parsley leaf"
+      ],
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "rosemary",
+      "altNames": [
+        "rosemary sprig",
+        "rosemary leaf"
+      ],
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "sage",
+      "altNames": [
+        "sage leaf"
+      ],
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "sorrel",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "tarragon",
+      "altNames": [
+        "tarragon leaf"
+      ],
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september"
+      ]
+    },
+    {
+      "name": "thyme",
+      "altNames": [
+        "thyme sprig",
+        "thyme leaf"
+      ],
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    }
+  ],
+  "meat": [
+    {
+      "name": "beef",
+      "altNames": [
+        "ox"
+      ],
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "goat",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "hare",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "hogget",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "lamb",
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "mutton",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "pork",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "rabbit",
+      "seasonality": [
+        "january",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "veal",
+      "altNames": [
+        "calf"
+      ],
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "venison",
+      "seasonality": [
+        "january",
+        "february",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    }
+  ],
+  "nuts": [
+    {
+      "name": "chestnut",
+      "seasonality": [
+        "january",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "cob nut",
+      "seasonality": [
+        "august",
+        "september",
+        "october",
+        "november"
+      ]
+    },
+    {
+      "name": "hazelnut",
+      "seasonality": [
+        "august",
+        "september",
+        "october",
+        "november"
+      ]
+    },
+    {
+      "name": "walnut",
+      "seasonality": [
+        "september",
+        "october",
+        "november"
+      ]
+    }
+  ],
+  "poultry": [
+    {
+      "name": "chicken",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "duck",
+      "seasonality": [
+        "january",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "goose",
+      "seasonality": [
+        "january",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "grouse",
+      "seasonality": [
+        "january",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "guinea fowl",
+      "seasonality": [
+        "january",
+        "february",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "partridge",
+      "seasonality": [
+        "january",
+        "february",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "pheasant",
+      "seasonality": [
+        "january",
+        "february",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "pigeon",
+      "seasonality": [
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november"
+      ]
+    },
+    {
+      "name": "quail",
+      "seasonality": [
+        "june",
+        "july",
+        "august",
+        "september"
+      ]
+    },
+    {
+      "name": "turkey",
+      "seasonality": [
+        "january",
+        "february",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    }
+  ],
+  "shellfish": [
+    {
+      "name": "clam",
+      "seasonality": [
+        "march",
+        "april",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "cockle",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "crab",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "cuttlefish",
+      "seasonality": [
+        "january",
+        "february",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "december"
+      ]
+    },
+    {
+      "name": "langoustine",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "lobster",
+      "seasonality": [
+        "june",
+        "july",
+        "august",
+        "september"
+      ]
+    },
+    {
+      "name": "mussel",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "octopus",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "oyster",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "atlantic prawn",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "scallop",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november"
+      ]
+    },
+    {
+      "name": "shrimp",
+      "seasonality": [
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november"
+      ]
+    },
+    {
+      "name": "squid",
+      "seasonality": [
+        "january",
+        "february",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "whelk",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august"
+      ]
+    },
+    {
+      "name": "winkle",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    }
+  ],
+  "vegetables": [
+    {
+      "name": "artichoke",
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november"
+      ]
+    },
+    {
+      "name": "asparagus",
+      "seasonality": [
+        "april",
+        "may",
+        "june"
+      ]
+    },
+    {
+      "name": "aubergine",
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "bean sprout",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "beetroot",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "bell pepper",
+      "altNames": [
+        "red pepper",
+        "green pepper",
+        "yellow pepper",
+        "orange pepper"
+      ],
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september"
+      ]
+    },
+    {
+      "name": "broad bean",
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september"
+      ]
+    },
+    {
+      "name": "broccoli",
+      "altNames": [
+        "tenderstem broccoli"
+      ],
+      "seasonality": [
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "brussels sprout",
+      "seasonality": [
+        "january",
+        "february",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "cabbage",
+      "altNames": [
+        "white cabbage",
+        "savoy cabbage",
+        "red cabbage",
+        "spring green cabbage"
+      ],
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "carrot",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "cauliflower",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "cavolo nero",
+      "seasonality": [
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "celeriac",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "celery",
+      "altNames": [
+        "celery stick"
+      ],
+      "seasonality": [
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november"
+      ]
+    },
+    {
+      "name": "chard",
+      "seasnsality": [
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september"
+      ]
+    },
+    {
+      "name": "courgette",
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september"
+      ]
+    },
+    {
+      "name": "cress",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "cucumber",
+      "seasonality": [
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "fennel",
+      "seasonality": [
+        "july",
+        "august",
+        "september"
+      ]
+    },
+    {
+      "name": "french bean",
+      "altNames": [
+        "haricots vert",
+        "fine bean"
+      ],
+      "seasonality": [
+        "june",
+        "july",
+        "august",
+        "september"
+      ]
+    },
+    {
+      "name": "hispi cabbage",
+      "seasonality": [
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "horseradish",
+      "seasonality": [
+        "january",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "jerusalem artichoke",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "kale",
+      "altNames": [
+        "curly kale"
+      ],
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "kohlrabi",
+      "seasonality": [
+        "january",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "leek",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "lettuce",
+      "altNames":[
+        "iceberg lettuce",
+        "cos lettuce",
+        "little gem lettuce",
+        "lamb's lettuce"
+      ],
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "marrow",
+      "seasonality": [
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "mushroom",
+      "altNames": [
+        "portobello mushroom",
+        "shiitake mushroom",
+        "cup mushroom",
+        "oyster mushroom",
+        "button mushroom",
+        "chestnut mushroom",
+        "field mushroom",
+        "cep mushroom",
+        "wild mushroom"
+      ],
+      "seasonality": [
+        "january",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "new potato",
+      "altNames": [
+        "jersey royal"
+      ],
+      "seasonality": [
+        "april",
+        "may",
+        "june",
+        "july"
+      ]
+    },
+    {
+      "name": "onion",
+      "altNames": [
+        "white onion",
+        "brown onion",
+        "red onion"
+      ],
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "pak choi",
+      "altNames": [
+        "bok choi"
+      ],
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september"
+      ]
+    },
+    {
+      "name": "parsnip",
+      "seasonality": [
+        "january",
+        "february",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "pea",
+      "altNames":[
+        "petit pois"
+      ],
+      "seasonality": [
+        "may",
+        "june",
+        "july",
+        "august",
+        "september"
+      ]
+    },
+    {
+      "name": "pea shoot",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "potato",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "pumpkin",
+      "seasonality": [
+        "september",
+        "october",
+        "november"
+      ]
+    },
+    {
+      "name": "purple sprouting",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "radish",
+      "seasonality": [
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "radicchio",
+      "seasonality": [
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "rocket",
+      "seasonality": [
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "romanesco",
+      "altNames": [
+        "romanesque"
+      ],
+      "seasonality": [
+        "july",
+        "august",
+        "september"
+      ]
+    },
+    {
+      "name": "runner bean",
+      "seasonality": [
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "salad leaf",
+      "altNames": [
+        "endive",
+        "frise"
+      ],
+      "seasonality": [
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "salsify",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "samphire",
+      "seasonality": [
+        "april",
+        "may",
+        "june",
+        "july",
+        "august"
+      ]
+    },
+    {
+      "name": "shallot",
+      "seasonality": [
+        "january",
+        "february",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "spinach",
+      "seasonality": [
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "spring onion",
+      "seasonality": [
+        "march",
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september"
+      ]
+    },
+    {
+      "name": "squash",
+      "altNames": [
+        "butternut squash"
+      ],
+      "seasonality": [
+        "september",
+        "october",
+        "november"
+      ]
+    },
+    {
+      "name": "sugar snap",
+      "altNames": [
+        "mangetout"
+      ],
+      "seasonality": [
+        "june",
+        "july",
+        "august",
+        "september"
+      ]
+    },
+    {
+      "name": "swede",
+      "seasonality": [
+        "january",
+        "february",
+        "march",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "sweetcorn",
+      "altNames": [
+        "corn",
+        "maize",
+        "corn on the cob"
+      ],
+      "seasonality": [
+        "july",
+        "august",
+        "september"
+      ]
+    },
+    {
+      "name": "tomato",
+      "altNames":[
+        "cherry tomato",
+        "plum tomato",
+        "beef tomato",
+        "piccolo tomato",
+        "heritage tomato",
+        "heirloom tomato",
+        "vine tomato"
+      ],
+      "seasonality": [
+        "april",
+        "may",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "truffle",
+      "altNames": [
+        "white truffle",
+        "black truffle"
+      ],
+      "seasonality": [
+        "january",
+        "february",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "turnip",
+      "seasonality": [
+        "january",
+        "february",
+        "june",
+        "july",
+        "august",
+        "september",
+        "october",
+        "november",
+        "december"
+      ]
+    },
+    {
+      "name": "watercress",
+      "seasonality": [
+        "june",
+        "july",
+        "august",
+        "september",
+        "october"
+      ]
+    },
+    {
+      "name": "wild garlic",
+      "seasonality": [
+        "march",
+        "april",
+        "may"
+      ]
+    },
+    {
+      "name": "wild nettle",
+      "seasonality": [
+        "march",
+        "april",
+        "may",
+        "june",
+        "july"
+      ]
+    }
+  ]
+}
