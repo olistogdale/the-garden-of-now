@@ -1,0 +1,69 @@
+[
+  {
+    "name": "Easy chocolate tart",
+    "description": "Perfect for a dinner party, this vegan tart has a crunchy digestive base and creamy chocolate filling made with coconut milk",
+    "image": [
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2022/04/Vegan-choc-tart-565cf6d.jpg?resize=768,713",
+        "width": 768,
+        "height": 713
+      },
+      {
+        "url": "https://images.immediate.co.uk/production/volatile/sites/30/2022/04/Vegan-choc-tart-565cf6d.jpg?resize=900,836",
+        "width": 900,
+        "height": 836
+      }
+    ],
+    "url": "https://www.bbcgoodfood.com/recipes/easy-chocolate-tart",
+    "keywords": "Chocolate, Chocolate tart, Digestive biscuits, Tart, vegan desserts",
+    "prepTime": "PT25M",
+    "cookTime": "PT10M",
+    "totalTime": "PT35M",
+    "recipeYield": "Serves 12-14 ",
+    "nutrition": {
+      "calories": "381 calories",
+      "fatContent": "28 grams fat",
+      "saturatedFatContent": "18 grams saturated fat",
+      "carbohydrateContent": "26 grams carbohydrates",
+      "sugarContent": "11 grams sugar",
+      "fiberContent": "3 grams fiber",
+      "proteinContent": "4 grams protein",
+      "sodiumContent": "0.5 milligram of sodium"
+    },
+    "recipeCategory": "Dessert",
+    "recipeIngredients": [
+      "350g digestive biscuits",
+      "2 tbsp cocoa powder",
+      "1 tbsp plain flour",
+      "1 tbsp golden syrup",
+      "125-175g  vegan margarine or butter, plus extra for the tin",
+      "2 x 400g cans coconut milk chilled",
+      "200g dark chocolate",
+      "1 tbsp golden syrup",
+      "edible silver or gold glitter spray",
+      "raspberries"
+    ],
+    "recipeInstructions": [
+      {
+        "text": "Heat the oven to 200C/180C fan/gas 6. Crush the biscuits to crumbs in a bowl using the end of a rolling pin or by pulsing in a food processor. Mix in the cocoa powder, flour, syrup and enough vegan margarine or butter to create a dough. Butter a 23cm loose bottom tart tin and press the mixture into the tin."
+      },
+      {
+        "text": "Bake in the oven for 10-12 mins, then leave to cool in the tin."
+      },
+      {
+        "text": "Meanwhile, make the filling. Open the cans of coconut milk which will have separated with the water at the top and the thick coconut at the bottom. Discard the water (or use it to make a smoothie) and tip the thick coconut into a bowl."
+      },
+      {
+        "text": "Break the dark chocolate into pieces and melt in the microwave on high in 10-second bursts, stirring in between, or in a heatproof bowl set over a pan of simmering water until smooth. Add the coconut along with the golden syrup and whisk together, beating hard until there are no lumps of coconut left."
+      },
+      {
+        "text": "Pour the filling over the base of the tart and put in the fridge to set for 3-4 hrs, or overnight."
+      },
+      {
+        "text": "Spray the tart with edible silver or gold glitter spray, if you like, and serve with raspberries. Will keep in the fridge for three days – it actually tastes even better one or two days after baking."
+      }
+    ],
+    "skillLevel": "Easy",
+    "forcedURL": "https://www.bbcgoodfood.com/recipes/vegan-chocolate-tart"
+  }
+]
