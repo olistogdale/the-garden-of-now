@@ -9,11 +9,11 @@ import pluralize from 'pluralize';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-import recipes from '../../seed-data/clean-data/clean-seed-data-total-yield-edited.json' with { type: 'json' };
-import seasonalIngredients from '../../../ingredients-data/seed-data/clean-data/seasonal-ingredients.json' with { type: 'json'};
-import seasonalIngredientProducts from '../../../ingredients-data/seed-data/clean-data/seasonal-ingredient-products-nested.json' with { type: "json"};
-import seasonalIngredientFallbacks from '../../../ingredients-data/seed-data/clean-data/seasonal-ingredient-fallbacks.json' with { type: "json"};
-import nonSeasonalIngredients from '../../../ingredients-data/seed-data/clean-data/non-seasonal-ingredients.json' with { type: "json"};
+import recipes from '../../data/clean-data/clean-seed-data-total-yield-edited.json' with { type: 'json' };
+import seasonalIngredients from '../../../ingredients/data/clean-data/seasonal-ingredients.json' with { type: 'json'};
+import seasonalIngredientProducts from '../../../ingredients/data/clean-data/seasonal-ingredient-products-nested.json' with { type: "json"};
+import seasonalIngredientFallbacks from '../../../ingredients/data/clean-data/seasonal-ingredient-fallbacks.json' with { type: "json"};
+import nonSeasonalIngredients from '../../../ingredients/data/clean-data/non-seasonal-ingredients.json' with { type: "json"};
 
 let seasonalIngredientNames = [];
 
@@ -423,14 +423,15 @@ function extractRawIngredients(input) {
   return rawIngredients;
 }
 
-const parsedRecipes = recipes.flatMap((recipe) => {
+const parsedRecipes = recipes.map((recipe) => {
   try {
-    const parsedRecipeIngredients = recipe.ingredients.map((ingredientLine) => {
+    let parsedRecipeIngredients = recipe.ingredients.map((ingredientLine) => {
       if (optionalRegExp.test(ingredientLine) && !ingredientLine.includes('plus')) {
-        return {
+        let parsedIngredientObject = {
           text: cleanIngredientLine(ingredientLine, true),
           optional: true
         }
+        return parsedIngredientObject
       } else {
         const text = cleanIngredientLine(ingredientLine, false);
         const ingredientOptions = splitIngredientOptions(text);
@@ -466,22 +467,18 @@ const parsedRecipes = recipes.flatMap((recipe) => {
         }
       }
     });
-
-    if (parsedRecipeIngredients.includes(null)) {
-      return [];
-    } else {
-      return [
-        {
-          ...recipe,
-          ingredients: parsedRecipeIngredients  
-        }
-      ]
+    const parsedRecipe = {
+      ...recipe,
+      ingredients: parsedRecipeIngredients
+    }
+    if (!parsedRecipe.ingredients.includes(null)) {
+      console.log(recipe.name)
+      return parsedRecipe;
     }
   } catch (err) {
     console.log(recipe.name, 'ERROR -', err)
-    return [];
   }
 });
 
-const outputPath = path.join(__dirname, '../../seed-data/clean-data/clean-seed-data-total-yield-ingredients-edited.json');
+const outputPath = path.join(__dirname, '../../data/clean-data/clean-seed-data-total-yield-ingredients-edited.json');
 fs.writeFileSync(outputPath, JSON.stringify(parsedRecipes, null, 2), 'utf8')
