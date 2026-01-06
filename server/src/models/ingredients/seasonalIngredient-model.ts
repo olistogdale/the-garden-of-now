@@ -2,7 +2,7 @@
 
 import {mongoose} from '../../database/db';
 
-import type {SeasonalIngredient, SeasonalIngredientDatabase} from '../../../../data/ingredients/types/ingredientTypes';
+import type {SeasonalIngredient, SeasonalIngredientCollection} from '../../../../data/ingredients/types/ingredientTypes';
 
 const {Schema, model} = mongoose;
 
@@ -19,7 +19,7 @@ const SeasonalIngredientSchema = new Schema <SeasonalIngredient> (
   }
 );
 
-const SeasonalIngredientDatabaseSchema = new Schema <SeasonalIngredientDatabase> (
+const SeasonalIngredientCollectionSchema = new Schema <SeasonalIngredientCollection> (
   {
     fish: { type: [SeasonalIngredientSchema], default: [] },
     fruit: { type: [SeasonalIngredientSchema], default: [] },
@@ -29,11 +29,8 @@ const SeasonalIngredientDatabaseSchema = new Schema <SeasonalIngredientDatabase>
     poultry: { type: [SeasonalIngredientSchema], default: [] },
     shellfish: { type: [SeasonalIngredientSchema], default: [] },
     vegetables: { type: [SeasonalIngredientSchema], default: [] }
-  },
-  {
-    collection: 'seasonalIngredients'
   }
 );
 
-export const seasonalIngredients = model('seasonalIngredients', SeasonalIngredientDatabaseSchema);
+export const seasonalIngredientModel = model('SeasonalIngredient', SeasonalIngredientCollectionSchema);
 
