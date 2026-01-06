@@ -1,10 +1,10 @@
 'use strict';
 
-import {mongoose} from '../../database/db';
+import { mongoose } from '../../database/db';
 
-import type {SeasonalIngredient, SeasonalIngredientCollection} from '../../../../data/ingredients/types/ingredientTypes';
+import type { SeasonalIngredient, SeasonalIngredientCollection } from '../../../../data/ingredients/types/ingredientTypes';
 
-const {Schema, model} = mongoose;
+const { Schema, model } = mongoose;
 
 const MONTHS = [
   'january','february','march','april','may','june',

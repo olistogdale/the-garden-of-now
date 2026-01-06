@@ -6,41 +6,41 @@ import type { NonSeasonalIngredient, NonSeasonalIngredientCollection } from '../
 
 const { Schema, model } = mongoose;
 
-const nonSeasonalIngredientSchema = new Schema <NonSeasonalIngredient> (
+const NonSeasonalIngredientSchema = new Schema <NonSeasonalIngredient> (
   {
     name: { type: String, required: true, trim: true },
     altNames: { type: [String] , default: undefined },
   }
 );
 
-const nonSeasonalIngredientCollectionSchema = new Schema <NonSeasonalIngredientCollection> (
+const NonSeasonalIngredientCollectionSchema = new Schema <NonSeasonalIngredientCollection> (
   {
-    curedMeat: { type:[nonSeasonalIngredientSchema], default: [] },
-    curedFish: { type:[nonSeasonalIngredientSchema], default: [] },
-    cheese: { type:[nonSeasonalIngredientSchema], default: [] },
-    oil: { type:[nonSeasonalIngredientSchema], default: [] },
-    vinegar: { type:[nonSeasonalIngredientSchema], default: [] },
-    condiments: { type:[nonSeasonalIngredientSchema], default: [] },
-    herbsAndSpices: { type:[nonSeasonalIngredientSchema], default: [] },
-    stocksAndGravies: { type:[nonSeasonalIngredientSchema], default: [] },
-    cannedVegetables: { type:[nonSeasonalIngredientSchema], default: [] },
-    noodles: { type:[nonSeasonalIngredientSchema], default: [] },
-    nuts: { type:[nonSeasonalIngredientSchema], default: [] },
-    grains: { type:[nonSeasonalIngredientSchema], default: [] },
-    pulses: { type:[nonSeasonalIngredientSchema], default: [] },
-    breads: { type:[nonSeasonalIngredientSchema], default: [] },
-    biscuits: { type:[nonSeasonalIngredientSchema], default: [] },
-    crisps: { type:[nonSeasonalIngredientSchema], default: [] },
-    dairy: { type:[nonSeasonalIngredientSchema], default: [] },
-    eggs: { type:[nonSeasonalIngredientSchema], default: [] },
-    baking: { type:[nonSeasonalIngredientSchema], default: [] },
-    spreads: { type:[nonSeasonalIngredientSchema], default: [] },
-    teaAndCoffee: { type:[nonSeasonalIngredientSchema], default: [] },
-    confectionery: { type:[nonSeasonalIngredientSchema], default: [] },
-    alcohol: { type:[nonSeasonalIngredientSchema], default: [] },
-    juice: { type:[nonSeasonalIngredientSchema], default: [] },
-    water: { type:[nonSeasonalIngredientSchema], default: [] }
+    curedMeat: { type:[NonSeasonalIngredientSchema], default: [] },
+    curedFish: { type:[NonSeasonalIngredientSchema], default: [] },
+    cheese: { type:[NonSeasonalIngredientSchema], default: [] },
+    oil: { type:[NonSeasonalIngredientSchema], default: [] },
+    vinegar: { type:[NonSeasonalIngredientSchema], default: [] },
+    condiments: { type:[NonSeasonalIngredientSchema], default: [] },
+    herbsAndSpices: { type:[NonSeasonalIngredientSchema], default: [] },
+    stocksAndGravies: { type:[NonSeasonalIngredientSchema], default: [] },
+    cannedVegetables: { type:[NonSeasonalIngredientSchema], default: [] },
+    noodles: { type:[NonSeasonalIngredientSchema], default: [] },
+    nuts: { type:[NonSeasonalIngredientSchema], default: [] },
+    grains: { type:[NonSeasonalIngredientSchema], default: [] },
+    pulses: { type:[NonSeasonalIngredientSchema], default: [] },
+    breads: { type:[NonSeasonalIngredientSchema], default: [] },
+    biscuits: { type:[NonSeasonalIngredientSchema], default: [] },
+    crisps: { type:[NonSeasonalIngredientSchema], default: [] },
+    dairy: { type:[NonSeasonalIngredientSchema], default: [] },
+    eggs: { type:[NonSeasonalIngredientSchema], default: [] },
+    baking: { type:[NonSeasonalIngredientSchema], default: [] },
+    spreads: { type:[NonSeasonalIngredientSchema], default: [] },
+    teaAndCoffee: { type:[NonSeasonalIngredientSchema], default: [] },
+    confectionery: { type:[NonSeasonalIngredientSchema], default: [] },
+    alcohol: { type:[NonSeasonalIngredientSchema], default: [] },
+    juice: { type:[NonSeasonalIngredientSchema], default: [] },
+    water: { type:[NonSeasonalIngredientSchema], default: [] }
   }
 );
 
-export const nonSeasonalIngredientModel = model('NonSeasonalIngredient', nonSeasonalIngredientCollectionSchema);
+export const nonSeasonalIngredientModel = model('NonSeasonalIngredient', NonSeasonalIngredientCollectionSchema);
