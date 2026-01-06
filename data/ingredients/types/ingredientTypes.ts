@@ -16,7 +16,7 @@ export type SeasonalIngredientCategories =
   | "shellfish"
   | "vegetables"
 
-export type SeasonalIngredientDatabase = {
+export type SeasonalIngredientCollection = {
   [category in SeasonalIngredientCategories]: SeasonalIngredient[]
 }
 
@@ -32,7 +32,7 @@ export type SeasonalIngredientProductCategories =
   | "poultry"
   | "shellfish"
 
-export type SeasonalIngredientProductDatabase = {
+export type SeasonalIngredientProductCollection = {
   [category in SeasonalIngredientProductCategories]: SeasonalIngredientProduct[]
 }
 
@@ -47,7 +47,7 @@ export type SeasonalIngredientFallback = {
   fallbackType: FallbackType
 }
 
-export type SeasonalIngredientFallbackDatabase = SeasonalIngredientFallback[]
+export type SeasonalIngredientFallbackCollection = SeasonalIngredientFallback[]
 
 export type NonSeasonalIngredient = {
   name: string,
@@ -81,6 +81,6 @@ export type NonSeasonalIngredientCategories =
   | "juice"
   | "water"
 
-export type NonSeasonalIngredientDatabase = {
+export type NonSeasonalIngredientCollection = {
   [category in NonSeasonalIngredientCategories]: NonSeasonalIngredient[]
 }
