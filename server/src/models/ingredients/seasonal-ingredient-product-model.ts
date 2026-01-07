@@ -6,16 +6,22 @@ import type { SeasonalIngredientProduct, SeasonalIngredientProductCollection } f
 
 const { Schema, model } = mongoose;
 
+const CATALOGUE_ID = "seasonal-ingredient-product-catalogue";
+
 const SeasonalIngredientProductSchema = new Schema <SeasonalIngredientProduct> (
   {
     name: { type: String, required: true, trim: true },
-    altNames: { type: [String] , default: undefined },
+    altNames: [{ type: String , default: undefined }],
     parentIngredient: { type: String, required: true }
+  },
+  {
+    _id: true
   }
 );
 
 const SeasonalIngredientProductCollectionSchema = new Schema <SeasonalIngredientProductCollection> (
   {
+    _id: { type: String, default: CATALOGUE_ID},
     fish: { type: [SeasonalIngredientProductSchema], default: [] },
     meat: { type: [SeasonalIngredientProductSchema], default: [] },
     poultry: { type: [SeasonalIngredientProductSchema], default: [] },

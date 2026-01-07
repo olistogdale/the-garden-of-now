@@ -9,9 +9,12 @@ const { Schema, model } = mongoose;
 const SeasonalIngredientFallbackSchema = new Schema <SeasonalIngredientFallback> (
   {
     name: { type: String, required: true, trim: true },
-    altNames: { type: [String] , default: undefined },
-    parentIngredients: { type: [String], required: true },
+    altNames: [{ type: String , default: undefined }],
+    parentIngredients: [{ type: String, required: true }],
     fallbackType: { type: String, required: true }
+  },
+  {
+    _id: true
   }
 );
 

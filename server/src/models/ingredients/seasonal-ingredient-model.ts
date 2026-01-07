@@ -11,16 +11,22 @@ const MONTHS = [
   'july','august','september','october','november','december',
 ] as const;
 
+const CATALOGUE_ID = "seasonal-ingredient-catalogue";
+
 const SeasonalIngredientSchema = new Schema <SeasonalIngredient> (
   {
     name: { type: String, required: true, trim: true },
-    altNames: { type: [String] , default: undefined },
-    seasonality: { type: [String], required: true, enum: MONTHS }
+    altNames: [{ type: String , default: undefined }],
+    seasonality: [{ type: String, required: true, enum: MONTHS }]
+  },
+  {
+    _id: true
   }
 );
 
 const SeasonalIngredientCollectionSchema = new Schema <SeasonalIngredientCollection> (
   {
+    _id: { type: String, default: CATALOGUE_ID},
     fish: { type: [SeasonalIngredientSchema], default: [] },
     fruit: { type: [SeasonalIngredientSchema], default: [] },
     herbs: { type: [SeasonalIngredientSchema], default: [] },

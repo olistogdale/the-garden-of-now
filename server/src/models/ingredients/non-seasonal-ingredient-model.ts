@@ -6,15 +6,21 @@ import type { NonSeasonalIngredient, NonSeasonalIngredientCollection } from '../
 
 const { Schema, model } = mongoose;
 
+const CATALOGUE_ID = "non-seasonal-ingredient-catalogue";
+
 const NonSeasonalIngredientSchema = new Schema <NonSeasonalIngredient> (
   {
     name: { type: String, required: true, trim: true },
-    altNames: { type: [String] , default: undefined },
+    altNames: [{ type: String , default: undefined }],
+  },
+  {
+    _id: true
   }
 );
 
 const NonSeasonalIngredientCollectionSchema = new Schema <NonSeasonalIngredientCollection> (
   {
+    _id: { type: String, default: CATALOGUE_ID},
     curedMeat: { type:[NonSeasonalIngredientSchema], default: [] },
     curedFish: { type:[NonSeasonalIngredientSchema], default: [] },
     cheese: { type:[NonSeasonalIngredientSchema], default: [] },
