@@ -16,9 +16,10 @@ export type SeasonalIngredientCategories =
   | "shellfish"
   | "vegetables"
 
-export type SeasonalIngredientCollection = {
-  [category in SeasonalIngredientCategories]: SeasonalIngredient[]
-}
+export type SeasonalIngredientCollection =
+  { _id?: string } & {
+    [category in SeasonalIngredientCategories]: SeasonalIngredient[]
+  }
 
 export type SeasonalIngredientProduct = {
   name: string,
@@ -32,9 +33,10 @@ export type SeasonalIngredientProductCategories =
   | "poultry"
   | "shellfish"
 
-export type SeasonalIngredientProductCollection = {
-  [category in SeasonalIngredientProductCategories]: SeasonalIngredientProduct[]
-}
+export type SeasonalIngredientProductCollection =
+  { _id?: string } & {
+    [category in SeasonalIngredientProductCategories]: SeasonalIngredientProduct[]
+  }
 
 export type FallbackType = 
   | "ambiguous"
@@ -81,6 +83,7 @@ export type NonSeasonalIngredientCategories =
   | "juice"
   | "water"
 
-export type NonSeasonalIngredientCollection = {
-  [category in NonSeasonalIngredientCategories]: NonSeasonalIngredient[]
-}
+export type NonSeasonalIngredientCollection =
+  { _id?: string } & {
+    [category in NonSeasonalIngredientCategories]: NonSeasonalIngredient[]
+  }
