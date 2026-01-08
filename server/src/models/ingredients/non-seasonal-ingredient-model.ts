@@ -32,7 +32,7 @@ const FOOD_GROUPS = [
   'alcohol',
   'juice',
   'water'
-]
+] as const;
 
 const NonSeasonalIngredientSchema = new Schema <NonSeasonalIngredient> (
   {
