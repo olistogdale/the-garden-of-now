@@ -1,0 +1,2598 @@
+[
+  {
+    "name": "’00’ flour",
+    "foodGroup": [
+      "baking"
+    ],
+    "altNames": [
+      "’00’ pasta flour"
+    ]
+  },
+  {
+    "name": "ale",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "allspice",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "almond",
+    "foodGroup": [
+      "nuts"
+    ]
+  },
+  {
+    "name": "almond flour",
+    "foodGroup": [
+      "baking"
+    ],
+    "altNames": [
+      "ground almonds"
+    ]
+  },
+  {
+    "name": "almond milk",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "amaretto",
+    "foodGroup": [
+      "alcohol"
+    ],
+    "altNames": [
+      "disaronno"
+    ]
+  },
+  {
+    "name": "american-style pancake",
+    "foodGroup": [
+      "breads"
+    ]
+  },
+  {
+    "name": "anchovy",
+    "foodGroup": [
+      "curedFish"
+    ],
+    "altNames": [
+      "anchovy fillet"
+    ]
+  },
+  {
+    "name": "apple chutney",
+    "foodGroup": [
+      "condiments"
+    ],
+    "altNames": [
+      "apple and pear chutney",
+      "apple & pear chutney"
+    ]
+  },
+  {
+    "name": "apple juice",
+    "foodGroup": [
+      "juice"
+    ]
+  },
+  {
+    "name": "apple sauce",
+    "foodGroup": [
+      "condiments"
+    ]
+  },
+  {
+    "name": "apricot jam",
+    "foodGroup": [
+      "spreads"
+    ]
+  },
+  {
+    "name": "artichoke heart",
+    "foodGroup": [
+      "cannedVegetables"
+    ]
+  },
+  {
+    "name": "asafoetida",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "aubergine pickle",
+    "foodGroup": [
+      "condiments"
+    ],
+    "altNames": [
+      "brinjal pickle"
+    ]
+  },
+  {
+    "name": "baguette",
+    "foodGroup": [
+      "breads"
+    ],
+    "altNames": [
+      "french stick"
+    ]
+  },
+  {
+    "name": "baking powder",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "balsamic vinegar",
+    "foodGroup": [
+      "vinegar"
+    ]
+  },
+  {
+    "name": "basmati rice",
+    "foodGroup": [
+      "grains"
+    ]
+  },
+  {
+    "name": "bbq sauce",
+    "foodGroup": [
+      "condiments"
+    ],
+    "altNames": [
+      "barbecue sauce"
+    ]
+  },
+  {
+    "name": "beef stock",
+    "foodGroup": [
+      "stocksAndGravies"
+    ],
+    "altNames": [
+      "beef stock cube"
+    ]
+  },
+  {
+    "name": "beer",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "bicarbonate of soda",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "black bean",
+    "foodGroup": [
+      "cannedVegetables"
+    ]
+  },
+  {
+    "name": "black olive",
+    "foodGroup": [
+      "cannedVegetables"
+    ]
+  },
+  {
+    "name": "black pepper",
+    "foodGroup": [
+      "herbsAndSpices"
+    ],
+    "altNames": [
+      "black peppercorn",
+      "pepper"
+    ]
+  },
+  {
+    "name": "black rice",
+    "foodGroup": [
+      "grains"
+    ]
+  },
+  {
+    "name": "black-eyed bean",
+    "foodGroup": [
+      "cannedVegetables"
+    ]
+  },
+  {
+    "name": "borlotti bean",
+    "foodGroup": [
+      "cannedVegetables"
+    ]
+  },
+  {
+    "name": "bouquet garni",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "bovril",
+    "foodGroup": [
+      "stocksAndGravies"
+    ]
+  },
+  {
+    "name": "brandy",
+    "foodGroup": [
+      "alcohol"
+    ],
+    "altNames": [
+      "cognac",
+      "armagnac"
+    ]
+  },
+  {
+    "name": "branston pickle",
+    "foodGroup": [
+      "condiments"
+    ],
+    "altNames": [
+      "ploughman’s chutney",
+      "ploughman’s pickle"
+    ]
+  },
+  {
+    "name": "brazil nut",
+    "foodGroup": [
+      "nuts"
+    ]
+  },
+  {
+    "name": "bread flour",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "bread mix",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "breadcrumb",
+    "foodGroup": [
+      "breads"
+    ]
+  },
+  {
+    "name": "bresaola",
+    "foodGroup": [
+      "curedMeat"
+    ]
+  },
+  {
+    "name": "brie",
+    "foodGroup": [
+      "cheese"
+    ]
+  },
+  {
+    "name": "brown bread",
+    "foodGroup": [
+      "breads"
+    ],
+    "altNames": [
+      "brown loaf",
+      "wholemeal bread",
+      "wholemeal loaf",
+      "granary bread",
+      "granary loaf"
+    ]
+  },
+  {
+    "name": "brown lentil",
+    "foodGroup": [
+      "pulses"
+    ],
+    "altNames": [
+      "lentil"
+    ]
+  },
+  {
+    "name": "brown rice",
+    "foodGroup": [
+      "grains"
+    ],
+    "altNames": [
+      "brown basmati rice",
+      "wild rice"
+    ]
+  },
+  {
+    "name": "brown roll",
+    "foodGroup": [
+      "breads"
+    ],
+    "altNames": [
+      "brown bap",
+      "wholemeal roll",
+      "wholemeal bap",
+      "granary roll",
+      "granary bap"
+    ]
+  },
+  {
+    "name": "brown sauce",
+    "foodGroup": [
+      "condiments"
+    ],
+    "altNames": [
+      "hp sauce"
+    ]
+  },
+  {
+    "name": "brown sugar",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "bucatini",
+    "foodGroup": [
+      "noodles"
+    ]
+  },
+  {
+    "name": "buckwheat flour",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "bulgur wheat",
+    "foodGroup": [
+      "grains"
+    ],
+    "altNames": [
+      "cracked wheat"
+    ]
+  },
+  {
+    "name": "burger bun",
+    "foodGroup": [
+      "breads"
+    ],
+    "altNames": [
+      "brioche bun"
+    ]
+  },
+  {
+    "name": "burger cheese",
+    "foodGroup": [
+      "cheese"
+    ]
+  },
+  {
+    "name": "butter",
+    "foodGroup": [
+      "dairy"
+    ],
+    "altNames": [
+      "salted butter",
+      "unsalted butter"
+    ]
+  },
+  {
+    "name": "butter bean",
+    "foodGroup": [
+      "cannedVegetables"
+    ]
+  },
+  {
+    "name": "buttermilk",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "cajun seasoning",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "cake flour",
+    "foodGroup": [
+      "baking"
+    ],
+    "altNames": [
+      "sponge flour"
+    ]
+  },
+  {
+    "name": "calvados",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "cane sugar",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "cannellini bean",
+    "foodGroup": [
+      "cannedVegetables"
+    ]
+  },
+  {
+    "name": "caper",
+    "foodGroup": [
+      "cannedVegetables"
+    ]
+  },
+  {
+    "name": "caramel",
+    "foodGroup": [
+      "baking"
+    ],
+    "altNames": [
+      "caramel sauce"
+    ]
+  },
+  {
+    "name": "caramelised onion chutney",
+    "foodGroup": [
+      "condiments"
+    ],
+    "altNames": [
+      "caramelised red onion chutney",
+      "red onion chutney",
+      "onion chutney"
+    ]
+  },
+  {
+    "name": "caraway seed",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "cardamom",
+    "foodGroup": [
+      "herbsAndSpices"
+    ],
+    "altNames": [
+      "cardamom pod"
+    ]
+  },
+  {
+    "name": "cashew",
+    "foodGroup": [
+      "nuts"
+    ],
+    "altNames": [
+      "cashew nut"
+    ]
+  },
+  {
+    "name": "caster sugar",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "cayenne pepper",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "celery salt",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "cheddar",
+    "foodGroup": [
+      "cheese"
+    ]
+  },
+  {
+    "name": "cheshire",
+    "foodGroup": [
+      "cheese"
+    ]
+  },
+  {
+    "name": "chicken stock",
+    "foodGroup": [
+      "stocksAndGravies"
+    ],
+    "altNames": [
+      "chicken stock cube",
+      "stock",
+      "stock cube"
+    ]
+  },
+  {
+    "name": "chickpea",
+    "foodGroup": [
+      "cannedVegetables"
+    ]
+  },
+  {
+    "name": "chilli flakes",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "chilli jam",
+    "foodGroup": [
+      "condiments"
+    ]
+  },
+  {
+    "name": "chilli powder",
+    "foodGroup": [
+      "herbsAndSpices"
+    ],
+    "altNames": [
+      "hot chilli powder",
+      "mild chilli powder"
+    ]
+  },
+  {
+    "name": "chocolate chip cookie",
+    "foodGroup": [
+      "biscuits"
+    ],
+    "altNames": [
+      "chocolate cookie",
+      "cookie",
+      "choc chip cookie",
+      "chocolate chunk cookie"
+    ]
+  },
+  {
+    "name": "chocolate mint thin",
+    "foodGroup": [
+      "confectionery"
+    ],
+    "altNames": [
+      "after eight"
+    ]
+  },
+  {
+    "name": "chocolate spread",
+    "foodGroup": [
+      "spreads"
+    ],
+    "altNames": [
+      "chocolate hazelnut spread",
+      "nutella"
+    ]
+  },
+  {
+    "name": "chopped tomato",
+    "foodGroup": [
+      "cannedVegetables"
+    ],
+    "altNames": [
+      "tinned tomato",
+      "canned tomato"
+    ]
+  },
+  {
+    "name": "choux pastry",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "ciabatta",
+    "foodGroup": [
+      "breads"
+    ],
+    "altNames": [
+      "ciabatta roll"
+    ]
+  },
+  {
+    "name": "cider",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "cider vinegar",
+    "foodGroup": [
+      "vinegar"
+    ],
+    "altNames": [
+      "apple cider vinegar"
+    ]
+  },
+  {
+    "name": "cinnamon",
+    "foodGroup": [
+      "herbsAndSpices"
+    ],
+    "altNames": [
+      "cinnamon stick"
+    ]
+  },
+  {
+    "name": "clotted cream",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "cocoa",
+    "foodGroup": [
+      "baking"
+    ],
+    "altNames": [
+      "cocoa powder"
+    ]
+  },
+  {
+    "name": "coconut cream",
+    "foodGroup": [
+      "dairy"
+    ],
+    "altNames": [
+      "creamed coconut"
+    ]
+  },
+  {
+    "name": "coconut milk",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "coffee",
+    "foodGroup": [
+      "teaAndCoffee"
+    ],
+    "altNames": [
+      "espresso"
+    ]
+  },
+  {
+    "name": "coffee liqueur",
+    "foodGroup": [
+      "alcohol"
+    ],
+    "altNames": [
+      "kahlúa",
+      "kahlua"
+    ]
+  },
+  {
+    "name": "conchiglie",
+    "foodGroup": [
+      "noodles"
+    ]
+  },
+  {
+    "name": "cooking chocolate",
+    "foodGroup": [
+      "confectionery"
+    ]
+  },
+  {
+    "name": "cooking oil",
+    "foodGroup": [
+      "oil"
+    ],
+    "altNames": [
+      "oil"
+    ]
+  },
+  {
+    "name": "coppa",
+    "foodGroup": [
+      "curedMeat"
+    ]
+  },
+  {
+    "name": "coriander seed",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "corn flour",
+    "foodGroup": [
+      "baking"
+    ],
+    "altNames": [
+      "cornflour"
+    ]
+  },
+  {
+    "name": "corned beef",
+    "foodGroup": [
+      "curedMeat"
+    ]
+  },
+  {
+    "name": "couscous",
+    "foodGroup": [
+      "grains"
+    ],
+    "altNames": [
+      "cous cous",
+      "cous-cous"
+    ]
+  },
+  {
+    "name": "cranberry sauce",
+    "foodGroup": [
+      "condiments"
+    ]
+  },
+  {
+    "name": "crème fraîche",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "cumin",
+    "foodGroup": [
+      "herbsAndSpices"
+    ],
+    "altNames": [
+      "cumin seed"
+    ]
+  },
+  {
+    "name": "currant",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "curry leaf",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "curry paste",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "curry powder",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "custard",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "dark chocolate",
+    "foodGroup": [
+      "confectionery"
+    ]
+  },
+  {
+    "name": "demerara sugar",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "dessicated coconut",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "digestive biscuit",
+    "foodGroup": [
+      "biscuits"
+    ],
+    "altNames": [
+      "chocolate digestive biscuit",
+      "chocolate digestive",
+      "digestive"
+    ]
+  },
+  {
+    "name": "dijon mustard",
+    "foodGroup": [
+      "condiments"
+    ],
+    "altNames": [
+      "french mustard"
+    ]
+  },
+  {
+    "name": "double cream",
+    "foodGroup": [
+      "dairy"
+    ],
+    "altNames": [
+      "extra thick double cream",
+      "extra thick cream"
+    ]
+  },
+  {
+    "name": "double gloucester",
+    "foodGroup": [
+      "cheese"
+    ]
+  },
+  {
+    "name": "dried fruit",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "dripping",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "dry sherry",
+    "foodGroup": [
+      "alcohol"
+    ],
+    "altNames": [
+      "fino sherry",
+      "manzanilla sherry"
+    ]
+  },
+  {
+    "name": "duck egg",
+    "foodGroup": [
+      "eggs"
+    ],
+    "altNames": [
+      "duck’s egg",
+      "ducks’ egg"
+    ]
+  },
+  {
+    "name": "duck fat",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "dulce de leche",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "egg",
+    "foodGroup": [
+      "eggs"
+    ],
+    "altNames": [
+      "chicken’s egg",
+      "chickens’ egg",
+      "egg white",
+      "egg yolk"
+    ]
+  },
+  {
+    "name": "english muffin",
+    "foodGroup": [
+      "breads"
+    ]
+  },
+  {
+    "name": "fennel seed",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "fenugreek",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "feta",
+    "foodGroup": [
+      "cheese"
+    ]
+  },
+  {
+    "name": "fettuccine",
+    "foodGroup": [
+      "noodles"
+    ]
+  },
+  {
+    "name": "filo pastry",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "fish stock",
+    "foodGroup": [
+      "stocksAndGravies"
+    ],
+    "altNames": [
+      "fish stock cube"
+    ]
+  },
+  {
+    "name": "five spice",
+    "foodGroup": [
+      "herbsAndSpices"
+    ],
+    "altNames": [
+      "five-spice"
+    ]
+  },
+  {
+    "name": "flageolet bean",
+    "foodGroup": [
+      "cannedVegetables"
+    ]
+  },
+  {
+    "name": "flatbread",
+    "foodGroup": [
+      "breads"
+    ]
+  },
+  {
+    "name": "focaccia",
+    "foodGroup": [
+      "breads"
+    ]
+  },
+  {
+    "name": "frangelico",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "french’s mustard",
+    "foodGroup": [
+      "condiments"
+    ],
+    "altNames": [
+      "american mustard"
+    ]
+  },
+  {
+    "name": "fromage frais",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "fusilli",
+    "foodGroup": [
+      "noodles"
+    ]
+  },
+  {
+    "name": "galangal",
+    "foodGroup": [
+      "herbsAndSpices"
+    ],
+    "altNames": [
+      "galangal root"
+    ]
+  },
+  {
+    "name": "garam masala",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "garlic",
+    "foodGroup": [
+      "herbsAndSpices"
+    ],
+    "altNames": [
+      "garlic clove",
+      "garlic bulb"
+    ]
+  },
+  {
+    "name": "garlic paste",
+    "foodGroup": [
+      "herbsAndSpices"
+    ],
+    "altNames": [
+      "garlic purée"
+    ]
+  },
+  {
+    "name": "gelatine",
+    "foodGroup": [
+      "baking"
+    ],
+    "altNames": [
+      "leaf gelatine",
+      "powdered gelatine"
+    ]
+  },
+  {
+    "name": "ghee",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "gherkin",
+    "foodGroup": [
+      "cannedVegetables"
+    ]
+  },
+  {
+    "name": "gin",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "ginger",
+    "foodGroup": [
+      "herbsAndSpices"
+    ],
+    "altNames": [
+      "ginger root",
+      "root ginger",
+      "stem ginger"
+    ]
+  },
+  {
+    "name": "gingernut biscuit",
+    "foodGroup": [
+      "biscuits"
+    ],
+    "altNames": [
+      "gingernuts"
+    ]
+  },
+  {
+    "name": "gnocchi",
+    "foodGroup": [
+      "noodles"
+    ]
+  },
+  {
+    "name": "goat's cheese",
+    "foodGroup": [
+      "cheese"
+    ]
+  },
+  {
+    "name": "golden caster sugar",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "golden syrup",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "goose fat",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "gravy granules",
+    "foodGroup": [
+      "stocksAndGravies"
+    ],
+    "altNames": [
+      "bisto"
+    ]
+  },
+  {
+    "name": "greek yogurt",
+    "foodGroup": [
+      "dairy"
+    ],
+    "altNames": [
+      "greek-style yogurt"
+    ]
+  },
+  {
+    "name": "green chilli",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "green lentil",
+    "foodGroup": [
+      "pulses"
+    ]
+  },
+  {
+    "name": "green olive",
+    "foodGroup": [
+      "cannedVegetables"
+    ]
+  },
+  {
+    "name": "green peppercorn",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "green split pea",
+    "foodGroup": [
+      "pulses"
+    ]
+  },
+  {
+    "name": "green tea",
+    "foodGroup": [
+      "teaAndCoffee"
+    ]
+  },
+  {
+    "name": "groundnut oil",
+    "foodGroup": [
+      "oil"
+    ]
+  },
+  {
+    "name": "halloumi",
+    "foodGroup": [
+      "cheese"
+    ]
+  },
+  {
+    "name": "ham",
+    "foodGroup": [
+      "curedMeat"
+    ],
+    "altNames": [
+      "roast ham"
+    ]
+  },
+  {
+    "name": "haricot bean",
+    "foodGroup": [
+      "cannedVegetables"
+    ]
+  },
+  {
+    "name": "harissa paste",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "hazelnut chocolate",
+    "foodGroup": [
+      "confectionery"
+    ]
+  },
+  {
+    "name": "herbes de provence",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "hoisin sauce",
+    "foodGroup": [
+      "condiments"
+    ]
+  },
+  {
+    "name": "honey",
+    "foodGroup": [
+      "spreads"
+    ]
+  },
+  {
+    "name": "horseradish sauce",
+    "foodGroup": [
+      "condiments"
+    ]
+  },
+  {
+    "name": "hot dog bun",
+    "foodGroup": [
+      "breads"
+    ],
+    "altNames": [
+      "hot-dog bun"
+    ]
+  },
+  {
+    "name": "hot sauce",
+    "foodGroup": [
+      "condiments"
+    ],
+    "altNames": [
+      "hot pepper sauce",
+      "tabasco sauce"
+    ]
+  },
+  {
+    "name": "icing sugar",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "jasmine rice",
+    "foodGroup": [
+      "grains"
+    ],
+    "altNames": [
+      "thai rice",
+      "glutinous rice"
+    ]
+  },
+  {
+    "name": "juniper berry",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "kidney bean",
+    "foodGroup": [
+      "cannedVegetables"
+    ]
+  },
+  {
+    "name": "kirsch",
+    "foodGroup": [
+      "alcohol"
+    ],
+    "altNames": [
+      "cherry liquer"
+    ]
+  },
+  {
+    "name": "lager",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "lard",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "lasagne",
+    "foodGroup": [
+      "noodles"
+    ]
+  },
+  {
+    "name": "lemon",
+    "foodGroup": [
+      "herbsAndSpices"
+    ],
+    "altNames": [
+      "lemon juice",
+      "lemon zest"
+    ]
+  },
+  {
+    "name": "lemongrass",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "lime",
+    "foodGroup": [
+      "herbsAndSpices"
+    ],
+    "altNames": [
+      "lime juice",
+      "lime zest"
+    ]
+  },
+  {
+    "name": "lime leaf",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "lime pickle",
+    "foodGroup": [
+      "condiments"
+    ]
+  },
+  {
+    "name": "limoncello",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "linguine",
+    "foodGroup": [
+      "noodles"
+    ]
+  },
+  {
+    "name": "long-grain rice",
+    "foodGroup": [
+      "grains"
+    ],
+    "altNames": [
+      "american rice",
+      "white rice",
+      "rice"
+    ]
+  },
+  {
+    "name": "mace",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "madeira",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "malt vinegar",
+    "foodGroup": [
+      "vinegar"
+    ],
+    "altNames": [
+      "vinegar"
+    ]
+  },
+  {
+    "name": "mango chutney",
+    "foodGroup": [
+      "condiments"
+    ]
+  },
+  {
+    "name": "maple syrup",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "margarine",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "marmalade",
+    "foodGroup": [
+      "spreads"
+    ],
+    "altNames": [
+      "orange marmalade"
+    ]
+  },
+  {
+    "name": "marmite",
+    "foodGroup": [
+      "stocksAndGravies"
+    ]
+  },
+  {
+    "name": "marsala",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "marshmallow",
+    "foodGroup": [
+      "confectionery"
+    ]
+  },
+  {
+    "name": "mascarpone",
+    "foodGroup": [
+      "cheese"
+    ]
+  },
+  {
+    "name": "mayonnaise",
+    "foodGroup": [
+      "condiments"
+    ]
+  },
+  {
+    "name": "medium-dry sherry",
+    "foodGroup": [
+      "alcohol"
+    ],
+    "altNames": [
+      "amontillado sherry",
+      "oloroso sherry"
+    ]
+  },
+  {
+    "name": "milk",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "milk chocolate",
+    "foodGroup": [
+      "confectionery"
+    ]
+  },
+  {
+    "name": "mincemeat",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "mint sauce",
+    "foodGroup": [
+      "condiments"
+    ]
+  },
+  {
+    "name": "mint syrup",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "mint tea",
+    "foodGroup": [
+      "teaAndCoffee"
+    ]
+  },
+  {
+    "name": "mirin",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "mixed peel",
+    "foodGroup": [
+      "baking"
+    ],
+    "altNames": [
+      "citrus peel"
+    ]
+  },
+  {
+    "name": "mixed spice",
+    "foodGroup": [
+      "herbsAndSpices"
+    ],
+    "altNames": [
+      "spice mix"
+    ]
+  },
+  {
+    "name": "mozzarella",
+    "foodGroup": [
+      "cheese"
+    ]
+  },
+  {
+    "name": "muscovado sugar",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "mustard",
+    "foodGroup": [
+      "condiments"
+    ],
+    "altNames": [
+      "english mustard"
+    ]
+  },
+  {
+    "name": "mustard seed",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "naan bread",
+    "foodGroup": [
+      "breads"
+    ]
+  },
+  {
+    "name": "nigella seed",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "noodle",
+    "foodGroup": [
+      "noodles"
+    ],
+    "altNames": [
+      "egg noodle"
+    ]
+  },
+  {
+    "name": "nutmeg",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "oat",
+    "foodGroup": [
+      "baking"
+    ],
+    "altNames": [
+      "porridge oat",
+      "rolled oat"
+    ]
+  },
+  {
+    "name": "oat flour",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "oat milk",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "oatcake",
+    "foodGroup": [
+      "biscuits"
+    ],
+    "altNames": [
+      "oat biscuit"
+    ]
+  },
+  {
+    "name": "olive oil",
+    "foodGroup": [
+      "oil"
+    ],
+    "altNames": [
+      "extra virgin olive oil"
+    ]
+  },
+  {
+    "name": "orange",
+    "foodGroup": [
+      "herbsAndSpices"
+    ],
+    "altNames": [
+      "orange juice",
+      "orange zest"
+    ]
+  },
+  {
+    "name": "oyster sauce",
+    "foodGroup": [
+      "condiments"
+    ]
+  },
+  {
+    "name": "pancake",
+    "foodGroup": [
+      "breads"
+    ],
+    "altNames": [
+      "crepe"
+    ]
+  },
+  {
+    "name": "pappardelle",
+    "foodGroup": [
+      "noodles"
+    ]
+  },
+  {
+    "name": "paprika",
+    "foodGroup": [
+      "herbsAndSpices"
+    ],
+    "altNames": [
+      "sweet paprika",
+      "hot paprika"
+    ]
+  },
+  {
+    "name": "parmesan",
+    "foodGroup": [
+      "cheese"
+    ]
+  },
+  {
+    "name": "pasta",
+    "foodGroup": [
+      "noodles"
+    ]
+  },
+  {
+    "name": "pastrami",
+    "foodGroup": [
+      "curedMeat"
+    ]
+  },
+  {
+    "name": "peanut",
+    "foodGroup": [
+      "nuts"
+    ]
+  },
+  {
+    "name": "pecan",
+    "foodGroup": [
+      "nuts"
+    ],
+    "altNames": [
+      "pecan nut"
+    ]
+  },
+  {
+    "name": "penne",
+    "foodGroup": [
+      "noodles"
+    ]
+  },
+  {
+    "name": "peppered mackerel",
+    "foodGroup": [
+      "curedFish"
+    ]
+  },
+  {
+    "name": "pepperoni",
+    "foodGroup": [
+      "curedMeat"
+    ]
+  },
+  {
+    "name": "piccalilli",
+    "foodGroup": [
+      "condiments"
+    ]
+  },
+  {
+    "name": "pine nut",
+    "foodGroup": [
+      "nuts"
+    ]
+  },
+  {
+    "name": "pink peppercorn",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "pinto bean",
+    "foodGroup": [
+      "cannedVegetables"
+    ]
+  },
+  {
+    "name": "pistachio",
+    "foodGroup": [
+      "nuts"
+    ],
+    "altNames": [
+      "pistachio nut"
+    ]
+  },
+  {
+    "name": "pitta bread",
+    "foodGroup": [
+      "breads"
+    ],
+    "altNames": [
+      "pitta"
+    ]
+  },
+  {
+    "name": "plain flour",
+    "foodGroup": [
+      "baking"
+    ],
+    "altNames": [
+      "white flour",
+      "all-purpose flour",
+      "flour"
+    ]
+  },
+  {
+    "name": "poppadum",
+    "foodGroup": [
+      "crisps"
+    ],
+    "altNames": [
+      "poppadom",
+      "pappadum",
+      "pappadom"
+    ]
+  },
+  {
+    "name": "poppy seed",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "port",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "potato flour",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "prawn cracker",
+    "foodGroup": [
+      "crisps"
+    ]
+  },
+  {
+    "name": "prosciutto",
+    "foodGroup": [
+      "curedMeat"
+    ]
+  },
+  {
+    "name": "puff pastry",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "quail egg",
+    "foodGroup": [
+      "eggs"
+    ],
+    "altNames": [
+      "quail’s egg",
+      "quails’ egg"
+    ]
+  },
+  {
+    "name": "quinoa",
+    "foodGroup": [
+      "grains"
+    ]
+  },
+  {
+    "name": "raisin",
+    "foodGroup": [
+      "baking"
+    ],
+    "altNames": [
+      "flame raisin"
+    ]
+  },
+  {
+    "name": "rapeseed oil",
+    "foodGroup": [
+      "oil"
+    ]
+  },
+  {
+    "name": "ras el hanout",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "raspberry jam",
+    "foodGroup": [
+      "spreads"
+    ]
+  },
+  {
+    "name": "red chilli",
+    "foodGroup": [
+      "herbsAndSpices"
+    ],
+    "altNames": [
+      "chilli"
+    ]
+  },
+  {
+    "name": "red leicester",
+    "foodGroup": [
+      "cheese"
+    ]
+  },
+  {
+    "name": "red lentil",
+    "foodGroup": [
+      "pulses"
+    ]
+  },
+  {
+    "name": "red vermouth",
+    "foodGroup": [
+      "alcohol"
+    ],
+    "altNames": [
+      "sweet vermouth"
+    ]
+  },
+  {
+    "name": "red wine",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "red wine vinegar",
+    "foodGroup": [
+      "vinegar"
+    ]
+  },
+  {
+    "name": "redcurrant jelly",
+    "foodGroup": [
+      "condiments"
+    ]
+  },
+  {
+    "name": "rice flour",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "rice noodle",
+    "foodGroup": [
+      "noodles"
+    ],
+    "altNames": [
+      "vermicelli noodle"
+    ]
+  },
+  {
+    "name": "rice wine vinegar",
+    "foodGroup": [
+      "vinegar"
+    ],
+    "altNames": [
+      "rice vinegar"
+    ]
+  },
+  {
+    "name": "ricotta",
+    "foodGroup": [
+      "cheese"
+    ]
+  },
+  {
+    "name": "rigatoni",
+    "foodGroup": [
+      "noodles"
+    ]
+  },
+  {
+    "name": "risotto rice",
+    "foodGroup": [
+      "grains"
+    ],
+    "altNames": [
+      "carnaroli rice",
+      "arborio rice"
+    ]
+  },
+  {
+    "name": "roasted pepper",
+    "foodGroup": [
+      "cannedVegetables"
+    ]
+  },
+  {
+    "name": "rollmop",
+    "foodGroup": [
+      "curedFish"
+    ]
+  },
+  {
+    "name": "rose syrup",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "rosé vermouth",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "rosé wine",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "rum",
+    "foodGroup": [
+      "alcohol"
+    ],
+    "altNames": [
+      "white rum",
+      "dark rum"
+    ]
+  },
+  {
+    "name": "rye flour",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "saffron",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "salad cream",
+    "foodGroup": [
+      "condiments"
+    ]
+  },
+  {
+    "name": "salad dressing",
+    "foodGroup": [
+      "condiments"
+    ]
+  },
+  {
+    "name": "salami",
+    "foodGroup": [
+      "curedMeat"
+    ]
+  },
+  {
+    "name": "salt",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "salted caramel",
+    "foodGroup": [
+      "baking"
+    ],
+    "altNames": [
+      "salted caramel sauce"
+    ]
+  },
+  {
+    "name": "scone",
+    "foodGroup": [
+      "breads"
+    ]
+  },
+  {
+    "name": "self-raising flour",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "self-raising wholemeal flour",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "semolina",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "sesame seed",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "sherry",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "sherry vinegar",
+    "foodGroup": [
+      "vinegar"
+    ]
+  },
+  {
+    "name": "shortcrust pastry",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "single cream",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "smoked mackerel",
+    "foodGroup": [
+      "curedFish"
+    ]
+  },
+  {
+    "name": "smoked salmon",
+    "foodGroup": [
+      "curedFish"
+    ]
+  },
+  {
+    "name": "smoked trout",
+    "foodGroup": [
+      "curedFish"
+    ]
+  },
+  {
+    "name": "soft cheese",
+    "foodGroup": [
+      "cheese"
+    ]
+  },
+  {
+    "name": "sourdough bread",
+    "foodGroup": [
+      "breads"
+    ],
+    "altNames": [
+      "sourdough loaf"
+    ]
+  },
+  {
+    "name": "soured cream",
+    "foodGroup": [
+      "dairy"
+    ],
+    "altNames": [
+      "sour cream"
+    ]
+  },
+  {
+    "name": "soy milk",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "soy sauce",
+    "foodGroup": [
+      "condiments"
+    ],
+    "altNames": [
+      "soya sauce"
+    ]
+  },
+  {
+    "name": "spaghetti",
+    "foodGroup": [
+      "noodles"
+    ]
+  },
+  {
+    "name": "sparkling water",
+    "foodGroup": [
+      "water"
+    ],
+    "altNames": [
+      "soda water"
+    ]
+  },
+  {
+    "name": "sparkling wine",
+    "foodGroup": [
+      "alcohol"
+    ],
+    "altNames": [
+      "champagne",
+      "prosecco"
+    ]
+  },
+  {
+    "name": "spelt flour",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "sriracha sauce",
+    "foodGroup": [
+      "condiments"
+    ],
+    "altNames": [
+      "chilli sauce"
+    ]
+  },
+  {
+    "name": "star anise",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "stilton",
+    "foodGroup": [
+      "cheese"
+    ],
+    "altNames": [
+      "blue cheese"
+    ]
+  },
+  {
+    "name": "stout",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "strawberry jam",
+    "foodGroup": [
+      "spreads"
+    ]
+  },
+  {
+    "name": "suet",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "sugar syrup",
+    "foodGroup": [
+      "baking"
+    ],
+    "altNames": [
+      "corn syrup"
+    ]
+  },
+  {
+    "name": "sultana",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "sumac",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "sundried tomato",
+    "foodGroup": [
+      "cannedVegetables"
+    ]
+  },
+  {
+    "name": "sunflower oil",
+    "foodGroup": [
+      "oil"
+    ]
+  },
+  {
+    "name": "sweet chilli sauce",
+    "foodGroup": [
+      "condiments"
+    ]
+  },
+  {
+    "name": "sweet sherry",
+    "foodGroup": [
+      "alcohol"
+    ],
+    "altNames": [
+      "cream sherry",
+      "pedro ximenez sherry"
+    ]
+  },
+  {
+    "name": "taco",
+    "foodGroup": [
+      "crisps"
+    ]
+  },
+  {
+    "name": "tagliatelle",
+    "foodGroup": [
+      "noodles"
+    ]
+  },
+  {
+    "name": "tahini",
+    "foodGroup": [
+      "condiments"
+    ]
+  },
+  {
+    "name": "tallow",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "tamarind",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "tartare sauce",
+    "foodGroup": [
+      "condiments"
+    ]
+  },
+  {
+    "name": "tea",
+    "foodGroup": [
+      "teaAndCoffee"
+    ],
+    "altNames": [
+      "black tea"
+    ]
+  },
+  {
+    "name": "thai basil",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "thai curry paste",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "tomato chutney",
+    "foodGroup": [
+      "condiments"
+    ],
+    "altNames": [
+      "tomato and chilli chutney",
+      "tomato & chilli chutney"
+    ]
+  },
+  {
+    "name": "tomato ketchup",
+    "foodGroup": [
+      "condiments"
+    ],
+    "altNames": [
+      "ketchup"
+    ]
+  },
+  {
+    "name": "tomato passata",
+    "foodGroup": [
+      "cannedVegetables"
+    ],
+    "altNames": [
+      "passata"
+    ]
+  },
+  {
+    "name": "tomato paste",
+    "foodGroup": [
+      "herbsAndSpices"
+    ],
+    "altNames": [
+      "tomato purée"
+    ]
+  },
+  {
+    "name": "tortilla",
+    "foodGroup": [
+      "breads"
+    ],
+    "altNames": [
+      "flour tortilla"
+    ]
+  },
+  {
+    "name": "tortilla chip",
+    "foodGroup": [
+      "crisps"
+    ],
+    "altNames": [
+      "nacho chip",
+      "nacho"
+    ]
+  },
+  {
+    "name": "treacle",
+    "foodGroup": [
+      "baking"
+    ],
+    "altNames": [
+      "black treacle"
+    ]
+  },
+  {
+    "name": "triple sec",
+    "foodGroup": [
+      "alcohol"
+    ],
+    "altNames": [
+      "grand marnier",
+      "curacao",
+      "curaçao",
+      "cointreau"
+    ]
+  },
+  {
+    "name": "turmeric",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "vanilla extract",
+    "foodGroup": [
+      "baking"
+    ],
+    "altNames": [
+      "vanilla bean extract",
+      "vanilla essence",
+      "vanilla bean essence"
+    ]
+  },
+  {
+    "name": "vanilla paste",
+    "foodGroup": [
+      "baking"
+    ],
+    "altNames": [
+      "vanilla bean paste"
+    ]
+  },
+  {
+    "name": "vegetable oil",
+    "foodGroup": [
+      "oil"
+    ]
+  },
+  {
+    "name": "vegetable stock",
+    "foodGroup": [
+      "stocksAndGravies"
+    ],
+    "altNames": [
+      "vegetable stock cube"
+    ]
+  },
+  {
+    "name": "vermouth",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "vodka",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "walnut oil",
+    "foodGroup": [
+      "oil"
+    ]
+  },
+  {
+    "name": "water",
+    "foodGroup": [
+      "water"
+    ],
+    "altNames": [
+      "ice",
+      "mineral water"
+    ]
+  },
+  {
+    "name": "wensleydale",
+    "foodGroup": [
+      "cheese"
+    ]
+  },
+  {
+    "name": "whipping cream",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "whisky",
+    "foodGroup": [
+      "alcohol"
+    ],
+    "altNames": [
+      "whiskey"
+    ]
+  },
+  {
+    "name": "white bread",
+    "foodGroup": [
+      "breads"
+    ],
+    "altNames": [
+      "white loaf",
+      "bread"
+    ]
+  },
+  {
+    "name": "white chocolate",
+    "foodGroup": [
+      "confectionery"
+    ]
+  },
+  {
+    "name": "white pepper",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  },
+  {
+    "name": "white roll",
+    "foodGroup": [
+      "breads"
+    ],
+    "altNames": [
+      "white bap"
+    ]
+  },
+  {
+    "name": "white sugar",
+    "foodGroup": [
+      "baking"
+    ],
+    "altNames": [
+      "granulated sugar",
+      "sugar"
+    ]
+  },
+  {
+    "name": "white vermouth",
+    "foodGroup": [
+      "alcohol"
+    ],
+    "altNames": [
+      "dry vermouth"
+    ]
+  },
+  {
+    "name": "white wine",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "white wine vinegar",
+    "foodGroup": [
+      "vinegar"
+    ]
+  },
+  {
+    "name": "wholegrain mustard",
+    "foodGroup": [
+      "condiments"
+    ]
+  },
+  {
+    "name": "wholemeal flour",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "wholemeal pitta bread",
+    "foodGroup": [
+      "breads"
+    ]
+  },
+  {
+    "name": "wine",
+    "foodGroup": [
+      "alcohol"
+    ]
+  },
+  {
+    "name": "worcestershire sauce",
+    "foodGroup": [
+      "condiments"
+    ]
+  },
+  {
+    "name": "yeast",
+    "foodGroup": [
+      "baking"
+    ]
+  },
+  {
+    "name": "yellow lentil",
+    "foodGroup": [
+      "pulses"
+    ]
+  },
+  {
+    "name": "yellow split pea",
+    "foodGroup": [
+      "pulses"
+    ]
+  },
+  {
+    "name": "yogurt",
+    "foodGroup": [
+      "dairy"
+    ]
+  },
+  {
+    "name": "za'atar",
+    "foodGroup": [
+      "herbsAndSpices"
+    ]
+  }
+]
