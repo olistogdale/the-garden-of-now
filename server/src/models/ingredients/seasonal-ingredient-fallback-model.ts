@@ -6,15 +6,31 @@ import type { SeasonalIngredientFallback } from '../../../../data/ingredients/ty
 
 const { Schema, model } = mongoose;
 
+const FALLBACK_TYPES = [
+  'ambiguous',
+  'specific'
+] as const;
+
 const SeasonalIngredientFallbackSchema = new Schema <SeasonalIngredientFallback> (
   {
-    name: { type: String, required: true, trim: true },
-    altNames: [{ type: String , default: undefined }],
-    parentIngredients: [{ type: String, required: true }],
-    fallbackType: { type: String, required: true }
-  },
-  {
-    _id: true
+    name: {
+      type: String,
+      required: true,
+      trim: true
+    },
+    altNames: { 
+      type: [String],
+      default: undefined
+    },
+    parentIngredients: {
+      type: [String],
+      required: true
+    },
+    fallbackType: {
+      type: String,
+      required: true,
+      enum: FALLBACK_TYPES
+    }
   }
 );
 
