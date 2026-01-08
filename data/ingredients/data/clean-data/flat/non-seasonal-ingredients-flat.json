@@ -12,7 +12,7 @@
   },
   {
     "name": "allspice",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "almond",
@@ -42,7 +42,7 @@
   },
   {
     "name": "anchovy",
-    "foodGroup": "curedFish",
+    "foodGroup": "cured fish",
     "altNames": [
       "anchovy fillet"
     ]
@@ -69,11 +69,11 @@
   },
   {
     "name": "artichoke heart",
-    "foodGroup": "cannedVegetables"
+    "foodGroup": "canned vegetables"
   },
   {
     "name": "asafoetida",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "aubergine pickle",
@@ -110,7 +110,7 @@
   },
   {
     "name": "beef stock",
-    "foodGroup": "stocksAndGravies",
+    "foodGroup": "stocks and gravies",
     "altNames": [
       "beef stock cube"
     ]
@@ -125,15 +125,15 @@
   },
   {
     "name": "black bean",
-    "foodGroup": "cannedVegetables"
+    "foodGroup": "canned vegetables"
   },
   {
     "name": "black olive",
-    "foodGroup": "cannedVegetables"
+    "foodGroup": "canned vegetables"
   },
   {
     "name": "black pepper",
-    "foodGroup": "herbsAndSpices",
+    "foodGroup": "herbs and spices",
     "altNames": [
       "black peppercorn",
       "pepper"
@@ -145,19 +145,19 @@
   },
   {
     "name": "black-eyed bean",
-    "foodGroup": "cannedVegetables"
+    "foodGroup": "canned vegetables"
   },
   {
     "name": "borlotti bean",
-    "foodGroup": "cannedVegetables"
+    "foodGroup": "canned vegetables"
   },
   {
     "name": "bouquet garni",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "bovril",
-    "foodGroup": "stocksAndGravies"
+    "foodGroup": "stocks and gravies"
   },
   {
     "name": "brandy",
@@ -193,7 +193,7 @@
   },
   {
     "name": "bresaola",
-    "foodGroup": "curedMeat"
+    "foodGroup": "cured meat"
   },
   {
     "name": "brie",
@@ -283,7 +283,7 @@
   },
   {
     "name": "butter bean",
-    "foodGroup": "cannedVegetables"
+    "foodGroup": "canned vegetables"
   },
   {
     "name": "buttermilk",
@@ -291,7 +291,7 @@
   },
   {
     "name": "cajun seasoning",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "cake flour",
@@ -310,11 +310,11 @@
   },
   {
     "name": "cannellini bean",
-    "foodGroup": "cannedVegetables"
+    "foodGroup": "canned vegetables"
   },
   {
     "name": "caper",
-    "foodGroup": "cannedVegetables"
+    "foodGroup": "canned vegetables"
   },
   {
     "name": "caramel",
@@ -334,11 +334,11 @@
   },
   {
     "name": "caraway seed",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "cardamom",
-    "foodGroup": "herbsAndSpices",
+    "foodGroup": "herbs and spices",
     "altNames": [
       "cardamom pod"
     ]
@@ -356,11 +356,11 @@
   },
   {
     "name": "cayenne pepper",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "celery salt",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "cheddar",
@@ -372,7 +372,7 @@
   },
   {
     "name": "chicken stock",
-    "foodGroup": "stocksAndGravies",
+    "foodGroup": "stocks and gravies",
     "altNames": [
       "chicken stock cube",
       "stock",
@@ -381,11 +381,11 @@
   },
   {
     "name": "chickpea",
-    "foodGroup": "cannedVegetables"
+    "foodGroup": "canned vegetables"
   },
   {
     "name": "chilli flakes",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "chilli jam",
@@ -393,7 +393,7 @@
   },
   {
     "name": "chilli powder",
-    "foodGroup": "herbsAndSpices",
+    "foodGroup": "herbs and spices",
     "altNames": [
       "hot chilli powder",
       "mild chilli powder"
@@ -426,7 +426,7 @@
   },
   {
     "name": "chopped tomato",
-    "foodGroup": "cannedVegetables",
+    "foodGroup": "canned vegetables",
     "altNames": [
       "tinned tomato",
       "canned tomato"
@@ -456,7 +456,7 @@
   },
   {
     "name": "cinnamon",
-    "foodGroup": "herbsAndSpices",
+    "foodGroup": "herbs and spices",
     "altNames": [
       "cinnamon stick"
     ]
@@ -485,7 +485,7 @@
   },
   {
     "name": "coffee",
-    "foodGroup": "teaAndCoffee",
+    "foodGroup": "tea and coffee",
     "altNames": [
       "espresso"
     ]
@@ -515,11 +515,11 @@
   },
   {
     "name": "coppa",
-    "foodGroup": "curedMeat"
+    "foodGroup": "cured meat"
   },
   {
     "name": "coriander seed",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "corn flour",
@@ -530,7 +530,7 @@
   },
   {
     "name": "corned beef",
-    "foodGroup": "curedMeat"
+    "foodGroup": "cured meat"
   },
   {
     "name": "couscous",
@@ -550,7 +550,7 @@
   },
   {
     "name": "cumin",
-    "foodGroup": "herbsAndSpices",
+    "foodGroup": "herbs and spices",
     "altNames": [
       "cumin seed"
     ]
@@ -561,15 +561,15 @@
   },
   {
     "name": "curry leaf",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "curry paste",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "curry powder",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "custard",
@@ -663,11 +663,11 @@
   },
   {
     "name": "fennel seed",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "fenugreek",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "feta",
@@ -683,21 +683,21 @@
   },
   {
     "name": "fish stock",
-    "foodGroup": "stocksAndGravies",
+    "foodGroup": "stocks and gravies",
     "altNames": [
       "fish stock cube"
     ]
   },
   {
     "name": "five spice",
-    "foodGroup": "herbsAndSpices",
+    "foodGroup": "herbs and spices",
     "altNames": [
       "five-spice"
     ]
   },
   {
     "name": "flageolet bean",
-    "foodGroup": "cannedVegetables"
+    "foodGroup": "canned vegetables"
   },
   {
     "name": "flatbread",
@@ -728,18 +728,18 @@
   },
   {
     "name": "galangal",
-    "foodGroup": "herbsAndSpices",
+    "foodGroup": "herbs and spices",
     "altNames": [
       "galangal root"
     ]
   },
   {
     "name": "garam masala",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "garlic",
-    "foodGroup": "herbsAndSpices",
+    "foodGroup": "herbs and spices",
     "altNames": [
       "garlic clove",
       "garlic bulb"
@@ -747,7 +747,7 @@
   },
   {
     "name": "garlic paste",
-    "foodGroup": "herbsAndSpices",
+    "foodGroup": "herbs and spices",
     "altNames": [
       "garlic purée"
     ]
@@ -766,7 +766,7 @@
   },
   {
     "name": "gherkin",
-    "foodGroup": "cannedVegetables"
+    "foodGroup": "canned vegetables"
   },
   {
     "name": "gin",
@@ -774,7 +774,7 @@
   },
   {
     "name": "ginger",
-    "foodGroup": "herbsAndSpices",
+    "foodGroup": "herbs and spices",
     "altNames": [
       "ginger root",
       "root ginger",
@@ -810,7 +810,7 @@
   },
   {
     "name": "gravy granules",
-    "foodGroup": "stocksAndGravies",
+    "foodGroup": "stocks and gravies",
     "altNames": [
       "bisto"
     ]
@@ -824,7 +824,7 @@
   },
   {
     "name": "green chilli",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "green lentil",
@@ -832,11 +832,11 @@
   },
   {
     "name": "green olive",
-    "foodGroup": "cannedVegetables"
+    "foodGroup": "canned vegetables"
   },
   {
     "name": "green peppercorn",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "green split pea",
@@ -844,7 +844,7 @@
   },
   {
     "name": "green tea",
-    "foodGroup": "teaAndCoffee"
+    "foodGroup": "tea and coffee"
   },
   {
     "name": "groundnut oil",
@@ -856,18 +856,18 @@
   },
   {
     "name": "ham",
-    "foodGroup": "curedMeat",
+    "foodGroup": "cured meat",
     "altNames": [
       "roast ham"
     ]
   },
   {
     "name": "haricot bean",
-    "foodGroup": "cannedVegetables"
+    "foodGroup": "canned vegetables"
   },
   {
     "name": "harissa paste",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "hazelnut chocolate",
@@ -875,7 +875,7 @@
   },
   {
     "name": "herbes de provence",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "hoisin sauce",
@@ -918,11 +918,11 @@
   },
   {
     "name": "juniper berry",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "kidney bean",
-    "foodGroup": "cannedVegetables"
+    "foodGroup": "canned vegetables"
   },
   {
     "name": "kirsch",
@@ -945,7 +945,7 @@
   },
   {
     "name": "lemon",
-    "foodGroup": "herbsAndSpices",
+    "foodGroup": "herbs and spices",
     "altNames": [
       "lemon juice",
       "lemon zest"
@@ -953,11 +953,11 @@
   },
   {
     "name": "lemongrass",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "lime",
-    "foodGroup": "herbsAndSpices",
+    "foodGroup": "herbs and spices",
     "altNames": [
       "lime juice",
       "lime zest"
@@ -965,7 +965,7 @@
   },
   {
     "name": "lime leaf",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "lime pickle",
@@ -990,7 +990,7 @@
   },
   {
     "name": "mace",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "madeira",
@@ -1024,7 +1024,7 @@
   },
   {
     "name": "marmite",
-    "foodGroup": "stocksAndGravies"
+    "foodGroup": "stocks and gravies"
   },
   {
     "name": "marsala",
@@ -1072,7 +1072,7 @@
   },
   {
     "name": "mint tea",
-    "foodGroup": "teaAndCoffee"
+    "foodGroup": "tea and coffee"
   },
   {
     "name": "mirin",
@@ -1087,7 +1087,7 @@
   },
   {
     "name": "mixed spice",
-    "foodGroup": "herbsAndSpices",
+    "foodGroup": "herbs and spices",
     "altNames": [
       "spice mix"
     ]
@@ -1109,7 +1109,7 @@
   },
   {
     "name": "mustard seed",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "naan bread",
@@ -1117,7 +1117,7 @@
   },
   {
     "name": "nigella seed",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "noodle",
@@ -1128,7 +1128,7 @@
   },
   {
     "name": "nutmeg",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "oat",
@@ -1162,7 +1162,7 @@
   },
   {
     "name": "orange",
-    "foodGroup": "herbsAndSpices",
+    "foodGroup": "herbs and spices",
     "altNames": [
       "orange juice",
       "orange zest"
@@ -1185,7 +1185,7 @@
   },
   {
     "name": "paprika",
-    "foodGroup": "herbsAndSpices",
+    "foodGroup": "herbs and spices",
     "altNames": [
       "sweet paprika",
       "hot paprika"
@@ -1201,7 +1201,7 @@
   },
   {
     "name": "pastrami",
-    "foodGroup": "curedMeat"
+    "foodGroup": "cured meat"
   },
   {
     "name": "peanut",
@@ -1220,11 +1220,11 @@
   },
   {
     "name": "peppered mackerel",
-    "foodGroup": "curedFish"
+    "foodGroup": "cured fish"
   },
   {
     "name": "pepperoni",
-    "foodGroup": "curedMeat"
+    "foodGroup": "cured meat"
   },
   {
     "name": "piccalilli",
@@ -1236,11 +1236,11 @@
   },
   {
     "name": "pink peppercorn",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "pinto bean",
-    "foodGroup": "cannedVegetables"
+    "foodGroup": "canned vegetables"
   },
   {
     "name": "pistachio",
@@ -1276,7 +1276,7 @@
   },
   {
     "name": "poppy seed",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "port",
@@ -1292,7 +1292,7 @@
   },
   {
     "name": "prosciutto",
-    "foodGroup": "curedMeat"
+    "foodGroup": "cured meat"
   },
   {
     "name": "puff pastry",
@@ -1323,7 +1323,7 @@
   },
   {
     "name": "ras el hanout",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "raspberry jam",
@@ -1331,7 +1331,7 @@
   },
   {
     "name": "red chilli",
-    "foodGroup": "herbsAndSpices",
+    "foodGroup": "herbs and spices",
     "altNames": [
       "chilli"
     ]
@@ -1399,11 +1399,11 @@
   },
   {
     "name": "roasted pepper",
-    "foodGroup": "cannedVegetables"
+    "foodGroup": "canned vegetables"
   },
   {
     "name": "rollmop",
-    "foodGroup": "curedFish"
+    "foodGroup": "cured fish"
   },
   {
     "name": "rose syrup",
@@ -1431,7 +1431,7 @@
   },
   {
     "name": "saffron",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "salad cream",
@@ -1443,11 +1443,11 @@
   },
   {
     "name": "salami",
-    "foodGroup": "curedMeat"
+    "foodGroup": "cured meat"
   },
   {
     "name": "salt",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "salted caramel",
@@ -1474,7 +1474,7 @@
   },
   {
     "name": "sesame seed",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "sherry",
@@ -1494,15 +1494,15 @@
   },
   {
     "name": "smoked mackerel",
-    "foodGroup": "curedFish"
+    "foodGroup": "cured fish"
   },
   {
     "name": "smoked salmon",
-    "foodGroup": "curedFish"
+    "foodGroup": "cured fish"
   },
   {
     "name": "smoked trout",
-    "foodGroup": "curedFish"
+    "foodGroup": "cured fish"
   },
   {
     "name": "soft cheese",
@@ -1565,7 +1565,7 @@
   },
   {
     "name": "star anise",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "stilton",
@@ -1599,11 +1599,11 @@
   },
   {
     "name": "sumac",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "sundried tomato",
-    "foodGroup": "cannedVegetables"
+    "foodGroup": "canned vegetables"
   },
   {
     "name": "sunflower oil",
@@ -1639,7 +1639,7 @@
   },
   {
     "name": "tamarind",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "tartare sauce",
@@ -1647,18 +1647,18 @@
   },
   {
     "name": "tea",
-    "foodGroup": "teaAndCoffee",
+    "foodGroup": "tea and coffee",
     "altNames": [
       "black tea"
     ]
   },
   {
     "name": "thai basil",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "thai curry paste",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "tomato chutney",
@@ -1677,14 +1677,14 @@
   },
   {
     "name": "tomato passata",
-    "foodGroup": "cannedVegetables",
+    "foodGroup": "canned vegetables",
     "altNames": [
       "passata"
     ]
   },
   {
     "name": "tomato paste",
-    "foodGroup": "herbsAndSpices",
+    "foodGroup": "herbs and spices",
     "altNames": [
       "tomato purée"
     ]
@@ -1723,7 +1723,7 @@
   },
   {
     "name": "turmeric",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "vanilla extract",
@@ -1747,7 +1747,7 @@
   },
   {
     "name": "vegetable stock",
-    "foodGroup": "stocksAndGravies",
+    "foodGroup": "stocks and gravies",
     "altNames": [
       "vegetable stock cube"
     ]
@@ -1801,7 +1801,7 @@
   },
   {
     "name": "white pepper",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   },
   {
     "name": "white roll",
@@ -1871,6 +1871,6 @@
   },
   {
     "name": "za'atar",
-    "foodGroup": "herbsAndSpices"
+    "foodGroup": "herbs and spices"
   }
 ]
