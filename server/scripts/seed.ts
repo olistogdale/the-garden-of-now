@@ -1,12 +1,17 @@
 'use strict';
 
+import path from 'node:path';
+
 import { MongoClient } from 'mongodb';
 
-const recipes = require('../../data/recipes/data/clean-data/recipes.json');
-const seasonalIngredients = require('../../data/ingredients/data/clean-data/seasonal-ingredients.json');
-const seasonalIngredientProducts = require('../../data/ingredients/data/clean-data/seasonal-ingredient-products-flat.json');
-const seasonalIngredientFallbacks = require('../../data/ingredients/data/clean-data/seasonal-ingredient-fallbacks.json');
-const nonSeasonalIngredients = require('../../data/ingredients/data/clean-data/non-seasonal-ingredients.json');
+const recipePath = path.join(__dirname, '../../data/recipes/data/clean-data')
+const ingredientPath = path.join(__dirname, '../../data/ingredients/data/clean-data/flat')
+
+const recipes = require(path.join(recipePath, 'recipes.json'));
+const seasonalIngredients = require(path.join(ingredientPath, 'seasonal-ingredients-flat.json'));
+const seasonalIngredientProducts = require(path.join(ingredientPath, 'seasonal-ingredient-products-flat.json'));
+const seasonalIngredientFallbacks = require(path.join(ingredientPath, 'seasonal-ingredient-fallbacks-flat.json'));
+const nonSeasonalIngredients = require(path.join(ingredientPath, 'non-seasonal-ingredients-flat.json'));
 
 async function seedDatabase() {
   const client = new MongoClient('mongodb://localhost:27017');
@@ -16,17 +21,17 @@ async function seedDatabase() {
   await db.collection('recipes').deleteMany({});
   await db.collection('recipes').insertMany(recipes);
 
-  await db.collection('seasonalIngredients').deleteMany({});
-  await db.collection('seasonalIngredients').insertOne(seasonalIngredients);
+  await db.collection('seasonalingredients').deleteMany({});
+  await db.collection('seasonalingredients').insertMany(seasonalIngredients);
 
-  await db.collection('seasonalIngredientProducts').deleteMany({});
-  await db.collection('seasonalIngredientProducts').insertOne(seasonalIngredientProducts);
+  await db.collection('seasonalingredientproducts').deleteMany({});
+  await db.collection('seasonalingredientproducts').insertMany(seasonalIngredientProducts);
 
-  await db.collection('seasonalIngredientFallbacks').deleteMany({});
-  await db.collection('seasonalIngredientFallbacks').insertMany(seasonalIngredientFallbacks);
+  await db.collection('seasonalingredientfallbacks').deleteMany({});
+  await db.collection('seasonalingredientfallbacks').insertMany(seasonalIngredientFallbacks);
 
-  await db.collection('nonSeasonalIngredients').deleteMany({});
-  await db.collection('nonSeasonalIngredients').insertOne(nonSeasonalIngredients);
+  await db.collection('nonseasonalingredients').deleteMany({});
+  await db.collection('nonseasonalingredients').insertMany(nonSeasonalIngredients);
 
   console.log("Recipes type:", typeof recipes);
   console.log("Is array:", Array.isArray(recipes));
