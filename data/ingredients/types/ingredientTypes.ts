@@ -2,24 +2,10 @@
 
 export type SeasonalIngredient = {
   name: string,
-  altNames?: string[],
-  seasonality: string[]
+  seasonality: string[],
+  foodGroup: string,
+  altNames?: string[]
 }
-
-export type SeasonalIngredientCategories =
-  | "fish"
-  | "fruit"
-  | "herbs"
-  | "meat"
-  | "nuts"
-  | "poultry"
-  | "shellfish"
-  | "vegetables"
-
-export type SeasonalIngredientCollection =
-  { _id?: string } & {
-    [category in SeasonalIngredientCategories]: SeasonalIngredient[]
-  }
 
 export type SeasonalIngredientProduct = {
   name: string,

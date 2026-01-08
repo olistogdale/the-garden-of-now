@@ -15,18 +15,18 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const cleanDataDir = path.join(__dirname, '../data/clean-data/nested');
+const cleanDataDir = path.join(__dirname, '../data/clean-data');
 
 const inputPaths = {
-  seasonalIngredients: path.join(cleanDataDir, 'seasonal-ingredients.json'),
-  seasonalIngredientProducts: path.join(cleanDataDir, 'seasonal-ingredient-products.json'),
-  nonSeasonalIngredients: path.join(cleanDataDir, 'non-seasonal-ingredients.json'),
+  seasonalIngredients: path.join(cleanDataDir, 'nested/seasonal-ingredients.json'),
+  seasonalIngredientProducts: path.join(cleanDataDir, 'nested/seasonal-ingredient-products.json'),
+  nonSeasonalIngredients: path.join(cleanDataDir, 'nested/non-seasonal-ingredients.json'),
 };
 
 const outputPaths = {
-  seasonalIngredients: path.join(cleanDataDir, 'seasonal-ingredients-flat.json'),
-  seasonalIngredientProducts: path.join(cleanDataDir, 'seasonal-ingredient-products-flat.json'),
-  nonSeasonalIngredients: path.join(cleanDataDir, 'non-seasonal-ingredients-flat.json'),
+  seasonalIngredients: path.join(cleanDataDir, 'flat/seasonal-ingredients-flat.json'),
+  seasonalIngredientProducts: path.join(cleanDataDir, 'flat/seasonal-ingredient-products-flat.json'),
+  nonSeasonalIngredients: path.join(cleanDataDir, 'flat/non-seasonal-ingredients-flat.json'),
 };
 
 const readJson = (filePath) => JSON.parse(fs.readFileSync(filePath, 'utf8'));
@@ -52,7 +52,7 @@ const flattenSeasonalIngredients = (dataByCategory) => {
         byName.set(key, {
           name: ingredient.name,
           seasonality: ingredient.seasonality ? [...ingredient.seasonality] : [],
-          foodGroup: [category],
+          foodGroup: category,
           altNames: ingredient.altNames ? [...ingredient.altNames] : undefined,
         });
         continue;
@@ -83,7 +83,7 @@ const flattenNonSeasonalIngredients = (dataByCategory) => {
       if (!existing) {
         byName.set(key, {
           name: ingredient.name,
-          foodGroup: [category],
+          foodGroup: category,
           altNames: ingredient.altNames ? [...ingredient.altNames] : undefined,
         });
         continue;
@@ -111,7 +111,7 @@ const flattenSeasonalIngredientProducts = (dataByCategory) => {
         byKey.set(key, {
           name: product.name,
           parentIngredient: product.parentIngredient,
-          foodGroup: [category],
+          foodGroup: category,
           altNames: product.altNames ? [...product.altNames] : undefined,
         });
         continue;
