@@ -24,7 +24,7 @@ const MONTHS = new Set([
   'december'
 ]);
 
-const normalize =  function(string: String) {
+const normalize =  function(string: string) {
   return string.trim().toLowerCase();
 }
 
@@ -32,15 +32,15 @@ const nameAggregator = function (array: (SeasonalIngredient | NonSeasonalIngredi
   return array
     .flatMap((el: SeasonalIngredient | NonSeasonalIngredient) => el.altNames ? [el.name, ...el.altNames] : [el.name])
     .map(normalize)
-    .filter(Boolean); 
+    .filter(s => s.length > 0);
 };
 
 const getIngredients = async function (ctx: Context) {
-  const month = normalize(ctx.params.month ?? []);
+  const month = normalize(ctx.params.month ?? '');
 
   if (!MONTHS.has(month)) {
     ctx.status =  400;
-    ctx.body = { error: 'Please specify ingredient seasonality' };
+    ctx.body = { error: 'Invalid month. Please specify a correct month.' };
     return;
   }
 
@@ -60,14 +60,14 @@ const getIngredients = async function (ctx: Context) {
 
     const seasonalIngredients = nameAggregator(seasonalIngredientsRetrieval);
     const nonSeasonalIngredients = nameAggregator(nonSeasonalIngredientsRetrieval);
-    const availableIngredients = [...seasonalIngredients, ...nonSeasonalIngredients]
+    const availableIngredients = Array.from(new Set([...seasonalIngredients, ...nonSeasonalIngredients]));
     
     ctx.status = 200;
     ctx.body = { month, availableIngredients, count: availableIngredients.length };
   } catch (err) {
     console.log('Error connecting to server: ' + err)
     ctx.status = 500;
-    ctx.body = { error: 'Server is not responding' };
+    ctx.body = { error: 'Internal server error.' };
   }
 };
 
