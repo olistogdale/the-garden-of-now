@@ -1,8 +1,8 @@
 'use strict';
 
-import { mongoose } from '../../database/db';
+import { mongoose } from '../database/db';
 
-import type { SeasonalIngredient } from '../../../../data/ingredients/types/ingredientTypes';
+import type { SeasonalIngredient } from '../../../data/ingredients/types/ingredientTypes';
 
 const { Schema, model } = mongoose;
 
