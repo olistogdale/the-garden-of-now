@@ -35,7 +35,10 @@ export type Instruction = {
   text: string
 }
 
+export type IngredientGroup = string[]
+
 export type Recipe = {
+  _id: string,
   name: string,
   description: string,
   image: ImageData[],
@@ -50,5 +53,16 @@ export type Recipe = {
   yield?: string,
   category?: string,
   ingredients: IngredientData[],
-  instructions: Instruction[]
+  instructions: Instruction[],
+  groupedIngredients: IngredientGroup[]
+}
+
+export type RecipeCard = {
+  _id: string,
+  name: string,
+  image: ImageData[],
+  prepTime?: string,
+  cookTime?: string,
+  totalTime?: string,
+  skillLevel?: string,
 }
