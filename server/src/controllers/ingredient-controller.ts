@@ -1,7 +1,7 @@
 'use strict';
 
-import {seasonalIngredientModel} from '../models/ingredients/seasonal-ingredient-model';
-import {nonSeasonalIngredientModel} from '../models/ingredients/non-seasonal-ingredient-model';
+import {seasonalIngredientModel} from '../models/seasonal-ingredient-model';
+import {nonSeasonalIngredientModel} from '../models/non-seasonal-ingredient-model';
 import {isNonEmpty, normalize} from '../utilities/string-utils';
 
 import type {Context} from 'koa';
