@@ -5,10 +5,10 @@ import {isNonEmpty, normalize} from '../utilities/string-utils';
 
 import type {Context} from 'koa';
 import type {RecipeCard} from '../../../data/recipes/types/recipeTypes'
-import type { SeasonalIngredientPayload } from '../../../data/ingredients/types/ingredientTypes';
+import type { AvailableIngredientPayload } from '../../../data/ingredients/types/ingredientTypes';
 
 const getAvailableRecipes = async function (ctx: Context) {
-  const {availableIngredients} = ctx.request.body as SeasonalIngredientPayload;
+  const {availableIngredients} = ctx.request.body as AvailableIngredientPayload;
 
   if (!Array.isArray(availableIngredients) || availableIngredients.length === 0) {
     ctx.status = 400;
