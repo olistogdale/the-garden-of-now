@@ -2,6 +2,7 @@
 
 import {seasonalIngredientModel} from '../models/ingredients/seasonal-ingredient-model';
 import {nonSeasonalIngredientModel} from '../models/ingredients/non-seasonal-ingredient-model';
+import {isNonEmpty, normalize} from '../utilities/string-utils';
 
 import type {Context} from 'koa';
 import type {
@@ -24,15 +25,12 @@ const MONTHS = new Set([
   'december'
 ]);
 
-const normalize =  function(string: string) {
-  return string.trim().toLowerCase();
-}
-
 const nameAggregator = function (array: (SeasonalIngredient | NonSeasonalIngredient)[]) {
   return array
     .flatMap((el: SeasonalIngredient | NonSeasonalIngredient) => el.altNames ? [el.name, ...el.altNames] : [el.name])
+    .filter(Boolean)
     .map(normalize)
-    .filter(s => s.length > 0);
+    .filter(isNonEmpty);
 };
 
 const getIngredients = async function (ctx: Context) {
@@ -63,11 +61,11 @@ const getIngredients = async function (ctx: Context) {
     const availableIngredients = Array.from(new Set([...seasonalIngredients, ...nonSeasonalIngredients]));
     
     ctx.status = 200;
-    ctx.body = { month, availableIngredients, count: availableIngredients.length };
+    ctx.body = {month, availableIngredients, count: availableIngredients.length};
   } catch (err) {
-    console.log('Error connecting to server: ' + err)
+    console.log('Error connecting to server:', err)
     ctx.status = 500;
-    ctx.body = { error: 'Internal server error.' };
+    ctx.body = {error: 'Internal server error: could not fetch available ingredients.'};
   }
 };
 
