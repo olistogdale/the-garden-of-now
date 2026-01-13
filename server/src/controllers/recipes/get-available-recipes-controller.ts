@@ -1,11 +1,11 @@
 'use strict';
 
-import {recipeModel} from '../models/recipe-model';
-import {isNonEmpty, normalize} from '../utilities/string-utils';
+import {recipeModel} from '../../models/recipe-model';
+import {isNonEmpty, normalize} from '../../utilities/string-utils';
 
 import type {Context} from 'koa';
-import type {RecipeCard} from '../../../data/recipes/types/recipeTypes'
-import type { AvailableIngredientPayload } from '../../../data/ingredients/types/ingredientTypes';
+import type {RecipeCard} from '../../../../data/recipes/types/recipeTypes'
+import type { AvailableIngredientPayload } from '../../../../data/ingredients/types/ingredientTypes';
 
 type FacetResult = {
   results: RecipeCard[];
@@ -15,7 +15,7 @@ type FacetResult = {
 const DEFAULT_LIMIT = 25;
 const MAX_LIMIT = 100;
 
-const getAvailableRecipes = async function (ctx: Context) {
+export const getAvailableRecipes = async function (ctx: Context) {
   const {availableIngredients, seed} = ctx.request.body as AvailableIngredientPayload;
 
   if (!Array.isArray(availableIngredients) || availableIngredients.length === 0) {
@@ -133,5 +133,3 @@ const getAvailableRecipes = async function (ctx: Context) {
     ctx.body = {error: 'Internal server error: could not fetch available recipes.'};
   }
 };
-
-export {getAvailableRecipes};
