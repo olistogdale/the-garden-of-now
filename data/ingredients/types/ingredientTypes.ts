@@ -34,3 +34,7 @@ export type NonSeasonalIngredient = {
   foodGroup: string,
   altNames?: string[]
 }
+
+export type SeasonalIngredientPayload = {
+  availableIngredients: string[]
+}
