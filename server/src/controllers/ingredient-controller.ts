@@ -6,8 +6,7 @@ import {isNonEmpty, normalize} from '../utilities/string-utils';
 
 import type {Context} from 'koa';
 import type {
-  SeasonalIngredient,
-  NonSeasonalIngredient
+  IngredientRetrieval
 } from '../../../data/ingredients/types/ingredientTypes';
 
 const MONTHS = new Set([
@@ -25,16 +24,15 @@ const MONTHS = new Set([
   'december'
 ]);
 
-const nameAggregator = function (array: (SeasonalIngredient | NonSeasonalIngredient)[]) {
+const nameAggregator = function (array: IngredientRetrieval[]) {
   return array
-    .flatMap((el: SeasonalIngredient | NonSeasonalIngredient) => el.altNames ? [el.name, ...el.altNames] : [el.name])
-    .filter(Boolean)
+    .flatMap((el) => el.altNames ? [el.name, ...el.altNames] : [el.name])
     .map(normalize)
     .filter(isNonEmpty);
 };
 
 const getIngredients = async function (ctx: Context) {
-  const month = normalize(ctx.params.month ?? '');
+  const month: string = normalize(ctx.params.month ?? '');
 
   if (!MONTHS.has(month)) {
     ctx.status =  400;
@@ -48,22 +46,22 @@ const getIngredients = async function (ctx: Context) {
         seasonalIngredientModel
           .find({seasonality: month})
           .select({ name: 1, altNames: 1, _id: 0 })
-          .lean(),
+          .lean<IngredientRetrieval[]>(),
         nonSeasonalIngredientModel
           .find()
           .select({ name: 1, altNames: 1, _id: 0 })
-          .lean()
+          .lean<IngredientRetrieval[]>()
       ]
     );
 
     const seasonalIngredients = nameAggregator(seasonalIngredientsRetrieval);
     const nonSeasonalIngredients = nameAggregator(nonSeasonalIngredientsRetrieval);
-    const availableIngredients = Array.from(new Set([...seasonalIngredients, ...nonSeasonalIngredients]));
+    const availableIngredients: string[] = Array.from(new Set([...seasonalIngredients, ...nonSeasonalIngredients]));
     
     ctx.status = 200;
     ctx.body = {month, availableIngredients, count: availableIngredients.length};
   } catch (err) {
-    console.log('Error connecting to server:', err)
+    console.log('Error fetching ingredients:', err)
     ctx.status = 500;
     ctx.body = {error: 'Internal server error: could not fetch available ingredients.'};
   }
