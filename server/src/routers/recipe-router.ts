@@ -1,9 +1,10 @@
 import Router from 'koa-router';
 
-import {getRecipes} from '../controllers/recipe-controller';
+import {getAvailableRecipes, getRecipe} from '../controllers/recipes/index';
 
 const recipeRouter = new Router();
 
-recipeRouter.get('/recipes', getRecipes);
+recipeRouter.get('/recipes', getAvailableRecipes);
+recipeRouter.get('/recipes/:id', getRecipe)
 
 export default recipeRouter;
