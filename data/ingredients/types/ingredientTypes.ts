@@ -21,6 +21,7 @@ export type IngredientRetrieval = {
 }
 
 export type AvailableIngredientPayload = {
-  availableIngredients: string[],
-  seed: string
+  availableIngredients: string[]
 }
+
+export type AvailableIngredientSeedPayload = AvailableIngredientPayload & {seed: string}
