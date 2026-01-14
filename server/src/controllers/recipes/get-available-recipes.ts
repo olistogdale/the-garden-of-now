@@ -5,7 +5,7 @@ import {isNonEmpty, normalize} from '../../utilities/string-utils';
 
 import type {Context} from 'koa';
 import type {RecipeCard} from '../../../../data/recipes/types/recipeTypes'
-import type { AvailableIngredientPayload } from '../../../../data/ingredients/types/ingredientTypes';
+import type { AvailableIngredientSeedPayload } from '../../../../data/ingredients/types/ingredientTypes';
 
 type FacetResult = {
   results: RecipeCard[];
@@ -16,7 +16,7 @@ const DEFAULT_LIMIT = 25;
 const MAX_LIMIT = 100;
 
 export const getAvailableRecipes = async function (ctx: Context) {
-  const {availableIngredients, seed} = ctx.request.body as AvailableIngredientPayload;
+  const {availableIngredients, seed} = ctx.request.body as AvailableIngredientSeedPayload;
 
   if (!Array.isArray(availableIngredients) || availableIngredients.length === 0) {
     ctx.status = 400;
