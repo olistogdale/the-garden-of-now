@@ -1,13 +1,13 @@
 'use strict';
 
-import {seasonalIngredientModel} from '../models/seasonal-ingredient-model';
-import {nonSeasonalIngredientModel} from '../models/non-seasonal-ingredient-model';
-import {isNonEmpty, normalize} from '../utilities/string-utils';
+import {seasonalIngredientModel} from '../../models/seasonal-ingredient-model';
+import {nonSeasonalIngredientModel} from '../../models/non-seasonal-ingredient-model';
+import {isNonEmpty, normalize} from '../../utilities/string-utils';
 
 import type {Context} from 'koa';
 import type {
   IngredientRetrieval
-} from '../../../data/ingredients/types/ingredientTypes';
+} from '../../../../data/ingredients/types/ingredientTypes';
 
 const MONTHS = new Set([
   'january',
@@ -31,7 +31,7 @@ const nameAggregator = function (array: IngredientRetrieval[]) {
     .filter(isNonEmpty);
 };
 
-const getIngredients = async function (ctx: Context) {
+export const getAvailableIngredients = async function (ctx: Context) {
   const month: string = normalize(ctx.params.month ?? '');
 
   if (!MONTHS.has(month)) {
@@ -66,5 +66,3 @@ const getIngredients = async function (ctx: Context) {
     ctx.body = {error: 'Internal server error: could not fetch available ingredients.'};
   }
 };
-
-export {getIngredients};

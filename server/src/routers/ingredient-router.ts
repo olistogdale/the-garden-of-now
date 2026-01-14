@@ -1,6 +1,6 @@
 import Router from 'koa-router'
 
-import {getAvailableIngredients} from '../controllers/ingredient-controller';
+import {getAvailableIngredients} from '../controllers/ingredients/get-available-ingredients';
 
 const ingredientRouter = new Router();
 
