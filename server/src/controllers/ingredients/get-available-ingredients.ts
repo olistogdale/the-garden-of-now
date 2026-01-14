@@ -7,7 +7,7 @@ import {isNonEmpty, normalize} from '../../utilities/string-utils';
 import type {Context} from 'koa';
 import type {
   IngredientRetrieval
-} from '../../../../data/ingredients/types/ingredientTypes';
+} from '../../../../data/ingredients/types/ingredient-types';
 
 const MONTHS = new Set([
   'january',

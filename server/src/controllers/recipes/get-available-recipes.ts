@@ -4,8 +4,8 @@ import {recipeModel} from '../../models/recipe-model';
 import {isNonEmpty, normalize} from '../../utilities/string-utils';
 
 import type {Context} from 'koa';
-import type {RecipeCard} from '../../../../data/recipes/types/recipeTypes'
-import type { AvailableIngredientSeedPayload } from '../../../../data/ingredients/types/ingredientTypes';
+import type {RecipeCard} from '../../../../data/recipes/types/recipe-types'
+import type { AvailableIngredientSeedPayload } from '../../../../data/ingredients/types/ingredient-types';
 
 type FacetResult = {
   results: RecipeCard[];

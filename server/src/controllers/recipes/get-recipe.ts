@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import {recipeModel} from '../../models/recipe-model';
 
 import type {Context} from 'koa';
-import type {Recipe} from '../../../../data/recipes/types/recipeTypes';
+import type {Recipe} from '../../../../data/recipes/types/recipe-types';
 
 export const getRecipe = async function(ctx: Context) {
   const recipeID: string = String(ctx.params.recipeID ?? '').trim();
