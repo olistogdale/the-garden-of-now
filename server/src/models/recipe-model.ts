@@ -2,7 +2,7 @@
 
 import { mongoose } from '../database/db';
 
-import type { ImageData, NutritionData, Ingredient, IngredientData, Instruction, Recipe } from '../../../data/recipes/types/recipeTypes';
+import type { ImageData, NutritionData, Ingredient, IngredientData, Instruction, Recipe } from '../../../data/recipes/types/recipe-types';
 
 const { Schema, model } = mongoose;
 

@@ -2,7 +2,7 @@
 
 import { mongoose } from '../database/db';
 
-import type { NonSeasonalIngredient } from '../../../data/ingredients/types/ingredientTypes';
+import type { NonSeasonalIngredient } from '../../../data/ingredients/types/ingredient-types';
 
 const { Schema, model } = mongoose;
 
