@@ -66,3 +66,8 @@ export type RecipeCard = {
   totalTime?: string,
   skillLevel?: string,
 }
+
+export type FacetRecipeResult = {
+  results: RecipeCard[];
+  totalCount: {count: number}[];
+};
