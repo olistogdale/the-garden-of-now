@@ -1,9 +1,9 @@
 import Router from 'koa-router'
 
-import {getIngredients} from '../controllers/ingredient-controller';
+import {getAvailableIngredients} from '../controllers/ingredient-controller';
 
 const ingredientRouter = new Router();
 
-ingredientRouter.get('/ingredients', getIngredients);
+ingredientRouter.get('/ingredients/:month', getAvailableIngredients);
 
 export default ingredientRouter;
