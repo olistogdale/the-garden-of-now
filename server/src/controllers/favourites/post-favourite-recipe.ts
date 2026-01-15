@@ -1,9 +1,5 @@
 'use strict';
 
-import type {Context} from 'koa';
+export const postFavouriteRecipe = async function() {
 
-const getFavourites = async function (ctx: Context) {
-
-};
-
-export {getFavourites};
+}
