@@ -1,8 +1,9 @@
 
 
 export function RecipeDetailPage() {
-  return
+  return (
     <div>
 
     </div>
+  )
 }

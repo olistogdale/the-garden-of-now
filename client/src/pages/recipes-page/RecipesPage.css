@@ -1,0 +1,32 @@
+.recipes-page__header {
+  margin: 0 0 18px 0;
+}
+
+.recipes-page__title {
+  margin: 0 0 6px 0;
+  font-size: 1.6rem;
+}
+
+.recipes-page__subtitle {
+  margin: 0;
+  opacity: 0.85;
+  max-width: 60ch;
+}
+
+.recipes-results {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 700px) {
+  .recipes-results {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .recipes-results {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
