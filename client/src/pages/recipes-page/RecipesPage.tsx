@@ -2,7 +2,7 @@ import './RecipesPage.css';
 
 import { RecipeCard } from '../../components/recipe-card/RecipeCard';
 
-import type { RecipeCardType } from '../../../../data/recipes/types/recipe-types/RecipeCardType'
+import type { RecipeCardType } from '../../../../data/recipes/types/recipe-types'
 
 const MOCK_RECIPES: RecipeCardData[] = [
   {

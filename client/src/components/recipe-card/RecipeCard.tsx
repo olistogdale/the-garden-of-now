@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { pickBestImage, getDisplayTime, normalizeSkill } from './recipeCard.utilities';
 
-import type { RecipeCardType } from '../../../../data/recipes/types/recipe-types/RecipeCardType'
+import type { RecipeCardType } from '../../../../data/recipes/types/recipe-types'
 
 type Props = {
   recipe: RecipeCardType;
