@@ -1,6 +1,6 @@
 'use strict';
 
-export type SeasonalIngredient = {
+export type SeasonalIngredientT = {
   _id: string,
   name: string,
   seasonality: string[],
@@ -8,20 +8,20 @@ export type SeasonalIngredient = {
   altNames?: string[]
 }
 
-export type NonSeasonalIngredient = {
+export type NonSeasonalIngredientT = {
   _id: string,
   name: string,
   foodGroup: string,
   altNames?: string[]
 }
 
-export type IngredientRetrieval = {
+export type IngredientRetrievalT = {
   name: string,
   altNames?: string[]
 }
 
-export type AvailableIngredientPayload = {
+export type AvailableIngredientPayloadT = {
   availableIngredients: string[]
 }
 
-export type AvailableIngredientSeedPayload = AvailableIngredientPayload & {seed: string}
+export type AvailableIngredientSeedPayloadT = AvailableIngredientPayloadT & {seed: string}

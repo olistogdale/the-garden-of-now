@@ -1,10 +1,10 @@
 'use strict';
 
 import mongoose from 'mongoose';
-import {recipeModel} from '../../models/recipe-model';
+import { recipeModel } from '../../models/recipe-model';
 
-import type {Context} from 'koa';
-import type {Recipe} from '../../../../data/recipes/types/recipe-types';
+import type { Context } from 'koa';
+import type { RecipeT } from '../../../../data/recipes/types/recipe-types';
 
 export const getRecipe = async function(ctx: Context) {
   const recipeID: string = String(ctx.params.recipeID ?? '').trim();
@@ -22,7 +22,7 @@ export const getRecipe = async function(ctx: Context) {
   }
 
   try {
-    const [recipe] = await recipeModel.aggregate<Recipe>([
+    const [recipe] = await recipeModel.aggregate <RecipeT> ([
       { $match: { _id: new mongoose.Types.ObjectId(recipeID) } },
       {
         $project: {
@@ -49,7 +49,7 @@ export const getRecipe = async function(ctx: Context) {
 
     if (!recipe) {
       ctx.status = 404;
-      ctx.body = {error: `Recipe ${recipeID} not found.`};
+      ctx.body = { error: `Recipe ${recipeID} not found.` };
       return;
     }
 
@@ -60,6 +60,6 @@ export const getRecipe = async function(ctx: Context) {
   } catch (err) {
     console.log(`Error fetching recipe ${recipeID}:`, err);
     ctx.status = 500;
-    ctx.body = {error: `Internal server error: could not fetch recipe ${recipeID}.`};
+    ctx.body = { error: `Internal server error: could not fetch recipe ${recipeID}.` };
   }
 };

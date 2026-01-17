@@ -2,7 +2,7 @@
 
 import Router from 'koa-router';
 
-import {getFavouriteRecipes, postFavouriteRecipe, deleteFavouriteRecipe} from '../controllers/favourites/index';
+import { getFavouriteRecipes, postFavouriteRecipe, deleteFavouriteRecipe } from '../controllers/favourites/index';
 
 const favouriteRouter = new Router();
 

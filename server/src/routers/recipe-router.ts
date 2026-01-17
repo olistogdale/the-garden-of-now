@@ -1,6 +1,6 @@
 import Router from 'koa-router';
 
-import {getAvailableRecipes, getRecipe} from '../controllers/recipes/index';
+import { getAvailableRecipes, getRecipe } from '../controllers/recipes/index';
 
 const recipeRouter = new Router();
 

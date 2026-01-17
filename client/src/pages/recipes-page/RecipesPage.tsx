@@ -2,9 +2,9 @@ import './RecipesPage.css';
 
 import { RecipeCard } from '../../components/recipe-card/RecipeCard';
 
-import type { RecipeCardType } from '../../../../data/recipes/types/recipe-types'
+import type { RecipeCardT } from '../../../../data/recipes/types/recipe-types'
 
-const MOCK_RECIPES: RecipeCardData[] = [
+const MOCK_RECIPES: RecipeCardT[] = [
   {
     _id: '1',
     name: 'Navarin of lamb & spring vegetables',

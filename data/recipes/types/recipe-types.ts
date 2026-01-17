@@ -1,12 +1,12 @@
 'use strict';
 
-export type ImageData = {
+export type ImageDataT = {
   url: string,
   width: number,
   height: number,
 }
 
-export type NutritionData = {
+export type NutritionDataT = {
   calories: string,
   fatContent: string,
   saturatedFatContent: string,
@@ -17,7 +17,7 @@ export type NutritionData = {
   sodiumContent: string
 }
 
-export type Ingredient = {
+export type IngredientT = {
   quantity: string,
   description: string,
   ingredient: string,
@@ -25,49 +25,49 @@ export type Ingredient = {
   preparation: string
 }
 
-export type IngredientData = {
+export type IngredientDataT = {
   text: string,
   optional: boolean,
-  ingredientOptions?: Ingredient[]
+  ingredientOptions?: IngredientT[]
 }
 
-export type Instruction = {
+export type InstructionT = {
   text: string
 }
 
-export type IngredientGroup = string[]
+export type IngredientGroupT = string[]
 
-export type Recipe = {
+export type RecipeT = {
   _id: string,
   name: string,
   description: string,
-  image: ImageData[],
+  image: ImageDataT[],
   url: string,
   keywords?: string,
   prepTime?: string,
   cookTime?: string,
   totalTime?: string,
-  nutrition?: NutritionData,
+  nutrition?: NutritionDataT,
   cuisine?: string,
   skillLevel?: string,
   yield?: string,
   category?: string,
-  ingredients: IngredientData[],
-  instructions: Instruction[],
-  groupedIngredients: IngredientGroup[]
+  ingredients: IngredientDataT[],
+  instructions: InstructionT[],
+  groupedIngredients: IngredientGroupT[]
 }
 
-export type RecipeCard = {
+export type RecipeCardT = {
   _id: string,
   name: string,
-  image: ImageData[],
+  image: ImageDataT[],
   prepTime?: string,
   cookTime?: string,
   totalTime?: string,
   skillLevel?: string,
 }
 
-export type FacetRecipeResult = {
-  results: RecipeCard[];
+export type FacetRecipeResultT = {
+  results: RecipeCardT[];
   totalCount: {count: number}[];
 };

@@ -1,32 +1,32 @@
 'use strict';
 
-import {recipeModel} from '../../models/recipe-model';
-import {isNonEmpty, normalize} from '../../utilities/string-utils';
+import { recipeModel } from '../../models/recipe-model';
+import { isNonEmpty, normalize } from '../../utilities/string-utils';
 
-import type {Context} from 'koa';
-import type {RecipeCard} from '../../../../data/recipes/types/recipe-types'
-import type { AvailableIngredientSeedPayload } from '../../../../data/ingredients/types/ingredient-types';
+import type { Context } from 'koa';
+import type { RecipeCardT } from '../../../../data/recipes/types/recipe-types'
+import type { AvailableIngredientSeedPayloadT } from '../../../../data/ingredients/types/ingredient-types';
 
 type FacetResult = {
-  results: RecipeCard[];
-  totalCount: {count: number}[];
+  results: RecipeCardT[];
+  totalCount: { count: number }[];
 };
 
 const DEFAULT_LIMIT = 25;
 const MAX_LIMIT = 100;
 
 export const getAvailableRecipes = async function (ctx: Context) {
-  const {availableIngredients, seed} = ctx.request.body as AvailableIngredientSeedPayload;
+  const { availableIngredients, seed } = ctx.request.body as AvailableIngredientSeedPayloadT;
 
   if (!Array.isArray(availableIngredients) || availableIngredients.length === 0) {
     ctx.status = 400;
-    ctx.body = {error: 'Invalid ingredients. Please specify a non empty array of ingredient strings.'};
+    ctx.body = { error: 'Invalid ingredients. Please specify a non empty array of ingredient strings.' };
     return;
   }
 
   if (typeof seed !== 'string' || seed.trim().length === 0 || seed.length > 128) {
     ctx.status = 400;
-    ctx.body = {error: 'Invalid seed. Please specify a non empty seed string shorter than 128 characters.'};
+    ctx.body = { error: 'Invalid seed. Please specify a non empty seed string shorter than 128 characters.' };
     return;
   }
 
@@ -47,7 +47,7 @@ export const getAvailableRecipes = async function (ctx: Context) {
   const trimmedSeed = seed.trim();
 
   try {
-    const [data] = await recipeModel.aggregate<FacetResult>([
+    const [data] = await recipeModel.aggregate <FacetResult> ([
       {
         $match: {
           $expr: {
@@ -91,8 +91,8 @@ export const getAvailableRecipes = async function (ctx: Context) {
       { $sort: { sortKey: 1, _id: 1 } },
       { $facet: {
           results: [
-            { $skip: skip},
-            { $limit: limit},
+            { $skip: skip },
+            { $limit: limit },
             {
               $project: {
                 name: 1,
@@ -107,13 +107,13 @@ export const getAvailableRecipes = async function (ctx: Context) {
             }
           ],
           totalCount: [
-            { $count: "count"}
+            { $count: "count" }
           ]
         }
       }
     ]);
 
-    const pageRecipes: RecipeCard[] = data?.results ?? [];
+    const pageRecipes: RecipeCardT[] = data?.results ?? [];
     const pageCount: number = pageRecipes.length;
     const totalCount: number = data?.totalCount?.[0]?.count ?? 0;
     const totalPages: number = Math.ceil(totalCount/limit);
@@ -130,6 +130,6 @@ export const getAvailableRecipes = async function (ctx: Context) {
   } catch (err) {
     console.log('Error fetching available recipes:', err);
     ctx.status = 500;
-    ctx.body = {error: 'Internal server error: could not fetch available recipes.'};
+    ctx.body = { error: 'Internal server error: could not fetch available recipes.' };
   }
 };
