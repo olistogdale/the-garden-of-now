@@ -1,22 +1,18 @@
 'use strict';
 
+import {userModel} from '../../models/user-model';
 import {recipeModel} from '../../models/recipe-model';
 import {isNonEmpty, normalize} from '../../utilities/string-utils';
 
 import type {Context} from 'koa';
-import type {RecipeCard} from '../../../../data/recipes/types/recipeTypes'
-import type {AvailableIngredientPayload} from '../../../../data/ingredients/types/ingredientTypes';
-
-type FacetResult = {
-  results: RecipeCard[];
-  totalCount: {count: number}[];
-};
+import type {RecipeCard, FacetRecipeResult} from '../../../../data/recipes/types/recipe-types'
+import type {AvailableIngredientPayload} from '../../../../data/ingredients/types/ingredient-types';
 
 const DEFAULT_LIMIT = 25;
 const MAX_LIMIT = 100;
 
 export const getFavouriteRecipes = async function (ctx: Context) {
-  const {availableIngredients} = ctx.request.body as AvailableIngredientPayload;
+  const {availableIngredients, userID} = ctx.request.body as AvailableIngredientPayload;
 
   if (!Array.isArray(availableIngredients) || availableIngredients.length === 0) {
     ctx.status = 400;
@@ -39,51 +35,7 @@ export const getFavouriteRecipes = async function (ctx: Context) {
   )];
 
   try {
-    const [data] = await recipeModel.aggregate<FacetResult>([
-      {
-        $match: {
-          $expr: {
-            $allElementsTrue: {
-              $map: {
-                input: "$groupedIngredients",
-                as: "group",
-                in: {
-                  $anyElementTrue: {
-                    $map: {
-                      input: "$$group",
-                      as: "candidate",
-                      in: { $in: ["$$candidate", normalizedIngredients] }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      { $facet: {
-          results: [
-            { $skip: skip},
-            { $limit: limit},
-            {
-              $project: {
-                name: 1,
-                image: 1,
-                prepTime: 1,
-                cookTime: 1,
-                totalTime: 1,
-                skillLevel: 1,
-                _id: { $toString: "$_id" },
-                sortKey: 0
-              }
-            }
-          ],
-          totalCount: [
-            { $count: "count"}
-          ]
-        }
-      }
-    ]);
+    const userRecipeIDs = await userModel.find()
 
     const pageRecipes: RecipeCard[] = data?.results ?? [];
     const pageCount: number = pageRecipes.length;
