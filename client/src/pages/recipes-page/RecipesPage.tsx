@@ -1,6 +1,7 @@
 import './RecipesPage.css';
 
 import { RecipeCard } from '../../components/recipe-card/RecipeCard';
+import { useAvailableIngredients } from '../../hooks/useSeasonalIngredients';
 
 import type { RecipeCardT } from '../../../../data/recipes/types/recipe-types'
 
@@ -26,7 +27,10 @@ const MOCK_RECIPES: RecipeCardT[] = [
 ];
 
 export function RecipesPage() {
-  // Later: replace MOCK_RECIPES with a fetch
+  const { month, availableIngredients } = useAvailableIngredients();
+  console.log(month, availableIngredients);
+
+
   const recipes = MOCK_RECIPES;
 
   return (

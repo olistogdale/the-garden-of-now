@@ -2,12 +2,9 @@ import './LandingPage.css';
 
 import { Link } from 'react-router-dom';
 
-import { useAvailableIngredients } from '../../hooks/useSeasonalIngredients';
+
 
 export function LandingPage() {
-  const { month, availableIngredients } = useAvailableIngredients();
-  console.log(month, availableIngredients);
-  
   return (
     <div className="landing-container">
       <section className="landing-hero">
