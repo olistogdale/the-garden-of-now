@@ -33,7 +33,7 @@ export function RecipesPage() {
     <div className="recipes-page-container">
       <section className="recipes-page__header">
         <h1 className="recipes-page__title">Recipes</h1>
-        <p className="recipes-page__subtitle">Browse what’s cooking right now.</p>
+        <p className="recipes-page__subtitle">See what’s cooking right now.</p>
       </section>
 
       <section className="recipes-results">

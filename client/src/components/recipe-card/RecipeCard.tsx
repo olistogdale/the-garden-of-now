@@ -2,7 +2,9 @@ import './RecipeCard.css';
 
 import { Link } from 'react-router-dom';
 
-import { pickBestImage, getDisplayTime, normalizeSkill } from './recipeCard.utilities';
+import { parseImage } from '../../utilities/parse-image';
+import { parseTime } from '../../utilities/parse-time';
+import { parseSkillLevel } from '../../utilities/parse-skill-level';
 
 import type { RecipeCardT } from '../../../../data/recipes/types/recipe-types'
 
@@ -11,9 +13,9 @@ type Props = {
 };
 
 export function RecipeCard({ recipe }: Props) {
-  const img = pickBestImage(recipe.image);
-  const time = getDisplayTime(recipe);
-  const skill = normalizeSkill(recipe.skillLevel);
+  const img = parseImage(recipe.image);
+  const time = parseTime(recipe);
+  const skill = parseSkillLevel(recipe.skillLevel);
 
   return (
     <article className="recipe-card-container">

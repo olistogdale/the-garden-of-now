@@ -1,4 +1,4 @@
-import type { RecipeCardT, ImageDataT } from '../../../../data/recipes/types/recipe-types'
+import type { RecipeCardT } from "../../../data/recipes/types/recipe-types";
 
 function parseDurationToMinutes(value?: string): number | null {
   if (!value) return null;
@@ -36,7 +36,7 @@ function formatMinutes(mins: number): string {
   return `${h} hr${h === 1 ? '' : 's'} ${m} min${m === 1 ? '' : 's'}`;
 }
 
-export function getDisplayTime(recipe: RecipeCardT): string | null {
+export function parseTime(recipe: RecipeCardT): string | null {
   const total = parseDurationToMinutes(recipe.totalTime);
   if (total !== null) return formatMinutes(total);
 
@@ -45,37 +45,4 @@ export function getDisplayTime(recipe: RecipeCardT): string | null {
 
   if (prep === null && cook === null) return null;
   return formatMinutes((prep ?? 0) + (cook ?? 0));
-}
-
-export function pickBestImage(images: ImageDataT[]): ImageDataT | null {
-  if (!images || images.length === 0) return null;
-
-  // Choose image whose width is closest to a typical card width (e.g. 480px).
-  const target = 480;
-
-  let best = images[0];
-  let bestScore = Math.abs(best.width - target);
-
-  for (const img of images) {
-    const score = Math.abs(img.width - target);
-    if (score < bestScore) {
-      best = img;
-      bestScore = score;
-    }
-  }
-
-  return best;
-}
-
-export function normalizeSkill(skill?: string): string | null {
-  if (!skill) return null;
-  const s = skill.trim().toLowerCase();
-  if (!s) return null;
-
-  if (s.includes('easy')) return 'Easy';
-  if (s.includes('medium') || s.includes('intermediate')) return 'Medium';
-  if (s.includes('hard') || s.includes('difficult')) return 'Hard';
-
-  // If your data already uses "Easy/Medium/Hard", this preserves it nicely:
-  return skill.trim();
 }
