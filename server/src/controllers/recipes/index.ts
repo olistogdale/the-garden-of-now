@@ -1,4 +1,4 @@
 'use strict';
 
-export { getAvailableRecipes } from './get-available-recipes';
+export { getRecipes } from './get-recipes';
 export { getRecipe } from './get-recipe';

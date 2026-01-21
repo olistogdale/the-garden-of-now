@@ -4,21 +4,16 @@ import { recipeModel } from '../../models/recipe-model';
 import { isNonEmpty, normalize } from '../../utilities/string-utils';
 
 import type { Context } from 'koa';
-import type { RecipeCardT } from '../../../../data/recipes/types/recipe-types'
-import type { AvailableIngredientSeedPayloadT } from '../../../../data/ingredients/types/ingredient-types';
-
-type FacetResult = {
-  results: RecipeCardT[];
-  totalCount: { count: number }[];
-};
+import type { RecipeCardT, RecipesRequestPayloadT, RecipesResponsePayloadT } from '../../../../data/recipes/types/recipe-types';
+import type { RecipesFacetResultT } from '../../types/recipe-types';
 
 const DEFAULT_LIMIT = 25;
 const MAX_LIMIT = 100;
 
-export const getAvailableRecipes = async function (ctx: Context) {
-  const { availableIngredients, seed } = ctx.request.body as AvailableIngredientSeedPayloadT;
+export const getRecipes = async function (ctx: Context) {
+  const { ingredients, seed } = ctx.request.body as RecipesRequestPayloadT;
 
-  if (!Array.isArray(availableIngredients) || availableIngredients.length === 0) {
+  if (!Array.isArray(ingredients) || ingredients.length === 0) {
     ctx.status = 400;
     ctx.body = { error: 'Invalid ingredients. Please specify a non empty array of ingredient strings.' };
     return;
@@ -38,7 +33,7 @@ export const getAvailableRecipes = async function (ctx: Context) {
   const skip: number = (page - 1) * limit;
 
   const normalizedIngredients = [...new Set(
-    availableIngredients
+    ingredients
       .filter(Boolean)
       .map(normalize)
       .filter(isNonEmpty)
@@ -47,7 +42,7 @@ export const getAvailableRecipes = async function (ctx: Context) {
   const trimmedSeed = seed.trim();
 
   try {
-    const [data] = await recipeModel.aggregate <FacetResult> ([
+    const [data] = await recipeModel.aggregate <RecipesFacetResultT> ([
       {
         $match: {
           $expr: {
@@ -101,8 +96,7 @@ export const getAvailableRecipes = async function (ctx: Context) {
                 cookTime: 1,
                 totalTime: 1,
                 skillLevel: 1,
-                _id: { $toString: "$_id" },
-                sortKey: 0
+                _id: { $toString: "$_id" }
               }
             }
           ],
@@ -113,23 +107,19 @@ export const getAvailableRecipes = async function (ctx: Context) {
       }
     ]);
 
-    const pageRecipes: RecipeCardT[] = data?.results ?? [];
-    const pageCount: number = pageRecipes.length;
+    const recipes: RecipeCardT[] = data?.results ?? [];
     const totalCount: number = data?.totalCount?.[0]?.count ?? 0;
     const totalPages: number = Math.ceil(totalCount/limit);
 
     ctx.status = 200;
     ctx.body = {
-      pageRecipes,
-      pageCount,
-      page,
-      limit,
+      recipes,
       totalCount,
       totalPages
-    }
+    } as RecipesResponsePayloadT;
   } catch (err) {
-    console.log('Error fetching available recipes:', err);
+    console.log('Error fetching recipes:', err);
     ctx.status = 500;
-    ctx.body = { error: 'Internal server error: could not fetch available recipes.' };
+    ctx.body = { error: 'Internal server error: could not fetch recipes.' };
   }
 };
