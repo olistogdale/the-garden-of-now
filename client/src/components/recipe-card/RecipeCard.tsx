@@ -18,7 +18,7 @@ export function RecipeCard({ recipe }: Props) {
   const skill = parseSkillLevel(recipe.skillLevel);
 
   return (
-    <article className="recipe-card-container">
+    <div className="recipe-card">
       <Link to={`/recipes/${recipe._id}`} className="recipe-card__link" aria-label={recipe.name}>
         <div className="recipe-card__media">
           {img ? (
@@ -44,6 +44,6 @@ export function RecipeCard({ recipe }: Props) {
           )}
         </div>
       </Link>
-    </article>
+    </div>
   );
 }

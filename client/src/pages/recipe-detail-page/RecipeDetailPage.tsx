@@ -1,69 +1,76 @@
 import './RecipeDetailPage.css';
 
-import { useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
+import { StatusPanel } from '../../components/status-panel/StatusPanel';
 import { parseImage } from '../../utilities/parse-image';
 import { parseTime } from '../../utilities/parse-time';
 import { parseSkillLevel } from '../../utilities/parse-skill-level';
+import { fetchRecipeByID } from '../../services/recipes-service';
 
-import type { RecipeCardT } from '../../../../data/recipes/types/recipe-types';
+import type { RecipeT } from '../../../../data/recipes/types/recipe-types';
+import type { StatusT } from '../../types/status-types';
 
-// ---- Mock data for Stage 1 ----
-const MOCK_RECIPES: RecipeCardT[] = [
-  {
-    _id: '1',
-    name: 'Navarin of lamb & spring vegetables',
-    image: [
-      {
-        url: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-221500_11-4e299a3.jpg?resize=440,400',
-        width: 440,
-        height: 400,
-      },
-      {
-        url: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-221500_11-4e299a3.jpg?resize=960,872',
-        width: 960,
-        height: 872,
-      },
-    ],
-    prepTime: '20 mins',
-    cookTime: '1 hr 10 mins',
-    skillLevel: 'Easy',
-  },
-  {
-    _id: '2',
-    name: 'Lemon herb roast chicken',
-    image: [],
-    totalTime: '1 hr 30 mins',
-    skillLevel: 'Medium',
-  },
-];
+
 
 export function RecipeDetailPage() {
-  const { id } = useParams();
+  const { id } = useParams <{ id: string }>();
 
-  const recipe = useMemo(() => MOCK_RECIPES.find((r) => r._id === id) ?? null, [id]);
+  const [recipe, setRecipe] = useState <RecipeT | null > (null);
+  const [recipeStatus, setRecipeStatus] = useState <StatusT> ('idle');
+  const [recipeError, setRecipeError] = useState <string | null> (null)
+
+  useEffect(() => {
+    if (!id) return;
+    
+    const controller = new AbortController();
+    const timeoutID = window.setTimeout(() => controller.abort(), 10000);
+
+    const loadRecipe = async function() {
+      try {
+        setRecipeStatus('loading');
+        setRecipeError(null)
+
+        const {recipe} = await fetchRecipeByID(id, controller.signal);
+
+        setRecipe(recipe);
+        setRecipeStatus('success');
+      } catch (err) {
+        if (err instanceof DOMException && err.name === 'AbortError') return;
+
+        setRecipeStatus('error');
+        setRecipeError(err instanceof Error? err.message : 'Unknown error')
+      }
+    }
+
+    loadRecipe()
+
+    return () => {
+      clearTimeout(timeoutID);
+      controller.abort();
+    }
+  }, [id])
+
+  if (recipeStatus === 'idle' || recipeStatus === 'loading') {
+    return (
+      <StatusPanel title="Recipe" message="Loading recipe…" />
+    )
+  }
+
+  if (recipeStatus === 'error') {
+    return (
+      <StatusPanel
+        title="Recipe"
+        message={`Couldn’t load recipe${recipeError ? `: ${recipeError}` : '.'}`}
+      />
+    )
+  }
 
   if (!recipe) {
     return (
-      <section className="recipe-detail-container">
-        <div className="recipe-detail__topbar">
-          <Link to="/recipes" className="textlink">
-            ← Back to recipes
-          </Link>
-        </div>
-
-        <div className="recipe-detail__empty">
-          <h1 className="recipe-detail__title">Recipe not found</h1>
-          <p className="recipe-detail__subtitle">
-            That recipe doesn’t exist (or hasn’t loaded yet).
-          </p>
-          <Link to="/recipes" className="btn btn-primary">
-            Browse recipes
-          </Link>
-        </div>
-      </section>
-    );
+      <StatusPanel title="Recipe" message="Recipe not found." />
+    )
   }
 
   const heroImg = parseImage(recipe.image);
@@ -121,4 +128,66 @@ export function RecipeDetailPage() {
       </section>
     </div>
   );
+
+  // return (
+  //   <div className="recipe-detail-page">
+  //     <header className="recipe-detail-page__header">
+  //       <button type="button" onClick={() => navigate(-1)} className="recipe-detail-page__back">
+  //         ← Back
+  //       </button>
+
+  //       <h1 className="recipe-detail-page__title">{recipe.name}</h1>
+
+  //       {/* Example: render first image if exists */}
+  //       {recipe.image?.[0]?.url && (
+  //         <img
+  //           className="recipe-detail-page__image"
+  //           src={recipe.image[0].url}
+  //           alt={recipe.name}
+  //         />
+  //       )}
+
+  //       <div className="recipe-detail-page__meta">
+  //         {/* Adapt these fields to your real recipe shape */}
+  //         {recipe.totalTime ? <span>Total: {recipe.totalTime}</span> : null}
+  //         {recipe.prepTime ? <span>Prep: {recipe.prepTime}</span> : null}
+  //         {recipe.cookTime ? <span>Cook: {recipe.cookTime}</span> : null}
+  //         {recipe.skillLevel ? <span>Skill: {recipe.skillLevel}</span> : null}
+  //       </div>
+  //     </header>
+
+  //     <main className="recipe-detail-page__content">
+  //       {recipe.description ? (
+  //         <p className="recipe-detail-page__description">{recipe.description}</p>
+  //       ) : null}
+
+  //       {/* Ingredients */}
+  //       {Array.isArray(recipe.ingredients) && recipe.ingredients.length > 0 && (
+  //         <section className="recipe-detail-page__section">
+  //           <h2>Ingredients</h2>
+  //           <ul>
+  //             {recipe.ingredients.map((ing, idx) => (
+  //               <li key={idx}>
+  //                 {/* adapt to your ingredient object */}
+  //                 {'text' in ing ? (ing as any).text : String(ing)}
+  //               </li>
+  //             ))}
+  //           </ul>
+  //         </section>
+  //       )}
+
+  //       {/* Method / steps */}
+  //       {Array.isArray((recipe as any).method) && (recipe as any).method.length > 0 && (
+  //         <section className="recipe-detail-page__section">
+  //           <h2>Method</h2>
+  //           <ol>
+  //             {(recipe as any).method.map((step: string, idx: number) => (
+  //               <li key={idx}>{step}</li>
+  //             ))}
+  //           </ol>
+  //         </section>
+  //       )}
+  //     </main>
+  //   </div>
+  // );
 }

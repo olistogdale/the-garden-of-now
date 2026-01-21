@@ -1,0 +1,1 @@
+export type StatusT = 'idle' | 'loading' | 'success' | 'error';

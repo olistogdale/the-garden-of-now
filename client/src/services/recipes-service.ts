@@ -2,66 +2,35 @@ import { API_URL } from '../config.ts';
 
 import { fetchRequest } from '../utilities/fetch-request.ts';
 
-export async function fetchSeasonalRecipes(availableIngredients: string[], seed: string) {
-  const url = `${API_URL}/recipes`;
+import type { RecipesRequestPayloadT, RecipesResponsePayloadT, RecipeByIDResponsePayloadT } from '../../../data/recipes/types/recipe-types.ts'
+
+export async function fetchRecipes(
+  { ingredients, seed }: RecipesRequestPayloadT,
+  page: number = 1,
+  limit: number = 25,
+  signal?: AbortSignal
+): Promise <RecipesResponsePayloadT> {
+  const params = new URLSearchParams({
+    page: String(page),
+    limit: String(limit)
+  })
+  const url = `${API_URL}/recipes?${params.toString()}`;
 
   return fetchRequest(url, {
     method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ availableIngredients, seed })
+      body: JSON.stringify({ ingredients, seed }),
+      signal
   })
 }
 
-export async function fetchRecipeByID(id: string) {
+export async function fetchRecipeByID(id: string, signal?: AbortSignal): Promise <RecipeByIDResponsePayloadT> {
   const url = `${API_URL}/recipes/${id}`;
 
   return fetchRequest(url, {
-    method: 'GET'
+    method: 'GET',
+    signal
   })
 }
-
-// export async function fetchSeasonalRecipes(availableIngredients: string[], seed: string[]) {
-//   const url = `${API_URL}/recipes`;
-
-//   try {
-//     const res = await fetch(url, {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json'
-//       },
-//       body: JSON.stringify({ availableIngredients, seed })
-//     })
-
-//     if (!res.ok) {
-//       throw new Error(`Response status: ${res.status}`)
-//     }
-
-//     const body = await res.json();
-//     return body;
-//   } catch (err) {
-//     console.log(`Error fetching recipes`, err);
-//     throw err;
-//   }
-// }
-
-// export async function fetchRecipeByID(id: string) {
-//   const url = `${API_URL}/recipes/${id}`;
-
-//   try {
-//     const res = await fetch(url, {
-//       method: 'GET'
-//     })
-
-//     if (!res.ok) {
-//       throw new Error(`Response status: ${res.status}`)
-//     }
-
-//     const body = await res.json();
-//     return body;
-//   } catch (err) {
-//     console.log(`Error fetching recipe ${id}`, err);
-//     throw err;
-//   }
-// }

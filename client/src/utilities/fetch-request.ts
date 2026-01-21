@@ -1,28 +1,23 @@
 export async function fetchRequest <T> (
   url: string,
-  options: RequestInit = {},
-  timeoutMs = 10000
+  options: RequestInit = {}
 ): Promise<T> {
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+  const res = await fetch(url, options);
 
-  try {
-    const res = await fetch(url, {
-      ...options,
-      signal: controller.signal
-    });
+  if (!res.ok) {
+    let message = `Response status: ${res.status}`;
 
-    if (!res.ok) {
-      throw new Error(`Response status: ${res.status}`);
+    try {
+      const data = (await res.json()) as { error?: unknown };
+      if (data && typeof data === 'object' && 'error' in data) {
+        message = String((data).error);
+      }
+    } catch {
+      //
     }
 
-    return (await res.json()) as T;
-  } catch (err: unknown) {
-    if (err instanceof DOMException && err.name === 'AbortError') {
-      throw new Error('Request timed out');
-    }
-    throw err;
-  } finally {
-    clearTimeout(timeoutId);
+    throw new Error(message);
   }
+
+  return (await res.json()) as T;
 }

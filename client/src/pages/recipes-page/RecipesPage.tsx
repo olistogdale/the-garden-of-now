@@ -1,43 +1,151 @@
 import './RecipesPage.css';
 
+import { useEffect, useMemo, useState } from 'react';
+
 import { RecipeCard } from '../../components/recipe-card/RecipeCard';
-import { useAvailableIngredients } from '../../hooks/useSeasonalIngredients';
+import { useIngredients } from '../../hooks/useIngredients.ts';
+import { fetchRecipes } from '../../services/recipes-service.ts';
+import { getSessionKey } from '../../utilities/session-key.ts';
+import { StatusPanel } from '../../components/status-panel/StatusPanel.tsx';
+import { month } from '../../utilities/generate-month.ts';
 
 import type { RecipeCardT } from '../../../../data/recipes/types/recipe-types'
-
-const MOCK_RECIPES: RecipeCardT[] = [
-  {
-    _id: '1',
-    name: 'Navarin of lamb & spring vegetables',
-    image: [
-      { url: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-221500_11-4e299a3.jpg?resize=440,400', width: 440, height: 400 },
-      { url: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-221500_11-4e299a3.jpg?resize=960,872', width: 960, height: 872 },
-    ],
-    prepTime: '20 mins',
-    cookTime: '1 hr 10 mins',
-    skillLevel: 'Easy',
-  },
-  {
-    _id: '2',
-    name: 'Lemon herb roast chicken',
-    image: [],
-    totalTime: '1 hr 30 mins',
-    skillLevel: 'Medium',
-  },
-];
+import type { StatusT } from '../../types/status-types'
 
 export function RecipesPage() {
-  const { month, availableIngredients } = useAvailableIngredients();
-  console.log(month, availableIngredients);
+  const { ingredients, ingredientsStatus, ingredientsError } = useIngredients();
+  const seed = getSessionKey();
 
+  const [recipes, setRecipes] = useState <RecipeCardT[]> ([]);
+  const [totalCount, setTotalCount] = useState <number | null> (null);
+  const [page, setPage] = useState <number> (1);
+  const [totalPages, setTotalPages] = useState <number | null> (null);
+  const [limit, setLimit] = useState <number> (24);
+  const [recipesStatus, setRecipesStatus] = useState <StatusT> ('idle');
+  const [recipesError, setRecipesError] = useState <string | null> (null);
 
-  const recipes = MOCK_RECIPES;
+  const ingredientsKey = useMemo(
+    () => (ingredients ? ingredients.join('|') : ''),
+    [ingredients]
+  )
 
+  useEffect(() => {
+    if (ingredientsStatus !== 'success' || !ingredients) return;
+
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), 10000)
+
+    const loadRecipes = async function() {
+      try {
+        setRecipesStatus('loading');
+        setRecipesError(null);
+
+        const {
+          recipes,
+          totalCount,
+          totalPages
+        } = await fetchRecipes({ingredients, seed}, page, limit, controller.signal);
+
+        setRecipes(recipes);
+        setTotalCount(totalCount);
+        setTotalPages(totalPages);
+        setRecipesStatus('success');
+      } catch (err) {
+        if (err instanceof DOMException && err.name === 'AbortError') return;
+
+        setRecipesStatus('error');
+        setRecipesError(err instanceof Error? err.message : 'Unknown error')
+      }
+    }
+
+    loadRecipes();
+    
+    return () => {
+      clearTimeout(timeoutId);
+      controller.abort();
+    };
+  }, [ingredientsKey, ingredientsStatus, seed, page, limit]);
+
+  useEffect(() => {
+    if (ingredientsStatus !== 'success' || !ingredients) return;
+    setPage(1);
+  }, [ingredientsKey, ingredientsStatus, seed]);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [page]);
+
+  const canSelectPrevious = page > 1;
+  const canSelectNext = totalPages !== null && page < totalPages;
+
+  // ---- Ingredients gate ----
+  if (ingredientsStatus === 'idle' || ingredientsStatus === 'loading') {
+    return <StatusPanel title="Recipes" message="Loading seasonal ingredients…" />;
+  }
+
+  if (ingredientsStatus === 'error') {
+    return (
+      <StatusPanel
+        title="Recipes"
+        message={`Couldn’t load seasonal ingredients${ingredientsError ? `: ${ingredientsError}` : '.'}`}
+      />
+    );
+  }
+
+  // ---- Recipes gate ----
+  if (recipesStatus === 'idle' || recipesStatus === 'loading') {
+    return <StatusPanel title="Recipes" message="Loading recipes…" />;
+  }
+
+  if (recipesStatus === 'error') {
+    return (
+      <StatusPanel
+        title="Recipes"
+        message={`Couldn’t load recipes${recipesError ? `: ${recipesError}` : '.'}`}
+      />
+    );
+  }
+
+  // ---- Success ----
   return (
     <div className="recipes-page-container">
+      <section className="recipes-page__pagination">
+        <button type="button" onClick={() => setPage(1)} disabled={!canSelectPrevious}>
+          First
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setPage((p) => Math.max(1, p - 1))}
+          disabled={!canSelectPrevious}
+        >
+          Prev
+        </button>
+
+        <span>
+          Page {page} of {totalPages ?? 1}
+        </span>
+
+        <button
+          type="button"
+          onClick={() => setPage((p) => p + 1)}
+          disabled={!canSelectNext}
+        >
+          Next
+        </button>
+
+        <button
+          type="button"
+          onClick={() => totalPages && setPage(totalPages)}
+          disabled={!canSelectNext}
+        >
+          Last
+        </button>
+      </section>
+      
       <section className="recipes-page__header">
         <h1 className="recipes-page__title">Recipes</h1>
-        <p className="recipes-page__subtitle">See what’s cooking right now.</p>
+        <p className="recipes-page__subtitle">Showing {totalCount} recipes for {month}</p>
       </section>
 
       <section className="recipes-results">
