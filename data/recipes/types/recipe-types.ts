@@ -67,7 +67,20 @@ export type RecipeCardT = {
   skillLevel?: string,
 }
 
-export type FacetRecipeResultT = {
-  results: RecipeCardT[];
-  totalCount: {count: number}[];
-};
+export type RecipesRequestPayloadT = {
+  ingredients: string[],
+  seed: string
+}
+
+export type RecipesResponsePayloadT = {
+  recipes: RecipeCardT[],
+  pageCount: number,
+  totalCount: number,
+  page: number,
+  totalPages: number,
+  limit: number
+}
+
+export type RecipeByIDResponsePayloadT = {
+  recipe: RecipeT
+}

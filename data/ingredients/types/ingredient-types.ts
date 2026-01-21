@@ -15,13 +15,11 @@ export type NonSeasonalIngredientT = {
   altNames?: string[]
 }
 
-export type IngredientRetrievalT = {
+export type IngredientT = {
   name: string,
   altNames?: string[]
 }
 
-export type AvailableIngredientPayloadT = {
-  availableIngredients: string[]
+export type IngredientsResponsePayloadT = {
+  ingredients: string[]
 }
-
-export type AvailableIngredientSeedPayloadT = AvailableIngredientPayloadT & {seed: string}
