@@ -1,0 +1,20 @@
+A simple shell that allows a sticky footer later if you want
+.app-shell {
+  min-height: 100vh;
+}
+
+/* Consistent page container + responsive padding */
+.app-main {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  padding: 16px;
+}
+
+/* Slightly roomier on larger screens */
+@media (min-width: 768px) {
+  .app-main {
+    padding: 24px;
+  }
+}
