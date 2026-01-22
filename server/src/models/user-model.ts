@@ -2,11 +2,11 @@
 
 import {mongoose} from '../database/db';
 
-import type {User, Name, RecipeEntry} from '../../../data/users/types/user-types';
+import type {UserT, NameT, RecipeEntryT} from '../../../data/users/types/user-types';
 
 const {Schema, model} = mongoose;
 
-const RecipeEntrySchema = new Schema <RecipeEntry> (
+const RecipeEntrySchema = new Schema <RecipeEntryT> (
   {
     recipeID: {type: String, required: true},
     name: {type: String, required: true},
@@ -15,7 +15,7 @@ const RecipeEntrySchema = new Schema <RecipeEntry> (
   {_id: false}
 );
 
-const NameSchema = new Schema <Name> (
+const NameSchema = new Schema <NameT> (
   {
     first: {type: String, required: true},
     last: {type: String, required: true}
@@ -23,7 +23,7 @@ const NameSchema = new Schema <Name> (
   {_id: false}
 );
 
-const UserSchema = new Schema <User> (
+const UserSchema = new Schema <UserT> (
   {
     _id: {type: String, required: true},
     name: {type: NameSchema, required: true},

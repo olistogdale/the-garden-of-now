@@ -2,11 +2,11 @@
 
 import { mongoose } from '../database/db';
 
-import type { ImageData, NutritionData, Ingredient, IngredientData, Instruction, Recipe } from '../../../data/recipes/types/recipe-types';
+import type { ImageDataT, NutritionDataT, IngredientT, IngredientDataT, InstructionT, RecipeT } from '../../../data/recipes/types/recipe-types';
 
 const { Schema, model } = mongoose;
 
-const ImageSchema = new Schema <ImageData> (
+const ImageSchema = new Schema <ImageDataT> (
   {
     url: { type: String, required: true },
     width: { type: Number, required: true },
@@ -14,7 +14,7 @@ const ImageSchema = new Schema <ImageData> (
   }
 )
 
-const NutritionDataSchema = new Schema <NutritionData> (
+const NutritionDataSchema = new Schema <NutritionDataT> (
   {
     calories: { type: String, default: undefined },
     fatContent: { type: String, default: undefined },
@@ -27,7 +27,7 @@ const NutritionDataSchema = new Schema <NutritionData> (
   }
 )
 
-const IngredientSchema = new Schema <Ingredient> (
+const IngredientSchema = new Schema <IngredientT> (
   {
     quantity: { type: String, default: undefined },
     description: { type: String, default: undefined },
@@ -37,7 +37,7 @@ const IngredientSchema = new Schema <Ingredient> (
   }
 )
 
-const IngredientDataSchema = new Schema <IngredientData> (
+const IngredientDataSchema = new Schema <IngredientDataT> (
   {
     text: { type: String, required: true },
     optional: { type: Boolean, required: true },
@@ -45,13 +45,13 @@ const IngredientDataSchema = new Schema <IngredientData> (
   }
 )
 
-const InstructionSchema = new Schema <Instruction> (
+const InstructionSchema = new Schema <InstructionT> (
   {
     text: { type: String, required: true }
   }
 )
 
-const RecipeSchema = new Schema <Recipe> (
+const RecipeSchema = new Schema <RecipeT> (
   {
     name: { type: String, required: true },
     description: { type: String, required: true },

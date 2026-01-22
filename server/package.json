@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "dev": "nodemon --exec tsx src/index.ts",
-  "seed": "tsx scripts/seed.ts",
-  "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --exec tsx src/index.ts",
+    "seed": "tsx scripts/seed.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +14,9 @@
   "type": "commonjs",
   "dependencies": {
     "@koa/cors": "^5.0.0",
+    "bcryptjs": "^3.0.3",
     "dotenv": "^17.2.3",
+    "jsonwebtoken": "^9.0.3",
     "koa": "^3.0.2",
     "koa-bodyparser": "^4.4.1",
     "koa-router": "^14.0.0",
@@ -22,6 +24,8 @@
     "pluralize": "^8.0.0"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/koa": "^3.0.0",
     "@types/koa__cors": "^5.0.0",
     "@types/koa-bodyparser": "^4.3.12",

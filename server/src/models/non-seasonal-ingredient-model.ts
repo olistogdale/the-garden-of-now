@@ -2,7 +2,7 @@
 
 import { mongoose } from '../database/db';
 
-import type { NonSeasonalIngredient } from '../../../data/ingredients/types/ingredient-types';
+import type { NonSeasonalIngredientT } from '../../../data/ingredients/types/ingredient-types';
 
 const { Schema, model } = mongoose;
 
@@ -34,7 +34,7 @@ const FOOD_GROUPS = [
   'water'
 ] as const;
 
-const NonSeasonalIngredientSchema = new Schema <NonSeasonalIngredient> (
+const NonSeasonalIngredientSchema = new Schema <NonSeasonalIngredientT> (
   {
     name: {
       type: String,

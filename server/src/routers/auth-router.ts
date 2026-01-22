@@ -2,10 +2,12 @@
 
 import Router from 'koa-router';
 
-import { getAuth } from '../controllers/auth-controller';
+import { registerUser, loginUser, authUser } from '../controllers/auth/index';
 
 const authRouter = new Router();
 
-authRouter.get('/auth', getAuth);
+authRouter.post('/register', registerUser);
+authRouter.post('/login', loginUser);
+authRouter.get('/auth/me', authUser); 
 
 export default authRouter;
