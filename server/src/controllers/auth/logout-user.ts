@@ -1,19 +1,15 @@
 'use strict';
 
-import bcrypt from 'bcryptjs'
-
-
-
 import type { Context } from 'koa';
-
 
 export const logoutUser = async function (ctx: Context) {
   try {
-    ctx.cookies.set('access token', '', {
+    ctx.cookies.set('accessToken', '', {
       httpOnly: true,
       sameSite: 'lax',
       secure: false,
-      path: '/'
+      path: '/',
+      expires: new Date(0),
     })
     ctx.status = 204;
   } catch (err) {

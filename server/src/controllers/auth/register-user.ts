@@ -6,7 +6,7 @@ import { userModel } from '../../models/user-model';
 import { signAccessToken } from '../../utilities/jwt-utils';
 
 import type { Context } from 'koa';
-import type { UserRegistrationRequestT, UserT } from '../../../../data/users/types/user-types';
+import type { UserAuthResponseT, UserRegistrationRequestT, UserT } from '../../../../data/users/types/user-types';
 import type { CreateUserT } from '../../types/user-types';
 
 export const registerUser = async function(ctx: Context) {
@@ -29,21 +29,22 @@ export const registerUser = async function(ctx: Context) {
 
     if (existingUser) {
       ctx.status = 409;
-      ctx.body = { error: 'A user already exists with this e-mail address. Please provide a different address.'}
+      ctx.body = { error: 'A user already exists with this e-mail address. Please provide a different address.'};
+      return;
     }
 
-    const passwordHash = await bcrypt.hash(password, 8);
-    const newUser = await userModel.create <CreateUserT> ({ name: { first: firstName, last: lastName }, email, passwordHash, lastLoginAt: new Date()})
+    const passwordHash = await bcrypt.hash(password, 10);
+    const newUser = await userModel.create <CreateUserT> ({ name: { first: firstName, last: lastName }, email: email.toLowerCase(), passwordHash, lastLoginAt: new Date()})
     const token = signAccessToken(newUser._id.toString());
 
-    ctx.cookies.set("access token", token, {
+    ctx.cookies.set("accessToken", token, {
       httpOnly: true,
-      sameSite: 'strict',
+      sameSite: 'lax',
       secure: false,
       path: '/'
     });
     ctx.status = 201;
-    ctx.body = { id: newUser._id, email: newUser.email };
+    ctx.body = { _id: newUser._id, email: newUser.email } as UserAuthResponseT;
   } catch (err) {
     console.log('Error registering new user:', err);
     ctx.status = 500;

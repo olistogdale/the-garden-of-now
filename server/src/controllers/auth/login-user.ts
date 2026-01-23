@@ -6,7 +6,7 @@ import { userModel } from '../../models/user-model';
 import { signAccessToken } from '../../utilities/jwt-utils';
 
 import type { Context } from 'koa';
-import type { UserT, UserLoginRequestT } from '../../../../data/users/types/user-types';
+import type { UserT, UserLoginRequestT, UserAuthResponseT } from '../../../../data/users/types/user-types';
 
 
 export const loginUser = async function (ctx: Context) {
@@ -23,7 +23,7 @@ export const loginUser = async function (ctx: Context) {
 
     if (!user) {
       ctx.status = 401;
-      ctx.body = { error: 'User not found. Please provide a valid email address.'};
+      ctx.body = { error: 'Invalid login credentials. Please provide a valid email and password.'};
       return;
     }
 
@@ -31,19 +31,20 @@ export const loginUser = async function (ctx: Context) {
 
     if (!ok) {
       ctx.status = 401;
-      ctx.body = { error: 'Invalid password. Please provide a valid password.'}
+      ctx.body = { error: 'Invalid password. Please provide a valid password.'};
+      return;
     }
 
     const token = signAccessToken(user._id.toString());
 
-    ctx.cookies.set('access token', token, {
+    ctx.cookies.set('accessToken', token, {
       httpOnly: true,
       sameSite: 'lax',
       secure: false,
       path: '/'
     })
     ctx.status = 200;
-    ctx.body = { id: user._id.toString(), email: user.email }
+    ctx.body = { _id: user._id.toString(), email: user.email } as UserAuthResponseT;
   } catch (err) {
     console.log('Error logging user in:', err);
     ctx.status = 500;
