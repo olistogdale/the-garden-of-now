@@ -1,9 +1,109 @@
 import './LoginPage.css';
 
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+
+import { StatusPanel } from '../../components/status-panel/StatusPanel';
+import { loginUser } from '../../services/auth-service';
+
+import type { LoginFormStateT } from '../../types/auth-types';
+import type { StatusT } from '../../types/status-types';
+
 export function LoginPage() {
+  const navigate = useNavigate();
+  
+  const [form, setForm] = useState <LoginFormStateT> ({email: '', password: ''});
+  const [formStatus, setFormStatus] = useState <StatusT> ('idle');
+  const [formError, setFormError] = useState <string | null> (null);
+  
+  const canSubmitForm = form.email.trim().length > 0 && form.password.length > 0 && formStatus !== 'loading'
+  
+  const onSubmit = async function(e: React.FormEvent) {
+    e.preventDefault()
+
+    if (!canSubmitForm) return;
+
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), 10000)
+
+    try {
+      setFormStatus('loading');
+      setFormError(null);
+
+      const { _id, email } = await loginUser(
+        {
+          email: form.email.trim(),
+          password: form.password
+        },
+        controller.signal
+      );
+
+      // insert auth logic here
+      navigate('/', { replace: true });
+    } catch (err) {
+      if (err instanceof DOMException && err.name === 'AbortError') {
+        setFormStatus('error');
+        setFormError('Request timed out. Please try again.');
+        return;
+      }
+
+      setFormStatus('error');
+      setFormError(err instanceof Error? err.message : 'Unknown error')
+    } finally {
+      clearTimeout(timeoutId);
+    } 
+  } 
+
+  if (formStatus === 'loading') {
+    return <StatusPanel title="Login" message="Logging you in…" />;
+  }
+ 
   return (
-    <div>
-      Login elements to go here
+    <div className="auth-page">
+      <section className="auth-page__header">
+        <h1 className="auth-page__title">Log in</h1>
+        <p className="auth-page__subtitle">Welcome back.</p>
+      </section>
+
+      <form className="auth-form" onSubmit={onSubmit}>
+        {formStatus === 'error' && formError ? (
+          <div className="auth-form__error" role="alert">
+            {formError}
+          </div>
+        ) : null}
+
+        <label className="auth-form__label">
+          Email
+          <input
+            className="auth-form__input"
+            type="email"
+            autoComplete="email"
+            value={form.email}
+            onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
+            required
+          />
+        </label>
+
+        <label className="auth-form__label">
+          Password
+          <input
+            className="auth-form__input"
+            type="password"
+            autoComplete="current-password"
+            value={form.password}
+            onChange={(e) => setForm((f) => ({ ...f, password: e.target.value }))}
+            required
+          />
+        </label>
+
+        <button className="auth-form__button" type="submit" disabled={!canSubmitForm}>
+          Log in
+        </button>
+
+        <p className="auth-form__footer">
+          Don’t have an account? <Link to="/register">Create one</Link>
+        </p>
+      </form>
     </div>
   )
 }

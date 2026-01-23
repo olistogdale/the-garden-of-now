@@ -1,0 +1,63 @@
+.auth-page {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.auth-page__header {
+  margin-bottom: 16px;
+}
+
+.auth-page__title {
+  margin: 0 0 6px 0;
+}
+
+.auth-page__subtitle {
+  margin: 0;
+  opacity: 0.8;
+}
+
+.auth-form {
+  display: grid;
+  gap: 12px;
+}
+
+.auth-form__label {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.auth-form__input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
+.auth-form__button {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.auth-form__button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-form__error {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,0,0,0.3);
+}
+
+.auth-form__hint {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.auth-form__footer {
+  margin: 8px 0 0 0;
+  font-size: 14px;
+}
