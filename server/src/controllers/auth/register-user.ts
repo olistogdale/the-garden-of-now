@@ -44,7 +44,7 @@ export const registerUser = async function(ctx: Context) {
       path: '/'
     });
     ctx.status = 201;
-    ctx.body = { _id: newUser._id, email: newUser.email } as UserAuthResponseT;
+    ctx.body = { _id: newUser._id, email: newUser.email, firstName: newUser.name.first, lastName: newUser.name.last } as UserAuthResponseT;
   } catch (err) {
     console.log('Error registering new user:', err);
     ctx.status = 500;

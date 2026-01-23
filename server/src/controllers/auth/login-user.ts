@@ -44,7 +44,7 @@ export const loginUser = async function (ctx: Context) {
       path: '/'
     })
     ctx.status = 200;
-    ctx.body = { _id: user._id.toString(), email: user.email } as UserAuthResponseT;
+    ctx.body = { _id: user._id.toString(), email: user.email, firstName: user.name.first, lastName: user.name.last } as UserAuthResponseT;
   } catch (err) {
     console.log('Error logging user in:', err);
     ctx.status = 500;

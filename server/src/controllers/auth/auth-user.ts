@@ -3,7 +3,7 @@
 import type { Context } from 'koa';
 
 import { userModel } from '../../models/user-model';
-import { UserAuthResponseT } from '../../../../data/users/types/user-types';
+import { PartialUserT, UserAuthResponseT } from '../../../../data/users/types/user-types';
 
 export const authUser = async function (ctx: Context) {
   const userID = ctx.state.user.userId;
@@ -15,7 +15,7 @@ export const authUser = async function (ctx: Context) {
   }
 
   try {
-    const user = await userModel.findById(userID).select("_id email");
+    const user = await userModel.findById<PartialUserT>(userID).select("_id email firstName lastName");
     
     if (!user) {
       ctx.status = 401;
@@ -24,7 +24,7 @@ export const authUser = async function (ctx: Context) {
     }
 
     ctx.status = 200;
-    ctx.body = { _id: user._id.toString(), email: user.email } as UserAuthResponseT;
+    ctx.body = { _id: user._id.toString(), email: user.email, firstName: user.name.first, lastName: user.name.last } as UserAuthResponseT;
   } catch (err) {
     console.log('Error fetching user:', err);
     ctx.status = 500;
