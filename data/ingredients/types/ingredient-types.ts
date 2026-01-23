@@ -20,6 +20,6 @@ export type IngredientT = {
   altNames?: string[]
 }
 
-export type IngredientsResponsePayloadT = {
+export type IngredientsResponseT = {
   ingredients: string[]
 }

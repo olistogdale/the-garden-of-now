@@ -67,12 +67,12 @@ export type RecipeCardT = {
   skillLevel?: string,
 }
 
-export type RecipesRequestPayloadT = {
+export type RecipesRequestT = {
   ingredients: string[],
   seed: string
 }
 
-export type RecipesResponsePayloadT = {
+export type RecipesResponseT = {
   recipes: RecipeCardT[],
   pageCount: number,
   totalCount: number,
@@ -81,6 +81,6 @@ export type RecipesResponsePayloadT = {
   limit: number
 }
 
-export type RecipeByIDResponsePayloadT = {
+export type RecipeByIDResponseT = {
   recipe: RecipeT
 }
