@@ -141,7 +141,29 @@ export function RecipesPage() {
         >
           Last
         </button>
+
+        <button
+          type="button"
+          onClick={() => {
+            setLimit(24);
+            setPage(1);
+          }}
+          disabled={limit===24}
+        >
+          24
+        </button>
+        <button
+          type="button"
+          onClick={() => {
+            setLimit(48);
+            setPage(1);
+          }}
+          disabled={limit===48}
+        >
+          48
+        </button>
       </section>
+
       
       <section className="recipes-page__header">
         <h1 className="recipes-page__title">Recipes</h1>
