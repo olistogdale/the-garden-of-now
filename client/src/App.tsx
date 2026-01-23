@@ -24,9 +24,14 @@ function App() {
           }
         >
           <Route path="/" element={<LandingPage />} />
-          <Route path="/recipes" element={<RecipesPage />} />
+          <Route path="/recipes" element={<RecipesPage mode="recipes"/>} />
           <Route path="/recipes/:id" element={<RecipeDetailPage />} />
+          <Route element={<RequireAuth />}>
+            <Route path="/profile" element={<ProfilePage />}/>
+            <Route path="/favourites" element={<RecipesPage mode="favourites"/>} />
+          </Route>
         </Route>
+
         <Route
           element={
             <IngredientsProvider>
