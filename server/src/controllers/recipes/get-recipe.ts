@@ -4,18 +4,18 @@ import mongoose from 'mongoose';
 import { recipeModel } from '../../models/recipe-model';
 
 import type { Context } from 'koa';
-import type { RecipeT } from '../../../../data/recipes/types/recipe-types';
+import type { RecipeT, RecipeByIDResponseT } from '../../../../data/recipes/types/recipe-types';
 
 export const getRecipe = async function(ctx: Context) {
-  const recipeId: string = String(ctx.params.id ?? '').trim();
+  const recipeID: string = String(ctx.params.id ?? '').trim()
 
-  if (recipeId.length === 0) {
+  if (recipeID.length === 0) {
     ctx.status = 400;
     ctx.body = {error: 'Invalid recipe ID. Please specify a non empty ID string.'};
     return;
   }
 
-  if (!mongoose.isValidObjectId(recipeId)) {
+  if (!mongoose.isValidObjectId(recipeID)) {
     ctx.status = 400;
     ctx.body = {error: 'Invalid recipe ID. Please specify a valid ID format.'};
     return;
@@ -23,7 +23,7 @@ export const getRecipe = async function(ctx: Context) {
 
   try {
     const [recipe] = await recipeModel.aggregate <RecipeT> ([
-      { $match: { _id: new mongoose.Types.ObjectId(recipeId) } },
+      { $match: { _id: new mongoose.Types.ObjectId(recipeID) } },
       {
         $project: {
           _id: { $toString: '$_id' },
@@ -49,17 +49,17 @@ export const getRecipe = async function(ctx: Context) {
 
     if (!recipe) {
       ctx.status = 404;
-      ctx.body = { error: `Recipe ${recipeId} not found.` };
+      ctx.body = { error: `Recipe ${recipeID} not found.` };
       return;
     }
 
     ctx.status = 200;
     ctx.body = {
       recipe
-    };
+    } as RecipeByIDResponseT;
   } catch (err) {
-    console.log(`Error fetching recipe ${recipeId}:`, err);
+    console.log(`Error fetching recipe ${recipeID}:`, err);
     ctx.status = 500;
-    ctx.body = { error: `Internal server error: could not fetch recipe ${recipeId}.` };
+    ctx.body = { error: `Internal server error: could not fetch recipe ${recipeID}.` };
   }
 };

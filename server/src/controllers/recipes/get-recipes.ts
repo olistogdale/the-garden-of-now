@@ -4,14 +4,14 @@ import { recipeModel } from '../../models/recipe-model';
 import { isNonEmpty, normalize } from '../../utilities/string-utils';
 
 import type { Context } from 'koa';
-import type { RecipeCardT, RecipesRequestPayloadT, RecipesResponsePayloadT } from '../../../../data/recipes/types/recipe-types';
+import type { RecipeCardT, RecipesRequestT, RecipesResponseT } from '../../../../data/recipes/types/recipe-types';
 import type { RecipesFacetResultT } from '../../types/recipe-types';
 
 const DEFAULT_LIMIT = 25;
 const MAX_LIMIT = 100;
 
 export const getRecipes = async function (ctx: Context) {
-  const { ingredients, seed } = ctx.request.body as RecipesRequestPayloadT;
+  const { ingredients, seed } = ctx.request.body as RecipesRequestT;
 
   if (!Array.isArray(ingredients) || ingredients.length === 0) {
     ctx.status = 400;
@@ -116,7 +116,7 @@ export const getRecipes = async function (ctx: Context) {
       recipes,
       totalCount,
       totalPages
-    } as RecipesResponsePayloadT;
+    } as RecipesResponseT;
   } catch (err) {
     console.log('Error fetching recipes:', err);
     ctx.status = 500;

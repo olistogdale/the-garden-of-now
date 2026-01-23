@@ -6,7 +6,7 @@ import { isNonEmpty, normalize } from '../../utilities/string-utils';
 
 import type { Context } from 'koa';
 import type {
-  IngredientsResponsePayloadT,
+  IngredientsResponseT,
   IngredientT
 } from '../../../../data/ingredients/types/ingredient-types';
 
@@ -60,7 +60,7 @@ export const getIngredients = async function (ctx: Context) {
     const ingredients: string[] = Array.from(new Set([...seasonalIngredients, ...nonSeasonalIngredients]));
     
     ctx.status = 200;
-    ctx.body = { ingredients } as IngredientsResponsePayloadT;
+    ctx.body = { ingredients } as IngredientsResponseT;
   } catch (err) {
     console.log('Error fetching ingredients:', err)
     ctx.status = 500;
