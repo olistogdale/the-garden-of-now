@@ -2,7 +2,10 @@ export async function fetchRequest <T> (
   url: string,
   options: RequestInit = {}
 ): Promise<T> {
-  const res = await fetch(url, options);
+  const res = await fetch(url, {
+    ...options,
+    credentials: 'include'
+  });
 
   if (!res.ok) {
     let message = `Response status: ${res.status}`;
@@ -17,6 +20,15 @@ export async function fetchRequest <T> (
     }
 
     throw new Error(message);
+  }
+
+  if (res.status === 204) {
+    return undefined as T;
+  }
+
+  const contentType = res.headers.get('content-type') ?? '';
+  if (!contentType.includes('application/json')) {
+    return undefined as T;
   }
 
   return (await res.json()) as T;
