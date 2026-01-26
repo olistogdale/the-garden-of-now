@@ -4,9 +4,8 @@ import { fetchRequest } from '../utilities/fetch-request';
 
 import type { UserRegistrationRequestT, UserLoginRequestT, UserAuthResponseT } from '../../../data/users/types/user-types'
 
-export async function registerUser(
-  { firstName, lastName, email, password }: UserRegistrationRequestT,
-  signal?: AbortSignal 
+export function registerUser(
+  { firstName, lastName, email, password }: UserRegistrationRequestT
 ): Promise <UserAuthResponseT> {
   const url = `${API_URL}/register`;
 
@@ -15,14 +14,12 @@ export async function registerUser(
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ firstName, lastName, email, password }),
-    signal
+    body: JSON.stringify({ firstName, lastName, email, password })
   })
 }
 
-export async function loginUser(
-  { email, password }: UserLoginRequestT,
-  signal?: AbortSignal
+export function loginUser(
+  { email, password }: UserLoginRequestT
 ): Promise <UserAuthResponseT> {
   const url = `${API_URL}/login`;
 
@@ -31,12 +28,11 @@ export async function loginUser(
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ email, password }),
-    signal
+    body: JSON.stringify({ email, password })
   })
 }
 
-export async function authUser(signal?: AbortSignal): Promise <UserAuthResponseT> {
+export  function authUser(signal: AbortSignal): Promise <UserAuthResponseT> {
   const url = `${API_URL}/auth`;
 
   return fetchRequest(url, {
@@ -45,11 +41,10 @@ export async function authUser(signal?: AbortSignal): Promise <UserAuthResponseT
   })
 }
 
-export async function logoutUser(signal?: AbortSignal): Promise <void> {
+export function logoutUser(): Promise <void> {
   const url = `${API_URL}/logout`;
 
   return fetchRequest(url, {
-    method: 'POST',
-    signal
+    method: 'POST'
   })
 }
