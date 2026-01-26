@@ -26,6 +26,12 @@ export type UserT = {
   updatedAt: Date
 };
 
+export type PartialUserT = {
+  _id: string,
+  name: NameT,
+  email: string
+}
+
 export type UserRegistrationRequestT = {
   firstName: string,
   lastName: string,
@@ -42,4 +48,6 @@ export type UserLoginRequestT = {
 export type UserAuthResponseT = {
   _id: string,
   email: string
+  firstName: string,
+  lastName: string
 }
