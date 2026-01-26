@@ -25,7 +25,6 @@ const NameSchema = new Schema <NameT> (
 
 const UserSchema = new Schema <UserT> (
   {
-    _id: {type: String, required: true},
     name: {type: NameSchema, required: true},
     email: {type: String, required: true, unique: true, lowercase: true, trim: true},
     emailVerified: {type: Boolean, default: false},

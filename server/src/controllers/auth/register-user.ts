@@ -7,7 +7,7 @@ import { signAccessToken } from '../../utilities/jwt-utils';
 
 import type { Context } from 'koa';
 import type { UserAuthResponseT, UserRegistrationRequestT, UserT } from '../../../../data/users/types/user-types';
-import type { CreateUserT } from '../../types/user-types';
+import type { CreateUserT, UserDocT } from '../../types/user-types';
 
 export const registerUser = async function(ctx: Context) {
   const { firstName, lastName, email, password } = ctx.request.body as UserRegistrationRequestT;
@@ -25,7 +25,7 @@ export const registerUser = async function(ctx: Context) {
   }
 
   try {
-    const existingUser = await userModel.findOne < UserT> ({ email: email.toLowerCase()});
+    const existingUser = await userModel.findOne < UserDocT> ({ email: email.toLowerCase()});
 
     if (existingUser) {
       ctx.status = 409;
