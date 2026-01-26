@@ -1,7 +1,5 @@
 import {
   useState,
-  useCallback,
-  useRef,
   useEffect,
   useMemo
 } from 'react';
@@ -16,29 +14,32 @@ export function IngredientsProvider({ children }: { children: React.ReactNode })
   const [ingredientsStatus, setStatus] = useState <StatusT> ('idle');
   const [ingredientsError, setError] = useState <string | null> (null);
 
-  // Prevent double-fetch in React 18 StrictMode dev (effects run twice)
-  const startedRef = useRef(false);
+  useEffect(() => {
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), 10000);
+    
+    (async function() {
+      setStatus('loading');
+      setError(null);
 
-  const load = useCallback(async () => {
-    setStatus('loading');
-    setError(null);
+      try {
+        const data = await fetchIngredients(controller.signal);
+        setIngredients(data.ingredients);
+        setStatus('success');
+      } catch (err) {
+        setIngredients(null);
+        setStatus('error');
+        setError(err instanceof Error ? err.message : 'Unknown error');
+      } finally {
+        clearTimeout(timeoutId);
+      }
+    })()
 
-    try {
-      const data = await fetchIngredients();
-      setIngredients(data.ingredients);
-      setStatus('success');
-    } catch (err) {
-      setIngredients(null);
-      setStatus('error');
-      setError(err instanceof Error ? err.message : 'Unknown error');
+    return () => {
+      clearTimeout(timeoutId);
+      controller.abort();
     }
   }, []);
-
-  useEffect(() => {
-    if (startedRef.current) return;
-    startedRef.current = true;
-    void load();
-  }, [load]);
 
   const value = useMemo(
     () => ({ ingredients, ingredientsStatus, ingredientsError }),
