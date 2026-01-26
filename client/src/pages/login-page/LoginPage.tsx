@@ -2,23 +2,25 @@ import './LoginPage.css';
 
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../hooks/useAuth';
 
 import { StatusPanel } from '../../components/status-panel/StatusPanel';
-import { loginUser } from '../../services/auth-service';
 
 import type { LoginFormStateT } from '../../types/auth-types';
 import type { StatusT } from '../../types/status-types';
+import type { FormEvent } from 'react'
 
 export function LoginPage() {
   const navigate = useNavigate();
-  
+  const { login } = useAuth();
+
   const [form, setForm] = useState <LoginFormStateT> ({email: '', password: ''});
   const [formStatus, setFormStatus] = useState <StatusT> ('idle');
   const [formError, setFormError] = useState <string | null> (null);
   
   const canSubmitForm = form.email.trim().length > 0 && form.password.length > 0 && formStatus !== 'loading'
   
-  const onSubmit = async function(e: React.FormEvent) {
+  const onSubmit = async function(e: FormEvent) {
     e.preventDefault()
 
     if (!canSubmitForm) return;
@@ -30,15 +32,8 @@ export function LoginPage() {
       setFormStatus('loading');
       setFormError(null);
 
-      const { _id, email } = await loginUser(
-        {
-          email: form.email.trim(),
-          password: form.password
-        },
-        controller.signal
-      );
-
-      // insert auth logic here
+      await login({ email: form.email, password: form.password });
+      setFormStatus('success');
       navigate('/', { replace: true });
     } catch (err) {
       if (err instanceof DOMException && err.name === 'AbortError') {

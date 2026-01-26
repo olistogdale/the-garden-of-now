@@ -4,13 +4,15 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import { StatusPanel } from '../../components/status-panel/StatusPanel';
-import { registerUser } from '../../services/auth-service';
+import { useAuth } from '../../hooks/useAuth';
 
 import type { StatusT } from '../../types/status-types';
 import type { RegistrationFormStateT } from '../../types/auth-types';
+import type { FormEvent } from 'react';
 
 export function RegistrationPage() {
   const navigate = useNavigate();
+  const { register } = useAuth();
 
   const [form, setForm] = useState <RegistrationFormStateT> ({
     firstName: '',
@@ -28,7 +30,7 @@ export function RegistrationPage() {
 
   const canSubmitForm = form.firstName.trim().length > 0 && form.lastName.trim().length > 0 && passwordsMatch && emailsMatch && formStatus !== 'loading';
 
-  const onSubmit = async function (e: React.FormEvent) {
+  const onSubmit = async function (e: FormEvent) {
     e.preventDefault();
 
     if (!canSubmitForm) return;
@@ -40,17 +42,8 @@ export function RegistrationPage() {
       setFormStatus('loading');
       setFormError(null);
 
-      const { _id, email } = await registerUser(
-        {
-          firstName: form.firstName,
-          lastName: form.lastName,
-          email: form.email,
-          password: form.password
-        },
-        controller.signal
-      )
-
-      // insert registration logic here
+      await register({ firstName: form.firstName, lastName: form.lastName, email: form.email, password: form.password });
+      setFormStatus('success');
       navigate('/', { replace: true });
     } catch (err) {
       if (err instanceof DOMException && err.name === 'AbortError') {
