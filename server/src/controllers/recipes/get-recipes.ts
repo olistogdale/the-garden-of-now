@@ -7,8 +7,8 @@ import type { Context } from 'koa';
 import type { RecipeCardT, RecipesRequestT, RecipesResponseT } from '../../../../data/recipes/types/recipe-types';
 import type { RecipesFacetResultT } from '../../types/recipe-types';
 
-const DEFAULT_LIMIT = 25;
-const MAX_LIMIT = 100;
+const DEFAULT_LIMIT = 24;
+const MAX_LIMIT = 96;
 
 export const getRecipes = async function (ctx: Context) {
   const { ingredients, seed } = ctx.request.body as RecipesRequestT;
