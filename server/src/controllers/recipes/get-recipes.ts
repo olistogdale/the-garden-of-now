@@ -69,7 +69,7 @@ export const getRecipes = async function (ctx: Context) {
           sortKey: {
             $function: {
               lang: "js",
-              args: [trimmedSeed, { $toString: "$_id" }],
+              args: [trimmedSeed, "$_id" ],
               body: function (seed: string, id: string) {
                 let hash = 2166136261;
                 const str = seed + ":" + id;
@@ -95,8 +95,7 @@ export const getRecipes = async function (ctx: Context) {
                 prepTime: 1,
                 cookTime: 1,
                 totalTime: 1,
-                skillLevel: 1,
-                _id: { $toString: "$_id" }
+                skillLevel: 1
               }
             }
           ],

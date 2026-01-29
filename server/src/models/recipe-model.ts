@@ -53,6 +53,7 @@ const InstructionSchema = new Schema <InstructionT> (
 
 const RecipeSchema = new Schema <RecipeT> (
   {
+    _id: { type: String, required: true },
     name: { type: String, required: true },
     description: { type: String, required: true },
     image: { type: [ImageSchema], required: true },
