@@ -1,8 +1,8 @@
 import { verifyAccessToken } from "../utilities/jwt-utils";
 
-import type { Middleware } from "koa";
+import type { Middleware, Context, Next } from "koa";
 
-export const requireAuth: Middleware = async function(ctx, next) {
+export const requireAuth: Middleware = async function(ctx: Context, next: Next) {
   const token = ctx.cookies.get("accessToken");
 
   if (!token) {
