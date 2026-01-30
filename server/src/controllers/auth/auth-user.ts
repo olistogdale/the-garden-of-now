@@ -6,25 +6,28 @@ import { userModel } from '../../models/user-model';
 import { PartialUserT, UserAuthResponseT } from '../../../../data/users/types/user-types';
 
 export const authUser = async function (ctx: Context) {
-  const userID = ctx.state.user.userId;
-
-  if (!userID) {
-    ctx.status = 401;
-    ctx.body = { error: 'No user ID. Please provide a valid user ID.'};
-    return;
-  }
+  const userId = ctx.state.user.userId;
 
   try {
-    const user = await userModel.findById<PartialUserT>(userID).select("_id email firstName lastName");
+    const user = await userModel
+      .findById(userId)
+      .select({ email: 1, name: 1 })
+      .lean<PartialUserT>();
     
     if (!user) {
-      ctx.status = 401;
-      ctx.body = { error: 'User not found. Please provide an ID for a valid user.'}
+      ctx.status = 404;
+      ctx.body = { error: 'User not found (session invalid).'}
       return;
     }
 
     ctx.status = 200;
-    ctx.body = { _id: user._id.toString(), email: user.email, firstName: user.name.first, lastName: user.name.last } as UserAuthResponseT;
+    const body: UserAuthResponseT = {
+      userId: user._id.toString(),
+      email: user.email,
+      firstName: user.name.first,
+      lastName: user.name.last
+    };
+    ctx.body = body;
   } catch (err) {
     console.log('Error fetching user:', err);
     ctx.status = 500;

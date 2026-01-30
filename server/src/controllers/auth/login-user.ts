@@ -4,6 +4,7 @@ import bcrypt from 'bcryptjs'
 
 import { userModel } from '../../models/user-model';
 import { signAccessToken } from '../../utilities/jwt-utils';
+import { normalize } from '../../utilities/string-utils';
 
 import type { Context } from 'koa';
 import type { UserT, UserLoginRequestT, UserAuthResponseT } from '../../../../data/users/types/user-types';
@@ -12,14 +13,16 @@ import type { UserT, UserLoginRequestT, UserAuthResponseT } from '../../../../da
 export const loginUser = async function (ctx: Context) {
   const { email, password } = ctx.request.body as UserLoginRequestT;
 
-  if (!email || !password) {
+  if (typeof email !== 'string' || !email.trim() || typeof password !== 'string' || password.length === 0 || password.trim() !== password) {
     ctx.status = 400;
     ctx.body = { error: 'Invalid login credentials. Please provide a valid email and password.'};
     return;
   }
 
+  const normalizedEmail = normalize(email);
+
   try {
-    const user = await userModel.findOne <UserT> ({ email: email.toLowerCase()});
+    const user = await userModel.findOne<UserT>({ email: normalizedEmail});
 
     if (!user) {
       ctx.status = 401;
@@ -31,7 +34,7 @@ export const loginUser = async function (ctx: Context) {
 
     if (!ok) {
       ctx.status = 401;
-      ctx.body = { error: 'Invalid password. Please provide a valid password.'};
+      ctx.body = { error: 'Invalid login credentials. Please provide a valid email and password.'};
       return;
     }
 
@@ -44,7 +47,13 @@ export const loginUser = async function (ctx: Context) {
       path: '/'
     })
     ctx.status = 200;
-    ctx.body = { _id: user._id.toString(), email: user.email, firstName: user.name.first, lastName: user.name.last } as UserAuthResponseT;
+    const body: UserAuthResponseT = {
+      userId: user._id.toString(),
+      email: user.email,
+      firstName: user.name.first,
+      lastName: user.name.last
+    }
+    ctx.body = body;
   } catch (err) {
     console.log('Error logging user in:', err);
     ctx.status = 500;
