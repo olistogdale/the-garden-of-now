@@ -8,11 +8,10 @@ const {Schema, model} = mongoose;
 
 const RecipeEntrySchema = new Schema <RecipeEntryT> (
   {
-    recipeID: {type: String, required: true},
+    _id: {type: String, required: true},
     name: {type: String, required: true},
     addedAt: {type: Date, default: Date.now}
-  },
-  {_id: false}
+  }
 );
 
 const NameSchema = new Schema <NameT> (
@@ -34,11 +33,6 @@ const UserSchema = new Schema <UserT> (
     lastLoginAt: {type: Date}
   },
   {timestamps: true}
-);
-
-UserSchema.index(
-  { _id: 1, 'favouriteRecipes.recipeID': 1 },
-  { unique: true, sparse: true }
 );
 
 export const userModel = model('User', UserSchema);

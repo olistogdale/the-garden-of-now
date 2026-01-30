@@ -45,7 +45,7 @@ const IngredientDataSchema = new Schema <IngredientDataT> (
   }
 )
 
-const InstructionSchema = new Schema <InstructionT> (
+const InstructionsSchema = new Schema <InstructionT> (
   {
     text: { type: String, required: true }
   }
@@ -68,7 +68,8 @@ const RecipeSchema = new Schema <RecipeT> (
     yield: { type: String, default: undefined },
     category: { type: String, default: undefined },
     ingredients: { type: [IngredientDataSchema], required: true },
-    instructions: { type: [InstructionSchema], required: true }
+    instructions: { type: [InstructionsSchema], required: true },
+    groupedIngredients: { type: [[String]], required: true }
   }
 )
 
