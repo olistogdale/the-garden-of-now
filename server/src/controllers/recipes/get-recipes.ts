@@ -4,8 +4,7 @@ import { recipeModel } from '../../models/recipe-model';
 import { isNonEmpty, normalize } from '../../utilities/string-utils';
 
 import type { Context } from 'koa';
-import type { RecipeCardT, RecipesRequestT, RecipesResponseT } from '../../../../data/recipes/types/recipe-types';
-import type { RecipesFacetResultT } from '../../types/recipe-types';
+import type { RecipeCardT, RecipesRequestT, RecipesResponseT, RecipesFacetResultT } from '../../../../data/recipes/types/recipe-types';
 
 const DEFAULT_LIMIT = 24;
 const MAX_LIMIT = 96;
@@ -21,7 +20,7 @@ export const getRecipes = async function (ctx: Context) {
 
   if (typeof seed !== 'string' || seed.trim().length === 0 || seed.length > 128) {
     ctx.status = 400;
-    ctx.body = { error: 'Invalid seed. Please specify a non empty seed string shorter than 128 characters.' };
+    ctx.body = { error: 'Invalid seed. Please specify a non empty seed string 128 characters or fewer.' };
     return;
   }
 
@@ -42,7 +41,7 @@ export const getRecipes = async function (ctx: Context) {
   const trimmedSeed = seed.trim();
 
   try {
-    const [data] = await recipeModel.aggregate <RecipesFacetResultT> ([
+    const [data] = await recipeModel.aggregate<RecipesFacetResultT>([
       {
         $match: {
           $expr: {
@@ -95,7 +94,8 @@ export const getRecipes = async function (ctx: Context) {
                 prepTime: 1,
                 cookTime: 1,
                 totalTime: 1,
-                skillLevel: 1
+                skillLevel: 1,
+                groupedIngredients: 1
               }
             }
           ],
@@ -111,11 +111,12 @@ export const getRecipes = async function (ctx: Context) {
     const totalPages: number = Math.ceil(totalCount/limit);
 
     ctx.status = 200;
-    ctx.body = {
+    const body: RecipesResponseT = {
       recipes,
       totalCount,
       totalPages
-    } as RecipesResponseT;
+    };
+    ctx.body = body;
   } catch (err) {
     console.log('Error fetching recipes:', err);
     ctx.status = 500;

@@ -5,10 +5,7 @@ import { nonSeasonalIngredientModel } from '../../models/non-seasonal-ingredient
 import { isNonEmpty, normalize } from '../../utilities/string-utils';
 
 import type { Context } from 'koa';
-import type {
-  IngredientsResponseT,
-  IngredientT
-} from '../../../../data/ingredients/types/ingredient-types';
+import type { IngredientsResponseT, IngredientT } from '../../../../data/ingredients/types/ingredient-types';
 
 const MONTHS = new Set([
   'january',
@@ -33,9 +30,17 @@ const nameAggregator = function (array: IngredientT[]) {
 };
 
 export const getIngredients = async function (ctx: Context) {
-  const month: string = normalize(ctx.params.month ?? '');
+  const { month } = ctx.params;
 
-  if (!MONTHS.has(month)) {
+  if (typeof month !== 'string' || !month.trim()) {
+    ctx.status =  400;
+    ctx.body = { error: 'Invalid month. Please specify a correct month.' };
+    return;
+  }
+
+  const normalizedMonth = normalize(month)
+
+  if (!MONTHS.has(normalizedMonth)) {
     ctx.status =  400;
     ctx.body = { error: 'Invalid month. Please specify a correct month.' };
     return;
@@ -45,13 +50,13 @@ export const getIngredients = async function (ctx: Context) {
     const [seasonalIngredientsRetrieval, nonSeasonalIngredientsRetrieval] = await Promise.all(
       [
         seasonalIngredientModel
-          .find({ seasonality: month })
+          .find({ seasonality: normalizedMonth })
           .select({ name: 1, altNames: 1, _id: 0 })
-          .lean <IngredientT[]> (),
+          .lean<IngredientT[]>(),
         nonSeasonalIngredientModel
           .find()
           .select({ name: 1, altNames: 1, _id: 0 })
-          .lean <IngredientT[]> ()
+          .lean<IngredientT[]>()
       ]
     );
 
@@ -60,7 +65,10 @@ export const getIngredients = async function (ctx: Context) {
     const ingredients: string[] = Array.from(new Set([...seasonalIngredients, ...nonSeasonalIngredients]));
     
     ctx.status = 200;
-    ctx.body = { ingredients } as IngredientsResponseT;
+    const body: IngredientsResponseT = {
+      ingredients
+    }
+    ctx.body = body;
   } catch (err) {
     console.log('Error fetching ingredients:', err)
     ctx.status = 500;
