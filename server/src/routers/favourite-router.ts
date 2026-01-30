@@ -2,12 +2,12 @@
 
 import Router from 'koa-router';
 
-import { getFavouriteRecipes, postFavouriteRecipe, deleteFavouriteRecipe } from '../controllers/favourites/index';
+import { getFavourites, postFavourite, deleteFavourite } from '../controllers/favourites/index';
 
 const favouriteRouter = new Router();
 
-favouriteRouter.post('/favourites', getFavouriteRecipes);
-favouriteRouter.post('/favourites/:id', postFavouriteRecipe);
-favouriteRouter.delete('/favourites/:id', deleteFavouriteRecipe);
+favouriteRouter.post('/favourites', getFavourites);
+favouriteRouter.post('/favourites', postFavourite);
+favouriteRouter.delete('/favourites/:id', deleteFavourite);
 
 export default favouriteRouter;
