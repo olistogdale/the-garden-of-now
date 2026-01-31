@@ -1,12 +1,14 @@
 'use strict';
 
+import type { RecipeCardT } from "../../recipes/types/recipe-types.js";
+
 export type NameT = {
   first: string,
   last: string
 };
 
 export type RecipeEntryT = {
-  recipeID: string,
+  _id: string,
   name: string,
   addedAt: Date
 }
@@ -46,8 +48,33 @@ export type UserLoginRequestT = {
 
 
 export type UserAuthResponseT = {
-  _id: string,
+  userId: string,
   email: string
   firstName: string,
   lastName: string
+}
+
+export type FavouriteCardT = RecipeCardT & {
+  inSeason: boolean
+}
+
+export type FavouritesRequestT = {
+  ingredients: string[]
+}
+
+export type FavouritesResponseT =  {
+  recipes: FavouriteCardT[],
+  totalCount: number,
+  totalPages: number
+} 
+
+export type FavouriteRequestT = {
+  recipeId: string
+  recipeName: string
+}
+
+export type FavouriteResponseT = {
+  recipeId: string,
+  recipeName: string,
+  addedAt: Date
 }

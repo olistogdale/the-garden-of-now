@@ -64,7 +64,8 @@ export type RecipeCardT = {
   prepTime?: string,
   cookTime?: string,
   totalTime?: string,
-  skillLevel?: string,
+  skillLevel?: string
+  groupedIngredients: string[][]
 }
 
 export type RecipesRequestT = {
@@ -74,13 +75,15 @@ export type RecipesRequestT = {
 
 export type RecipesResponseT = {
   recipes: RecipeCardT[],
-  pageCount: number,
   totalCount: number,
-  page: number,
-  totalPages: number,
-  limit: number
+  totalPages: number
 }
 
-export type RecipeByIDResponseT = {
+export type RecipeResponseT = {
   recipe: RecipeT
 }
+
+export type RecipesFacetResultT = {
+  results: RecipeCardT[];
+  totalCount: { count: number }[];
+};
