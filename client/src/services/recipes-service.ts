@@ -2,18 +2,18 @@ import { API_URL } from '../config.ts';
 
 import { fetchRequest } from '../utilities/fetch-request.ts';
 
-import type { RecipesRequestT, RecipesResponseT, RecipeByIDResponseT } from '../../../data/recipes/types/recipe-types.ts'
+import type { RecipesRequestT, RecipesResponseT, RecipeResponseT } from '../../../data/recipes/types/recipe-types.ts'
 
-export async function fetchRecipes(
+export function getRecipes(
   { ingredients, seed }: RecipesRequestT,
   page: number = 1,
-  limit: number = 25,
+  limit: number = 24,
   signal?: AbortSignal
 ): Promise <RecipesResponseT> {
   const params = new URLSearchParams({
     page: String(page),
     limit: String(limit)
-  })
+  });
   const url = `${API_URL}/recipes?${params.toString()}`;
 
   return fetchRequest(url, {
@@ -26,8 +26,8 @@ export async function fetchRecipes(
   })
 }
 
-export async function fetchRecipeByID(id: string, signal?: AbortSignal): Promise <RecipeByIDResponseT> {
-  const url = `${API_URL}/recipes/${id}`;
+export function getRecipeByID(recipeId: string, signal?: AbortSignal): Promise <RecipeResponseT> {
+  const url = `${API_URL}/recipes/${recipeId}`;
 
   return fetchRequest(url, {
     method: 'GET',
