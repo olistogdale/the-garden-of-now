@@ -21,9 +21,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setAuthError(null);
 
     try {
-      const { _id, email, firstName, lastName }: UserAuthResponseT = await registerUser(payload);
+      const { userId, email, firstName, lastName }: UserAuthResponseT = await registerUser(payload);
 
-      setAuth({ _id, email, firstName, lastName });
+      setAuth({ userId, email, firstName, lastName });
       setAuthStatus('success');
     } catch (err) {
       setAuth(null);
@@ -38,9 +38,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setAuthError(null);
 
     try {
-      const { _id, email, firstName, lastName }: UserAuthResponseT = await loginUser(payload);
+      const { userId, email, firstName, lastName }: UserAuthResponseT = await loginUser(payload);
 
-      setAuth({ _id, email, firstName, lastName });
+      setAuth({ userId, email, firstName, lastName });
       setAuthStatus('success');
     } catch (err) {
       setAuth(null)
@@ -59,9 +59,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setAuthError(null);
 
       try {
-        const { _id, email, firstName, lastName }: UserAuthResponseT = await authUser(controller.signal);
+        const { userId, email, firstName, lastName }: UserAuthResponseT = await authUser(controller.signal);
 
-        setAuth({ _id, email, firstName, lastName });
+        setAuth({ userId, email, firstName, lastName });
         setAuthStatus('success');
       } catch (err) {
         const message = err instanceof Error ? err.message : '';
