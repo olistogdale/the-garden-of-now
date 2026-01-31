@@ -7,12 +7,10 @@ import { StatusPanel } from '../../components/status-panel/StatusPanel';
 import { parseImage } from '../../utilities/parse-image';
 import { parseTime } from '../../utilities/parse-time';
 import { parseSkillLevel } from '../../utilities/parse-skill-level';
-import { fetchRecipeByID } from '../../services/recipes-service';
+import { getRecipeByID } from '../../services/recipes-service';
 
 import type { RecipeT } from '../../../../data/recipes/types/recipe-types';
 import type { StatusT } from '../../types/status-types';
-
-
 
 export function RecipeDetailPage() {
   const { id } = useParams <{ id: string }>();
@@ -32,7 +30,7 @@ export function RecipeDetailPage() {
         setRecipeStatus('loading');
         setRecipeError(null)
 
-        const {recipe} = await fetchRecipeByID(id, controller.signal);
+        const {recipe} = await getRecipeByID(id, controller.signal);
 
         setRecipe(recipe);
         setRecipeStatus('success');

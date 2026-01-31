@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 import { RecipeCard } from '../../components/recipe-card/RecipeCard';
 import { useIngredients } from '../../hooks/useIngredients.ts';
-import { fetchRecipes } from '../../services/recipes-service.ts';
+import { getRecipes } from '../../services/recipes-service.ts';
 import { getSessionKey } from '../../utilities/session-key.ts';
 import { StatusPanel } from '../../components/status-panel/StatusPanel.tsx';
 import { month } from '../../utilities/generate-month.ts';
@@ -44,7 +44,7 @@ export function RecipesPage() {
           recipes,
           totalCount,
           totalPages
-        } = await fetchRecipes({ingredients, seed}, page, limit, controller.signal);
+        } = await getRecipes({ingredients, seed}, page, limit, controller.signal);
 
         setRecipes(recipes);
         setTotalCount(totalCount);
