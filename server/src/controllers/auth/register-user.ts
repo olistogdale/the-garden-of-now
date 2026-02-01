@@ -57,7 +57,8 @@ export const registerUser = async function(ctx: Context) {
       userId: newUser._id.toString(),
       email: newUser.email,
       firstName: newUser.name.first,
-      lastName: newUser.name.last
+      lastName: newUser.name.last,
+      favourites: newUser.favouriteRecipes
     };
     ctx.body = body;
   } catch (err) {

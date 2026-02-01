@@ -31,7 +31,8 @@ export type UserT = {
 export type PartialUserT = {
   _id: string,
   name: NameT,
-  email: string
+  email: string,
+  favouriteRecipes: RecipeEntryT[]
 }
 
 export type UserRegistrationRequestT = {
@@ -51,7 +52,8 @@ export type UserAuthResponseT = {
   userId: string,
   email: string
   firstName: string,
-  lastName: string
+  lastName: string,
+  favourites: RecipeEntryT[]
 }
 
 export type FavouriteCardT = RecipeCardT & {

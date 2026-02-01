@@ -51,7 +51,8 @@ export const loginUser = async function (ctx: Context) {
       userId: user._id.toString(),
       email: user.email,
       firstName: user.name.first,
-      lastName: user.name.last
+      lastName: user.name.last,
+      favourites: user.favouriteRecipes
     }
     ctx.body = body;
   } catch (err) {

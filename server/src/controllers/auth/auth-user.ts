@@ -11,7 +11,7 @@ export const authUser = async function (ctx: Context) {
   try {
     const user = await userModel
       .findById(userId)
-      .select({ email: 1, name: 1 })
+      .select({ email: 1, name: 1, favouriteRecipes: 1 })
       .lean<PartialUserT>();
     
     if (!user) {
@@ -25,7 +25,8 @@ export const authUser = async function (ctx: Context) {
       userId: user._id.toString(),
       email: user.email,
       firstName: user.name.first,
-      lastName: user.name.last
+      lastName: user.name.last,
+      favourites: user.favouriteRecipes
     };
     ctx.body = body;
   } catch (err) {
