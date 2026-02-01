@@ -10,7 +10,7 @@ export function NavBar() {
   const navLinkClassname: NavLinkProps['className'] = ({ isActive }) => (isActive ? 'navlink active' : 'navlink') 
 
   return (
-    <div className="navbar-container">
+    <div className="navbar">
       <NavLink to="/" className="navbar-branding">
         The Garden of Now
       </NavLink>

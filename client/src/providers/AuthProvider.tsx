@@ -9,10 +9,12 @@ import { registerUser, loginUser, authUser, logoutUser } from '../services/auth-
 import { AuthContext } from '../context/auth-context';
 
 import type { StatusT } from '../types/status-types'
-import type { UserRegistrationRequestT, UserLoginRequestT, UserAuthResponseT } from '../../../data/users/types/user-types';
+import type { UserRegistrationRequestT, UserLoginRequestT, UserAuthResponseT, RecipeEntryT } from '../../../data/users/types/user-types';
+import type { UserAuthStateT } from '../types/auth-types';
+import { postFavourite, deleteFavourite } from '../services/favourites-service';
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [auth, setAuth] = useState <UserAuthResponseT | null> (null);
+  const [auth, setAuth] = useState <UserAuthStateT | null> (null);
   const [authStatus, setAuthStatus] = useState <StatusT> ('idle');
   const [authError, setAuthError] = useState <string | null> (null);
 
@@ -21,9 +23,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setAuthError(null);
 
     try {
-      const { userId, email, firstName, lastName }: UserAuthResponseT = await registerUser(payload);
+      const { userId, email, firstName, lastName, favourites }: UserAuthResponseT = await registerUser(payload);
 
-      setAuth({ userId, email, firstName, lastName });
+      setAuth({ userId, email, firstName, lastName, favourites });
       setAuthStatus('success');
     } catch (err) {
       setAuth(null);
@@ -38,9 +40,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setAuthError(null);
 
     try {
-      const { userId, email, firstName, lastName }: UserAuthResponseT = await loginUser(payload);
+      const { userId, email, firstName, lastName, favourites }: UserAuthResponseT = await loginUser(payload);
 
-      setAuth({ userId, email, firstName, lastName });
+      setAuth({ userId, email, firstName, lastName, favourites });
       setAuthStatus('success');
     } catch (err) {
       setAuth(null)
@@ -59,9 +61,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setAuthError(null);
 
       try {
-        const { userId, email, firstName, lastName }: UserAuthResponseT = await authUser(controller.signal);
+        const { userId, email, firstName, lastName, favourites }: UserAuthResponseT = await authUser(controller.signal);        
 
-        setAuth({ userId, email, firstName, lastName });
+        setAuth({ userId, email, firstName, lastName, favourites });
         setAuthStatus('success');
       } catch (err) {
         const message = err instanceof Error ? err.message : '';
@@ -105,9 +107,52 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, [])
 
+  const favouriteIdsSet = useMemo(
+    () => new Set(auth?.favourites?.map((favourite) => favourite._id) ?? []),
+    [auth?.favourites]
+  );
+
+  const isInFavourites = useCallback(
+    (recipeId: string) => favouriteIdsSet.has(recipeId),
+    [favouriteIdsSet]
+  );
+
+  const toggleFavourite = useCallback(async (recipeId: string, recipeName: string) => {
+    let prevFavourites: RecipeEntryT[] | null = null;
+    let exists: boolean | null = null;
+    
+    setAuth((prev: UserAuthStateT | null) => {
+      if (!prev) return prev;
+
+      prevFavourites = prev.favourites.slice();
+      exists = prev.favourites.some((recipe) => recipe._id === recipeId);
+
+      return {
+        ...prev,
+        favourites: exists ?
+          prev.favourites.filter((recipe: RecipeEntryT) => recipe._id !== recipeId) :
+          [{ _id: recipeId, name: recipeName, addedAt: new Date()}, ...prev.favourites]
+      };
+    })
+
+    if (exists === null) return;
+
+    try {
+      if (exists) await deleteFavourite({recipeId})
+      else await postFavourite({recipeId, recipeName})
+    } catch (err) {
+      console.log('Error toggling favourite recipe:', err)
+      setAuth((prev: UserAuthStateT | null) => {
+        if (!prev || !prevFavourites) return prev
+        return {...prev, favourites: prevFavourites}
+      })
+    }
+   }, [] )
+  
+  
   const value = useMemo(
-    () => ({ auth, authStatus, authError, register, login, logout }),
-    [auth, authStatus, authError, register, login, logout]
+    () => ({ auth, authStatus, authError, register, login, logout, isInFavourites, toggleFavourite }),
+    [auth, authStatus, authError, register, login, logout, isInFavourites, toggleFavourite]
   );
 
   return (

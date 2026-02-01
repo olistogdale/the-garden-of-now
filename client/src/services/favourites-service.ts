@@ -42,7 +42,9 @@ export function postFavourite(
   })
 }
 
-export function deleteFavourite( recipeId: string, signal?: AbortSignal
+export function deleteFavourite(
+  { recipeId }: { recipeId: string },
+  signal?: AbortSignal
 ): Promise<void> {
   const url = `${API_URL}/favourite/${recipeId}`;
 
