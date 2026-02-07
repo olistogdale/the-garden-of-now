@@ -1,0 +1,22 @@
+.back-button {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--primary-colour);
+  background-color: var(--background-colour);
+  padding: var(--small-gap) var(--medium-gap);
+  border-radius: var(--large-gap);
+  border: 2px solid var(--primary-colour);
+}
+
+.back-button:hover {
+  color: var(--background-colour);
+  background-color: var(--primary-colour);
+}
+
+.back-button:active {
+  color: var(--tertiary-colour);
+  background-color: var(--accent-colour);
+  border-color: var(--accent-colour)
+}
