@@ -5,9 +5,9 @@ import type { Context } from 'koa';
 import type { RecipeT, RecipeResponseT } from '../../../../data/recipes/types/recipe-types';
 
 export const getRecipe = async function (ctx: Context) {
-  const { id } = ctx.params;
+  const { recipeId } = ctx.params;
 
-  if (typeof id !== 'string' || !id.trim()) {
+  if (typeof recipeId !== 'string' || !recipeId.trim()) {
     ctx.status = 400;
     ctx.body = { error: 'Invalid recipe ID. Please provide a valid recipe ID.' };
     return;
@@ -15,12 +15,12 @@ export const getRecipe = async function (ctx: Context) {
 
   try {
     const recipe = await recipeModel
-      .findById(id)
+      .findById(recipeId)
       .lean<RecipeT>();
 
     if (!recipe) {
       ctx.status = 404;
-      ctx.body = { error: `Recipe ${id} not found.` };
+      ctx.body = { error: `Recipe ${recipeId} not found.` };
       return;
     }
 
@@ -28,8 +28,8 @@ export const getRecipe = async function (ctx: Context) {
     const body: RecipeResponseT = { recipe };
     ctx.body = body;
   } catch (err) {
-    console.log(`Error fetching recipe ${id}:`, err);
+    console.log(`Error fetching recipe ${recipeId}:`, err);
     ctx.status = 500;
-    ctx.body = { error: `Internal server error: could not fetch recipe ${id}.` };
+    ctx.body = { error: `Internal server error: could not fetch recipe ${recipeId}.` };
   }
 };

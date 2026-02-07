@@ -60,14 +60,14 @@ export const getFavourites = async function (ctx: Context) {
       return;
     }
 
-    const recipeIds = favouriteEntries
+    const favouriteIds = favouriteEntries
       .slice()
       .sort((a, b) => new Date(a.addedAt).getTime() - new Date(b.addedAt).getTime())
       .map((favourite) => favourite._id);
 
-    const totalCount = recipeIds.length;
+    const totalCount = favouriteIds.length;
     const totalPages = Math.ceil(totalCount/limit);
-    const pageRecipeIds = recipeIds.slice(skip, skip + limit);
+    const pageRecipeIds = favouriteIds.slice(skip, skip + limit);
   
     const favouriteRecipes = await recipeModel
       .find<RecipeCardT>({ _id: { $in: pageRecipeIds } })

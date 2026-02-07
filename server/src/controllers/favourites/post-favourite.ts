@@ -21,7 +21,7 @@ export const postFavourite = async function(ctx: Context) {
     const result = await userModel.updateOne(
       {
         _id: userId,
-        'favouriteRecipes.recipeId': { $ne: recipeId },
+        'favouriteRecipes._id': { $ne: recipeId },
       },
       {
         $push: {

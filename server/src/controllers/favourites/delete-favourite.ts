@@ -18,7 +18,7 @@ export const deleteFavourite = async function(ctx: Context) {
     const result = await userModel.updateOne(
       {
         _id: userId,
-        'favouriteRecipes.recipeId': recipeId
+        'favouriteRecipes._id': recipeId
       },
       {
         $pull: {
