@@ -7,10 +7,11 @@ import { parseTime } from '../../utilities/parse-time';
 import { parseSkillLevel } from '../../utilities/parse-skill-level';
 
 import type { RecipeCardT } from '../../../../data/recipes/types/recipe-types'
+import { FavouriteToggle } from '../favourite-toggle/FavouriteToggle';
 
 type Props = {
   recipe: RecipeCardT;
-};
+}
 
 export function RecipeCard({ recipe }: Props) {
   const img = parseImage(recipe.image);
@@ -19,6 +20,9 @@ export function RecipeCard({ recipe }: Props) {
 
   return (
     <div className="recipe-card">
+      <div className="recipe-card__fav-toggle">
+        <FavouriteToggle recipe={recipe}/>
+      </div>
       <Link to={`/recipes/${recipe._id}`} className="recipe-card__link" aria-label={recipe.name}>
         <div className="recipe-card__media">
           {img ? (

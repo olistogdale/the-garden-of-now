@@ -1,6 +1,7 @@
 import './RecipesPage.css';
 
 import { useEffect, useMemo, useState } from 'react';
+import { useAuth } from '../../hooks/useAuth.ts';
 
 import { RecipeCard } from '../../components/recipe-card/RecipeCard';
 import { useIngredients } from '../../hooks/useIngredients.ts';
@@ -8,12 +9,19 @@ import { getRecipes } from '../../services/recipes-service.ts';
 import { getSessionKey } from '../../utilities/session-key.ts';
 import { StatusPanel } from '../../components/status-panel/StatusPanel.tsx';
 import { month } from '../../utilities/generate-month.ts';
+import { getFavourites } from '../../services/favourites-service.ts';
 
 import type { RecipeCardT } from '../../../../data/recipes/types/recipe-types'
 import type { StatusT } from '../../types/status-types'
 
-export function RecipesPage() {
+
+type Props = {
+  mode: string
+}
+
+export function RecipesPage({mode}: Props) {
   const { ingredients, ingredientsStatus, ingredientsError } = useIngredients();
+  const { auth, isInFavourites } = useAuth();
   const seed = getSessionKey();
 
   const [recipes, setRecipes] = useState <RecipeCardT[]> ([]);
@@ -29,13 +37,18 @@ export function RecipesPage() {
     [ingredients]
   )
 
+  const favouritesKey = useMemo(
+    () => (auth?.favourites ? auth.favourites.map((recipe) => recipe._id).join('|') : ''),
+    [auth?.favourites]
+  )
+
   useEffect(() => {
     if (ingredientsStatus !== 'success' || !ingredients) return;
 
     const controller = new AbortController();
-    const timeoutId = window.setTimeout(() => controller.abort(), 10000)
+    const timeoutId = window.setTimeout(() => controller.abort(), 10000);
 
-    const loadRecipes = async function() {
+    (async function() {
       try {
         setRecipesStatus('loading');
         setRecipesError(null);
@@ -44,7 +57,9 @@ export function RecipesPage() {
           recipes,
           totalCount,
           totalPages
-        } = await getRecipes({ingredients, seed}, page, limit, controller.signal);
+        } = (mode === 'recipes')
+          ? await getRecipes({ingredients, seed}, page, limit, controller.signal)
+          : await getFavourites({ingredients}, page, limit, controller.signal)
 
         setRecipes(recipes);
         setTotalCount(totalCount);
@@ -56,15 +71,25 @@ export function RecipesPage() {
         setRecipesStatus('error');
         setRecipesError(err instanceof Error? err.message : 'Unknown error')
       }
-    }
-
-    loadRecipes();
+    })()
     
     return () => {
       clearTimeout(timeoutId);
       controller.abort();
     };
-  }, [ingredientsKey, ingredientsStatus, seed, page, limit]);
+  }, [mode, ingredientsKey, ingredientsStatus, seed, page, limit]);
+
+  useEffect(() => {
+    if (mode === 'recipes' || !auth) return;
+
+    setRecipes((prev) => prev.filter((recipe) => isInFavourites(recipe._id)))
+
+    const nextTotalPages = Math.max(1, Math.ceil(auth.favourites.length / limit));
+
+    setTotalCount(auth.favourites.length);
+    setTotalPages(nextTotalPages);
+    setPage((p) => Math.min(p, nextTotalPages));
+  }, [mode, favouritesKey, isInFavourites, limit]);
 
   useEffect(() => {
     if (ingredientsStatus !== 'success' || !ingredients) return;

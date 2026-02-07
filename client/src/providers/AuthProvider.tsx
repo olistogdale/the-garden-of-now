@@ -9,7 +9,8 @@ import { registerUser, loginUser, authUser, logoutUser } from '../services/auth-
 import { AuthContext } from '../context/auth-context';
 
 import type { StatusT } from '../types/status-types'
-import type { UserRegistrationRequestT, UserLoginRequestT, UserAuthResponseT, RecipeEntryT } from '../../../data/users/types/user-types';
+// import type { UserRegistrationRequestT, UserLoginRequestT, UserAuthResponseT, RecipeEntryT } from '../../../data/users/types/user-types';
+import type { UserRegistrationRequestT, UserLoginRequestT, UserAuthResponseT } from '../../../data/users/types/user-types';
 import type { UserAuthStateT } from '../types/auth-types';
 import { postFavourite, deleteFavourite } from '../services/favourites-service';
 
@@ -118,36 +119,47 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   );
 
   const toggleFavourite = useCallback(async (recipeId: string, recipeName: string) => {
-    let prevFavourites: RecipeEntryT[] | null = null;
-    let exists: boolean | null = null;
-    
-    setAuth((prev: UserAuthStateT | null) => {
+    if (!auth) return;
+
+    const existsNow = isInFavourites(recipeId);
+
+    setAuth((prev) => {
       if (!prev) return prev;
 
-      prevFavourites = prev.favourites.slice();
-      exists = prev.favourites.some((recipe) => recipe._id === recipeId);
+      const existsPrev = prev.favourites.some((r) => r._id === recipeId);
 
       return {
         ...prev,
-        favourites: exists ?
-          prev.favourites.filter((recipe: RecipeEntryT) => recipe._id !== recipeId) :
-          [{ _id: recipeId, name: recipeName, addedAt: new Date()}, ...prev.favourites]
+        favourites: existsPrev
+          ? prev.favourites.filter((r) => r._id !== recipeId)
+          : [{ _id: recipeId, name: recipeName, addedAt: new Date() }, ...prev.favourites],
       };
-    })
-
-    if (exists === null) return;
+    });
 
     try {
-      if (exists) await deleteFavourite({recipeId})
-      else await postFavourite({recipeId, recipeName})
+      if (existsNow) await deleteFavourite({ recipeId });
+      else await postFavourite({ recipeId, recipeName });
     } catch (err) {
-      console.log('Error toggling favourite recipe:', err)
-      setAuth((prev: UserAuthStateT | null) => {
-        if (!prev || !prevFavourites) return prev
-        return {...prev, favourites: prevFavourites}
-      })
+      console.log('Error toggling favourite recipe:', err);
+
+      try {
+        const controller = new AbortController();
+        const fresh = await authUser(controller.signal);
+        setAuth({
+          userId: fresh.userId,
+          email: fresh.email,
+          firstName: fresh.firstName,
+          lastName: fresh.lastName,
+          favourites: fresh.favourites,
+        });
+      } catch (err) {
+        console.log('Error resynching favourite recipes with database:', err);
+        setAuth(null);
+        setAuthStatus('error');
+        setAuthError(err instanceof Error? err.message : 'Unknown error');
+      }
     }
-   }, [] )
+  }, [auth, isInFavourites]);
   
   
   const value = useMemo(
