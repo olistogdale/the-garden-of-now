@@ -1,32 +1,18 @@
-A simple shell that allows a sticky footer later if you want
-.app-shell {
-  min-height: 100vh;
+.main-layout {
+  --header-height: clamp(72px, 8dvh, 102px);
+  padding-top: var(--header-height);
 }
 
-/* .app-header {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-
-  padding: 16px;
-} */
-
-/* Consistent page container + responsive padding */
-.app-main {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-
-  padding: 16px;
+ .main-layout__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height); 
+  z-index: 50;
 }
 
-/* Slightly roomier on larger screens */
-@media (min-width: 768px) {
-  .app-main {
-    padding: 24px;
-  }
-
-  /* .app-header {
-    padding: 24px;
-  } */
+.main-layout__main {
+  min-height: calc(100dvh - var(--header-height)); /* remove this once page layout is defined */
+  border: 1px solid blue; /* remove this when finished */
 }

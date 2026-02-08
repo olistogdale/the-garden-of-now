@@ -6,14 +6,14 @@ import './MainLayout.css'
 
 export function MainLayout() {
   return (
-    <div className="app-shell">
-      <header className= "app-header">
+    <div className="main-layout">
+      <header className= "main-layout__header">
         <NavBar />
       </header>
-      <main className="app-main">
+      <main className="main-layout__main">
         <Outlet />
       </main>
-      <footer>
+      <footer className="main-layout__footer">
         {/* insert component for footer here when ready*/}
       </footer>
     </div>
