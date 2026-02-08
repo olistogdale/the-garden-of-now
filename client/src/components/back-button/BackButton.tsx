@@ -1,6 +1,7 @@
 import './BackButton.css'
 
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 
 type Props = {
   to?: string
@@ -17,7 +18,8 @@ export function BackButton({to}: Props) {
 
   return (
     <button className='back-button' onClick={handleBack}>
-      &lt; BACK
+      <ArrowLeft strokeWidth={3} className='back-button__icon' />
+      <span className='back-button__text'>&lt; BACK</span>
     </button>
   )
 }

@@ -5,9 +5,17 @@
   text-decoration: none;
   color: var(--primary-colour);
   background-color: var(--background-colour);
-  padding: var(--small-gap) var(--medium-gap);
-  border-radius: var(--large-gap);
+  padding: var(--small-gap);
+  border-radius: var(--medium-gap);
   border: 2px solid var(--primary-colour);
+}
+
+.back-button__text {
+  display: none;
+}
+
+.back-button__icon {
+  display: block;
 }
 
 .back-button:hover {
@@ -19,4 +27,18 @@
   color: var(--tertiary-colour);
   background-color: var(--accent-colour);
   border-color: var(--accent-colour)
+}
+
+@media (min-width: 1024px) {
+  .back-button {
+    padding: var(--small-gap) var(--medium-gap);
+  }
+  
+  .back-button__text {
+    display: inline-block;
+  }
+
+  .back-button__icon {
+    display: none;
+  }
 }
