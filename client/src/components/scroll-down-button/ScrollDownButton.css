@@ -1,0 +1,25 @@
+.scroll-down-button {
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 2.75rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--background-colour);
+  background-color: var(--secondary-transparent-colour);
+  padding: var(--small-gap);
+  border-radius: var(--medium-gap);
+  transition: background-color 0.2s ease;
+}
+
+.scroll-down-button:hover {
+  background-color: var(--secondary-colour);
+  transform: translateY(2.5px);
+}
+
+.scroll-down-button:active {
+  color: var(--secondary-colour);
+  background-color: var(--accent-colour);
+}
