@@ -1,4 +1,8 @@
 .back-button {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 1rem;
@@ -24,13 +28,15 @@
 }
 
 .back-button:active {
-  color: var(--tertiary-colour);
+  color: var(--secondary-colour);
   background-color: var(--accent-colour);
   border-color: var(--accent-colour)
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .back-button {
+    width: auto;
+    height: auto;
     padding: var(--small-gap) var(--medium-gap);
   }
   

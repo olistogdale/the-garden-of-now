@@ -17,7 +17,7 @@ export function BackButton({to}: Props) {
   }
 
   return (
-    <button className='back-button' onClick={handleBack}>
+    <button className='back-button' onClick={handleBack} aria-label="Back">
       <ArrowLeft strokeWidth={3} className='back-button__icon' />
       <span className='back-button__text'>&lt; BACK</span>
     </button>

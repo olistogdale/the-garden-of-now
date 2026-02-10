@@ -1,7 +1,6 @@
 .navbar {
   height: 100%;
   background: var(--background-colour);
-  border-bottom: 1px solid var(--tertiary-colour);
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
@@ -23,7 +22,7 @@
   font-family: var(--font-heading);
   font-weight: 900;
   font-size: 1.5rem;
-  line-height: 1.5rem;
+  line-height: 1;
   color: var(--primary-colour);
 }
 
@@ -41,8 +40,12 @@
 }
 
 .navbar__navlink {
+  display: grid;
+  place-items: center;
   font-family: var(--font-heading);
   font-weight: 800;
+  width: 2.75rem;
+  height: 2.75rem;
   text-decoration: none;
   color: var(--background-colour);
   background-color: var(--primary-colour);
@@ -60,12 +63,12 @@
 }
 
 .navbar__navlink:hover {
-  background-color: var(--secondary-colour);
-  border-color: var(--secondary-colour);
+  background-color: var(--primary-light-colour);
+  border-color: var(--primary-light-colour);
 }
 
 .navbar__navlink:active {
-  color: var(--tertiary-colour);
+  color: var(--secondary-colour);
   background-color: var(--accent-colour);
   border-color: var(--accent-colour);
 }
@@ -90,8 +93,10 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .navbar__navlink {
+    width: auto;
+    height: auto;
     padding: var(--small-gap) var(--medium-gap);
   }
   
