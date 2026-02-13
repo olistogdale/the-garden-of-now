@@ -2,13 +2,14 @@ import './RecipesPage.css';
 
 import { useEffect, useMemo, useState } from 'react';
 import { useAuth } from '../../hooks/useAuth.ts';
+import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from 'lucide-react'
 
 import { RecipeCard } from '../../components/recipe-card/RecipeCard';
 import { useIngredients } from '../../hooks/useIngredients.ts';
 import { getRecipes } from '../../services/recipes-service.ts';
 import { getSessionKey } from '../../utilities/session-key.ts';
 import { StatusPanel } from '../../components/status-panel/StatusPanel.tsx';
-import { month } from '../../utilities/generate-month.ts';
+import { monthCapitalized } from '../../utilities/generate-month.ts';
 import { getFavourites } from '../../services/favourites-service.ts';
 
 import type { RecipeCardT } from '../../../../data/recipes/types/recipe-types'
@@ -133,69 +134,47 @@ export function RecipesPage({mode}: Props) {
 
   // ---- Success ----
   return (
-    <div className="recipes-page-container">
-      <section className="recipes-page__pagination">
-        <button type="button" onClick={() => setPage(1)} disabled={!canSelectPrevious}>
-          First
-        </button>
-
-        <button
-          type="button"
-          onClick={() => setPage((p) => Math.max(1, p - 1))}
-          disabled={!canSelectPrevious}
-        >
-          Prev
-        </button>
-
-        <span>
-          Page {page} of {totalPages ?? 1}
-        </span>
-
-        <button
-          type="button"
-          onClick={() => setPage((p) => p + 1)}
-          disabled={!canSelectNext}
-        >
-          Next
-        </button>
-
-        <button
-          type="button"
-          onClick={() => totalPages && setPage(totalPages)}
-          disabled={!canSelectNext}
-        >
-          Last
-        </button>
-
-        <button
-          type="button"
-          onClick={() => {
-            setLimit(24);
-            setPage(1);
-          }}
-          disabled={limit===24}
-        >
-          24
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            setLimit(48);
-            setPage(1);
-          }}
-          disabled={limit===48}
-        >
-          48
-        </button>
+    <div className="recipes-page">
+      <section className="recipes-page__description">
+        <div className="description-header-blank"/>
+        <h1 className="description-title">{ monthCapitalized}'S RECIPES</h1>
+        <p className="description-subtitle">Showing {totalCount} recipes </p>
       </section>
-
       
-      <section className="recipes-page__header">
-        <h1 className="recipes-page__title">Recipes</h1>
-        <p className="recipes-page__subtitle">Showing {totalCount} recipes for {month}</p>
+      <section className="recipes-page__pagination">
+        <div className="pagination__limit--blank" />
+        <div className="pagination__nav">
+          <button className="nav-button" type="button" onClick={() => setPage(1)} disabled={!canSelectPrevious}>
+            <p className="nav-button-text">&lt;&lt; FIRST</p>
+            <ChevronsLeft className="nav-button-icon" />
+          </button>
+          <button className="nav-button" type="button" onClick={() => setPage((p) => Math.max(1, p - 1))} disabled={!canSelectPrevious}>
+            <p className="nav-button-text">&lt; PREV</p>
+            <ChevronLeft className="nav-button-icon" />
+          </button>
+          <span className="nav-info">
+            Page <span>{page}</span> of {totalPages ?? 1}
+          </span>
+          <button className="nav-button" type="button" onClick={() => setPage((p) => p + 1)} disabled={!canSelectNext}>
+            <p className="nav-button-text">NEXT &gt;</p>
+            <ChevronRight className="nav-button-icon" />
+          </button>
+          <button className="nav-button" type="button" onClick={() => totalPages && setPage(totalPages)} disabled={!canSelectNext}>
+            <p className="nav-button-text">LAST &gt;&gt;</p>
+            <ChevronsRight className="nav-button-icon" />
+          </button>
+        </div>
+        <div className="pagination__limit">
+          <button className="limit-button" type="button" onClick={() => {setLimit(24); setPage(1);}} disabled={limit===24}>
+            24
+          </button>
+          <button className="limit-button" type="button" onClick={() => {setLimit(48); setPage(1);}} disabled={limit===48}>
+            48
+          </button>
+        </div>
       </section>
 
-      <section className="recipes-results">
+      <section className="recipes-page__results">
         {recipes.map((recipe) => (
           <RecipeCard key={recipe._id} recipe={recipe} />
         ))}

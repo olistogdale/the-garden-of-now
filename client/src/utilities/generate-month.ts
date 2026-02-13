@@ -14,3 +14,5 @@ const MONTHS = [
 ];
 
 export const month = MONTHS[new Date().getMonth()];
+
+export const monthCapitalized = month.toUpperCase();
