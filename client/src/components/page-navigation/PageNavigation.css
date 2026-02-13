@@ -117,8 +117,8 @@
   border: 1px solid var(--primary-colour);
 }
 
-.limit-button.is-loading {
-  color: transparent;
+.limit-button.is-loading .limit-button-text {
+  visibility: hidden;
 }
 
 .limit-button-spinner {
@@ -134,6 +134,23 @@
 
 .limit-button.is-loading .limit-button-spinner {
   opacity: 1;
+}
+
+.limit-button:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.limit-button:disabled::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: var(--disabled-colour);
+  border-radius: inherit;
+}
+
+.limit-button.is-loading:disabled::after {
+  background: transparent;
 }
 
 .limit-button:hover {

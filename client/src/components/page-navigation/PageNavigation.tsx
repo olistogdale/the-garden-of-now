@@ -89,26 +89,26 @@ export function PageNavigation({
         </button>
       </div>
       <div className="pagination__limit">
-        <button
-          className={`limit-button ${isSpinning('limit-24') ? 'is-loading' : ''}`}
-          type="button"
-          onClick={() => handleAction('limit-24', () => {setLimit(24); setPage(1);})}
-          disabled={isLoading || limit===24}
-          aria-busy={isSpinning('limit-24')}
-        >
-          24
-          <span className="limit-button-spinner" aria-hidden="true" />
-        </button>
-        <button
-          className={`limit-button ${isSpinning('limit-48') ? 'is-loading' : ''}`}
-          type="button"
-          onClick={() => handleAction('limit-48', () => {setLimit(48); setPage(1);})}
-          disabled={isLoading || limit===48}
-          aria-busy={isSpinning('limit-48')}
-        >
-          48
-          <span className="limit-button-spinner" aria-hidden="true" />
-        </button>
+          <button
+            className={`limit-button ${isSpinning('limit-24') ? 'is-loading' : ''}`}
+            type="button"
+            onClick={() => handleAction('limit-24', () => {setLimit(24); setPage(1);})}
+            disabled={isLoading || limit===24}
+            aria-busy={isSpinning('limit-24')}
+          >
+            <span className="limit-button-text">24</span>
+            <span className="limit-button-spinner" aria-hidden="true" />
+          </button>
+          <button
+            className={`limit-button ${isSpinning('limit-48') ? 'is-loading' : ''}`}
+            type="button"
+            onClick={() => handleAction('limit-48', () => {setLimit(48); setPage(1);})}
+            disabled={isLoading || limit===48}
+            aria-busy={isSpinning('limit-48')}
+          >
+            <span className="limit-button-text">48</span>
+            <span className="limit-button-spinner" aria-hidden="true" />
+          </button>
       </div>
     </section>
   )
