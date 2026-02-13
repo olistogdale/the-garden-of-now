@@ -1,17 +1,16 @@
 .status-panel-container {
-  border: 1px solid #e6e6e6;
-  border-radius: 14px;
-  padding: 16px;
-  background: white;
+  border: 1px solid var(--background-colour);
+  border-radius: var(--xxlarge-gap);
+  padding: var(--medium-gap);
+  background: var(--secondary-colour);
 }
 
 .status-panel__title {
-  margin: 0 0 8px 0;
-  font-size: 1.4rem;
+  margin: 0 0 var(--medium-gap) 0;
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
 .status-panel__message {
-  margin: 0;
-  opacity: 0.85;
   line-height: 1.5;
 }
