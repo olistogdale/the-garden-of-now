@@ -69,7 +69,7 @@ export function LandingPage() {
             <img className="feature__img" src={FeatureOneImage}/>
             <div className="feature__content">
               <h2>SEASONAL PICKS</h2>
-              <p>Month-to-month, discover recipes made entirely from fresh, local ingredients.</p>
+              <p>Month-to-month, discover recipes that use only fresh, local ingredients.</p>
             </div>
           </div>
 
@@ -91,7 +91,7 @@ export function LandingPage() {
           </div>
 
           <div className="feature-footer-blank">
-            {/*<ScrollDownButton targetId="page"/>*/}
+            <ScrollDownButton targetId="page"/>
           </div>
         </div>
       </section>

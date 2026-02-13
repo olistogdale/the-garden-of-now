@@ -4,6 +4,7 @@
 
 .landing section {
   height: 100vh;
+  max-height: 100vh;
 }
 
 .landing__hero {
@@ -12,7 +13,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   display: grid;
-  grid-template-rows: var(--header-height) 6fr 8fr 4fr 2fr;
+  grid-template-rows: var(--header-height) 3fr 4fr 2fr 1fr;
   place-items: center;
 }
 
@@ -113,11 +114,13 @@
 .feature {
   position: relative;
   z-index: 5;
-  padding: var(--medium-gap) var(--large-gap);
+  padding: var(--large-gap);
   align-content: center;
+  max-height: 20vh;
+
   color: var(--secondary-colour);
   border: 1px solid var(--secondary-colour);
-  border-radius: var(--xlarge-gap);
+  border-radius: var(--large-gap);
   background: var(--background-colour);
 }
 
@@ -164,8 +167,9 @@
   .feature {
     display: grid;
     grid-template-columns: 4fr 6fr;
-    gap: var(--medium-gap) var(--large-gap);
-    border-radius: var(--xlarge-gap);
+    padding: var(--medium-gap);
+    border-radius: var(--large-gap);
+    line-height: 1.4;
   }
 
   .feature__content {
@@ -177,12 +181,12 @@
     display: block;
     width: 100%;
     height: 100%;
-    max-height: 18vh;
+
 
     object-fit: cover;
     object-position: center;
 
-    border-radius: var(--medium-gap);
+    border-radius: var(--small-gap);
     overflow: hidden;
   }
 }
@@ -196,14 +200,16 @@
   .feature {
     grid-template-rows: 7fr 3fr;
     grid-template-columns: 1fr;
-    height: 72.5vh;
-    gap: var(--large-gap) var(--xlarge-gap);
-    border-radius: var(--xxlarge-gap);
+    max-height: none;
+    height: 74.5vh;
+    gap: var(--large-gap);
+    padding: var(--large-gap);
+    border-radius: var(--xlarge-gap);
   }
   
-  .feature img {
+  .feature__img {
     max-height: 50vh;
-    border-radius: var(--xlarge-gap)
+    border-radius: var(--medium-gap)
   }
 
   .feature-header-blank {
