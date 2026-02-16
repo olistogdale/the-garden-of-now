@@ -1,8 +1,13 @@
 .scroll-down-button {
+  position:absolute;
+  z-index: 10;
+  bottom: 1.5vh;
+
   display: grid;
   place-items: center;
   width: 3.25rem;
   height: 2.75rem;
+
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 1rem;
@@ -15,8 +20,9 @@
 }
 
 .scroll-down-button:hover {
-  background-color: var(--secondary-colour);
   transform: translateY(2.5px);
+
+  background-color: var(--secondary-colour);
 }
 
 .scroll-down-button:active {
