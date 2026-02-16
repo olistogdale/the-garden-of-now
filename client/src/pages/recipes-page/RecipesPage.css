@@ -8,7 +8,7 @@
   grid-template-rows: var(--header-height) auto;
   place-items:center;
   gap: 0.5rem;
-  margin: 0 0 2vh 0;
+  margin: 0 0 2dvh 0;
 }
 
 .description-title {  

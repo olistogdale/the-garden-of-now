@@ -1,12 +1,13 @@
 .scroll-down-button {
   position:absolute;
   z-index: 10;
-  bottom: 1.5vh;
+  top: 91dvh;
+  left: calc(50dvw - 1.5rem);
 
   display: grid;
   place-items: center;
-  width: 3.25rem;
-  height: 2.75rem;
+  width: 3rem;
+  height: 2.5rem;
 
   font-family: var(--font-heading);
   font-weight: 800;

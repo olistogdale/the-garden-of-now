@@ -1,6 +1,6 @@
 A simple shell that allows a sticky footer later if you want
 .app-shell {
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* Consistent page container + responsive padding */

@@ -1,6 +1,6 @@
 .bg-scroll {
   position: absolute;
-  inset: -50vw;
+  inset: -50dvw;
   z-index: 0;
   pointer-events: none;
   transform: rotate(-12deg);
@@ -15,7 +15,7 @@
   white-space: nowrap;
   font-family: var(--font-heading);
   font-weight: 900;
-  font-size: clamp(7.5rem, 10vw, 10rem);
+  font-size: clamp(7.5rem, 10dvw, 10rem);
   line-height: 0.9;
   will-change: transform;
   animation: marquee-right 240s linear infinite;
