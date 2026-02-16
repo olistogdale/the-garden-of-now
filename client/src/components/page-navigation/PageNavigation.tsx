@@ -63,7 +63,7 @@ export function PageNavigation({
           <span className="nav-button-spinner" aria-hidden="true" />
         </button>
         <span className="nav-info">
-          Page <span>{page}</span> of {totalPages ?? 1}
+          <span className="nav-info-optional">Page</span> <span className="nav-info-page">{page}</span> of {totalPages ?? 1}
         </span>
         <button
           className={`nav-button ${isSpinning('next') ? 'is-loading' : ''}`}

@@ -10,7 +10,7 @@
 
 .pagination__nav {
   display: grid;
-  grid-template-columns: 1fr 1fr 10rem 1fr 1fr;
+  grid-template-columns: 1fr 1fr 7rem 1fr 1fr;
   place-items: center;
   gap: 0.5rem;
   padding: 0.5rem;
@@ -19,8 +19,12 @@
   border: 1px solid var(--secondary-colour);
 }
 
-.nav-info span {
+.nav-info-page {
   color: var(--accent-dark-colour);
+}
+
+.nav-info-optional {
+  display: none;
 }
 
 .nav-button {
@@ -174,6 +178,15 @@
 @media (min-width: 640px) {
   .recipes-page__pagination {
     grid-template-columns: 1fr 8fr 1fr;
+  }
+
+  .pagination__nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 10rem 1fr 1fr;
+  }
+
+  .nav-info-optional {
+    display: inline;
   }
   
   .pagination__limit--blank {
