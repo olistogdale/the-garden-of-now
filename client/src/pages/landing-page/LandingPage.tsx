@@ -40,9 +40,9 @@ export function LandingPage() {
           <h1 className="hero-title">
             SHORT ON DINNER-TIME INSPIRATION?
           </h1>
-          <h3 className="hero-subtitle">
+          <h4 className="hero-subtitle">
             Create mouth-watering meals using only seasonal ingredients.
-          </h3>
+          </h4>
         </div>
         <div className="hero-image-blank"/>
         <div className="hero-cta">
@@ -90,9 +90,7 @@ export function LandingPage() {
             </div>
           </div>
 
-          <div className="feature-footer-blank">
-            <ScrollDownButton targetId="page"/>
-          </div>
+          <ScrollDownButton targetId="page"/>
         </div>
       </section>
     </div>

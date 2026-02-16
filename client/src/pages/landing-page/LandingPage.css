@@ -17,7 +17,6 @@
   place-items: center;
 }
 
-
 .hero-content {
   width: 90vw;
   height: 15vh;
@@ -149,10 +148,6 @@
   border-radius: var(--medium-gap);
 
   letter-spacing: 0em;
-}
-
-.feature-footer-blank {
-  z-index: 5;
 }
 
 @media (min-width: 640px) {
