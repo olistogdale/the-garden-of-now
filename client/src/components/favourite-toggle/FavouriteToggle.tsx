@@ -1,4 +1,7 @@
+import './FavouriteToggle.css';
+
 import { useAuth } from "../../hooks/useAuth";
+import { Minus, Plus } from 'lucide-react';
 
 import type { RecipeCardT, RecipeT } from "../../../../data/recipes/types/recipe-types";
 
@@ -16,13 +19,13 @@ export function FavouriteToggle({ recipe }: Props) {
 
   return (
     <div className="favourite-toggle">
-      <button type="button" className="favourite-toggle__button" onClick={(e) => {
-        e.preventDefault();
-        e.stopPropagation();
+      <button type="button" className="favourite-toggle__button" onClick={(event) => {
+        event.preventDefault();
+        event.stopPropagation();
         toggleFavourite(recipeId, recipeName)}
       }
       >
-          {isInFavourites(recipeId) ? "-" : "+" }
+          {isInFavourites(recipeId) ? <Minus /> : <Plus /> }
       </button>
     </div>
   )
