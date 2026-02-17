@@ -1,11 +1,6 @@
 .recipe-card {
+  position: relative;
   min-width: 0;
-}
-
-.recipe-card__fav-toggle {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
 }
 
 .recipe-card__link {

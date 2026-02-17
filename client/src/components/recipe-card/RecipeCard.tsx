@@ -23,9 +23,7 @@ export function RecipeCard({ recipe }: Props) {
   
   return (
     <div className="recipe-card">
-      <div className="recipe-card__fav-toggle">
-        <FavouriteToggle recipe={recipe}/>
-      </div>
+      <FavouriteToggle recipe={recipe}/>
       <Link to={`/recipes/${recipe._id}`} className="recipe-card__link" aria-label={recipe.name}>
         <div className="recipe-card__media">
           {img ? (
