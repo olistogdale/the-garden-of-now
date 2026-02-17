@@ -39,7 +39,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .recipes-page__results {
     grid-template-columns: repeat(3, 1fr);
     margin: -0.5rem 0;
