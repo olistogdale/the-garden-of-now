@@ -104,11 +104,8 @@ export function RecipesPage({mode}: Props) {
   }, [ingredientsKey, ingredientsStatus, seed]);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'auto' });
   }, [page]);
-
-  // const canSelectPrevious = page > 1;
-  // const canSelectNext = totalPages !== null && page < totalPages;
 
   // ---- Ingredients gate ----
   if (ingredientsStatus === 'idle' || ingredientsStatus === 'loading') {

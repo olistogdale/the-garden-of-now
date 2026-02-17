@@ -27,7 +27,8 @@ export function PageNavigation({
   const canSelectPrevious = page > 1;
   const canSelectNext = totalPages !== null && page < totalPages;
 
-  function handleAction(id: string, action: () => void) {
+  function handleAction(id: string, action: () => void, event?: React.MouseEvent<HTMLButtonElement>) {
+    event?.currentTarget.blur();
     setPendingAction(id);
     action();
   }
@@ -43,7 +44,7 @@ export function PageNavigation({
         <button
           className={`nav-button ${isSpinning('first') ? 'is-loading' : ''}`}
           type="button"
-          onClick={() => handleAction('first', () => setPage(1))}
+          onClick={(event) => handleAction('first', () => setPage(1), event)}
           disabled={isLoading || !canSelectPrevious}
           aria-busy={isSpinning('first')}
         >
@@ -54,7 +55,7 @@ export function PageNavigation({
         <button
           className={`nav-button ${isSpinning('prev') ? 'is-loading' : ''}`}
           type="button"
-          onClick={() => handleAction('prev', () => setPage((p) => Math.max(1, p - 1)))}
+          onClick={(event) => handleAction('prev', () => setPage((p) => Math.max(1, p - 1)), event)}
           disabled={isLoading || !canSelectPrevious}
           aria-busy={isSpinning('prev')}
         >
@@ -68,7 +69,7 @@ export function PageNavigation({
         <button
           className={`nav-button ${isSpinning('next') ? 'is-loading' : ''}`}
           type="button"
-          onClick={() => handleAction('next', () => setPage((p) => p + 1))}
+          onClick={(event) => handleAction('next', () => setPage((p) => p + 1), event)}
           disabled={isLoading || !canSelectNext}
           aria-busy={isSpinning('next')}
         >
@@ -79,7 +80,7 @@ export function PageNavigation({
         <button
           className={`nav-button ${isSpinning('last') ? 'is-loading' : ''}`}
           type="button"
-          onClick={() => totalPages && handleAction('last', () => setPage(totalPages))}
+          onClick={(event) => totalPages && handleAction('last', () => setPage(totalPages), event)}
           disabled={isLoading || !canSelectNext}
           aria-busy={isSpinning('last')}
         >
