@@ -3,6 +3,7 @@ import './PageNavigation.css';
 import {ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight} from 'lucide-react';
 
 type Props = {
+  top: boolean,
   page: number,
   setPage: React.Dispatch<React.SetStateAction<number>>;
   totalPages: number | null;
@@ -14,6 +15,7 @@ type Props = {
 }
 
 export function PageNavigation({
+  top,
   page,
   setPage,
   totalPages,
@@ -40,6 +42,7 @@ export function PageNavigation({
   return (
     <section className="recipes-page__pagination">
       <div className="pagination__limit--blank" />
+
       <div className="pagination__nav">
         <button
           className={`nav-button ${isSpinning('first') ? 'is-loading' : ''}`}
@@ -52,6 +55,7 @@ export function PageNavigation({
           <ChevronsLeft className="nav-button-icon" />
           <span className="nav-button-spinner" aria-hidden="true" />
         </button>
+
         <button
           className={`nav-button ${isSpinning('prev') ? 'is-loading' : ''}`}
           type="button"
@@ -63,9 +67,11 @@ export function PageNavigation({
           <ChevronLeft className="nav-button-icon" />
           <span className="nav-button-spinner" aria-hidden="true" />
         </button>
+
         <span className="nav-info">
           <span className="nav-info-optional">Page</span> <span className="nav-info-page">{page}</span> of {totalPages ?? 1}
         </span>
+
         <button
           className={`nav-button ${isSpinning('next') ? 'is-loading' : ''}`}
           type="button"
@@ -77,6 +83,7 @@ export function PageNavigation({
           <ChevronRight className="nav-button-icon" />
           <span className="nav-button-spinner" aria-hidden="true" />
         </button>
+        
         <button
           className={`nav-button ${isSpinning('last') ? 'is-loading' : ''}`}
           type="button"
@@ -89,28 +96,32 @@ export function PageNavigation({
           <span className="nav-button-spinner" aria-hidden="true" />
         </button>
       </div>
-      <div className="pagination__limit">
-          <button
-            className={`limit-button ${isSpinning('limit-24') ? 'is-loading' : ''}`}
-            type="button"
-            onClick={() => handleAction('limit-24', () => {setLimit(24); setPage(1);})}
-            disabled={isLoading || limit===24}
-            aria-busy={isSpinning('limit-24')}
-          >
-            <span className="limit-button-text">24</span>
-            <span className="limit-button-spinner" aria-hidden="true" />
-          </button>
-          <button
-            className={`limit-button ${isSpinning('limit-48') ? 'is-loading' : ''}`}
-            type="button"
-            onClick={() => handleAction('limit-48', () => {setLimit(48); setPage(1);})}
-            disabled={isLoading || limit===48}
-            aria-busy={isSpinning('limit-48')}
-          >
-            <span className="limit-button-text">48</span>
-            <span className="limit-button-spinner" aria-hidden="true" />
-          </button>
-      </div>
+
+      {top
+        ? <div className="pagination__limit">
+            <button
+              className={`limit-button ${isSpinning('limit-24') ? 'is-loading' : ''}`}
+              type="button"
+              onClick={() => handleAction('limit-24', () => {setLimit(24); setPage(1);})}
+              disabled={isLoading || limit===24}
+              aria-busy={isSpinning('limit-24')}
+            >
+              <span className="limit-button-text">24</span>
+              <span className="limit-button-spinner" aria-hidden="true" />
+            </button>
+            <button
+              className={`limit-button ${isSpinning('limit-48') ? 'is-loading' : ''}`}
+              type="button"
+              onClick={() => handleAction('limit-48', () => {setLimit(48); setPage(1);})}
+              disabled={isLoading || limit===48}
+              aria-busy={isSpinning('limit-48')}
+            >
+              <span className="limit-button-text">48</span>
+              <span className="limit-button-spinner" aria-hidden="true" />
+            </button>
+          </div>
+        : <div className="pagination__limit--blank" />
+      }
     </section>
   )
 }

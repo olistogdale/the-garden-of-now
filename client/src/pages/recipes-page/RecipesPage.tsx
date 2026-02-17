@@ -145,6 +145,7 @@ export function RecipesPage({mode}: Props) {
       </section>
       
       <PageNavigation
+        top={true}
         page={page}
         setPage={setPage}
         totalPages={totalPages}
@@ -162,6 +163,7 @@ export function RecipesPage({mode}: Props) {
       </section>
 
       <PageNavigation
+        top={false}
         page={page}
         setPage={setPage}
         totalPages={totalPages}
