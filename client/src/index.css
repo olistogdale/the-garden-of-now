@@ -10,10 +10,12 @@
   --font-heading: 'Rubik', system-ui, -apple-system, sans-serif;
   --font-body: 'Courier Prime', system-ui, -apple-system, sans-serif;
   --primary-colour: rgba(25, 100, 15);
-  --primary-transparent-colour: rgba(25, 100, 15, 0.5);
+  --primary-50pct-colour: rgba(25, 100, 15, 0.5);
+  --primary-10pct-colour: rgba(23, 100, 15, 0.1);
   --primary-light-colour: rgb(125, 185, 120);
   --secondary-colour: rgb(40, 10, 45);
-  --secondary-transparent-colour: rgba(40, 10, 45, 0.5);
+  --secondary-50pct-colour: rgba(40, 10, 45, 0.5);
+  --secondary-10pct-colour: rgba(40, 10, 45, 0.1);
   --secondary-light-colour: rgb(70, 20, 80);
   --accent-colour: rgb(240, 150, 10);
   --accent-dark-colour: rgb(195, 125, 20);
@@ -47,6 +49,8 @@ html {
   scroll-behavior: smooth;
   font-size: 100%;
   line-height: 1.5;
+
+  background-color: var(--background-colour);
 }
 
 h1, h2, h3 {
