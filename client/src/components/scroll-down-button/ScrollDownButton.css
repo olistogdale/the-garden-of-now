@@ -14,7 +14,7 @@
   font-size: 1rem;
   text-decoration: none;
   color: var(--background-colour);
-  background-color: var(--secondary-transparent-colour);
+  background-color: var(--secondary-50pct-colour);
   padding: var(--small-gap);
   border-radius: var(--medium-gap);
   transition: background-color 0.2s ease;

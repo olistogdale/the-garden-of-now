@@ -89,8 +89,8 @@
   border-radius: var(--large-gap);
 
   color: var(--background-colour);
-  border: 1px solid var(--secondary-transparent-colour);
-  background: var(--secondary-transparent-colour);
+  border: 1px solid var(--secondary-50pct-colour);
+  background: var(--secondary-50pct-colour);
 }
 
 @media (min-width: 640px) {

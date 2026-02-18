@@ -3,8 +3,7 @@ import './RecipeCard.css';
 import { Link } from 'react-router-dom';
 
 import { parseImage } from '../../utilities/parse-image';
-import { parseTime } from '../../utilities/parse-time';
-import { parseSkillLevel } from '../../utilities/parse-skill-level';
+import { parseTotalDuration, durationToString } from '../../utilities/parse-time';
 import { FavouriteToggle } from '../favourite-toggle/FavouriteToggle';
 import { useAutoMarquee } from '../../hooks/useAutoMarquee';
 
@@ -16,8 +15,9 @@ type Props = {
 
 export function RecipeCard({ recipe }: Props) {
   const img = parseImage(recipe.image);
-  const time = parseTime(recipe);
-  const skill = parseSkillLevel(recipe.skillLevel);
+  const time = parseTotalDuration(recipe);
+  const timeString = durationToString(time);
+  const skill = recipe.skillLevel;
   
   const titleRef = useAutoMarquee([recipe.name]);
   
@@ -46,7 +46,7 @@ export function RecipeCard({ recipe }: Props) {
           </div>
           {(time || skill) && (
             <div className="recipe-card__meta">
-              {time && <span className="recipe-card__pill">{time}</span>}
+              {time && <span className="recipe-card__pill">{timeString}</span>}
               {skill && <span className="recipe-card__pill">{skill}</span>}
             </div>
           )}
