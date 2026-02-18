@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 
 import { StatusPanel } from '../../components/status-panel/StatusPanel';
+import { BackgroundScroll } from '../../components/background-scroll/BackgroundScroll';
 
 import type { LoginFormStateT } from '../../types/auth-types';
 import type { StatusT } from '../../types/status-types';
@@ -55,50 +56,55 @@ export function LoginPage() {
  
   return (
     <div className="auth-page">
-      <section className="auth-page__header">
-        <h1 className="auth-page__title">Log in</h1>
-        <p className="auth-page__subtitle">Welcome back.</p>
-      </section>
+      <BackgroundScroll />
+      
+      <div className="auth-page__form">
+        <section className="auth-form__header">
+          <h2 className="auth-form__title">LOG IN</h2>
+          <p className="auth-form__subtitle">Welcome back.</p>
+        </section>
 
-      <form className="auth-form" onSubmit={onSubmit}>
-        {formStatus === 'error' && formError ? (
-          <div className="auth-form__error" role="alert">
-            {formError}
-          </div>
-        ) : null}
+        <form className="auth-form" onSubmit={onSubmit}>
+          {formStatus === 'error' && formError ? (
+            <div className="auth-form__error" role="alert">
+              {formError}
+            </div>
+          ) : null}
 
-        <label className="auth-form__label">
-          Email
-          <input
-            className="auth-form__input"
-            type="email"
-            autoComplete="email"
-            value={form.email}
-            onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-            required
-          />
-        </label>
+          <label className="auth-form__label">
+            Email
+            <input
+              className="auth-form__input"
+              type="email"
+              autoComplete="email"
+              value={form.email}
+              onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
+              required
+            />
+          </label>
 
-        <label className="auth-form__label">
-          Password
-          <input
-            className="auth-form__input"
-            type="password"
-            autoComplete="current-password"
-            value={form.password}
-            onChange={(e) => setForm((f) => ({ ...f, password: e.target.value }))}
-            required
-          />
-        </label>
+          <label className="auth-form__label">
+            Password
+            <input
+              className="auth-form__input"
+              type="password"
+              autoComplete="current-password"
+              value={form.password}
+              onChange={(e) => setForm((f) => ({ ...f, password: e.target.value }))}
+              required
+            />
+          </label>
 
-        <button className="auth-form__button" type="submit" disabled={!canSubmitForm}>
-          Log in
-        </button>
+          <button className="auth-form__button" type="submit" disabled={!canSubmitForm}>
+            LOG IN
+          </button>
 
-        <p className="auth-form__footer">
-          Don’t have an account? <Link to="/register">Create one</Link>
-        </p>
-      </form>
+          <p className="auth-form__footer">
+            Don’t have an account? <Link to="/register">Create one</Link>
+          </p>
+        </form>
+
+      </div>
     </div>
   )
 }

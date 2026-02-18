@@ -4,8 +4,8 @@ import './AuthLayout.css'
 
 export function AuthLayout() {
   return (
-    <div className="app-shell">
-      <main className="app-main">
+    <div className="auth-layout">
+      <main className="auth-layout__main">
         <Outlet />
       </main>
     </div>
