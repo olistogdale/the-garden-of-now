@@ -59,6 +59,7 @@
 }
 
 .auth-form__button {
+  position: relative;
   display: grid;
   place-items: center;
   padding: var(--small-gap);
@@ -74,11 +75,6 @@
   background-color: var(--secondary-colour);
 }
 
-.auth-form__button:disabled {
-  cursor: not-allowed;
-  opacity: 0.25;
-}
-
 .auth-form__button:hover {
   background-color: var(--secondary-light-colour);
   border: 1px solid var(--secondary-light-colour);
@@ -87,6 +83,36 @@
 .auth-form__button:active {
   background-color: var(--accent-colour);
   border: 1px solid var(--accent-colour);
+}
+
+.auth-form__button.is-invalid {
+  cursor: not-allowed;
+  opacity: 0.25;
+}
+
+.auth-form__spinner {
+  position: absolute;
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 2px solid var(--background-colour);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: hero-cta-spin 0.5s linear infinite;
+  opacity: 0;
+}
+
+.auth-form__button.is-loading .auth-form__text {
+  visibility: hidden;
+}
+
+.auth-form__button.is-loading .auth-form__spinner {
+  opacity: 1;
+}
+
+@keyframes hero-cta-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .auth-form__error {

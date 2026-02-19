@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 
-import { StatusPanel } from '../../components/status-panel/StatusPanel';
 import { BackgroundScroll } from '../../components/background-scroll/BackgroundScroll';
 
 import type { LoginFormStateT } from '../../types/auth-types';
@@ -15,13 +14,15 @@ export function LoginPage() {
   const navigate = useNavigate();
   const { login } = useAuth();
 
-  const [form, setForm] = useState <LoginFormStateT> ({email: '', password: ''});
-  const [formStatus, setFormStatus] = useState <StatusT> ('idle');
-  const [formError, setFormError] = useState <string | null> (null);
+  const [form, setForm] = useState<LoginFormStateT>({email: '', password: ''});
+  const [formStatus, setFormStatus] = useState<StatusT>('idle');
+  const [formError, setFormError] = useState<string | null>(null);
+
+  const isLoading = formStatus === 'loading';
+  const isInvalid = !form.email.trim().length || !form.password.length;
+  const canSubmitForm = !isInvalid && !isLoading;
   
-  const canSubmitForm = form.email.trim().length > 0 && form.password.length > 0 && formStatus !== 'loading'
-  
-  const onSubmit = async function(e: FormEvent) {
+  const handleSubmit = async function(e: FormEvent) {
     e.preventDefault()
 
     if (!canSubmitForm) return;
@@ -48,10 +49,6 @@ export function LoginPage() {
     } finally {
       clearTimeout(timeoutId);
     } 
-  } 
-
-  if (formStatus === 'loading') {
-    return <StatusPanel title="Login" message="Logging you in…" />;
   }
  
   return (
@@ -64,7 +61,7 @@ export function LoginPage() {
           <p className="auth-form__subtitle">Welcome back.</p>
         </section>
 
-        <form className="auth-form" onSubmit={onSubmit}>
+        <form className="auth-form" onSubmit={handleSubmit}>
           {formStatus === 'error' && formError ? (
             <div className="auth-form__error" role="alert">
               {formError}
@@ -78,7 +75,7 @@ export function LoginPage() {
               type="email"
               autoComplete="email"
               value={form.email}
-              onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
+              onChange={(event) => setForm((form) => ({ ...form, email: event.target.value }))}
               required
             />
           </label>
@@ -90,20 +87,25 @@ export function LoginPage() {
               type="password"
               autoComplete="current-password"
               value={form.password}
-              onChange={(e) => setForm((f) => ({ ...f, password: e.target.value }))}
+              onChange={(event) => setForm((form) => ({ ...form, password: event.target.value }))}
               required
             />
           </label>
 
-          <button className="auth-form__button" type="submit" disabled={!canSubmitForm}>
-            LOG IN
+          <button
+            className={`auth-form__button ${isInvalid ? 'is-invalid' : isLoading ? 'is-loading' : ''}`}
+            type="submit"
+            disabled={isInvalid || isLoading}
+            aria-busy={isLoading}
+          >
+            <span className="auth-form__text">LOG IN</span>
+            <span className="auth-form__spinner" aria-hidden="true" />
           </button>
 
           <p className="auth-form__footer">
             Don’t have an account? <Link to="/register">Create one</Link>
           </p>
         </form>
-
       </div>
     </div>
   )
