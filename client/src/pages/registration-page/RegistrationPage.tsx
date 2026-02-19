@@ -42,7 +42,7 @@ export function RegistrationPage() {
       setFormStatus('loading');
       setFormError(null);
 
-      await register({ firstName: form.firstName, lastName: form.lastName, email: form.email, password: form.password });
+      await register({ firstName: form.firstName, lastName: form.lastName, email: form.email, password: form.password }, controller.signal);
       setFormStatus('success');
       navigate('/', { replace: true });
     } catch (err) {

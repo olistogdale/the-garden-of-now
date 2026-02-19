@@ -27,7 +27,7 @@ export type AuthContextValueT = {
   auth: UserAuthStateT | null,
   authStatus: StatusT,
   authError: string | null,
-  register: (payload: UserRegistrationRequestT) => Promise <void>,
+  register: (payload: UserRegistrationRequestT, signal: AbortSignal) => Promise <void>,
   login: (payload: UserLoginRequestT, signal: AbortSignal) => Promise <void>,
   logout: () => Promise <void>,
   isInFavourites: (recipeId: string) => boolean,

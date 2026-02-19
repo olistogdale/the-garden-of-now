@@ -19,12 +19,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [authStatus, setAuthStatus] = useState <StatusT> ('idle');
   const [authError, setAuthError] = useState <string | null> (null);
 
-  const register = useCallback(async (payload: UserRegistrationRequestT) => {
+  const register = useCallback(async (payload: UserRegistrationRequestT, signal: AbortSignal) => {
     setAuthStatus('loading');
     setAuthError(null);
 
     try {
-      const { userId, email, firstName, lastName, favourites }: UserAuthResponseT = await registerUser(payload);
+      const { userId, email, firstName, lastName, favourites }: UserAuthResponseT = await registerUser(payload, signal);
 
       setAuth({ userId, email, firstName, lastName, favourites });
       setAuthStatus('success');

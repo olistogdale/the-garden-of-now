@@ -5,7 +5,8 @@ import { fetchRequest } from '../utilities/fetch-request';
 import type { UserRegistrationRequestT, UserLoginRequestT, UserAuthResponseT } from '../../../data/users/types/user-types'
 
 export function registerUser(
-  { firstName, lastName, email, password }: UserRegistrationRequestT
+  { firstName, lastName, email, password }: UserRegistrationRequestT,
+  signal: AbortSignal
 ): Promise <UserAuthResponseT> {
   const url = `${API_URL}/register`;
 
@@ -15,6 +16,7 @@ export function registerUser(
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({ firstName, lastName, email, password }),
+    signal
   })
 }
 

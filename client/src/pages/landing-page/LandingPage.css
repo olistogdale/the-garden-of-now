@@ -3,8 +3,8 @@
 }
 
 .landing section {
-  min-height: 100dvh;
   height: 100dvh;
+  min-height: 100dvh;
   max-height: 100dvh;
 }
 
@@ -46,6 +46,7 @@
 }
 
 .hero-cta-button {
+  position: relative;
   display: grid;
   place-items: center;
   padding: var(--large-gap) var(--xlarge-gap);

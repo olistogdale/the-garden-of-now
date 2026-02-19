@@ -1,6 +1,6 @@
 import './LandingPage.css';
 
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import FeatureOneImage from './../../assets/images/feature-1-img-previous.png';
 import FeatureTwoImage from './../../assets/images/feature-2-img-previous.png';
@@ -10,26 +10,13 @@ import { ScrollDownButton } from '../../components/scroll-down-button/ScrollDown
 
 export function LandingPage() {
   const navigate = useNavigate();
-  const [isBrowsing, setIsBrowsing] = useState(false);
-  const navTimeoutRef = useRef<number | null>(null);
 
-  useEffect(() => {
-    return () => {
-      if (navTimeoutRef.current !== null) {
-        window.clearTimeout(navTimeoutRef.current);
-      }
-    };
-  }, []);
+  const [isBrowsing, setIsBrowsing] = useState<boolean>(false);
 
-  function handleBrowseClick() {
+  function handleClick() {
     if (isBrowsing) return;
     setIsBrowsing(true);
-
-    window.requestAnimationFrame(() => {
-      navTimeoutRef.current = window.setTimeout(() => {
-        navigate('/recipes');
-      }, 100);
-    });
+    navigate('/recipes');
   }
 
   return (
@@ -49,7 +36,7 @@ export function LandingPage() {
           <button
             className={`hero-cta-button ${isBrowsing ? 'is-loading' : ''}`}
             type="button"
-            onClick={handleBrowseClick}
+            onClick={handleClick}
             disabled={isBrowsing}
             aria-busy={isBrowsing}
           >
