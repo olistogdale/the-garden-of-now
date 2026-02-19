@@ -36,12 +36,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  const login = useCallback(async (payload: UserLoginRequestT) => {
+  const login = useCallback(async (payload: UserLoginRequestT, signal: AbortSignal) => {
     setAuthStatus('loading');
     setAuthError(null);
 
     try {
-      const { userId, email, firstName, lastName, favourites }: UserAuthResponseT = await loginUser(payload);
+      const { userId, email, firstName, lastName, favourites }: UserAuthResponseT = await loginUser(payload, signal);
 
       setAuth({ userId, email, firstName, lastName, favourites });
       setAuthStatus('success');

@@ -14,12 +14,13 @@ export function registerUser(
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ firstName, lastName, email, password })
+    body: JSON.stringify({ firstName, lastName, email, password }),
   })
 }
 
 export function loginUser(
-  { email, password }: UserLoginRequestT
+  { email, password }: UserLoginRequestT,
+  signal: AbortSignal
 ): Promise <UserAuthResponseT> {
   const url = `${API_URL}/login`;
 
@@ -28,7 +29,8 @@ export function loginUser(
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ email, password })
+    body: JSON.stringify({ email, password }),
+    signal
   })
 }
 

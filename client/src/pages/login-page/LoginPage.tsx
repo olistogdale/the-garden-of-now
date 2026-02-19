@@ -34,11 +34,11 @@ export function LoginPage() {
       setFormStatus('loading');
       setFormError(null);
 
-      await login({ email: form.email, password: form.password });
+      await login({ email: form.email, password: form.password }, controller.signal);
       setFormStatus('success');
       navigate('/', { replace: true });
     } catch (err) {
-      if (err instanceof DOMException && err.name === 'AbortError') {
+      if (err instanceof Error && err.name === 'AbortError') {
         setFormStatus('error');
         setFormError('Request timed out. Please try again.');
         return;
