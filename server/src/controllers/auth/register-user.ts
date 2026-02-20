@@ -18,9 +18,9 @@ export const registerUser = async function(ctx: Context) {
     return;
   }
 
-  if (typeof password !== 'string' || password !== password.trim() || password.length < 8) {
+  if (typeof password !== 'string' || password.length < 8) {
     ctx.status = 400;
-    ctx.body = { error: 'Invalid password. Passwords must be at least 8 characters in length and may not begin or end with a space.'};
+    ctx.body = { error: 'Invalid password. Passwords must be at least 8 characters in length.'};
     return;
   }
 
