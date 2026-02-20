@@ -1,16 +1,18 @@
 .back-button {
   display: grid;
   place-items: center;
+  z-index: 5;
   width: 2.75rem;
   height: 2.75rem;
+  padding: var(--small-gap);
+  border-radius: var(--medium-gap);
+  
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 1rem;
-  text-decoration: none;
+
   color: var(--primary-colour);
   background-color: var(--background-colour);
-  padding: var(--small-gap);
-  border-radius: var(--medium-gap);
   border: 2px solid var(--primary-colour);
 }
 
@@ -18,7 +20,7 @@
   display: none;
 }
 
-.back-button__icon {
+.back-button__icon{
   display: block;
 }
 
@@ -40,11 +42,11 @@
     padding: var(--small-gap) var(--medium-gap);
   }
   
-  .back-button__text {
+  .back-button .back-button__text {
     display: inline-block;
   }
 
-  .back-button__icon {
+  .back-button .back-button__icon {
     display: none;
   }
 }

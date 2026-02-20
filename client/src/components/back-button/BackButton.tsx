@@ -7,7 +7,7 @@ type Props = {
   to?: string
 }
 
-export function BackButton({to}: Props) {
+export function BackButton({ to }: Props) {
   const navigate = useNavigate();
 
   function handleBack() {
