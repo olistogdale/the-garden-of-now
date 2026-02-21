@@ -11,13 +11,14 @@ import { StatusPanel } from '../../components/status-panel/StatusPanel.tsx';
 import { monthCapitalized } from '../../utilities/generate-month.ts';
 import { getFavourites } from '../../services/favourites-service.ts';
 import { PageNavigation } from '../../components/page-navigation/PageNavigation.tsx';
+import { useStableLoading } from '../../hooks/useStableLoading.ts';
 
 import type { RecipeCardT } from '../../../../data/recipes/types/recipe-types'
 import type { StatusT } from '../../types/status-types'
 
 
 type Props = {
-  mode: string
+  mode: "recipes" | "favourites"
 }
 
 export function RecipesPage({mode}: Props) {
@@ -67,15 +68,12 @@ export function RecipesPage({mode}: Props) {
         setTotalCount(totalCount);
         setTotalPages(totalPages);
         setRecipesStatus('success');
-        setPendingAction(null);
       } catch (err) {
-        if (err instanceof DOMException && err.name === 'AbortError') {
-          setPendingAction(null);
-          return;
-        }
+        if ((err instanceof DOMException || err instanceof Error) && err.name === 'AbortError') return;
 
         setRecipesStatus('error');
         setRecipesError(err instanceof Error? err.message : 'Unknown error')
+      } finally {
         setPendingAction(null);
       }
     })()
@@ -107,41 +105,26 @@ export function RecipesPage({mode}: Props) {
     window.scrollTo({ top: 0, behavior: 'auto' });
   }, [page]);
 
-  // ---- Ingredients gate ----
-  if (ingredientsStatus === 'idle' || ingredientsStatus === 'loading') {
-    return <StatusPanel title="Recipes" message="Loading seasonal ingredients…" />;
-  }
+  const isPendingIngredients = ingredientsStatus === 'idle' || ingredientsStatus === 'loading'
+  const showLoadingIngredients = useStableLoading(isPendingIngredients);
 
-  if (ingredientsStatus === 'error') {
-    return (
-      <StatusPanel
-        title="Recipes"
-        message={`Couldn’t load seasonal ingredients${ingredientsError ? `: ${ingredientsError}` : '.'}`}
-      />
-    );
-  }
+  const isPendingRecipes = (recipesStatus === 'idle' || recipesStatus === 'loading') && recipes.length === 0
+  const showLoadingRecipes = useStableLoading(isPendingRecipes);
 
-  // ---- Recipes gate ----
-  if ((recipesStatus === 'idle' || recipesStatus === 'loading') && recipes.length === 0) {
-    return <StatusPanel title="Recipes" message="Loading recipes…" />;
-  }
+  if (ingredientsStatus === 'error') return <StatusPanel mode="error" message={`Couldn’t load seasonal ingredients${ingredientsError ? `: ${ingredientsError}` : '.'}`} />
 
-  if (recipesStatus === 'error' && recipes.length === 0) {
-    return (
-      <StatusPanel
-        title="Recipes"
-        message={`Couldn’t load recipes${recipesError ? `: ${recipesError}` : '.'}`}
-      />
-    );
-  }
+  if (showLoadingIngredients) return <StatusPanel mode="loading" message="Loading ingredients…" />;
+  
+  if (recipesStatus === 'error' && recipes.length === 0) return <StatusPanel mode="error" message={`Couldn’t load recipes${recipesError ? `: ${recipesError}` : '.'}`} />
 
-  // ---- Success ----
+  if (showLoadingRecipes) return <StatusPanel mode="loading" message="Loading recipes…" />;
+
   return (
     <div className="recipes-page">
       <section className="recipes-page__description">
         <div className="description-header-blank"/>
         <h1 className="description-title">{ monthCapitalized}'S RECIPES</h1>
-        <p className="description-subtitle">Showing {totalCount} recipes </p>
+        <p className="description-subtitle">{totalCount === null ? "Loading recipes..." : `Showing ${totalCount} recipes`}</p>
       </section>
       
       <PageNavigation

@@ -4,6 +4,7 @@ import { useAuth } from '../../hooks/useAuth';
 import { StatusPanel } from '../../components/status-panel/StatusPanel';
 
 import type { StatusT } from '../../types/status-types';
+import { useStableLoading } from '../../hooks/useStableLoading';
 
 export function ProfilePage () { 
   const navigate = useNavigate();
@@ -15,20 +16,21 @@ export function ProfilePage () {
   const onLogout = async function () {
     try {
       setLogoutStatus('loading');
-      setLogoutError('null');
+      setLogoutError(null);
       
       await logout()
-      setLogoutStatus('success');
       navigate('/', { replace: true });
     } catch (err) {
       setLogoutStatus('error');
       setLogoutError(err instanceof Error? err.message : 'Unknown error');
     }
   }
+
+  const showLoading = useStableLoading(logoutStatus === "loading");
   
-  if (logoutStatus === 'loading') {
-    return <StatusPanel title="Login" message="Logging out of your account..." />;
-  }
+  if (logoutStatus === "error") return <StatusPanel mode = "error" message={`Could not log out ${logoutError ? `: ${logoutError}` : '.'}`} />;
+
+  if (showLoading) return <StatusPanel mode="loading" message="Logging out of your account..." />;
 
   return (
     <div className="profile-page">
@@ -41,14 +43,13 @@ export function ProfilePage () {
         ) : null}
       </section>
 
-      {logoutStatus === 'error' && logoutError ? (
-        <div className="profile-page__error" role="alert">
-          {logoutError}
-        </div>
-      ) : null}
-
       <section className="profile-page__actions">
-        <button className="profile-page__button" type="button" onClick={onLogout}>
+        <button
+          className="profile-page__button"
+          type="button"
+          onClick={onLogout}
+          disabled={logoutStatus === "loading"}
+        >
           Log out
         </button>
 

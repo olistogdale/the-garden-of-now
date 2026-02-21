@@ -9,9 +9,11 @@ import { durationToString, parseDuration } from '../../utilities/parse-time';
 import { parseIngredients } from '../../utilities/parse-ingredients';
 import { parseInstructions } from '../../utilities/parse-instructions';
 import { getRecipeByID } from '../../services/recipes-service';
+import { useStableLoading } from '../../hooks/useStableLoading';
 
 import type { RecipeT } from '../../../../data/recipes/types/recipe-types';
 import type { StatusT } from '../../types/status-types';
+
 
 export function RecipeDetailPage() {
   const { id } = useParams <{ id: string }>();
@@ -26,7 +28,7 @@ export function RecipeDetailPage() {
     const controller = new AbortController();
     const timeoutID = window.setTimeout(() => controller.abort(), 10000);
 
-    const loadRecipe = async function() {
+    (async function() {
       try {
         setRecipeStatus('loading');
         setRecipeError(null)
@@ -36,14 +38,12 @@ export function RecipeDetailPage() {
         setRecipe(recipe);
         setRecipeStatus('success');
       } catch (err) {
-        if (err instanceof DOMException && err.name === 'AbortError') return;
+        if ((err instanceof DOMException || err instanceof Error) && err.name === 'AbortError') return;
 
         setRecipeStatus('error');
         setRecipeError(err instanceof Error? err.message : 'Unknown error')
       }
-    }
-
-    loadRecipe()
+    })()
 
     return () => {
       clearTimeout(timeoutID);
@@ -51,26 +51,16 @@ export function RecipeDetailPage() {
     }
   }, [id])
 
-  if (recipeStatus === 'idle' || recipeStatus === 'loading') {
-    return (
-      <StatusPanel title="Recipe" message="Loading recipe…" />
-    )
-  }
+  const isPending = recipeStatus === 'idle' || recipeStatus === 'loading';
+  const showLoading = useStableLoading(isPending);
 
-  if (recipeStatus === 'error') {
-    return (
-      <StatusPanel
-        title="Recipe"
-        message={`Couldn’t load recipe${recipeError ? `: ${recipeError}` : '.'}`}
-      />
-    )
-  }
+  if (!id) return <StatusPanel mode="error" message={"Invalid recipe link."} />
 
-  if (!recipe) {
-    return (
-      <StatusPanel title="Recipe" message="Recipe not found." />
-    )
-  }
+  if (recipeStatus === 'error') return <StatusPanel mode="error" message={`Couldn’t load recipe${recipeError ? `: ${recipeError}` : '.'}`} />
+
+  if (showLoading) return <StatusPanel mode="loading" message="Loading recipe…" />;
+
+  if (!recipe) return <StatusPanel mode="error" message="Recipe not found." />
 
   const img = parseImage(recipe.image);
   const name = recipe.name;
@@ -86,10 +76,6 @@ export function RecipeDetailPage() {
   const servings = recipe.yield;
   const ingredients = parseIngredients(recipe.ingredients);
   const instructions = parseInstructions(recipe.instructions);
-
-  console.log(recipe.prepTime);
-  console.log(prepTime);
-  console.log(prepTimeString);
 
   return (
     <div className="recipe-detail">
@@ -130,8 +116,8 @@ export function RecipeDetailPage() {
 
       <section className="recipe-detail__ingredients">
         <h3 className="recipe-detail__ingredient-title">INGREDIENTS</h3>
-        {ingredients.map((ingredient: string) => (
-          <div className="recipe-detail__ingredient-line">
+        {ingredients.map((ingredient: string, i: number) => (
+          <div key={i} className="recipe-detail__ingredient-line">
             {ingredient}
           </div>
         ))}
@@ -140,7 +126,7 @@ export function RecipeDetailPage() {
       <section className="recipe-detail__instructions">
         <h3 className="recipe-detail__instruction-title">INSTRUCTIONS</h3>
         {instructions.map((instruction: string, i: number) => (
-          <div className="recipe-detail__instruction">
+          <div key={i} className="recipe-detail__instruction">
             <h4>STEP {i + 1}</h4>
             <p>{instruction}</p>
           </div>
