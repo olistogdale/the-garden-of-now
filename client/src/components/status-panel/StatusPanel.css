@@ -1,16 +1,33 @@
-.status-panel-container {
+.status-panel {
+  position: relative;
+  display: grid;
+  grid-template-rows: var(--header-height) 1fr;
+  place-items: center;
+  text-align: center;
+  height: 100dvh;
+
   border: 1px solid var(--background-colour);
   border-radius: var(--xxlarge-gap);
   padding: var(--medium-gap);
-  background: var(--secondary-colour);
+  background: var(--background-colour);
 }
 
 .status-panel__title {
+  position: absolute;
   margin: 0 0 var(--medium-gap) 0;
-  font-size: 1.5rem;
-  line-height: 1;
+  width: 80dvw;
+
+  font-size: 2rem;
+  line-height: 1.25;
+
+  color: var(--secondary-colour);
 }
 
 .status-panel__message {
+  padding: 7rem 0 0 0;
+  width: 80dvw;
+  
   line-height: 1.5;
+
+  color: var(--secondary-colour);
 }
