@@ -94,7 +94,7 @@ export function RecipesPage({mode}: Props) {
     setTotalCount(auth.favourites.length);
     setTotalPages(nextTotalPages);
     setPage((p) => Math.min(p, nextTotalPages));
-  }, [mode, favouritesKey, isInFavourites, limit]);
+  }, [mode, favouritesKey, isInFavourites, limit, auth]);
 
   useEffect(() => {
     if (ingredientsStatus !== 'success' || !ingredients) return;
