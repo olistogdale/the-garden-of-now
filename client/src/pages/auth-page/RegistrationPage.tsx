@@ -72,7 +72,7 @@ export function RegistrationPage() {
         <BackButton />
       </div>
       
-      <div className="auth-page__form auth-page__form--registration">
+      <section className="auth-page__form auth-page__form--registration">
         <div className="back-button--form">
           <BackButton />
         </div>
@@ -89,7 +89,7 @@ export function RegistrationPage() {
             </div>
           ) : null}
 
-          <section className="auth-form__section">
+          <fieldset className="auth-form__section">
             <label className="auth-form__label">
               First Name
               <input
@@ -97,7 +97,7 @@ export function RegistrationPage() {
                 type="text"
                 autoComplete="given-name"
                 value={form.firstName}
-                onChange={(e) => setForm((f) => ({ ...f, firstName: e.target.value }))}
+                onChange={(event) => setForm((form) => ({ ...form, firstName: event.target.value }))}
                 required
               />
             </label>
@@ -109,13 +109,13 @@ export function RegistrationPage() {
                 type="text"
                 autoComplete="family-name"
                 value={form.lastName}
-                onChange={(e) => setForm((f) => ({ ...f, lastName: e.target.value }))}
+                onChange={(event) => setForm((form) => ({ ...form, lastName: event.target.value }))}
                 required
               />
             </label>
-          </section>
+          </fieldset>
           
-          <section className='auth-form__section'>
+          <fieldset className='auth-form__section'>
             <label className="auth-form__label">
               Email
               <input
@@ -123,7 +123,7 @@ export function RegistrationPage() {
                 type="email"
                 autoComplete="email"
                 value={form.email}
-                onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
+                onChange={(event) => setForm((form) => ({ ...form, email: event.target.value }))}
                 required
               />
             </label>
@@ -135,11 +135,11 @@ export function RegistrationPage() {
                 type="email"
                 autoComplete="email"
                 value={form.confirmEmail}
-                onChange={(e) => setForm((f) => ({ ...f, confirmEmail: e.target.value }))}
+                onChange={(event) => setForm((form) => ({ ...form, confirmEmail: event.target.value }))}
                 required
               />
             </label>
-          </section>
+          </fieldset>
           
 
           {!emailsMatch && form.email.length > 0 ? (
@@ -148,7 +148,7 @@ export function RegistrationPage() {
             </div>
           ) : null}
 
-          <section className='auth-form__section'>
+          <fieldset className='auth-form__section'>
             <label className="auth-form__label">
               Password
               <input
@@ -156,7 +156,7 @@ export function RegistrationPage() {
                 type="password"
                 autoComplete="new-password"
                 value={form.password}
-                onChange={(e) => setForm((f) => ({ ...f, password: e.target.value }))}
+                onChange={(event) => setForm((form) => ({ ...form, password: event.target.value }))}
                 required
               />
             </label>
@@ -168,11 +168,11 @@ export function RegistrationPage() {
                 type="password"
                 autoComplete="new-password"
                 value={form.confirmPassword}
-                onChange={(e) => setForm((f) => ({ ...f, confirmPassword: e.target.value }))}
+                onChange={(event) => setForm((form) => ({ ...form, confirmPassword: event.target.value }))}
                 required
               />
             </label>
-          </section>
+          </fieldset>
           
 
           {!passwordsMatch && form.confirmPassword.length > 0 ? (
@@ -194,7 +194,7 @@ export function RegistrationPage() {
             Already have an account? <Link to="/login">Log in</Link>
           </p>
         </form>
-      </div>
+      </section>
     </div>
   )
 };
