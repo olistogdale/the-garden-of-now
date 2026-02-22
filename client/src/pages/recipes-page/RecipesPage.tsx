@@ -1,6 +1,6 @@
 import './RecipesPage.css';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useAuth } from '../../hooks/useAuth.ts';
 
 import { RecipeCard } from '../../components/recipe-card/RecipeCard';
@@ -24,7 +24,7 @@ type Props = {
 export function RecipesPage({mode}: Props) {
   const { ingredients, ingredientsStatus, ingredientsError } = useIngredients();
   const { auth, isInFavourites } = useAuth();
-  const seed = getSessionKey();
+  const recipeSeed = getSessionKey();
 
   const [recipes, setRecipes] = useState <RecipeCardT[]> ([]);
   const [totalCount, setTotalCount] = useState <number | null> (null);
@@ -35,15 +35,7 @@ export function RecipesPage({mode}: Props) {
   const [recipesError, setRecipesError] = useState <string | null> (null);
   const [pendingAction, setPendingAction] = useState<string | null>(null);
 
-  const ingredientsKey = useMemo(
-    () => (ingredients ? ingredients.join('|') : ''),
-    [ingredients]
-  )
-
-  const favouritesKey = useMemo(
-    () => (auth?.favourites ? auth.favourites.map((recipe) => recipe._id).join('|') : ''),
-    [auth?.favourites]
-  )
+  const seed = mode === 'recipes' ? recipeSeed : '';
 
   useEffect(() => {
     if (ingredientsStatus !== 'success' || !ingredients) return;
@@ -82,24 +74,26 @@ export function RecipesPage({mode}: Props) {
       clearTimeout(timeoutId);
       controller.abort();
     };
-  }, [mode, ingredientsKey, ingredientsStatus, seed, page, limit]);
+  }, [mode, ingredients, ingredientsStatus, seed, page, limit]);
 
   useEffect(() => {
-    if (mode === 'recipes' || !auth) return;
+    if (mode !== 'favourites') return;
 
     setRecipes((prev) => prev.filter((recipe) => isInFavourites(recipe._id)))
 
-    const nextTotalPages = Math.max(1, Math.ceil(auth.favourites.length / limit));
+    const favouritesCount = auth?.favourites?.length ?? 0;
+    
+    const nextTotalPages = Math.max(1, Math.ceil(favouritesCount / limit));
 
-    setTotalCount(auth.favourites.length);
+    setTotalCount(favouritesCount);
     setTotalPages(nextTotalPages);
     setPage((p) => Math.min(p, nextTotalPages));
-  }, [mode, favouritesKey, isInFavourites, limit, auth]);
+  }, [mode, auth?.favourites, isInFavourites, limit]);
 
   useEffect(() => {
     if (ingredientsStatus !== 'success' || !ingredients) return;
     setPage(1);
-  }, [ingredientsKey, ingredientsStatus, seed]);
+  }, [ingredients, ingredientsStatus]);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });
