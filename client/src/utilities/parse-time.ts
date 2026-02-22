@@ -16,8 +16,6 @@ export function parseDuration(value?: string): DurationData | null {
 
   const match = str.match(DURATION_RE);
 
-  console.log(match);
-
   if (match?.groups) {
     const {
       days = "0",
@@ -44,7 +42,7 @@ export function parseTotalDuration(recipe: RecipeCardT): DurationData | null {
 
   const daysNum = (prep?.daysNum ?? 0) + (cook?.daysNum ?? 0);
   const hoursNum = (prep?.hoursNum ?? 0) + (cook?.hoursNum ?? 0);
-  const minsNum = (prep?.minsNum ?? 0) + (prep?.minsNum ?? 0);
+  const minsNum = (prep?.minsNum ?? 0) + (cook?.minsNum ?? 0);
 
   if (daysNum === 0 && hoursNum === 0 && minsNum === 0) return null;
 
