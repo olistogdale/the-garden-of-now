@@ -33,3 +33,8 @@ export type AuthContextValueT = {
   isInFavourites: (recipeId: string) => boolean,
   toggleFavourite: (recipeId: string, recipeName: string) => Promise <void> 
 }
+
+export type ErrorWithStatus = Error & {
+  status?: number,
+  data?: unknown
+};

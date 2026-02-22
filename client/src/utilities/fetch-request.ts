@@ -1,3 +1,5 @@
+import type { ErrorWithStatus } from "../types/auth-types";
+
 export async function fetchRequest <T> (
   url: string,
   options: RequestInit = {}
@@ -9,17 +11,26 @@ export async function fetchRequest <T> (
 
   if (!res.ok) {
     let message = `Response status: ${res.status}`;
+    let data: unknown;
 
     try {
-      const data = (await res.json()) as { error?: unknown };
-      if (data && typeof data === 'object' && 'error' in data) {
+      data = await res.json();
+      if (
+        data &&
+        typeof data === 'object' &&
+        'error' in data &&
+        typeof (data as { error?: unknown }).error === 'string'
+      ) {
         message = String((data).error);
       }
     } catch {
       //
     }
 
-    throw new Error(message);
+    const newError = new Error(message) as ErrorWithStatus;
+    newError.status = res.status;
+    newError.data = data;
+    throw newError;
   }
 
   if (res.status === 204) {

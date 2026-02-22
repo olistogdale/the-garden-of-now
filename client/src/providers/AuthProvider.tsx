@@ -7,12 +7,14 @@ import {
 
 import { registerUser, loginUser, authUser, logoutUser } from '../services/auth-service';
 import { AuthContext } from '../context/auth-context';
+import { postFavourite, deleteFavourite } from '../services/favourites-service';
+import { isErrorWithStatus } from '../utilities/error-guard';
 
 import type { StatusT } from '../types/status-types'
-// import type { UserRegistrationRequestT, UserLoginRequestT, UserAuthResponseT, RecipeEntryT } from '../../../data/users/types/user-types';
 import type { UserRegistrationRequestT, UserLoginRequestT, UserAuthResponseT } from '../../../data/users/types/user-types';
 import type { UserAuthStateT } from '../types/auth-types';
-import { postFavourite, deleteFavourite } from '../services/favourites-service';
+
+
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [auth, setAuth] = useState <UserAuthStateT | null> (null);
@@ -68,9 +70,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         setAuthStatus('success');
       } catch (err) {
         const message = err instanceof Error ? err.message : '';
+        
         setAuth(null);
 
-        if (message.includes('401')) {
+        if (isErrorWithStatus(err) && err.status === 401) {
           setAuthStatus('success');
           setAuthError(null);
         } else if (err instanceof DOMException && err.name === 'AbortError') {
@@ -78,7 +81,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           setAuthError('Auth check timed out');
         } else {
           setAuthStatus('error');
-          setAuthError(err instanceof Error ? err.message : 'Unknown error');
+          setAuthError(message || 'Unknown error');
         }
       } finally {
         clearTimeout(timeoutId)
