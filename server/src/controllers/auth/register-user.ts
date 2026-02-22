@@ -5,6 +5,7 @@ import bcrypt from 'bcryptjs'
 import { userModel } from '../../models/user-model';
 import { signAccessToken } from '../../utilities/jwt-utils';
 import { normalize } from '../../utilities/string-utils';
+import { config } from './../../config';
 
 import type { Context } from 'koa';
 import type { UserAuthResponseT, UserRegistrationRequestT } from '../../../../data/users/types/user-types';
@@ -48,8 +49,8 @@ export const registerUser = async function(ctx: Context) {
 
     ctx.cookies.set("accessToken", token, {
       httpOnly: true,
-      sameSite: 'lax',
-      secure: false,
+      sameSite: config.isProd ? 'none' : 'lax',
+      secure: config.isProd,
       path: '/'
     });
     ctx.status = 201;

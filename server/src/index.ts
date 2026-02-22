@@ -11,10 +11,12 @@ import favouriteRouter from './routers/favourite-router';
 import { config } from './config';
 
 const app = new Koa();
+app.proxy = config.isProd;
+
 const PORT = config.port;
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: config.clientOrigin,
   credentials: true
 }));
 app.use(bodyParser());
