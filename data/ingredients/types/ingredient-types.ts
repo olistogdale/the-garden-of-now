@@ -15,7 +15,7 @@ export type NonSeasonalIngredientT = {
   altNames?: string[]
 }
 
-export type IngredientT = {
+export type GenericIngredientT = {
   name: string,
   altNames?: string[]
 }
