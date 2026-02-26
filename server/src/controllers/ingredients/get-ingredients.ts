@@ -2,10 +2,11 @@
 
 import { seasonalIngredientModel } from '../../models/seasonal-ingredient-model';
 import { nonSeasonalIngredientModel } from '../../models/non-seasonal-ingredient-model';
-import { isNonEmpty, normalize } from '../../utilities/string-utils';
+import { normalize } from '../../utilities/string-utils';
+import { nameAggregator } from '../../utilities/name-aggregator';
 
 import type { Context } from 'koa';
-import type { IngredientsResponseT, IngredientT } from '../../../../data/ingredients/types/ingredient-types';
+import type { IngredientsResponseT, GenericIngredientT } from '../../../../data/ingredients/types/ingredient-types';
 
 const MONTHS = new Set([
   'january',
@@ -21,13 +22,6 @@ const MONTHS = new Set([
   'november',
   'december'
 ]);
-
-const nameAggregator = function (array: IngredientT[]) {
-  return array
-    .flatMap((el) => el.altNames ? [el.name, ...el.altNames] : [el.name])
-    .map(normalize)
-    .filter(isNonEmpty);
-};
 
 export const getIngredients = async function (ctx: Context) {
   const { month } = ctx.params;
@@ -52,11 +46,11 @@ export const getIngredients = async function (ctx: Context) {
         seasonalIngredientModel
           .find({ seasonality: normalizedMonth })
           .select({ name: 1, altNames: 1, _id: 0 })
-          .lean<IngredientT[]>(),
+          .lean<GenericIngredientT[]>(),
         nonSeasonalIngredientModel
           .find()
           .select({ name: 1, altNames: 1, _id: 0 })
-          .lean<IngredientT[]>()
+          .lean<GenericIngredientT[]>()
       ]
     );
 
