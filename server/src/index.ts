@@ -2,11 +2,21 @@
 
 import { createApp } from "./app";
 import { config } from "./config";
+import { connectDB } from "./database/db";
 
-const app = createApp();
-const PORT = config.port;
+(async function() {
+  try {
+    await connectDB()
 
-app.listen(PORT);
+    const app = createApp();
+    const PORT = config.port;
 
-console.log(`Server listening on port ${PORT}`)
+    app.listen(PORT);
 
+    console.log(`Server listening on port ${PORT}`)
+  } catch (err) {
+    console.log("Server failed to start:", err);
+    
+    process.exit(1);
+  }
+})();
