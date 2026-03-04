@@ -1,8 +1,8 @@
 import { describe, it, expect } from "vitest";
 
-import { isInSeason } from "./seasonality-utils";
+import { isInSeason } from "../seasonality-utils";
 
-import type { RecipeCardT } from "../../../data/recipes/types/recipe-types";
+import type { RecipeCardT } from "../../../../data/recipes/types/recipe-types";
 
 describe('isInSeason', () => {
   const hamAndCheeseSandwich = {

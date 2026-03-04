@@ -10,7 +10,7 @@ vi.mock("../config", () => {
   }
 })
 
-import { signAccessToken, verifyAccessToken } from "./jwt-utils";
+import { signAccessToken, verifyAccessToken } from "../jwt-utils";
 
 import type { JwtPayload } from 'jsonwebtoken';
 

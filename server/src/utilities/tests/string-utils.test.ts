@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 
-import { normalize, isNonEmpty } from './string-utils';
+import { normalize, isNonEmpty } from '../string-utils';
 
 describe('normalize', () => {
   it.each([

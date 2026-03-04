@@ -1,8 +1,8 @@
 import { describe, it, expect } from "vitest";
 
-import { nameAggregator } from "./name-aggregator";
+import { nameAggregator } from "../name-aggregator";
 
-import type { GenericIngredientT } from "../../../data/ingredients/types/ingredient-types";
+import type { GenericIngredientT } from "../../../../data/ingredients/types/ingredient-types";
 
 describe('nameAggregator', () => {
   it.each([
