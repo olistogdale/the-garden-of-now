@@ -21,7 +21,7 @@ describe("POST /recipes", () => {
 
   afterAll(async () => {
     await disconnectDB();
-    await mongo.stop();
+    mongo && await mongo.stop();
   })
 
   beforeEach(async () => {

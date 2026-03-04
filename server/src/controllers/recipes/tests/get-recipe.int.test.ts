@@ -19,7 +19,7 @@ describe("GET /recipes/:id", () => {
 
   afterAll(async () => {
     await disconnectDB();
-    await mongo.stop();
+    mongo && await mongo.stop();
   })
 
   beforeEach(async () => {

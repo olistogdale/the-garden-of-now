@@ -19,7 +19,7 @@ describe("POST /register", () => {
 
   afterAll(async () => {
     await disconnectDB();
-    await mongo.stop();
+    mongo && await mongo.stop();
   })
 
   beforeEach(async () => {
