@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from "vitest";
 import jwt, { JsonWebTokenError, TokenExpiredError } from "jsonwebtoken";
 
-vi.mock("../config", () => {
+vi.mock("../../config", () => {
   return {
     config: {
       jwtSecret: "correct-jwt-secret",
