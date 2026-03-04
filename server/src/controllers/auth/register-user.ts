@@ -39,12 +39,14 @@ export const registerUser = async function(ctx: Context) {
     }
 
     const passwordHash = await bcrypt.hash(password, 10);
+
     const newUser = await userModel.create({
       name: { first: cleanFirstName, last: cleanLastName },
       email: normalizedEmail,
       passwordHash,
       lastLoginAt: new Date()
     });
+
     const token = signAccessToken(newUser._id.toString());
 
     ctx.cookies.set("accessToken", token, {
@@ -53,7 +55,9 @@ export const registerUser = async function(ctx: Context) {
       secure: config.isProd,
       path: '/'
     });
+
     ctx.status = 201;
+
     const body: UserAuthResponseT = {
       userId: newUser._id.toString(),
       email: newUser.email,
@@ -61,6 +65,7 @@ export const registerUser = async function(ctx: Context) {
       lastName: newUser.name.last,
       favourites: newUser.favouriteRecipes
     };
+    
     ctx.body = body;
   } catch (err) {
     console.log('Error registering new user:', err);
