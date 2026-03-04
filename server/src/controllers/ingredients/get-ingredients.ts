@@ -28,7 +28,7 @@ export const getIngredients = async function (ctx: Context) {
 
   if (typeof month !== 'string' || !month.trim()) {
     ctx.status =  400;
-    ctx.body = { error: 'Invalid month. Please specify a correct month.' };
+    ctx.body = { error: 'Invalid input. Please specify a correct month.' };
     return;
   }
 
@@ -36,7 +36,7 @@ export const getIngredients = async function (ctx: Context) {
 
   if (!MONTHS.has(normalizedMonth)) {
     ctx.status =  400;
-    ctx.body = { error: 'Invalid month. Please specify a correct month.' };
+    ctx.body = { error: 'Invalid input. Please specify a correct month.' };
     return;
   }
 
