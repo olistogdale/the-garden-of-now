@@ -53,6 +53,7 @@
   gap: var(--medium-gap);
 }
 
+/* Ruleset below may be irrelevant - consider revising */
 .auth-form section {
   display: flex;
   flex-direction: column;

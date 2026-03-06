@@ -21,7 +21,7 @@ const ROWS = [
 export function BackgroundScroll() {
   return (
     <div className="bg-scroll" aria-hidden="true">
-      {ROWS.map((idxs, i) => (
+      {ROWS.map((row, i) => (
         <div
           key={i}
           className={[
@@ -29,9 +29,9 @@ export function BackgroundScroll() {
             `bg-scroll__row--${i + 1}`,
           ].join(" ")}
         >
-          {idxs.map((phraseIndex) => (
-            <span key={phraseIndex}>
-              {PHRASES[phraseIndex]}
+          {row.map((phrase) => (
+            <span key={phrase}>
+              {PHRASES[phrase]}
             </span>
           ))}
         </div>

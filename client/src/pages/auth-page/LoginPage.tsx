@@ -9,7 +9,7 @@ import { BackButton } from '../../components/back-button/BackButton';
 
 import type { LoginFormStateT } from '../../types/auth-types';
 import type { StatusT } from '../../types/status-types';
-import type { FormEvent } from 'react'
+import type { SubmitEvent } from 'react'
 
 export function LoginPage() {
   const navigate = useNavigate();
@@ -23,8 +23,8 @@ export function LoginPage() {
   const isInvalid = !form.email.trim().length || !form.password.length;
   const canSubmitForm = !isInvalid && !isLoading;
   
-  const handleSubmit = async function(e: FormEvent) {
-    e.preventDefault()
+  const handleLogin = async function(event: SubmitEvent) {
+    event.preventDefault()
 
     if (!canSubmitForm) return;
 
@@ -72,7 +72,7 @@ export function LoginPage() {
           <p className="auth-form__subtitle">Welcome back.</p>
         </section>
 
-        <form className="auth-form" onSubmit={handleSubmit}>
+        <form className="auth-form" onSubmit={handleLogin}>
           {formStatus === 'error' && formError ? (
             <div className="auth-form__error" role="alert">
               {formError}
