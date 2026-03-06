@@ -2,7 +2,10 @@
 
 import path from 'node:path';
 import crypto from 'node:crypto';
+import dotenv from 'dotenv';
 import { MongoClient } from 'mongodb';
+
+dotenv.config();
 
 const recipePath = path.join(__dirname, '../../data/recipes/data/clean-data');
 const ingredientPath = path.join(__dirname, '../../data/ingredients/data/clean-data/flat');
@@ -30,9 +33,18 @@ function recipeIdFromUrl(url: string): string {
 }
 
 async function seedDatabase() {
-  const client = new MongoClient('mongodb://localhost:27017');
+  const mongoUri = process.env.MONGO_URI?.trim() || 'mongodb://localhost:27017/the_garden_of_now';
+  const client = new MongoClient(mongoUri);
   await client.connect();
-  const db = client.db('the_garden_of_now');
+  const dbNameFromUri = (() => {
+    try {
+      const { pathname } = new URL(mongoUri);
+      return pathname && pathname !== '/' ? pathname.slice(1) : 'the_garden_of_now';
+    } catch {
+      return 'the_garden_of_now';
+    }
+  })();
+  const db = client.db(dbNameFromUri);
 
   const recipesWithIds = recipes.map((r: any) => ({
     ...r,
