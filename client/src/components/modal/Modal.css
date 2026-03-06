@@ -1,0 +1,128 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+
+  display: grid;
+  place-items: center;
+
+  background: rgba(0, 0, 0, 0.125);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.modal-panel {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 105;
+  width: min(80dvw, var(--auth-form-max-width, 512px));
+  margin: 10dvw 0;
+  padding: var(--large-gap);
+  gap: var(--large-gap);
+  border-radius: var(--xlarge-gap);
+  color: var(--secondary-colour);
+  background-color: var(--background-colour);
+}
+
+.modal-panel__exit-button {
+  display: grid;
+  place-items: center;
+  justify-self: right;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: var(--xsmall-gap);
+  border-radius: var(--medium-gap);
+
+  color: var(--background-colour);
+  background-color: var(--primary-light-colour);
+  border: 2px solid var(--primary-light-colour);
+}
+
+.modal-panel__exit-button:hover {
+  color: var(--background-colour);
+  background-color: var(--primary-colour);
+  border-color: var(--primary-colour);
+}
+
+.modal-panel__exit-button:active {
+  color: var(--secondary-colour);
+  background-color: var(--accent-colour);
+  border-color: var(--accent-colour);
+}
+
+.password-form {
+  display: grid;
+  gap: var(--medium-gap);
+}
+
+.password-form__label {
+  display: grid;
+  gap: var(--xsmall-gap);
+  font-size: 1rem;
+}
+
+.password-form__input {
+  padding: var(--small-gap);
+  border-radius: var(--medium-gap);
+
+  font-family: var(--font-heading);
+
+  border: 2px solid var(--secondary-10pct-colour);
+}
+
+.password-form__input:focus {
+  outline: none;
+  border: 2px solid var(--accent-colour);
+}
+
+.password-form__button {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: var(--small-gap);
+  border-radius: var(--medium-gap);
+
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  
+  border: 1px solid var(--secondary-colour);
+  color: var(--background-colour);
+  background-color: var(--secondary-colour);
+}
+
+.password-form__button:hover {
+  background-color: var(--secondary-light-colour);
+  border: 1px solid var(--secondary-light-colour);
+}
+
+.password-form__button:active {
+  background-color: var(--accent-colour);
+  border: 1px solid var(--accent-colour);
+}
+
+.password-form__button.is-invalid {
+  cursor: not-allowed;
+  opacity: 0.25;
+}
+
+.password-form__spinner {
+  position: absolute;
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 2px solid var(--background-colour);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: hero-cta-spin 0.5s linear infinite;
+  opacity: 0;
+}
+
+.password-form__button.is-loading .password-form__text {
+  visibility: hidden;
+}
+
+.password-form__button.is-loading .password-form__spinner {
+  opacity: 1;
+}
