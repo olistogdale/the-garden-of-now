@@ -1,6 +1,7 @@
 import './RecipesPage.css';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth.ts';
 
 import { RecipeCard } from '../../components/recipe-card/RecipeCard';
@@ -12,10 +13,11 @@ import { monthCapitalized } from '../../utilities/generate-month.ts';
 import { getFavourites } from '../../services/favourites-service.ts';
 import { PageNavigation } from '../../components/page-navigation/PageNavigation.tsx';
 import { useStableLoading } from '../../hooks/useStableLoading.ts';
+import { sanitizePage, sanitizeLimit } from '../../utilities/sanitizer.ts';
 
 import type { RecipeCardT } from '../../../../data/recipes/types/recipe-types'
 import type { StatusT } from '../../types/status-types'
-
+import type { PaginationUpdateT } from '../../types/pagination-types.ts';
 
 type Props = {
   mode: "recipes" | "favourites"
@@ -26,16 +28,50 @@ export function RecipesPage({mode}: Props) {
   const { auth, isInFavourites } = useAuth();
   const recipeSeed = getSessionKey();
 
-  const [recipes, setRecipes] = useState <RecipeCardT[]> ([]);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const page = sanitizePage(searchParams.get('page') ?? 1);
+  const limit = sanitizeLimit(searchParams.get('limit') ?? 24);
   const [totalCount, setTotalCount] = useState <number | null> (null);
-  const [page, setPage] = useState <number> (1);
   const [totalPages, setTotalPages] = useState <number | null> (null);
-  const [limit, setLimit] = useState <number> (24);
+
+  const [recipes, setRecipes] = useState <RecipeCardT[]> ([]);
   const [recipesStatus, setRecipesStatus] = useState <StatusT> ('idle');
   const [recipesError, setRecipesError] = useState <string | null> (null);
   const [pendingAction, setPendingAction] = useState<string | null>(null);
 
   const seed = mode === 'recipes' ? recipeSeed : '';
+
+  const setParams = useCallback(({page: pageNumber, limit: limitValue}: PaginationUpdateT, options?: { replace?: boolean }) => {
+    setSearchParams((prev) => {
+      const next = new URLSearchParams(prev);
+      let hasChanges = false;
+      
+      if (pageNumber !== undefined) {
+        const currentPage = sanitizePage(next.get('page') ?? '1');
+        const resolvedPage = typeof pageNumber === 'function' ? pageNumber(currentPage) : pageNumber;
+        const normalizedPage = sanitizePage(resolvedPage);
+        
+        if (normalizedPage !== currentPage) {
+          next.set('page', String(normalizedPage));
+          hasChanges = true;
+        }
+      }
+
+      if (limitValue !== undefined) {
+        const currentLimit = sanitizeLimit(next.get('limit') ?? '24');
+        const normalizedLimit = sanitizeLimit(limitValue);
+
+        if (normalizedLimit !== currentLimit) {
+          next.set('limit', String(normalizedLimit));
+          hasChanges = true;
+        }
+      }
+      
+      if (!hasChanges) return prev;
+      return next;
+    }, { replace: options?.replace ?? false }) 
+ 
+  }, [setSearchParams])
 
   useEffect(() => {
     if (ingredientsStatus !== 'success' || !ingredients) return;
@@ -87,17 +123,16 @@ export function RecipesPage({mode}: Props) {
 
     setTotalCount(favouritesCount);
     setTotalPages(nextTotalPages);
-    setPage((p) => Math.min(p, nextTotalPages));
-  }, [mode, auth?.favourites, isInFavourites, limit]);
 
-  useEffect(() => {
-    if (ingredientsStatus !== 'success' || !ingredients) return;
-    setPage(1);
-  }, [ingredients, ingredientsStatus]);
+    setParams({ page: Math.min(page, nextTotalPages) }, { replace: true })
+  }, [mode, auth?.favourites, isInFavourites, page, limit, setParams]);
+
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });
   }, [page]);
+
+
 
   const isPendingIngredients = ingredientsStatus === 'idle' || ingredientsStatus === 'loading'
   const showLoadingIngredients = useStableLoading(isPendingIngredients);
@@ -124,10 +159,9 @@ export function RecipesPage({mode}: Props) {
       <PageNavigation
         top={true}
         page={page}
-        setPage={setPage}
-        totalPages={totalPages}
         limit={limit}
-        setLimit={setLimit}
+        setParams={setParams}
+        totalPages={totalPages}
         isLoading={recipesStatus === 'loading'}
         pendingAction={pendingAction}
         setPendingAction={setPendingAction}
@@ -142,10 +176,9 @@ export function RecipesPage({mode}: Props) {
       <PageNavigation
         top={false}
         page={page}
-        setPage={setPage}
-        totalPages={totalPages}
         limit={limit}
-        setLimit={setLimit}
+        setParams={setParams}
+        totalPages={totalPages}
         isLoading={recipesStatus === 'loading'}
         pendingAction={pendingAction}
         setPendingAction={setPendingAction}
