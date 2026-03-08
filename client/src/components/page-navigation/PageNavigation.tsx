@@ -2,13 +2,14 @@ import './PageNavigation.css';
 
 import {ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight} from 'lucide-react';
 
+import type { PaginationUpdateT } from '../../types/pagination-types';
+
 type Props = {
   top: boolean,
   page: number,
-  setPage: React.Dispatch<React.SetStateAction<number>>;
-  totalPages: number | null;
   limit: number,
-  setLimit: React.Dispatch<React.SetStateAction<number>>;
+  setParams: ({ page, limit }: PaginationUpdateT) => void;
+  totalPages: number | null;
   isLoading: boolean;
   pendingAction: string | null;
   setPendingAction: React.Dispatch<React.SetStateAction<string | null>>;
@@ -17,10 +18,9 @@ type Props = {
 export function PageNavigation({
   top,
   page,
-  setPage,
-  totalPages,
   limit,
-  setLimit,
+  setParams,
+  totalPages,
   isLoading,
   pendingAction,
   setPendingAction
@@ -48,7 +48,7 @@ export function PageNavigation({
           <button
             className={`nav-button ${isSpinning('first') ? 'is-loading' : ''}`}
             type="button"
-            onClick={(event) => handleAction('first', () => setPage(1), event)}
+            onClick={(event) => handleAction('first', () => setParams({ page: 1 }), event)}
             disabled={isLoading || !canSelectPrevious}
             aria-busy={isSpinning('first')}
           >
@@ -60,7 +60,7 @@ export function PageNavigation({
           <button
             className={`nav-button ${isSpinning('prev') ? 'is-loading' : ''}`}
             type="button"
-            onClick={(event) => handleAction('prev', () => setPage((p) => Math.max(1, p - 1)), event)}
+            onClick={(event) => handleAction('prev', () => setParams({ page: (p) => Math.max(1, p - 1)}), event)}
             disabled={isLoading || !canSelectPrevious}
             aria-busy={isSpinning('prev')}
           >
@@ -76,7 +76,7 @@ export function PageNavigation({
           <button
             className={`nav-button ${isSpinning('next') ? 'is-loading' : ''}`}
             type="button"
-            onClick={(event) => handleAction('next', () => setPage((p) => p + 1), event)}
+            onClick={(event) => handleAction('next', () => setParams({ page: (p) => p + 1 }), event)}
             disabled={isLoading || !canSelectNext}
             aria-busy={isSpinning('next')}
           >
@@ -88,7 +88,7 @@ export function PageNavigation({
           <button
             className={`nav-button ${isSpinning('last') ? 'is-loading' : ''}`}
             type="button"
-            onClick={(event) => totalPages && handleAction('last', () => setPage(totalPages), event)}
+            onClick={(event) => totalPages && handleAction('last', () => setParams({ page: totalPages }), event)}
             disabled={isLoading || !canSelectNext}
             aria-busy={isSpinning('last')}
           >
@@ -103,7 +103,7 @@ export function PageNavigation({
               <button
                 className={`limit-button ${isSpinning('limit-24') ? 'is-loading' : ''}`}
                 type="button"
-                onClick={() => handleAction('limit-24', () => {setLimit(24); setPage(1);})}
+                onClick={() => handleAction('limit-24', () => {setParams({ page: 1, limit: 24 })})}
                 disabled={isLoading || limit===24}
                 aria-busy={isSpinning('limit-24')}
               >
@@ -113,7 +113,7 @@ export function PageNavigation({
               <button
                 className={`limit-button ${isSpinning('limit-48') ? 'is-loading' : ''}`}
                 type="button"
-                onClick={() => handleAction('limit-48', () => {setLimit(48); setPage(1);})}
+                onClick={() => handleAction('limit-48', () => {setParams({ page: 1, limit: 48 })})}
                 disabled={isLoading || limit===48}
                 aria-busy={isSpinning('limit-48')}
               >
