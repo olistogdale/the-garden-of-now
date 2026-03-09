@@ -132,6 +132,7 @@
   justify-content: start;
   gap: var(--xlarge-gap);
   padding: var(--large-gap);
+  margin-bottom: var(--xlarge-gap);
   border-radius: var(--xlarge-gap);
 
   border: 1px solid var(--primary-colour);
@@ -154,11 +155,19 @@
     padding: var(--large-gap);
     gap: var(--large-gap)
   }
+
+  .recipe-detail__instructions {
+    margin-bottom: var(--xxlarge-gap);
+  }
 }
 
 @media (min-width: 1025px) {
   .recipe-detail {
     padding: 0 var(--xlarge-gap);
     gap: var(--xlarge-gap);
+  }
+
+  .recipe-detail__instructions {
+    margin-bottom: var(--xxxlarge-gap);
   }
 }
