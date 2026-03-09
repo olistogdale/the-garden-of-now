@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 
 import { NavBar } from '../../components/nav-bar/NavBar';
+import { Footer } from '../../components/footer/Footer';
 
 import './MainLayout.css'
 
@@ -14,7 +15,7 @@ export function MainLayout() {
         <Outlet />
       </main>
       <footer className="main-layout__footer">
-        {/* insert component for footer here when ready*/}
+        <Footer />
       </footer>
     </div>
   )

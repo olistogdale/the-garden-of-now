@@ -29,6 +29,7 @@
   --xxlarge-gap: 2rem;
   --xxxlarge-gap: 2.5rem;
   --header-height: clamp(72px, 8dvh, 102px);
+  --footer-height: clamo(144px, 16dvh, 204px);
 }
 
 /* =========================================
