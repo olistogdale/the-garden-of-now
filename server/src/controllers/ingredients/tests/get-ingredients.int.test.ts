@@ -29,6 +29,7 @@ describe("GET ingredients/:month", () => {
 
   async function expectError(app: any, query: string, errorCode: number, error: string) {
     const res = await request(app).get(`/ingredients/${query}`);
+    
     expect(res.status).toBe(errorCode);
     expect(res.body.error).toBe(error);
   }

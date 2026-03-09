@@ -57,7 +57,7 @@ export const getIngredients = async function (ctx: Context) {
     const seasonalIngredients = nameAggregator(seasonalIngredientsRetrieval);
     const nonSeasonalIngredients = nameAggregator(nonSeasonalIngredientsRetrieval);
     const ingredients: string[] = Array.from(new Set([...seasonalIngredients, ...nonSeasonalIngredients]));
-    
+
     ctx.status = 200;
     const body: IngredientsResponseT = {
       ingredients
