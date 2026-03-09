@@ -6,7 +6,6 @@ import bcrypt from "bcryptjs";
 import { createApp } from "../../../app";
 import { connectDB, disconnectDB } from "../../../database/db";
 import { userModel } from "../../../models/user-model";
-import profileRouter from "../../../routers/profile-router";
 import { extractAccessToken } from "../../auth/tests/test-utils";
 
 let mongo: MongoMemoryServer;
@@ -27,12 +26,6 @@ describe("GET /password", () => {
   beforeEach(async () => {
     await userModel.deleteMany({});
   });
-
-  function createProfileApp() {
-    const app = createApp();
-    app.use(profileRouter.routes());
-    return app.callback();
-  }
 
   async function createAndLoginUser(app: any) {
     const hashedPassword = await bcrypt.hash("TheGardenOfNow", 10);
@@ -59,21 +52,21 @@ describe("GET /password", () => {
   }
 
   async function expectError(app: any, body: any, errorCode: number, error: string, cookie?: any) {
-    const req = request(app).get("/password");
     const res = cookie
-      ? await req.set("Cookie", cookie).send(body)
-      : await req.send(body);
+      ? await request(app).patch("/me/password").send(body).set("Cookie", cookie)
+      : await request(app).patch("/me/password").send(body)
 
     expect(res.status).toBe(errorCode);
     expect(res.body.error).toBe(error);
   }
 
   it("changes user password for valid authenticated input (204)", async () => {
-    const app = createProfileApp();
+    const app = createApp().callback()
+
     const accessToken = await createAndLoginUser(app);
 
     const res = await request(app)
-      .get("/password")
+      .patch("/me/password")
       .set("Cookie", accessToken)
       .send({
         currentPassword: "TheGardenOfNow",
@@ -89,10 +82,11 @@ describe("GET /password", () => {
   });
 
   it("throws an error for invalid password input (400)", async () => {
-    const app = createProfileApp();
+    const app = createApp().callback();
+
     const accessToken = await createAndLoginUser(app);
 
-    const errorReturned = "Invalid password input. Please provide a valid current password and a new password of at least 8 characters.";
+    const errorReturned = "Invalid password input. Please provide a valid current password and a new password at least 8 characters in length.";
 
     await expectError(app, { currentPassword: 1, newPassword: "TheGardenOfThen" }, 400, errorReturned, accessToken);
     await expectError(app, { currentPassword: "", newPassword: "TheGardenOfThen" }, 400, errorReturned, accessToken);
@@ -103,25 +97,26 @@ describe("GET /password", () => {
   });
 
   it("throws an error for incorrect current password input (401)", async () => {
-    const app = createProfileApp();
+    const app = createApp().callback();
+
     const accessToken = await createAndLoginUser(app);
 
-    const errorReturned = "Invalid current password. Please provide your current password correctly.";
+    const errorReturned = "Invalid password. Please provide a valid current password.";
 
     await expectError(app, { currentPassword: "WrongPassword", newPassword: "TheGardenOfThen" }, 401, errorReturned, accessToken);
   });
 
   it("throws an error if new password matches current password (400)", async () => {
-    const app = createProfileApp();
+    const app = createApp().callback();
     const accessToken = await createAndLoginUser(app);
 
-    const errorReturned = "Invalid new password. Your new password must be different from your current password.";
+    const errorReturned = "Invalid new password. Your new password must be different to your current password.";
 
     await expectError(app, { currentPassword: "TheGardenOfNow", newPassword: "TheGardenOfNow" }, 400, errorReturned, accessToken);
   });
 
   it("throws an error if user not found (404)", async () => {
-    const app = createProfileApp();
+    const app = createApp().callback();
     const accessToken = await createAndLoginUser(app);
 
     await userModel.deleteMany({});
@@ -132,7 +127,7 @@ describe("GET /password", () => {
   });
 
   it("throws an error if user provides bad token (401)", async () => {
-    const app = createProfileApp();
+    const app = createApp().callback();
 
     const errorReturned = "Invalid or expired token. Please provide a valid access token.";
 
@@ -140,7 +135,7 @@ describe("GET /password", () => {
   });
 
   it("throws an error if user fails to provide a token (401)", async () => {
-    const app = createProfileApp();
+    const app = createApp().callback();
 
     const errorReturned = "Not authenticated. Please provide a valid access token.";
 
