@@ -95,13 +95,11 @@ export function Modal ({ handleModal }: Props) {
             disabled={isInvalid || isLoading}
             aria-busy={isLoading}
           >
-            <span className="auth-form__text">CHANGE PASSWORD</span>
-            <span className="auth-form__spinner" aria-hidden="true" />
+            <span className="password-form__text">CHANGE PASSWORD</span>
+            <span className="password-form__spinner" aria-hidden="true" />
           </button>
         </form>
       </div>
     </div>
   )
-  
-  
 }
