@@ -23,9 +23,9 @@
   margin: 10dvw 0;
   padding: var(--large-gap);
   border-radius: var(--xlarge-gap);
+
   color: var(--secondary-colour);
   background-color: var(--background-colour);
-
 }
 
 .auth-page__form--registration {
@@ -53,12 +53,13 @@
   gap: var(--medium-gap);
 }
 
-/* Ruleset below may be irrelevant - consider revising */
-.auth-form section {
+.auth-form fieldset {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: var(--medium-gap);
+  
+  border: none;
 }
 
 .auth-form__label {
@@ -187,7 +188,7 @@
     border: 1px solid var(--secondary-colour);
   }
 
-  .auth-form section {
+  .auth-form fieldset {
     flex-direction: row;
     flex: 1;
   }
