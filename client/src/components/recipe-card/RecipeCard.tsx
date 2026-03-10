@@ -18,11 +18,12 @@ export function RecipeCard({ recipe }: Props) {
   const time = parseTotalDuration(recipe);
   const timeString = durationToString(time);
   const skill = recipe.skillLevel;
+  const notInSeason = recipe.inSeason === false;
   
   const titleRef = useAutoMarquee([recipe.name]);
   
   return (
-    <div className="recipe-card">
+    <div className={`recipe-card recipe-card--${notInSeason ? 'unavailable' : 'available'}`}>
       <FavouriteToggle recipe={recipe}/>
       <Link to={`/recipes/${recipe._id}`} className="recipe-card__link" aria-label={recipe.name}>
         <div className="recipe-card__media">

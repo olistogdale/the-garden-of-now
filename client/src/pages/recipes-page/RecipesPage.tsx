@@ -132,8 +132,6 @@ export function RecipesPage({mode}: Props) {
     window.scrollTo({ top: 0, behavior: 'auto' });
   }, [page]);
 
-
-
   const isPendingIngredients = ingredientsStatus === 'idle' || ingredientsStatus === 'loading'
   const showLoadingIngredients = useStableLoading(isPendingIngredients);
 
@@ -152,7 +150,7 @@ export function RecipesPage({mode}: Props) {
     <div className="recipes-page">
       <section className="recipes-page__description">
         <div className="description-header-blank"/>
-        <h1 className="description-title">{ monthCapitalized}'S RECIPES</h1>
+        <h1 className="description-title">{mode === 'recipes' ? `${monthCapitalized}'S RECIPES` : 'FAVOURITE RECIPES'}</h1>
         <p className="description-subtitle">{totalCount === null ? "Loading recipes..." : `Showing ${totalCount} recipes`}</p>
       </section>
       

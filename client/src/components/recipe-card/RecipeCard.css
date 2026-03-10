@@ -3,6 +3,21 @@
   min-width: 0;
 }
 
+.recipe-card--unavailable::after {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  content: "OUT OF SEASON";
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--secondary-50pct-colour);
+  background: rgba(255, 255, 255, 0.75);
+}
+
 .recipe-card__link {
   position: relative;
   display: block;
