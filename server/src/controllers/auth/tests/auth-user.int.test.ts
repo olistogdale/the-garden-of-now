@@ -6,11 +6,11 @@ import bcrypt from "bcryptjs";
 import { createApp } from "../../../app";
 import { connectDB, disconnectDB } from "../../../database/db";
 import { userModel } from "../../../models/user-model";
-import { extractAccessToken } from "./test-utils";
+import { extractAccessToken } from "../../../utilities/test-utils";
 
 let mongo: MongoMemoryServer;
 
-describe("GET /auth/me", () => {
+describe("GET /auth", () => {
   beforeAll(async () => {
     mongo = await MongoMemoryServer.create({
       binary: { version: "6.0.15"}
@@ -29,8 +29,8 @@ describe("GET /auth/me", () => {
 
   async function expectError(app: any, errorCode: number, error: string, cookie?: any) {
     const res = cookie
-      ? await request(app).get("/auth/me").set("Cookie", cookie)
-      : await request(app).get("/auth/me") 
+      ? await request(app).get("/auth").set("Cookie", cookie)
+      : await request(app).get("/auth") 
     expect(res.status).toBe(errorCode);
     expect(res.body.error).toBe(error);
   }
@@ -62,7 +62,7 @@ describe("GET /auth/me", () => {
 
     const accessToken = extractAccessToken(loginRes);
 
-    const res = await request(app).get("/auth/me").set("Cookie", accessToken);
+    const res = await request(app).get("/auth").set("Cookie", accessToken);
 
     expect(res.status).toBe(200);
     expect(typeof res.body.userId).toBe("string");

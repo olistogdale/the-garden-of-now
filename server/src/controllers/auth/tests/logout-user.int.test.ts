@@ -1,12 +1,11 @@
 import { describe, it, expect, beforeAll, afterAll, beforeEach } from "vitest";
 import request from "supertest";
 import { MongoMemoryServer } from "mongodb-memory-server";
-import bcrypt from "bcryptjs";
 
 import { createApp } from "../../../app";
 import { connectDB, disconnectDB } from "../../../database/db";
 import { userModel } from "../../../models/user-model";
-import { extractAccessToken } from "./test-utils";
+import { createAccessToken, extractAccessToken, convertToObject } from "../../../utilities/test-utils";
 
 let mongo: MongoMemoryServer
 
@@ -35,38 +34,15 @@ describe("POST /logout", () => {
     expect(res.body.error).toBe(error);
   }
 
-  function convertToObject(token: string) {
-    return Object.fromEntries(token.split("; ").map((string: string) => {
-      return string.split("=");
-    }))
-  }
-
   const mockLoginInfo = {
     email: "bob.simmons@email.com",
     password: "TheGardenOfNow"
   }
 
   it("sets status to success and removes valid access token from cookies (204)", async () => {
-    const hashedPassword = await bcrypt.hash("TheGardenOfNow", 10)
-            
-    await userModel.create({
-      name: {
-        first: "Bob",
-        last: "Simmons"
-      },
-      email: "bob.simmons@email.com",
-      emailVerified: true,
-      passwordHash: hashedPassword,
-      favouriteRecipes: [],
-      role: "user",
-      lastLoginAt: new Date()
-    })
-    
     const app = createApp().callback();
 
-    const loginRes = await request(app).post("/login").send(mockLoginInfo);
-
-    const accessToken = extractAccessToken(loginRes);
+    const accessToken = await createAccessToken(app);
     const accessTokenObj = convertToObject(accessToken);
 
     const res = await request(app).post("/logout").set("Cookie", accessToken);

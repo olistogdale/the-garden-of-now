@@ -6,7 +6,7 @@ import bcrypt from "bcryptjs";
 import { createApp } from "../../../app";
 import { connectDB, disconnectDB } from "../../../database/db";
 import { userModel } from "../../../models/user-model";
-import { extractAccessToken } from "./test-utils";
+import { extractAccessToken } from "../../../utilities/test-utils";
 
 let mongo: MongoMemoryServer;
 
