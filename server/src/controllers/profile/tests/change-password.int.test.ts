@@ -6,11 +6,11 @@ import bcrypt from "bcryptjs";
 import { createApp } from "../../../app";
 import { connectDB, disconnectDB } from "../../../database/db";
 import { userModel } from "../../../models/user-model";
-import { extractAccessToken } from "../../auth/tests/test-utils";
+import { extractAccessToken } from "../../../utilities/test-utils";
 
 let mongo: MongoMemoryServer;
 
-describe("GET /password", () => {
+describe("PATCH /password", () => {
   beforeAll(async () => {
     mongo = await MongoMemoryServer.create({
       binary: { version: "6.0.15" }
@@ -27,7 +27,7 @@ describe("GET /password", () => {
     await userModel.deleteMany({});
   });
 
-  async function createAndLoginUser(app: any) {
+  async function createAccessToken(app: any) {
     const hashedPassword = await bcrypt.hash("TheGardenOfNow", 10);
 
     await userModel.create({
@@ -53,8 +53,8 @@ describe("GET /password", () => {
 
   async function expectError(app: any, body: any, errorCode: number, error: string, cookie?: any) {
     const res = cookie
-      ? await request(app).patch("/me/password").send(body).set("Cookie", cookie)
-      : await request(app).patch("/me/password").send(body)
+      ? await request(app).patch("/password").send(body).set("Cookie", cookie)
+      : await request(app).patch("/password").send(body)
 
     expect(res.status).toBe(errorCode);
     expect(res.body.error).toBe(error);
@@ -63,10 +63,10 @@ describe("GET /password", () => {
   it("changes user password for valid authenticated input (204)", async () => {
     const app = createApp().callback()
 
-    const accessToken = await createAndLoginUser(app);
+    const accessToken = await createAccessToken(app);
 
     const res = await request(app)
-      .patch("/me/password")
+      .patch("/password")
       .set("Cookie", accessToken)
       .send({
         currentPassword: "TheGardenOfNow",
@@ -84,7 +84,7 @@ describe("GET /password", () => {
   it("throws an error for invalid password input (400)", async () => {
     const app = createApp().callback();
 
-    const accessToken = await createAndLoginUser(app);
+    const accessToken = await createAccessToken(app);
 
     const errorReturned = "Invalid password input. Please provide a valid current password and a new password at least 8 characters in length.";
 
@@ -99,7 +99,7 @@ describe("GET /password", () => {
   it("throws an error for incorrect current password input (401)", async () => {
     const app = createApp().callback();
 
-    const accessToken = await createAndLoginUser(app);
+    const accessToken = await createAccessToken(app);
 
     const errorReturned = "Invalid password. Please provide a valid current password.";
 
@@ -108,7 +108,7 @@ describe("GET /password", () => {
 
   it("throws an error if new password matches current password (400)", async () => {
     const app = createApp().callback();
-    const accessToken = await createAndLoginUser(app);
+    const accessToken = await createAccessToken(app);
 
     const errorReturned = "Invalid new password. Your new password must be different to your current password.";
 
@@ -117,7 +117,7 @@ describe("GET /password", () => {
 
   it("throws an error if user not found (404)", async () => {
     const app = createApp().callback();
-    const accessToken = await createAndLoginUser(app);
+    const accessToken = await createAccessToken(app);
 
     await userModel.deleteMany({});
 
