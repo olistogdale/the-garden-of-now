@@ -61,11 +61,12 @@ export type RecipeCardT = {
   _id: string,
   name: string,
   image: ImageDataT[],
+  groupedIngredients: string[][],
   prepTime?: string,
   cookTime?: string,
   totalTime?: string,
-  skillLevel?: string
-  groupedIngredients: string[][]
+  skillLevel?: string,
+  inSeason?: boolean,
 }
 
 export type RecipesRequestT = {
@@ -84,6 +85,6 @@ export type RecipeResponseT = {
 }
 
 export type RecipesFacetResultT = {
-  results: RecipeCardT[];
-  totalCount: { count: number }[];
+  results: RecipeCardT[],
+  totalCount: { count: number }[]
 };
