@@ -5,7 +5,7 @@ import { MongoMemoryServer } from "mongodb-memory-server";
 import { createApp } from "../../../app";
 import { connectDB, disconnectDB } from "../../../database/db";
 import { recipeModel } from "../../../models/recipe-model";
-import { makeRecipe } from "./test-utils";
+import { makeRecipe } from "../../../utilities/test-utils";
 
 let mongo: MongoMemoryServer;
 
@@ -84,7 +84,7 @@ describe("GET /recipes/:id", () => {
     await expectError(app, "%20%20%20", 400, errorReturned);
   })
 
-  it("throws an error for invalid recipe ID (404)", async () => {
+  it("throws an error for incorrect recipe ID (404)", async () => {
     const app = createApp().callback();
     
     const errorReturned = "Recipe irish_pork_1 not found."

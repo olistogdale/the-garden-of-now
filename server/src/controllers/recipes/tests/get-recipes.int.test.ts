@@ -5,7 +5,7 @@ import { MongoMemoryServer } from 'mongodb-memory-server';
 import { createApp } from '../../../app'
 import { connectDB, disconnectDB } from '../../../database/db';
 import { recipeModel } from '../../../models/recipe-model';
-import { makeRecipe } from './test-utils';
+import { makeRecipe } from '../../../utilities/test-utils';
 
 import type { RecipeT } from '../../../../../data/recipes/types/recipe-types';
 
