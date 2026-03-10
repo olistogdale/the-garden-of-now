@@ -4,3 +4,4 @@ export { registerUser } from './register-user';
 export { loginUser } from './login-user';
 export { authUser } from './auth-user';
 export { logoutUser } from './logout-user';
+export { deleteUser } from './delete-user';
