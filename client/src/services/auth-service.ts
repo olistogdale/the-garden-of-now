@@ -37,7 +37,7 @@ export function loginUser(
 }
 
 export  function authUser(signal: AbortSignal): Promise <UserAuthResponseT> {
-  const url = `${API_URL}/auth/me`;
+  const url = `${API_URL}/auth`;
 
   return fetchRequest(url, {
     method: 'GET',

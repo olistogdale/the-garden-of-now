@@ -8,7 +8,7 @@ export function changePassword(
   { currentPassword, newPassword }: UserPasswordRequestT,
   signal: AbortSignal
 ): Promise <void> {
-  const url = `${API_URL}/me/password`;
+  const url = `${API_URL}/password`;
 
   return fetchRequest(url, {
     method: 'PATCH',
