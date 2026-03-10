@@ -76,8 +76,6 @@ export function LandingPage() {
               <p>Filter recipes by ease, nutritional value, time-taken and type of cuisine.</p>
             </div>
           </div>
-
-          <ScrollDownButton targetId="page"/>
         </div>
       </section>
     </div>
