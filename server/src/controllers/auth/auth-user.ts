@@ -1,9 +1,9 @@
 'use strict';
 
-import type { Context } from 'koa';
-
 import { userModel } from '../../models/user-model';
 import { PartialUserT, UserAuthResponseT } from '../../../../data/users/types/user-types';
+
+import type { Context } from 'koa';
 
 export const authUser = async function (ctx: Context) {
   const userId = ctx.state.user.userId;
