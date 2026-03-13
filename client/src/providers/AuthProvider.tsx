@@ -5,7 +5,7 @@ import {
   useMemo
 } from 'react';
 
-import { registerUser, loginUser, authUser, logoutUser } from '../services/auth-service';
+import { registerUser, loginUser, authUser, logoutUser, deleteUser } from '../services/auth-service';
 import { AuthContext } from '../context/auth-context';
 import { postFavourite, deleteFavourite } from '../services/favourites-service';
 import { isErrorWithStatus } from '../utilities/error-guard';
@@ -111,6 +111,23 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   }, [])
 
+  const remove = useCallback(async () => {
+    setAuthStatus('loading');
+    setAuthError(null);
+
+    try {
+      await deleteUser();
+
+      setAuth(null);
+      setAuthStatus('success');
+    } catch (err) {
+      setAuth(null);
+      setAuthStatus('error');
+      setAuthError(err instanceof Error? err.message : 'Unknown error');
+      throw err;
+    }
+  }, [])
+
   const favouriteIdsSet = useMemo(
     () => new Set(auth?.favourites?.map((favourite) => favourite._id) ?? []),
     [auth?.favourites]
@@ -166,8 +183,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   
   
   const value = useMemo(
-    () => ({ auth, authStatus, authError, register, login, logout, isInFavourites, toggleFavourite }),
-    [auth, authStatus, authError, register, login, logout, isInFavourites, toggleFavourite]
+    () => ({ auth, authStatus, authError, register, login, logout, remove, isInFavourites, toggleFavourite }),
+    [auth, authStatus, authError, register, login, logout, remove, isInFavourites, toggleFavourite]
   );
 
   return (

@@ -52,3 +52,11 @@ export function logoutUser(): Promise <void> {
     method: 'POST'
   })
 }
+
+export function deleteUser(): Promise <void> {
+  const url = `${API_URL}/delete`;
+
+  return fetchRequest(url, {
+    method: 'DELETE'
+  })
+}

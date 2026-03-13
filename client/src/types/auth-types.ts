@@ -30,6 +30,7 @@ export type AuthContextValueT = {
   register: (payload: UserRegistrationRequestT, signal: AbortSignal) => Promise <void>,
   login: (payload: UserLoginRequestT, signal: AbortSignal) => Promise <void>,
   logout: () => Promise <void>,
+  remove: () => Promise <void>,
   isInFavourites: (recipeId: string) => boolean,
   toggleFavourite: (recipeId: string, recipeName: string) => Promise <void> 
 }
