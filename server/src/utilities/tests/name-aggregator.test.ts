@@ -17,7 +17,9 @@ describe('nameAggregator', () => {
     const input = [{ name: "lemon" }, { name: "green onion", altNames: ["spring onion", "salad onion"]}, { name: "broccoli" }];
 
     const before = structuredClone(input);
+    
     nameAggregator(input as GenericIngredientT[]);
+
     expect(input).toEqual(before);
   })
 })
