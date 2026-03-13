@@ -31,7 +31,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setAuth({ userId, email, firstName, lastName, favourites });
       setAuthStatus('success');
     } catch (err) {
-      setAuth(null);
       setAuthStatus('error');
       setAuthError(err instanceof Error ? err.message : 'Unknown error');
       throw err;
@@ -48,7 +47,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setAuth({ userId, email, firstName, lastName, favourites });
       setAuthStatus('success');
     } catch (err) {
-      setAuth(null)
       setAuthStatus('error');
       setAuthError(err instanceof Error? err.message : 'Unknown error');
       throw err;
@@ -104,7 +102,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setAuth(null);
       setAuthStatus('success');
     } catch (err) {
-      setAuth(null);
       setAuthStatus('error');
       setAuthError(err instanceof Error? err.message : 'Unknown error');
       throw err;
@@ -121,7 +118,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setAuth(null);
       setAuthStatus('success');
     } catch (err) {
-      setAuth(null);
       setAuthStatus('error');
       setAuthError(err instanceof Error? err.message : 'Unknown error');
       throw err;
