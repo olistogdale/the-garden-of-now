@@ -10,20 +10,22 @@ import { Modal } from "../../components/modal/Modal";
 
 import type { StatusT } from '../../types/status-types';
 
+
 export function ProfilePage () { 
   const navigate = useNavigate();
   const { logout, auth } = useAuth();
 
   const [logoutStatus, setLogoutStatus] = useState <StatusT> ('idle');
   const [logoutError, setLogoutError] = useState <string | null> (null);
-  const [profileModal, setProfileModal] = useState <boolean> (false);
+
+  const [profileModal, setProfileModal] = useState <string | null> (null);
 
   const handleLogout = async function () {
     try {
       setLogoutStatus('loading');
       setLogoutError(null);
       
-      await logout()
+      await logout();
       navigate('/', { replace: true });
     } catch (err) {
       setLogoutStatus('error');
@@ -31,8 +33,16 @@ export function ProfilePage () {
     }
   }
 
-  const handleModal = async function () {
-    setProfileModal((prev) => !prev)    
+  const closeModal = async function () {
+    setProfileModal(null)    
+  }
+
+  const launchChangePasswordModal = async function() {
+    setProfileModal('password');
+  }
+
+  const launchDeleteUserModal = async function() {
+    setProfileModal('delete-user');
   }
 
   const showLoading = useStableLoading(logoutStatus === "loading");
@@ -43,7 +53,9 @@ export function ProfilePage () {
 
   return (
     <div className="profile">
-      {profileModal && <Modal handleModal={handleModal}/>}
+      {profileModal === "password" && <Modal mode={"change-password"} closeModal={closeModal}/>}
+      
+      {profileModal === "delete-user" && <Modal mode={"delete-user"} closeModal={closeModal}/>}
 
       <section className="profile__user">
         <div className="user__header-blank"/>
@@ -70,10 +82,17 @@ export function ProfilePage () {
               </button>
 
               <button
+                className="user__delete-user"
+                type="button"
+                onClick={launchDeleteUserModal}
+              >
+                DELETE USER
+              </button>
+
+              <button
                 className="user__change-password"
                 type="button"
-                onClick={handleModal}
-                disabled={logoutStatus === "loading"}
+                onClick={launchChangePasswordModal}
               >
                 CHANGE PASSWORD
               </button>
