@@ -4,7 +4,7 @@ import {
   useMemo
 } from 'react';
 
-import { fetchIngredients } from '../services/ingredients-service';
+import { getIngredients } from '../services/ingredients-service';
 import { IngredientsContext } from '../context/ingredients-context';
 
 import type { StatusT } from '../types/status-types'
@@ -23,7 +23,7 @@ export function IngredientsProvider({ children }: { children: React.ReactNode })
       setError(null);
 
       try {
-        const data = await fetchIngredients(controller.signal);
+        const data = await getIngredients(controller.signal);
         setIngredients(data.ingredients);
         setStatus('success');
       } catch (err) {

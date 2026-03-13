@@ -5,7 +5,7 @@ import { month } from '../utilities/generate-month.ts'
 
 import type { IngredientsResponseT } from '../../../data/ingredients/types/ingredient-types.ts'
 
-export async function fetchIngredients(signal?: AbortSignal): Promise <IngredientsResponseT> {
+export async function getIngredients(signal?: AbortSignal): Promise <IngredientsResponseT> {
   const url = `${API_URL}/ingredients/${month}`;
   return fetchRequest(url, {
     method: "GET",
