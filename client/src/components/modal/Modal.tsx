@@ -48,39 +48,33 @@ export function Modal ({ mode, closeModal }: Props) {
       setPasswordFormStatus("success")
       closeModal();
     } catch (err) {
-      if ((err instanceof DOMException || err instanceof Error) && err.name === 'AbortError') return;
+      if ((err instanceof DOMException || err instanceof Error) && err.name === 'AbortError') {
+        setPasswordFormStatus('error');
+        setPasswordFormError('Request timed out');  
+        return;
+      }
 
       setPasswordFormStatus('error');
       setPasswordFormError(err instanceof Error? err.message : 'Unknown error');
-    }
-
-    return () => {
+    } finally {
       clearTimeout(timeoutId);
-      controller.abort();
-    };
+    }
   }
 
   const handleDeleteUser = async function(event: MouseEvent) {
     event.preventDefault();
-
-    const controller = new AbortController;
-    const timeoutId = window.setTimeout(() => controller.abort(), 10000)
     
     try {
       setConfirmDeleteStatus('loading');
       setConfirmDeleteError(null);
 
       await remove();
+
       navigate('/', { replace: true });
     } catch (err) {
       setConfirmDeleteStatus('error');
       setConfirmDeleteError(err instanceof Error? err.message: 'Unknown error');
     }
-
-    return () => {
-      clearTimeout(timeoutId);
-      controller.abort();
-    };
   }
 
   return (
