@@ -3,7 +3,7 @@ import "./modal.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { changePassword } from "../../services/profile-service";
+import { patchPassword } from "../../services/profile-service";
 import { useAuth } from "../../hooks/useAuth";
 
 import type { MouseEvent, SubmitEvent } from "react";
@@ -43,7 +43,7 @@ export function Modal ({ mode, closeModal }: Props) {
       setPasswordFormStatus('loading');
       setPasswordFormError(null);
 
-      await changePassword({ currentPassword: passwordForm.currentPassword, newPassword: passwordForm.newPassword }, controller.signal);
+      await patchPassword({ currentPassword: passwordForm.currentPassword, newPassword: passwordForm.newPassword }, controller.signal);
 
       setPasswordFormStatus("success")
       closeModal();

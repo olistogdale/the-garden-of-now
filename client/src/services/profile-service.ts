@@ -4,7 +4,7 @@ import { fetchRequest } from '../utilities/fetch-request';
 
 import type { UserPasswordRequestT } from '../types/profile-types';
 
-export function changePassword(
+export function patchPassword(
   { currentPassword, newPassword }: UserPasswordRequestT,
   signal: AbortSignal
 ): Promise <void> {
