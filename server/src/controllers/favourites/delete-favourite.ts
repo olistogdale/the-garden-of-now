@@ -4,13 +4,13 @@ import { userModel } from '../../models/user-model';
 
 import type { Context } from 'koa';
 
-export const deleteFavourite = async function(ctx: Context) {
+export const deleteFavourite = async function (ctx: Context) {
   const userId = ctx.state.user.userId;
   const { recipeId } = ctx.params;
 
   if (typeof recipeId !== 'string' || !recipeId.trim()) {
     ctx.status = 400;
-    ctx.body = { error: 'No recipe ID. Please provide a valid recipe ID.'};
+    ctx.body = { error: 'No recipe ID. Please provide a valid recipe ID.' };
     return;
   }
 
@@ -18,15 +18,15 @@ export const deleteFavourite = async function(ctx: Context) {
     const result = await userModel.updateOne(
       {
         _id: userId,
-        'favouriteRecipes._id': recipeId
+        'favouriteRecipes._id': recipeId,
       },
       {
         $pull: {
           favouriteRecipes: {
-            _id: recipeId
+            _id: recipeId,
           },
         },
-      }
+      },
     );
 
     if (result.modifiedCount === 0) {
@@ -34,12 +34,17 @@ export const deleteFavourite = async function(ctx: Context) {
 
       if (!exists) {
         ctx.status = 404;
-        ctx.body = { error: 'User not found. Please provide an ID for a valid user.'};
+        ctx.body = {
+          error: 'User not found. Please provide an ID for a valid user.',
+        };
         return;
       }
 
       ctx.status = 404;
-      ctx.body = { error: 'Favourite recipe not found. Please provide an ID for a valid recipe.'};
+      ctx.body = {
+        error:
+          'Favourite recipe not found. Please provide an ID for a valid recipe.',
+      };
       return;
     }
 
@@ -47,6 +52,8 @@ export const deleteFavourite = async function(ctx: Context) {
   } catch (err) {
     console.log('Error deleting favourite recipe:', err);
     ctx.status = 500;
-    ctx.body = { error: 'Internal server error: could not delete favourite recipe.'};
+    ctx.body = {
+      error: 'Internal server error: could not delete favourite recipe.',
+    };
   }
-}
+};

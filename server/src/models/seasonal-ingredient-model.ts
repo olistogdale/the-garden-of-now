@@ -18,7 +18,7 @@ const MONTHS = [
   'september',
   'october',
   'november',
-  'december'
+  'december',
 ] as const;
 
 const FOOD_GROUPS = [
@@ -29,32 +29,32 @@ const FOOD_GROUPS = [
   'nuts',
   'poultry',
   'shellfish',
-  'vegetables'
+  'vegetables',
 ] as const;
 
-const SeasonalIngredientSchema = new Schema <SeasonalIngredientT> (
-  {
-    name: {
-      type: String,
-      required: true,
-      trim: true
-    },
-    seasonality: {
-      type: [String],
-      enum: MONTHS,
-      required: true,
-    },
-    foodGroup: {
-      type: String,
-      enum: FOOD_GROUPS,
-      required: true
-    },
-    altNames: {
-      type: [String],
-      default: undefined
-    }
-  }
+const SeasonalIngredientSchema = new Schema<SeasonalIngredientT>({
+  name: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  seasonality: {
+    type: [String],
+    enum: MONTHS,
+    required: true,
+  },
+  foodGroup: {
+    type: String,
+    enum: FOOD_GROUPS,
+    required: true,
+  },
+  altNames: {
+    type: [String],
+    default: undefined,
+  },
+});
+
+export const seasonalIngredientModel = model(
+  'SeasonalIngredient',
+  SeasonalIngredientSchema,
 );
-
-export const seasonalIngredientModel = model('SeasonalIngredient', SeasonalIngredientSchema);
-

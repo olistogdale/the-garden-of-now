@@ -1,18 +1,27 @@
 'use strict';
 
-import { FavouriteRequestT, FavouriteResponseT } from '../../../../data/users/types/user-types';
+import {
+  FavouriteRequestT,
+  FavouriteResponseT,
+} from '../../../../data/users/types/user-types';
 import { userModel } from '../../models/user-model';
 
 import type { Context } from 'koa';
 
-
-export const postFavourite = async function(ctx: Context) {
+export const postFavourite = async function (ctx: Context) {
   const userId = ctx.state.user.userId;
   const { recipeId, recipeName } = ctx.request.body as FavouriteRequestT;
 
-  if (typeof recipeId !== 'string' || !recipeId.trim() || typeof recipeName !== 'string' || ! recipeName.trim()) {
+  if (
+    typeof recipeId !== 'string' ||
+    !recipeId.trim() ||
+    typeof recipeName !== 'string' ||
+    !recipeName.trim()
+  ) {
     ctx.status = 400;
-    ctx.body = { error: 'No recipe name or ID. Please provide a valid recipe name and ID.'}
+    ctx.body = {
+      error: 'No recipe name or ID. Please provide a valid recipe name and ID.',
+    };
     return;
   }
 
@@ -31,7 +40,7 @@ export const postFavourite = async function(ctx: Context) {
             addedAt,
           },
         },
-      }
+      },
     );
 
     if (result.modifiedCount === 0) {
@@ -39,25 +48,29 @@ export const postFavourite = async function(ctx: Context) {
 
       if (!exists) {
         ctx.status = 404;
-        ctx.body = { error: 'User not found. Please provide an ID for a valid user.'};
+        ctx.body = {
+          error: 'User not found. Please provide an ID for a valid user.',
+        };
         return;
       }
 
       ctx.status = 409;
-      ctx.body = { error: 'Favourite already saved to user profile.'};
+      ctx.body = { error: 'Favourite already saved to user profile.' };
       return;
-    };
+    }
 
     ctx.status = 201;
     const body: FavouriteResponseT = {
       recipeId,
       recipeName,
-      addedAt
-    }
+      addedAt,
+    };
     ctx.body = body;
   } catch (err) {
-    console.log('Error posting favourite recipe:', err)
+    console.log('Error posting favourite recipe:', err);
     ctx.status = 500;
-    ctx.body = { error: 'Internal server error: could not post favourite recipe.'}
+    ctx.body = {
+      error: 'Internal server error: could not post favourite recipe.',
+    };
   }
-}
+};

@@ -2,7 +2,11 @@
 
 import Router from 'koa-router';
 
-import { getFavourites, postFavourite, deleteFavourite } from '../controllers/favourites/index';
+import {
+  getFavourites,
+  postFavourite,
+  deleteFavourite,
+} from '../controllers/favourites/index';
 import { requireAuth } from '../middleware/auth';
 
 const favouriteRouter = new Router();

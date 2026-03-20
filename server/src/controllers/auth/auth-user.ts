@@ -1,7 +1,10 @@
 'use strict';
 
 import { userModel } from '../../models/user-model';
-import { PartialUserT, UserAuthResponseT } from '../../../../data/users/types/user-types';
+import {
+  PartialUserT,
+  UserAuthResponseT,
+} from '../../../../data/users/types/user-types';
 
 import type { Context } from 'koa';
 
@@ -13,10 +16,10 @@ export const authUser = async function (ctx: Context) {
       .findById(userId)
       .select({ email: 1, name: 1, favouriteRecipes: 1 })
       .lean<PartialUserT>();
-    
+
     if (!user) {
       ctx.status = 404;
-      ctx.body = { error: 'User not found (session invalid).'}
+      ctx.body = { error: 'User not found (session invalid).' };
       return;
     }
 
@@ -26,12 +29,12 @@ export const authUser = async function (ctx: Context) {
       email: user.email,
       firstName: user.name.first,
       lastName: user.name.last,
-      favourites: user.favouriteRecipes
+      favourites: user.favouriteRecipes,
     };
     ctx.body = body;
   } catch (err) {
     console.log('Error fetching user:', err);
     ctx.status = 500;
-    ctx.body = { error: 'Internal server error. Could not fetch user.'}
+    ctx.body = { error: 'Internal server error. Could not fetch user.' };
   }
-}
+};

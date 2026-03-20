@@ -31,26 +31,27 @@ const FOOD_GROUPS = [
   'confectionery',
   'alcohol',
   'juice',
-  'water'
+  'water',
 ] as const;
 
-const NonSeasonalIngredientSchema = new Schema <NonSeasonalIngredientT> (
-  {
-    name: {
-      type: String,
-      required: true,
-      trim: true
-    },
-    foodGroup: {
-      type: String,
-      enum: FOOD_GROUPS,
-      required: true
-    },
-    altNames: {
-      type: [String],
-      default: undefined
-    }
-  }
-);
+const NonSeasonalIngredientSchema = new Schema<NonSeasonalIngredientT>({
+  name: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  foodGroup: {
+    type: String,
+    enum: FOOD_GROUPS,
+    required: true,
+  },
+  altNames: {
+    type: [String],
+    default: undefined,
+  },
+});
 
-export const nonSeasonalIngredientModel = model('NonSeasonalIngredient', NonSeasonalIngredientSchema);
+export const nonSeasonalIngredientModel = model(
+  'NonSeasonalIngredient',
+  NonSeasonalIngredientSchema,
+);

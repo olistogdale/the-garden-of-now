@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 export { registerUser } from './register-user';
 export { loginUser } from './login-user';

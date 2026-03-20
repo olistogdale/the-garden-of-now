@@ -1,107 +1,159 @@
-import { describe, it, expect, beforeAll, afterAll, beforeEach } from "vitest";
-import request from "supertest";
-import { MongoMemoryServer } from "mongodb-memory-server";
-import bcrypt from "bcryptjs";
+import { describe, it, expect, beforeAll, afterAll, beforeEach } from 'vitest';
+import request from 'supertest';
+import { MongoMemoryServer } from 'mongodb-memory-server';
+import bcrypt from 'bcryptjs';
 
-import { createApp } from "../../../app";
-import { connectDB, disconnectDB } from "../../../database/db";
-import { userModel } from "../../../models/user-model";
-import { extractAccessToken } from "../../../utilities/test-utils";
+import { createApp } from '../../../app';
+import { connectDB, disconnectDB } from '../../../database/db';
+import { userModel } from '../../../models/user-model';
+import { extractAccessToken } from '../../../utilities/test-utils';
 
 let mongo: MongoMemoryServer;
 
-describe("POST /register", () => {
+describe('POST /register', () => {
   beforeAll(async () => {
     mongo = await MongoMemoryServer.create({
-      binary: { version: "6.0.15" }
-    })
-    await connectDB(mongo.getUri())
-  })
+      binary: { version: '6.0.15' },
+    });
+    await connectDB(mongo.getUri());
+  });
 
   afterAll(async () => {
     await disconnectDB();
-    mongo && await mongo.stop();
-  })
+    mongo && (await mongo.stop());
+  });
 
   beforeEach(async () => {
-    await userModel.deleteMany({})
-  })
+    await userModel.deleteMany({});
+  });
 
-  async function expectError(app: any, body: any, errorCode: number, error: string) {
+  async function expectError(
+    app: any,
+    body: any,
+    errorCode: number,
+    error: string,
+  ) {
     const res = await request(app).post(`/register`).send(body);
     expect(res.status).toBe(errorCode);
     expect(res.body.error).toBe(error);
   }
 
   const mockRegistrationInfo = {
-    firstName: "Bob",
-    lastName: "Simmons",
-    email: "bob.simmons@email.com",
-    password: "TheGardenOfNow"
-  }
+    firstName: 'Bob',
+    lastName: 'Simmons',
+    email: 'bob.simmons@email.com',
+    password: 'TheGardenOfNow',
+  };
 
-  it("sets an access token in cookies, creates a new user and returns user details upon valid user registration input (201)", async () => {
+  it('sets an access token in cookies, creates a new user and returns user details upon valid user registration input (201)', async () => {
     const app = createApp().callback();
 
-    const res = await request(app).post("/register").send(mockRegistrationInfo);
+    const res = await request(app).post('/register').send(mockRegistrationInfo);
     const accessToken = extractAccessToken(res);
-    const newUser = await userModel.findOne({ email: mockRegistrationInfo.email.toLowerCase() }).lean();
+    const newUser = await userModel
+      .findOne({ email: mockRegistrationInfo.email.toLowerCase() })
+      .lean();
 
     expect(res.status).toBe(201);
-    expect(typeof res.body.userId).toBe("string");
-    expect(res.body.firstName).toBe("Bob");
-    expect(res.body.lastName).toBe("Simmons");
-    expect(res.body.email).toBe("bob.simmons@email.com");
+    expect(typeof res.body.userId).toBe('string');
+    expect(res.body.firstName).toBe('Bob');
+    expect(res.body.lastName).toBe('Simmons');
+    expect(res.body.email).toBe('bob.simmons@email.com');
 
     expect(accessToken).toBeTruthy();
     expect(/HttpOnly/i.test(accessToken)).toBe(true);
-  
+
     expect(newUser).not.toBeNull();
     expect(newUser!.passwordHash).toBeDefined();
     expect(newUser!.passwordHash).not.toBe(mockRegistrationInfo.password);
-    await expect(bcrypt.compare(mockRegistrationInfo.password, newUser!.passwordHash)).resolves.toBe(true);
-  })
-  
-  it("throws an error for invalid user name or email input (400)", async () => {
+    await expect(
+      bcrypt.compare(mockRegistrationInfo.password, newUser!.passwordHash),
+    ).resolves.toBe(true);
+  });
+
+  it('throws an error for invalid user name or email input (400)', async () => {
     const app = createApp().callback();
 
-    const errorReturned = "Invalid registration credentials. Please provide a first name, last name and email."
+    const errorReturned =
+      'Invalid registration credentials. Please provide a first name, last name and email.';
 
-    await expectError(app, { ...mockRegistrationInfo, firstName: "   " }, 400, errorReturned);
-    await expectError(app, { ...mockRegistrationInfo, firstName: 1 }, 400, errorReturned);
-    await expectError(app, { ...mockRegistrationInfo, lastName: "   " }, 400, errorReturned);
-    await expectError(app, { ...mockRegistrationInfo, lastName: 1 }, 400, errorReturned);
-    await expectError(app, { ...mockRegistrationInfo, email: "   " }, 400, errorReturned);
-    await expectError(app, { ...mockRegistrationInfo, email: 1 }, 400, errorReturned);
-  })
+    await expectError(
+      app,
+      { ...mockRegistrationInfo, firstName: '   ' },
+      400,
+      errorReturned,
+    );
+    await expectError(
+      app,
+      { ...mockRegistrationInfo, firstName: 1 },
+      400,
+      errorReturned,
+    );
+    await expectError(
+      app,
+      { ...mockRegistrationInfo, lastName: '   ' },
+      400,
+      errorReturned,
+    );
+    await expectError(
+      app,
+      { ...mockRegistrationInfo, lastName: 1 },
+      400,
+      errorReturned,
+    );
+    await expectError(
+      app,
+      { ...mockRegistrationInfo, email: '   ' },
+      400,
+      errorReturned,
+    );
+    await expectError(
+      app,
+      { ...mockRegistrationInfo, email: 1 },
+      400,
+      errorReturned,
+    );
+  });
 
-  it("throws an error for invalid password input (400)", async () => {
+  it('throws an error for invalid password input (400)', async () => {
     const app = createApp().callback();
 
-    const errorReturned = "Invalid password. Passwords must be at least 8 characters in length."
+    const errorReturned =
+      'Invalid password. Passwords must be at least 8 characters in length.';
 
-    await expectError(app, { ...mockRegistrationInfo, password: 1 }, 400, errorReturned);
-    await expectError(app, { ...mockRegistrationInfo, password: "short" }, 400, errorReturned);
-  })
+    await expectError(
+      app,
+      { ...mockRegistrationInfo, password: 1 },
+      400,
+      errorReturned,
+    );
+    await expectError(
+      app,
+      { ...mockRegistrationInfo, password: 'short' },
+      400,
+      errorReturned,
+    );
+  });
 
-  it("throws an error for email input that matches an existing user (409)", async () => {
+  it('throws an error for email input that matches an existing user (409)', async () => {
     await userModel.create({
       name: {
-        first: "Bob",
-        last: "Simmons"
+        first: 'Bob',
+        last: 'Simmons',
       },
-      email: "bob.simmons@email.com",
+      email: 'bob.simmons@email.com',
       emailVerified: true,
-      passwordHash: "passwordhash",
+      passwordHash: 'passwordhash',
       favouriteRecipes: [],
-      role: "user",
-      lastLoginAt: new Date()
-    })
-    
+      role: 'user',
+      lastLoginAt: new Date(),
+    });
+
     const app = createApp().callback();
 
-    const errorReturned = "A user already exists with this e-mail address. Please provide a different address."
+    const errorReturned =
+      'A user already exists with this e-mail address. Please provide a different address.';
 
     await expectError(app, { ...mockRegistrationInfo }, 409, errorReturned);
-  })
-})
+  });
+});

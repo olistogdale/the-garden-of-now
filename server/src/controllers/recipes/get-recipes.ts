@@ -4,7 +4,12 @@ import { recipeModel } from '../../models/recipe-model';
 import { isNonEmpty, normalize } from '../../utilities/string-utils';
 
 import type { Context } from 'koa';
-import type { RecipeCardT, RecipesRequestT, RecipesResponseT, RecipesFacetResultT } from '../../../../data/recipes/types/recipe-types';
+import type {
+  RecipeCardT,
+  RecipesRequestT,
+  RecipesResponseT,
+  RecipesFacetResultT,
+} from '../../../../data/recipes/types/recipe-types';
 
 const DEFAULT_LIMIT = 24;
 const MAX_LIMIT = 96;
@@ -14,29 +19,43 @@ export const getRecipes = async function (ctx: Context) {
 
   if (!Array.isArray(ingredients) || ingredients.length === 0) {
     ctx.status = 400;
-    ctx.body = { error: 'Invalid ingredients. Please specify a non empty array of ingredient strings.' };
+    ctx.body = {
+      error:
+        'Invalid ingredients. Please specify a non empty array of ingredient strings.',
+    };
     return;
   }
 
-  if (typeof seed !== 'string' || seed.trim().length === 0 || seed.length > 128) {
+  if (
+    typeof seed !== 'string' ||
+    seed.trim().length === 0 ||
+    seed.length > 128
+  ) {
     ctx.status = 400;
-    ctx.body = { error: 'Invalid seed. Please specify a non empty seed string 128 characters or fewer.' };
+    ctx.body = {
+      error:
+        'Invalid seed. Please specify a non empty seed string 128 characters or fewer.',
+    };
     return;
   }
 
-  const pageRaw: string | undefined = Array.isArray(ctx.query.page) ? ctx.query.page[0] : ctx.query.page;
-  const limitRaw: string | undefined = Array.isArray(ctx.query.limit) ? ctx.query.limit[0] : ctx.query.limit;
+  const pageRaw: string | undefined = Array.isArray(ctx.query.page)
+    ? ctx.query.page[0]
+    : ctx.query.page;
+  const limitRaw: string | undefined = Array.isArray(ctx.query.limit)
+    ? ctx.query.limit[0]
+    : ctx.query.limit;
 
   const page: number = Math.max(1, Number(pageRaw ?? 1) || 1);
-  const limit: number = Math.min(MAX_LIMIT, Math.max(1, Number(limitRaw ?? DEFAULT_LIMIT) || DEFAULT_LIMIT));
+  const limit: number = Math.min(
+    MAX_LIMIT,
+    Math.max(1, Number(limitRaw ?? DEFAULT_LIMIT) || DEFAULT_LIMIT),
+  );
   const skip: number = (page - 1) * limit;
 
-  const normalizedIngredients = [...new Set(
-    ingredients
-      .filter(Boolean)
-      .map(normalize)
-      .filter(isNonEmpty)
-  )];
+  const normalizedIngredients = [
+    ...new Set(ingredients.filter(Boolean).map(normalize).filter(isNonEmpty)),
+  ];
 
   const trimmedSeed = seed.trim();
 
@@ -47,43 +66,44 @@ export const getRecipes = async function (ctx: Context) {
           $expr: {
             $allElementsTrue: {
               $map: {
-                input: "$groupedIngredients",
-                as: "group",
+                input: '$groupedIngredients',
+                as: 'group',
                 in: {
                   $anyElementTrue: {
                     $map: {
-                      input: "$$group",
-                      as: "candidate",
-                      in: { $in: ["$$candidate", normalizedIngredients] }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
+                      input: '$$group',
+                      as: 'candidate',
+                      in: { $in: ['$$candidate', normalizedIngredients] },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
       },
       {
         $addFields: {
           sortKey: {
             $function: {
-              lang: "js",
-              args: [trimmedSeed, "$_id" ],
+              lang: 'js',
+              args: [trimmedSeed, '$_id'],
               body: function (seed: string, id: string) {
                 let hash = 2166136261;
-                const str = seed + ":" + id;
+                const str = seed + ':' + id;
                 for (let i = 0; i < str.length; i++) {
                   hash ^= str.charCodeAt(i);
                   hash = (hash * 16777619) >>> 0;
                 }
                 return hash;
-              }
-            }
-          }
-        }
+              },
+            },
+          },
+        },
       },
       { $sort: { sortKey: 1, _id: 1 } },
-      { $facet: {
+      {
+        $facet: {
           results: [
             { $skip: skip },
             { $limit: limit },
@@ -95,26 +115,24 @@ export const getRecipes = async function (ctx: Context) {
                 cookTime: 1,
                 totalTime: 1,
                 skillLevel: 1,
-                groupedIngredients: 1
-              }
-            }
+                groupedIngredients: 1,
+              },
+            },
           ],
-          totalCount: [
-            { $count: "count" }
-          ]
-        }
-      }
+          totalCount: [{ $count: 'count' }],
+        },
+      },
     ]);
 
     const recipes: RecipeCardT[] = data?.results ?? [];
     const totalCount: number = data?.totalCount?.[0]?.count ?? 0;
-    const totalPages: number = Math.ceil(totalCount/limit);
+    const totalPages: number = Math.ceil(totalCount / limit);
 
     ctx.status = 200;
     const body: RecipesResponseT = {
       recipes,
       totalCount,
-      totalPages
+      totalPages,
     };
     ctx.body = body;
   } catch (err) {

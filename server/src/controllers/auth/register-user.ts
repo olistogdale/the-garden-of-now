@@ -1,6 +1,6 @@
 'use strict';
 
-import bcrypt from 'bcryptjs'
+import bcrypt from 'bcryptjs';
 
 import { userModel } from '../../models/user-model';
 import { signAccessToken } from '../../utilities/jwt-utils';
@@ -8,20 +8,37 @@ import { normalize } from '../../utilities/string-utils';
 import { config } from './../../config';
 
 import type { Context } from 'koa';
-import type { UserAuthResponseT, UserRegistrationRequestT } from '../../../../data/users/types/user-types';
+import type {
+  UserAuthResponseT,
+  UserRegistrationRequestT,
+} from '../../../../data/users/types/user-types';
 
-export const registerUser = async function(ctx: Context) {
-  const { firstName, lastName, email, password } = ctx.request.body as UserRegistrationRequestT;
+export const registerUser = async function (ctx: Context) {
+  const { firstName, lastName, email, password } = ctx.request
+    .body as UserRegistrationRequestT;
 
-  if (typeof firstName !== 'string' || !firstName.trim() || typeof lastName !== 'string' || !lastName.trim() || typeof email !== 'string' || !email.trim()) {
+  if (
+    typeof firstName !== 'string' ||
+    !firstName.trim() ||
+    typeof lastName !== 'string' ||
+    !lastName.trim() ||
+    typeof email !== 'string' ||
+    !email.trim()
+  ) {
     ctx.status = 400;
-    ctx.body = { error: 'Invalid registration credentials. Please provide a first name, last name and email.'};
+    ctx.body = {
+      error:
+        'Invalid registration credentials. Please provide a first name, last name and email.',
+    };
     return;
   }
 
   if (typeof password !== 'string' || password.length < 8) {
     ctx.status = 400;
-    ctx.body = { error: 'Invalid password. Passwords must be at least 8 characters in length.'};
+    ctx.body = {
+      error:
+        'Invalid password. Passwords must be at least 8 characters in length.',
+    };
     return;
   }
 
@@ -30,11 +47,14 @@ export const registerUser = async function(ctx: Context) {
   const normalizedEmail = normalize(email);
 
   try {
-    const exists = await userModel.exists({ email: normalizedEmail});
+    const exists = await userModel.exists({ email: normalizedEmail });
 
     if (exists) {
       ctx.status = 409;
-      ctx.body = { error: 'A user already exists with this e-mail address. Please provide a different address.'};
+      ctx.body = {
+        error:
+          'A user already exists with this e-mail address. Please provide a different address.',
+      };
       return;
     }
 
@@ -44,16 +64,16 @@ export const registerUser = async function(ctx: Context) {
       name: { first: cleanFirstName, last: cleanLastName },
       email: normalizedEmail,
       passwordHash,
-      lastLoginAt: new Date()
+      lastLoginAt: new Date(),
     });
 
     const token = signAccessToken(newUser._id.toString());
 
-    ctx.cookies.set("accessToken", token, {
+    ctx.cookies.set('accessToken', token, {
       httpOnly: true,
       sameSite: config.isProd ? 'none' : 'lax',
       secure: config.isProd,
-      path: '/'
+      path: '/',
     });
 
     ctx.status = 201;
@@ -63,13 +83,15 @@ export const registerUser = async function(ctx: Context) {
       email: newUser.email,
       firstName: newUser.name.first,
       lastName: newUser.name.last,
-      favourites: newUser.favouriteRecipes
+      favourites: newUser.favouriteRecipes,
     };
-    
+
     ctx.body = body;
   } catch (err) {
     console.log('Error registering new user:', err);
     ctx.status = 500;
-    ctx.body = { error: 'Internal server error. Could not register a new user.'};
+    ctx.body = {
+      error: 'Internal server error. Could not register a new user.',
+    };
   }
-}
+};

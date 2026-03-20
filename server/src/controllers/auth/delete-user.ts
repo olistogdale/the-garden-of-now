@@ -2,7 +2,7 @@ import { userModel } from '../../models/user-model';
 
 import type { Context } from 'koa';
 
-export const deleteUser = async function(ctx: Context) {
+export const deleteUser = async function (ctx: Context) {
   const userId = ctx.state.user.userId;
 
   try {
@@ -28,4 +28,4 @@ export const deleteUser = async function(ctx: Context) {
     ctx.status = 500;
     ctx.body = { error: 'Internal server error. Could not delete user.' };
   }
-}
+};

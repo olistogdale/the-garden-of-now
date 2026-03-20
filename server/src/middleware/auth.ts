@@ -1,13 +1,18 @@
-import { verifyAccessToken } from "../utilities/jwt-utils";
+import { verifyAccessToken } from '../utilities/jwt-utils';
 
-import type { Middleware, Context, Next } from "koa";
+import type { Middleware, Context, Next } from 'koa';
 
-export const requireAuth: Middleware = async function(ctx: Context, next: Next) {
-  const token = ctx.cookies.get("accessToken");
+export const requireAuth: Middleware = async function (
+  ctx: Context,
+  next: Next,
+) {
+  const token = ctx.cookies.get('accessToken');
 
   if (!token) {
     ctx.status = 401;
-    ctx.body = { error: 'Not authenticated. Please provide a valid access token.'};
+    ctx.body = {
+      error: 'Not authenticated. Please provide a valid access token.',
+    };
     return;
   }
 
@@ -17,14 +22,18 @@ export const requireAuth: Middleware = async function(ctx: Context, next: Next) 
 
     if (!userId || typeof userId !== 'string') {
       ctx.status = 401;
-      ctx.body = { error: 'Invalid token. Please provide a valid access token.'};
-      return
+      ctx.body = {
+        error: 'Invalid token. Please provide a valid access token.',
+      };
+      return;
     }
 
     ctx.state.user = { userId };
     await next();
   } catch (err) {
     ctx.status = 401;
-    ctx.body = { error: 'Invalid or expired token. Please provide a valid access token.'}
+    ctx.body = {
+      error: 'Invalid or expired token. Please provide a valid access token.',
+    };
   }
-}
+};

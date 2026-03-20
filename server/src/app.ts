@@ -13,10 +13,12 @@ export function createApp() {
   const app = new Koa();
   app.proxy = config.isProd;
 
-  app.use(cors({
-    origin: config.clientOrigin,
-    credentials: true
-  }));
+  app.use(
+    cors({
+      origin: config.clientOrigin,
+      credentials: true,
+    }),
+  );
   app.use(bodyParser());
 
   app.use(authRouter.routes());
