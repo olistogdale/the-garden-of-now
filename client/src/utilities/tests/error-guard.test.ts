@@ -2,10 +2,10 @@ import { describe, it, expect } from "vitest";
 
 import { isErrorWithStatus } from "../error-guard";
 
-import type { ErrorWithStatus } from "../../types/auth-types";
+import type { ErrorWithStatusT } from "../../types/auth-types";
 
 const error = new Error("Something's wrong");
-const errorWithStatus = new Error("Something's wrong") as ErrorWithStatus;
+const errorWithStatus = new Error("Something's wrong") as ErrorWithStatusT;
 errorWithStatus.status = 400
 const errorWithFalseStatus = new Error("Something's wrong") as Error & { status?: string };
 errorWithFalseStatus.status = 'four hundred';

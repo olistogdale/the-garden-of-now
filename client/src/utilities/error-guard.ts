@@ -1,6 +1,6 @@
-import type { ErrorWithStatus } from "../types/auth-types";
+import type { ErrorWithStatusT } from "../types/auth-types";
 
-export function isErrorWithStatus(err: unknown): err is ErrorWithStatus {
+export function isErrorWithStatus(err: unknown): err is ErrorWithStatusT {
   return (
     err instanceof Error &&
     'status' in err &&

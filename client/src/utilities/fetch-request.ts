@@ -1,4 +1,4 @@
-import type { ErrorWithStatus } from "../types/auth-types";
+import type { ErrorWithStatusT } from "../types/auth-types";
 
 export async function fetchRequest <T> (
   url: string,
@@ -27,7 +27,7 @@ export async function fetchRequest <T> (
       //
     }
 
-    const newError = new Error(message) as ErrorWithStatus;
+    const newError = new Error(message) as ErrorWithStatusT;
     newError.status = res.status;
     newError.data = data;
     throw newError;
