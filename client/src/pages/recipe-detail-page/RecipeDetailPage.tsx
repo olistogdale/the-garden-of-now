@@ -54,8 +54,6 @@ export function RecipeDetailPage() {
   const isPending = recipeStatus === 'idle' || recipeStatus === 'loading';
   const showLoading = useStableLoading(isPending);
 
-  if (!id) return <StatusPanel mode="error" message={"Invalid recipe link."} />
-
   if (recipeStatus === 'error') return <StatusPanel mode="error" message={`Couldn’t load recipe${recipeError ? `: ${recipeError}` : '.'}`} />
 
   if (showLoading) return <StatusPanel mode="loading" message="Loading recipe…" />;
