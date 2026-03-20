@@ -98,15 +98,18 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     try {
       await logoutUser();
-
-      setAuth(null);
-      setAuthStatus('success');
     } catch (err) {
       setAuthStatus('error');
       setAuthError(err instanceof Error? err.message : 'Unknown error');
       throw err;
     }
   }, [])
+
+  const clearAuth = useCallback(() => {
+    setAuth(null);
+    setAuthStatus('success');
+    setAuthError(null);
+  }, []);
 
   const remove = useCallback(async () => {
     setAuthStatus('loading');
@@ -179,8 +182,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   
   
   const value = useMemo(
-    () => ({ auth, authStatus, authError, register, login, logout, remove, isInFavourites, toggleFavourite }),
-    [auth, authStatus, authError, register, login, logout, remove, isInFavourites, toggleFavourite]
+    () => ({ auth, authStatus, authError, register, login, logout, clearAuth, remove, isInFavourites, toggleFavourite }),
+    [auth, authStatus, authError, register, login, logout, clearAuth, remove, isInFavourites, toggleFavourite]
   );
 
   return (

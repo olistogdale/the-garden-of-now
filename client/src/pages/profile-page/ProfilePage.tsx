@@ -11,9 +11,9 @@ import { Modal } from "../../components/modal/Modal";
 import type { StatusT } from '../../types/status-types';
 
 
-export function ProfilePage () { 
+export function ProfilePage () {
   const navigate = useNavigate();
-  const { logout, auth } = useAuth();
+  const { logout, clearAuth, auth } = useAuth();
 
   const [logoutStatus, setLogoutStatus] = useState <StatusT> ('idle');
   const [logoutError, setLogoutError] = useState <string | null> (null);
@@ -27,6 +27,9 @@ export function ProfilePage () {
       
       await logout();
       navigate('/', { replace: true });
+      window.setTimeout(() => {
+        clearAuth()
+      }, 0);
     } catch (err) {
       setLogoutStatus('error');
       setLogoutError(err instanceof Error? err.message : 'Unknown error');
