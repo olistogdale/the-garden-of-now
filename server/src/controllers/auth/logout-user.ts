@@ -1,16 +1,19 @@
 'use strict';
 
+import { config } from '../../config';
+
 import type { Context } from 'koa';
 
 export const logoutUser = async function (ctx: Context) {
   try {
-    ctx.cookies.set('accessToken', '', {
+    ctx.cookies.set(config.cookieName, '', {
       httpOnly: true,
-      sameSite: 'lax',
-      secure: false,
+      sameSite: config.cookieSameSite,
+      secure: config.cookieSecure,
       path: '/',
       expires: new Date(0),
     });
+
     ctx.status = 204;
   } catch (err) {
     console.log('Error logging user out:', err);

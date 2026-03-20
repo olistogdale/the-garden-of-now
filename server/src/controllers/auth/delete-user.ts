@@ -1,4 +1,5 @@
 import { userModel } from '../../models/user-model';
+import { config } from '../../config';
 
 import type { Context } from 'koa';
 
@@ -14,10 +15,10 @@ export const deleteUser = async function (ctx: Context) {
       return;
     }
 
-    ctx.cookies.set('accessToken', '', {
+    ctx.cookies.set(config.cookieName, '', {
       httpOnly: true,
-      sameSite: 'lax',
-      secure: false,
+      sameSite: config.cookieSameSite,
+      secure: config.cookieSecure,
       path: '/',
       expires: new Date(0),
     });

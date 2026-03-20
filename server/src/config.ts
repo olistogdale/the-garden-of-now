@@ -19,6 +19,8 @@ function parsePort(value: string): number {
 const env = process.env.NODE_ENV ?? 'development';
 const isProd = env === 'production';
 
+const cookieSameSite: 'none' | 'lax' = isProd ? 'none' : 'lax';
+
 export const config = {
   env,
   isProd,
@@ -27,4 +29,7 @@ export const config = {
   jwtSecret: requireEnv('JWT_SECRET'),
   jwtExpiration: process.env.JWT_EXPIRATION ?? '1h',
   clientOrigin: requireEnv('CLIENT_ORIGIN'),
+  cookieName: 'accessToken',
+  cookieSameSite,
+  cookieSecure: isProd
 };

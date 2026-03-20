@@ -69,10 +69,10 @@ export const registerUser = async function (ctx: Context) {
 
     const token = signAccessToken(newUser._id.toString());
 
-    ctx.cookies.set('accessToken', token, {
+    ctx.cookies.set(config.cookieName, token, {
       httpOnly: true,
-      sameSite: config.isProd ? 'none' : 'lax',
-      secure: config.isProd,
+      sameSite: config.cookieSameSite,
+      secure: config.cookieSecure,
       path: '/',
     });
 

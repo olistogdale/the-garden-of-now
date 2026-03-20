@@ -59,12 +59,13 @@ export const loginUser = async function (ctx: Context) {
 
     const token = signAccessToken(user._id.toString());
 
-    ctx.cookies.set('accessToken', token, {
+    ctx.cookies.set(config.cookieName, token, {
       httpOnly: true,
-      sameSite: config.isProd ? 'none' : 'lax',
-      secure: config.isProd,
+      sameSite: config.cookieSameSite,
+      secure: config.cookieSecure,
       path: '/',
     });
+
     ctx.status = 200;
     const body: UserAuthResponseT = {
       userId: user._id.toString(),
