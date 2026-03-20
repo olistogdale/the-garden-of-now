@@ -1,5 +1,6 @@
 const KEY = 'garden_of_now_session_key';
-const cryptoRef = typeof globalThis.crypto === 'undefined' ? null : globalThis.crypto;
+const cryptoRef =
+  typeof globalThis.crypto === 'undefined' ? null : globalThis.crypto;
 
 function generateKey(): string {
   if (cryptoRef?.randomUUID) {

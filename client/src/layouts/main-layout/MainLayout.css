@@ -1,12 +1,14 @@
- .main-layout__header {
+.main-layout__header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: var(--header-height); 
+  height: var(--header-height);
   z-index: 50;
 }
 
 .main-layout__main {
-  min-height: calc(100dvh - var(--header-height)); /* remove this once page layout is defined */
+  min-height: calc(
+    100dvh - var(--header-height)
+  ); /* remove this once page layout is defined */
 }

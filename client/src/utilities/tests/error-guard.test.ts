@@ -1,26 +1,30 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect } from 'vitest';
 
-import { isErrorWithStatus } from "../error-guard";
+import { isErrorWithStatus } from '../error-guard';
 
-import type { ErrorWithStatusT } from "../../types/auth-types";
+import type { ErrorWithStatusT } from '../../types/auth-types';
 
 const error = new Error("Something's wrong");
 const errorWithStatus = new Error("Something's wrong") as ErrorWithStatusT;
-errorWithStatus.status = 400
-const errorWithFalseStatus = new Error("Something's wrong") as Error & { status?: string };
+errorWithStatus.status = 400;
+const errorWithFalseStatus = new Error("Something's wrong") as Error & {
+  status?: string;
+};
 errorWithFalseStatus.status = 'four hundred';
-const errorWithNaNStatus = new Error("Something's wrong") as Error & { status?: unknown };
+const errorWithNaNStatus = new Error("Something's wrong") as Error & {
+  status?: unknown;
+};
 errorWithNaNStatus.status = NaN;
-const nonError = { key: "value", status: 400 }
+const nonError = { key: 'value', status: 400 };
 
-describe( isErrorWithStatus, () => {
+describe(isErrorWithStatus, () => {
   it.each([
     { input: errorWithStatus, output: true },
-    { input: error, output: false},
-    { input: errorWithFalseStatus, output: false},
-    { input: errorWithNaNStatus, output: false},
-    { input: nonError, output: false }
-  ])('returns "$output" for "$input"', ({input, output}) => {
-    expect(isErrorWithStatus(input)).toBe(output)
-  })
-})
+    { input: error, output: false },
+    { input: errorWithFalseStatus, output: false },
+    { input: errorWithNaNStatus, output: false },
+    { input: nonError, output: false },
+  ])('returns "$output" for "$input"', ({ input, output }) => {
+    expect(isErrorWithStatus(input)).toBe(output);
+  });
+});

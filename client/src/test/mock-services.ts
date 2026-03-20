@@ -1,11 +1,20 @@
-import { vi } from "vitest";
+import { vi } from 'vitest';
 
-import { loginUser, registerUser, authUser, logoutUser, deleteUser } from "../services/auth-service";
-import { getFavourites, postFavourite, deleteFavourite } from "../services/favourites-service";
-import { getIngredients } from "../services/ingredients-service";
-import { patchPassword } from "../services/profile-service";
-import { getRecipes, getRecipeByID } from "../services/recipes-service";
-
+import {
+  loginUser,
+  registerUser,
+  authUser,
+  logoutUser,
+  deleteUser,
+} from '../services/auth-service';
+import {
+  getFavourites,
+  postFavourite,
+  deleteFavourite,
+} from '../services/favourites-service';
+import { getIngredients } from '../services/ingredients-service';
+import { patchPassword } from '../services/profile-service';
+import { getRecipes, getRecipeByID } from '../services/recipes-service';
 
 vi.mock('../services/auth-service');
 vi.mock('../services/favourites-service');
@@ -23,7 +32,7 @@ export const mockGetFavourites = vi.mocked(getFavourites);
 export const mockPostFavourite = vi.mocked(postFavourite);
 export const mockDeleteFavourite = vi.mocked(deleteFavourite);
 
-export const mockGetIngredients = vi.mocked(getIngredients)
+export const mockGetIngredients = vi.mocked(getIngredients);
 
 export const mockPatchPassword = vi.mocked(patchPassword);
 

@@ -1,5 +1,5 @@
 .scroll-down-button {
-  position:absolute;
+  position: absolute;
   z-index: 10;
   top: 91dvh;
   left: calc(50dvw - 1.5rem);

@@ -7,12 +7,12 @@
 }
 
 .navbar__navlinks--left {
- display: flex;
- flex-direction: row;
- justify-content: start;
- align-items: center;
- padding: var(--small-gap) var(--medium-gap);
- gap: var(--small-gap);
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  padding: var(--small-gap) var(--medium-gap);
+  gap: var(--small-gap);
 }
 
 .navbar__brand {
@@ -81,7 +81,7 @@
   .navbar__brand br {
     display: none;
   }
-  
+
   .navbar__navlinks--left {
     padding: var(--medium-gap) var(--large-gap);
     gap: var(--medium-gap);
@@ -103,13 +103,13 @@
     padding: var(--medium-gap) var(--xlarge-gap);
     gap: var(--medium-gap);
   }
-  
+
   .navlink {
     width: auto;
     height: auto;
     padding: var(--small-gap) var(--medium-gap);
   }
-  
+
   .navlink-text {
     display: inline-block;
   }
@@ -118,4 +118,3 @@
     display: none;
   }
 }
-

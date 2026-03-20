@@ -10,7 +10,7 @@
   inset: 0;
   pointer-events: none;
 
-  content: "OUT OF SEASON";
+  content: 'OUT OF SEASON';
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 1.5rem;

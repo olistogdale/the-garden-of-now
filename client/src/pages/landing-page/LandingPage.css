@@ -97,7 +97,7 @@
 .landing__features {
   position: relative;
   display: grid;
-  place-items:center;
+  place-items: center;
   background-color: var(--background-colour);
   overflow: hidden;
   isolation: isolate;
@@ -161,7 +161,7 @@
   .hero-subtitle {
     font-size: 1.25rem;
   }
-  
+
   .feature {
     display: grid;
     grid-template-columns: 5fr 6fr;
@@ -205,10 +205,10 @@
     padding: var(--large-gap);
     border-radius: var(--xlarge-gap);
   }
-  
+
   .feature__img {
     max-height: 50dvh;
-    border-radius: var(--medium-gap)
+    border-radius: var(--medium-gap);
   }
 
   .feature-header-blank {

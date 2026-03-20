@@ -1,4 +1,4 @@
-import "./LoadingSpinner.css";
+import './LoadingSpinner.css';
 
 type Props = {
   label?: string;
@@ -7,11 +7,11 @@ type Props = {
 };
 
 export function LoadingSpinner({
-  label = "the garden of now • the garden of now • ",
+  label = 'the garden of now • the garden of now • ',
   size = 150,
   duration = 500,
 }: Props) {
-  const radius = 33.5;              
+  const radius = 33.5;
   const viewBoxSize = 120;
 
   return (
@@ -19,8 +19,8 @@ export function LoadingSpinner({
       className="loading-spinner"
       style={
         {
-          "--spinner-size": `${size}px`,
-          "--spinner-duration": `${duration}ms`,
+          '--spinner-size': `${size}px`,
+          '--spinner-duration': `${duration}ms`,
         } as React.CSSProperties
       }
       role="status"

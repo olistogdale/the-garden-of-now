@@ -51,7 +51,8 @@
   border-color: var(--accent-colour);
 }
 
-.password-form, .confirm-delete {
+.password-form,
+.confirm-delete {
   display: grid;
   gap: var(--medium-gap);
 }
@@ -76,7 +77,8 @@
   border: 2px solid var(--accent-colour);
 }
 
-.password-form__button, .confirm-delete__button {
+.password-form__button,
+.confirm-delete__button {
   position: relative;
   display: grid;
   place-items: center;
@@ -87,18 +89,20 @@
   font-weight: 800;
   font-size: 1rem;
   cursor: pointer;
-  
+
   border: 1px solid var(--secondary-colour);
   color: var(--background-colour);
   background-color: var(--secondary-colour);
 }
 
-.password-form__button:hover, .confirm-delete__button:hover{
+.password-form__button:hover,
+.confirm-delete__button:hover {
   background-color: var(--secondary-light-colour);
   border: 1px solid var(--secondary-light-colour);
 }
 
-.password-form__button:active, .confirm-delete__button:active {
+.password-form__button:active,
+.confirm-delete__button:active {
   background-color: var(--accent-colour);
   border: 1px solid var(--accent-colour);
 }
@@ -108,7 +112,8 @@
   opacity: 0.25;
 }
 
-.password-form__spinner, .confirm-delete__spinner {
+.password-form__spinner,
+.confirm-delete__spinner {
   position: absolute;
   width: 1.15rem;
   height: 1.15rem;

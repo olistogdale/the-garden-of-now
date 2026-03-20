@@ -58,7 +58,7 @@
   flex-direction: column;
   justify-content: space-between;
   gap: var(--medium-gap);
-  
+
   border: none;
 }
 
@@ -93,7 +93,7 @@
   font-weight: 800;
   font-size: 1rem;
   cursor: pointer;
-  
+
   border: 1px solid var(--secondary-colour);
   color: var(--background-colour);
   background-color: var(--secondary-colour);
@@ -167,10 +167,10 @@
     overflow: hidden;
     isolation: isolate;
   }
-  
+
   .auth-page__background {
     display: block;
-    position:absolute;
+    position: absolute;
   }
 
   .back-button--page {

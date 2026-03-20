@@ -16,7 +16,14 @@
 }
 
 .loading-spinner__text {
-  font: 800 1rem/1 Rubik, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font:
+    800 1rem/1 Rubik,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   fill: currentColor;

@@ -38,13 +38,15 @@
   cursor: pointer;
 }
 
-.user__logout, .user__delete-user {
+.user__logout,
+.user__delete-user {
   border: 1px solid var(--secondary-colour);
   color: var(--background-colour);
   background-color: var(--secondary-colour);
 }
 
-.user__logout:hover, .user__delete-user:hover {
+.user__logout:hover,
+.user__delete-user:hover {
   border-color: var(--secondary-light-colour);
   background-color: var(--secondary-light-colour);
 }
@@ -70,7 +72,7 @@
   .user__dashboard {
     max-width: 820px;
   }
-  
+
   .user__controls {
     flex-direction: row;
   }
@@ -79,4 +81,3 @@
     width: 50%;
   }
 }
-

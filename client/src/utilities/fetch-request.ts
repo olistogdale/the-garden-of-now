@@ -1,12 +1,12 @@
-import type { ErrorWithStatusT } from "../types/auth-types";
+import type { ErrorWithStatusT } from '../types/auth-types';
 
-export async function fetchRequest <T> (
+export async function fetchRequest<T>(
   url: string,
-  options: RequestInit = {}
+  options: RequestInit = {},
 ): Promise<T> {
   const res = await fetch(url, {
     ...options,
-    credentials: 'include'
+    credentials: 'include',
   });
 
   if (!res.ok) {
@@ -21,7 +21,7 @@ export async function fetchRequest <T> (
         'error' in data &&
         typeof (data as { error?: unknown }).error === 'string'
       ) {
-        message = String((data).error);
+        message = String(data.error);
       }
     } catch {
       //

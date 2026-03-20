@@ -9,33 +9,39 @@ import { BackButton } from '../../components/back-button/BackButton';
 
 import type { LoginFormStateT } from '../../types/auth-types';
 import type { StatusT } from '../../types/status-types';
-import type { SubmitEvent } from 'react'
+import type { SubmitEvent } from 'react';
 
 export function LoginPage() {
   const navigate = useNavigate();
   const { login } = useAuth();
 
-  const [form, setForm] = useState<LoginFormStateT>({email: '', password: ''});
+  const [form, setForm] = useState<LoginFormStateT>({
+    email: '',
+    password: '',
+  });
   const [formStatus, setFormStatus] = useState<StatusT>('idle');
   const [formError, setFormError] = useState<string | null>(null);
 
   const isLoading = formStatus === 'loading';
   const isInvalid = !form.email.trim().length || !form.password.length;
   const canSubmitForm = !isInvalid && !isLoading;
-  
-  const handleLogin = async function(event: SubmitEvent) {
-    event.preventDefault()
+
+  const handleLogin = async function (event: SubmitEvent) {
+    event.preventDefault();
 
     if (!canSubmitForm) return;
 
     const controller = new AbortController();
-    const timeoutId = window.setTimeout(() => controller.abort(), 10000)
+    const timeoutId = window.setTimeout(() => controller.abort(), 10000);
 
     try {
       setFormStatus('loading');
       setFormError(null);
 
-      await login({ email: form.email, password: form.password }, controller.signal);
+      await login(
+        { email: form.email, password: form.password },
+        controller.signal,
+      );
       setFormStatus('success');
       navigate('/', { replace: true });
     } catch (err) {
@@ -46,27 +52,27 @@ export function LoginPage() {
       }
 
       setFormStatus('error');
-      setFormError(err instanceof Error? err.message : 'Unknown error')
+      setFormError(err instanceof Error ? err.message : 'Unknown error');
     } finally {
       clearTimeout(timeoutId);
-    } 
-  }
- 
+    }
+  };
+
   return (
     <div className="auth-page login-page">
       <div className="auth-page__background">
-         <BackgroundScroll />
+        <BackgroundScroll />
       </div>
 
       <div className="back-button--page">
         <BackButton />
       </div>
-      
+
       <div className="auth-page__form auth-page__form--login">
         <div className="back-button--form">
           <BackButton />
         </div>
-        
+
         <section className="auth-form__header">
           <h2 className="auth-form__title">LOG IN</h2>
           <p className="auth-form__subtitle">Welcome back.</p>
@@ -86,7 +92,9 @@ export function LoginPage() {
               type="email"
               autoComplete="email"
               value={form.email}
-              onChange={(event) => setForm((form) => ({ ...form, email: event.target.value }))}
+              onChange={(event) =>
+                setForm((form) => ({ ...form, email: event.target.value }))
+              }
               required
             />
           </label>
@@ -98,7 +106,9 @@ export function LoginPage() {
               type="password"
               autoComplete="current-password"
               value={form.password}
-              onChange={(event) => setForm((form) => ({ ...form, password: event.target.value }))}
+              onChange={(event) =>
+                setForm((form) => ({ ...form, password: event.target.value }))
+              }
               required
             />
           </label>
@@ -119,5 +129,5 @@ export function LoginPage() {
         </form>
       </div>
     </div>
-  )
+  );
 }

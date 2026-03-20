@@ -1,24 +1,24 @@
-import {
-  useState,
-  useEffect,
-  useMemo
-} from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
 import { getIngredients } from '../services/ingredients-service';
 import { IngredientsContext } from '../context/ingredients-context';
 
-import type { StatusT } from '../types/status-types'
+import type { StatusT } from '../types/status-types';
 
-export function IngredientsProvider({ children }: { children: React.ReactNode }) {
-  const [ingredients, setIngredients] = useState <string[] | null> (null);
-  const [ingredientsStatus, setStatus] = useState <StatusT> ('idle');
-  const [ingredientsError, setError] = useState <string | null> (null);
+export function IngredientsProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const [ingredients, setIngredients] = useState<string[] | null>(null);
+  const [ingredientsStatus, setStatus] = useState<StatusT>('idle');
+  const [ingredientsError, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const controller = new AbortController();
     const timeoutId = window.setTimeout(() => controller.abort(), 10000);
-    
-    (async function() {
+
+    (async function () {
       setStatus('loading');
       setError(null);
 
@@ -33,17 +33,17 @@ export function IngredientsProvider({ children }: { children: React.ReactNode })
       } finally {
         clearTimeout(timeoutId);
       }
-    })()
+    })();
 
     return () => {
       clearTimeout(timeoutId);
       controller.abort();
-    }
+    };
   }, []);
 
   const value = useMemo(
     () => ({ ingredients, ingredientsStatus, ingredientsError }),
-    [ingredients, ingredientsStatus, ingredientsError]
+    [ingredients, ingredientsStatus, ingredientsError],
   );
 
   return (

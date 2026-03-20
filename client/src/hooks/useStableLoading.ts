@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
 type Options = {
   delayMs?: number;
@@ -7,7 +7,7 @@ type Options = {
 
 export function useStableLoading(
   isLoading: boolean,
-  { delayMs = 0, minShowMs = 500 }: Options = {}
+  { delayMs = 0, minShowMs = 500 }: Options = {},
 ) {
   const [show, setShow] = useState(false);
 

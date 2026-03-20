@@ -1,13 +1,16 @@
 import './FavouriteToggle.css';
 
-import { useAuth } from "../../hooks/useAuth";
+import { useAuth } from '../../hooks/useAuth';
 import { Minus, Plus } from 'lucide-react';
 
-import type { RecipeCardT, RecipeT } from "../../../../data/recipes/types/recipe-types";
+import type {
+  RecipeCardT,
+  RecipeT,
+} from '../../../../data/recipes/types/recipe-types';
 
 export type Props = {
-  recipe: RecipeCardT | RecipeT
-} & React.HTMLAttributes<HTMLDivElement>
+  recipe: RecipeCardT | RecipeT;
+} & React.HTMLAttributes<HTMLDivElement>;
 
 export function FavouriteToggle({ recipe }: Props) {
   const { auth, isInFavourites, toggleFavourite } = useAuth();
@@ -19,14 +22,17 @@ export function FavouriteToggle({ recipe }: Props) {
 
   return (
     <div className="favourite-toggle">
-      <button type="button" className="favourite-toggle__button" onClick={(event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        toggleFavourite(recipeId, recipeName)}
-      }
+      <button
+        type="button"
+        className="favourite-toggle__button"
+        onClick={(event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          toggleFavourite(recipeId, recipeName);
+        }}
       >
-          {isInFavourites(recipeId) ? <Minus /> : <Plus /> }
+        {isInFavourites(recipeId) ? <Minus /> : <Plus />}
       </button>
     </div>
-  )
+  );
 }

@@ -14,51 +14,61 @@ import { useStableLoading } from '../../hooks/useStableLoading';
 import type { RecipeT } from '../../../../data/recipes/types/recipe-types';
 import type { StatusT } from '../../types/status-types';
 
-
 export function RecipeDetailPage() {
-  const { id } = useParams <{ id: string }>();
+  const { id } = useParams<{ id: string }>();
 
-  const [recipe, setRecipe] = useState <RecipeT | null > (null);
-  const [recipeStatus, setRecipeStatus] = useState <StatusT> ('idle');
-  const [recipeError, setRecipeError] = useState <string | null> (null)
+  const [recipe, setRecipe] = useState<RecipeT | null>(null);
+  const [recipeStatus, setRecipeStatus] = useState<StatusT>('idle');
+  const [recipeError, setRecipeError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!id) return;
-    
+
     const controller = new AbortController();
     const timeoutID = window.setTimeout(() => controller.abort(), 10000);
 
-    (async function() {
+    (async function () {
       try {
         setRecipeStatus('loading');
-        setRecipeError(null)
+        setRecipeError(null);
 
-        const {recipe} = await getRecipeByID(id, controller.signal);
+        const { recipe } = await getRecipeByID(id, controller.signal);
 
         setRecipe(recipe);
         setRecipeStatus('success');
       } catch (err) {
-        if ((err instanceof DOMException || err instanceof Error) && err.name === 'AbortError') return;
+        if (
+          (err instanceof DOMException || err instanceof Error) &&
+          err.name === 'AbortError'
+        )
+          return;
 
         setRecipeStatus('error');
-        setRecipeError(err instanceof Error? err.message : 'Unknown error')
+        setRecipeError(err instanceof Error ? err.message : 'Unknown error');
       }
-    })()
+    })();
 
     return () => {
       clearTimeout(timeoutID);
       controller.abort();
-    }
-  }, [id])
+    };
+  }, [id]);
 
   const isPending = recipeStatus === 'idle' || recipeStatus === 'loading';
   const showLoading = useStableLoading(isPending);
 
-  if (recipeStatus === 'error') return <StatusPanel mode="error" message={`Couldn’t load recipe${recipeError ? `: ${recipeError}` : '.'}`} />
+  if (recipeStatus === 'error')
+    return (
+      <StatusPanel
+        mode="error"
+        message={`Couldn’t load recipe${recipeError ? `: ${recipeError}` : '.'}`}
+      />
+    );
 
-  if (showLoading) return <StatusPanel mode="loading" message="Loading recipe…" />;
+  if (showLoading)
+    return <StatusPanel mode="loading" message="Loading recipe…" />;
 
-  if (!recipe) return <StatusPanel mode="error" message="Recipe not found." />
+  if (!recipe) return <StatusPanel mode="error" message="Recipe not found." />;
 
   const img = parseImage(recipe.image);
   const name = recipe.name;
@@ -77,35 +87,51 @@ export function RecipeDetailPage() {
 
   return (
     <div className="recipe-detail">
-      <section className="recipe-detail__hero" aria-label="Recipe image & information">
-        <div className="recipe-detail__header-blank"/>
-        
+      <section
+        className="recipe-detail__hero"
+        aria-label="Recipe image & information"
+      >
+        <div className="recipe-detail__header-blank" />
+
         <div className="recipe-detail__info-container">
-          {img
-            ? <img
-                className="recipe-detail__img"
-                src={img.url}
-                alt={name}
-                loading="eager"
-              />
-            : <div className="recipe-detail__img-fallback" aria-hidden="true" />
-          }
-          
+          {img ? (
+            <img
+              className="recipe-detail__img"
+              src={img.url}
+              alt={name}
+              loading="eager"
+            />
+          ) : (
+            <div className="recipe-detail__img-fallback" aria-hidden="true" />
+          )}
+
           <div className="recipe-detail__info">
             <h1 className="recipe-detail__title">{name.toUpperCase()}</h1>
             <p className="recipe-detail__description">{description}</p>
             {(prepTime || cookTime || totalTime) && (
               <div className="recipe-detail__meta">
-                {prepTime && <span className="pill pill-time">Prep: {prepTimeString}</span>}
-                {cookTime && <span className="pill pill-time">Cook: {cookTimeString} </span>}
-                {totalTime && <span className="pill pill-time--total">Total: {totalTimeString} </span>}
+                {prepTime && (
+                  <span className="pill pill-time">Prep: {prepTimeString}</span>
+                )}
+                {cookTime && (
+                  <span className="pill pill-time">
+                    Cook: {cookTimeString}{' '}
+                  </span>
+                )}
+                {totalTime && (
+                  <span className="pill pill-time--total">
+                    Total: {totalTimeString}{' '}
+                  </span>
+                )}
               </div>
             )}
             {(cuisine || skill || servings) && (
               <div className="recipe-detail__meta">
                 {skill && <span className="pill pill-info">{skill}</span>}
                 {servings && <span className="pill pill-info">{servings}</span>}
-                {cuisine && <span className="pill pill-info--cuisine">{cuisine}</span>}              
+                {cuisine && (
+                  <span className="pill pill-info--cuisine">{cuisine}</span>
+                )}
               </div>
             )}
           </div>

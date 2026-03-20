@@ -1,4 +1,4 @@
-import type { ImageDataT } from "../../../data/recipes/types/recipe-types";
+import type { ImageDataT } from '../../../data/recipes/types/recipe-types';
 
 export function parseImage(images: ImageDataT[]): ImageDataT | null {
   if (!images || images.length === 0) return null;

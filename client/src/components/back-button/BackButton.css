@@ -6,7 +6,7 @@
   height: 2.75rem;
   padding: var(--small-gap);
   border-radius: var(--medium-gap);
-  
+
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 1rem;
@@ -20,7 +20,7 @@
   display: none;
 }
 
-.back-button__icon{
+.back-button__icon {
   display: block;
 }
 
@@ -32,7 +32,7 @@
 .back-button:active {
   color: var(--secondary-colour);
   background-color: var(--accent-colour);
-  border-color: var(--accent-colour)
+  border-color: var(--accent-colour);
 }
 
 @media (min-width: 1025px) {
@@ -41,7 +41,7 @@
     height: auto;
     padding: var(--small-gap) var(--medium-gap);
   }
-  
+
   .back-button .back-button__text {
     display: inline-block;
   }

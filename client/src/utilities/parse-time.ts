@@ -1,12 +1,13 @@
-import type { RecipeCardT } from "../../../data/recipes/types/recipe-types";
+import type { RecipeCardT } from '../../../data/recipes/types/recipe-types';
 
 type DurationData = {
-  daysNum: number,
-  hoursNum: number,
-  minsNum: number
-}
+  daysNum: number;
+  hoursNum: number;
+  minsNum: number;
+};
 
-const DURATION_RE = /^P(?:(?<days>\d+)D)?T(?:(?<hours>\d+)H)?(?:(?<mins>\d+)M)?$/
+const DURATION_RE =
+  /^P(?:(?<days>\d+)D)?T(?:(?<hours>\d+)H)?(?:(?<mins>\d+)M)?$/;
 
 export function parseDuration(value?: string): DurationData | null {
   if (!value) return null;
@@ -16,18 +17,14 @@ export function parseDuration(value?: string): DurationData | null {
 
   const match = str.match(DURATION_RE);
 
-  if (match?.groups && match[0] !== "PT") {
-    const {
-      days = "0",
-      hours = "0",
-      mins = "0"
-    } = match.groups;
-    
+  if (match?.groups && match[0] !== 'PT') {
+    const { days = '0', hours = '0', mins = '0' } = match.groups;
+
     return {
       daysNum: Number(days),
       hoursNum: Number(hours),
-      minsNum: Number(mins)
-    }
+      minsNum: Number(mins),
+    };
   } else {
     return null;
   }
@@ -51,7 +48,7 @@ export function parseTotalDuration(recipe: RecipeCardT): DurationData | null {
 
   if (hoursNum >= 24) {
     daysNum += Math.floor(hoursNum / 24);
-    hoursNum %= 24
+    hoursNum %= 24;
   }
 
   if (daysNum === 0 && hoursNum === 0 && minsNum === 0) return null;
@@ -59,13 +56,15 @@ export function parseTotalDuration(recipe: RecipeCardT): DurationData | null {
   return {
     daysNum,
     hoursNum,
-    minsNum
-  }
+    minsNum,
+  };
 }
 
-export function durationToString(duration?: DurationData | null): string | null {
+export function durationToString(
+  duration?: DurationData | null,
+): string | null {
   if (!duration) return null;
-  
+
   const units: string[] = [];
   const days = duration.daysNum;
   const hours = duration.hoursNum;
@@ -77,5 +76,5 @@ export function durationToString(duration?: DurationData | null): string | null 
   if (hours) units.push(`${hours}h`);
   if (mins) units.push(`${mins}m`);
 
-  return units.join(", ");
-};
+  return units.join(', ');
+}

@@ -20,7 +20,7 @@
   --accent-colour: rgb(240, 150, 10);
   --accent-dark-colour: rgb(195, 125, 20);
   --background-colour: rgb(255, 250, 240);
-  --disabled-colour: rgb(255,255,255, 0.5);
+  --disabled-colour: rgb(255, 255, 255, 0.5);
   --xsmall-gap: 0.25rem;
   --small-gap: 0.5rem;
   --medium-gap: 0.75rem;
@@ -54,12 +54,16 @@ html {
   background-color: var(--background-colour);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-heading);
   font-weight: 800;
 }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   font-family: var(--font-body);
   font-weight: 400;
 }

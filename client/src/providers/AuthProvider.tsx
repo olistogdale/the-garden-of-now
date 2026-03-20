@@ -1,57 +1,78 @@
-import {
-  useState,
-  useEffect,
-  useCallback,
-  useMemo
-} from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 
-import { registerUser, loginUser, authUser, logoutUser, deleteUser } from '../services/auth-service';
+import {
+  registerUser,
+  loginUser,
+  authUser,
+  logoutUser,
+  deleteUser,
+} from '../services/auth-service';
 import { AuthContext } from '../context/auth-context';
 import { postFavourite, deleteFavourite } from '../services/favourites-service';
 import { isErrorWithStatus } from '../utilities/error-guard';
 
-import type { StatusT } from '../types/status-types'
-import type { UserRegistrationRequestT, UserLoginRequestT, UserAuthResponseT } from '../../../data/users/types/user-types';
+import type { StatusT } from '../types/status-types';
+import type {
+  UserRegistrationRequestT,
+  UserLoginRequestT,
+  UserAuthResponseT,
+} from '../../../data/users/types/user-types';
 import type { UserAuthStateT } from '../types/auth-types';
 
-
-
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [auth, setAuth] = useState <UserAuthStateT | null> (null);
-  const [authStatus, setAuthStatus] = useState <StatusT> ('idle');
-  const [authError, setAuthError] = useState <string | null> (null);
+  const [auth, setAuth] = useState<UserAuthStateT | null>(null);
+  const [authStatus, setAuthStatus] = useState<StatusT>('idle');
+  const [authError, setAuthError] = useState<string | null>(null);
 
-  const register = useCallback(async (payload: UserRegistrationRequestT, signal: AbortSignal) => {
-    setAuthStatus('loading');
-    setAuthError(null);
+  const register = useCallback(
+    async (payload: UserRegistrationRequestT, signal: AbortSignal) => {
+      setAuthStatus('loading');
+      setAuthError(null);
 
-    try {
-      const { userId, email, firstName, lastName, favourites }: UserAuthResponseT = await registerUser(payload, signal);
+      try {
+        const {
+          userId,
+          email,
+          firstName,
+          lastName,
+          favourites,
+        }: UserAuthResponseT = await registerUser(payload, signal);
 
-      setAuth({ userId, email, firstName, lastName, favourites });
-      setAuthStatus('success');
-    } catch (err) {
-      setAuthStatus('error');
-      setAuthError(err instanceof Error ? err.message : 'Unknown error');
-      throw err;
-    }
-  }, []);
+        setAuth({ userId, email, firstName, lastName, favourites });
+        setAuthStatus('success');
+      } catch (err) {
+        setAuthStatus('error');
+        setAuthError(err instanceof Error ? err.message : 'Unknown error');
+        throw err;
+      }
+    },
+    [],
+  );
 
-  const login = useCallback(async (payload: UserLoginRequestT, signal: AbortSignal) => {
-    setAuthStatus('loading');
-    setAuthError(null);
+  const login = useCallback(
+    async (payload: UserLoginRequestT, signal: AbortSignal) => {
+      setAuthStatus('loading');
+      setAuthError(null);
 
-    try {
-      const { userId, email, firstName, lastName, favourites }: UserAuthResponseT = await loginUser(payload, signal);
+      try {
+        const {
+          userId,
+          email,
+          firstName,
+          lastName,
+          favourites,
+        }: UserAuthResponseT = await loginUser(payload, signal);
 
-      setAuth({ userId, email, firstName, lastName, favourites });
-      setAuthStatus('success');
-    } catch (err) {
-      setAuthStatus('error');
-      setAuthError(err instanceof Error? err.message : 'Unknown error');
-      throw err;
-    }
-  }, []);
+        setAuth({ userId, email, firstName, lastName, favourites });
+        setAuthStatus('success');
+      } catch (err) {
+        setAuthStatus('error');
+        setAuthError(err instanceof Error ? err.message : 'Unknown error');
+        throw err;
+      }
+    },
+    [],
+  );
 
   useEffect(() => {
     const controller = new AbortController();
@@ -62,13 +83,19 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setAuthError(null);
 
       try {
-        const { userId, email, firstName, lastName, favourites }: UserAuthResponseT = await authUser(controller.signal);        
+        const {
+          userId,
+          email,
+          firstName,
+          lastName,
+          favourites,
+        }: UserAuthResponseT = await authUser(controller.signal);
 
         setAuth({ userId, email, firstName, lastName, favourites });
         setAuthStatus('success');
       } catch (err) {
         const message = err instanceof Error ? err.message : '';
-        
+
         setAuth(null);
 
         if (isErrorWithStatus(err) && err.status === 401) {
@@ -82,7 +109,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           setAuthError(message || 'Unknown error');
         }
       } finally {
-        clearTimeout(timeoutId)
+        clearTimeout(timeoutId);
       }
     })();
 
@@ -100,10 +127,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       await logoutUser();
     } catch (err) {
       setAuthStatus('error');
-      setAuthError(err instanceof Error? err.message : 'Unknown error');
+      setAuthError(err instanceof Error ? err.message : 'Unknown error');
       throw err;
     }
-  }, [])
+  }, []);
 
   const clearAuth = useCallback(() => {
     setAuth(null);
@@ -122,73 +149,96 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setAuthStatus('success');
     } catch (err) {
       setAuthStatus('error');
-      setAuthError(err instanceof Error? err.message : 'Unknown error');
+      setAuthError(err instanceof Error ? err.message : 'Unknown error');
       throw err;
     }
-  }, [])
+  }, []);
 
   const favouriteIdsSet = useMemo(
     () => new Set(auth?.favourites?.map((favourite) => favourite._id) ?? []),
-    [auth?.favourites]
+    [auth?.favourites],
   );
 
   const isInFavourites = useCallback(
     (recipeId: string) => favouriteIdsSet.has(recipeId),
-    [favouriteIdsSet]
+    [favouriteIdsSet],
   );
 
-  const toggleFavourite = useCallback(async (recipeId: string, recipeName: string) => {
-    if (!auth) return;
+  const toggleFavourite = useCallback(
+    async (recipeId: string, recipeName: string) => {
+      if (!auth) return;
 
-    const existsNow = isInFavourites(recipeId);
+      const existsNow = isInFavourites(recipeId);
 
-    setAuth((prev) => {
-      if (!prev) return prev;
+      setAuth((prev) => {
+        if (!prev) return prev;
 
-      const existsPrev = prev.favourites.some((r) => r._id === recipeId);
+        const existsPrev = prev.favourites.some((r) => r._id === recipeId);
 
-      return {
-        ...prev,
-        favourites: existsPrev
-          ? prev.favourites.filter((r) => r._id !== recipeId)
-          : [{ _id: recipeId, name: recipeName, addedAt: new Date() }, ...prev.favourites],
-      };
-    });
-
-    try {
-      if (existsNow) await deleteFavourite({ recipeId });
-      else await postFavourite({ recipeId, recipeName });
-    } catch (err) {
-      console.log('Error toggling favourite recipe:', err);
+        return {
+          ...prev,
+          favourites: existsPrev
+            ? prev.favourites.filter((r) => r._id !== recipeId)
+            : [
+                { _id: recipeId, name: recipeName, addedAt: new Date() },
+                ...prev.favourites,
+              ],
+        };
+      });
 
       try {
-        const controller = new AbortController();
-        const fresh = await authUser(controller.signal);
-        setAuth({
-          userId: fresh.userId,
-          email: fresh.email,
-          firstName: fresh.firstName,
-          lastName: fresh.lastName,
-          favourites: fresh.favourites,
-        });
+        if (existsNow) await deleteFavourite({ recipeId });
+        else await postFavourite({ recipeId, recipeName });
       } catch (err) {
-        console.log('Error resynching favourite recipes with database:', err);
-        setAuth(null);
-        setAuthStatus('error');
-        setAuthError(err instanceof Error? err.message : 'Unknown error');
+        console.log('Error toggling favourite recipe:', err);
+
+        try {
+          const controller = new AbortController();
+          const fresh = await authUser(controller.signal);
+          setAuth({
+            userId: fresh.userId,
+            email: fresh.email,
+            firstName: fresh.firstName,
+            lastName: fresh.lastName,
+            favourites: fresh.favourites,
+          });
+        } catch (err) {
+          console.log('Error resynching favourite recipes with database:', err);
+          setAuth(null);
+          setAuthStatus('error');
+          setAuthError(err instanceof Error ? err.message : 'Unknown error');
+        }
       }
-    }
-  }, [auth, isInFavourites]);
-  
-  
-  const value = useMemo(
-    () => ({ auth, authStatus, authError, register, login, logout, clearAuth, remove, isInFavourites, toggleFavourite }),
-    [auth, authStatus, authError, register, login, logout, clearAuth, remove, isInFavourites, toggleFavourite]
+    },
+    [auth, isInFavourites],
   );
 
-  return (
-    <AuthContext.Provider value={value}>
-      {children}
-    </AuthContext.Provider>
+  const value = useMemo(
+    () => ({
+      auth,
+      authStatus,
+      authError,
+      register,
+      login,
+      logout,
+      clearAuth,
+      remove,
+      isInFavourites,
+      toggleFavourite,
+    }),
+    [
+      auth,
+      authStatus,
+      authError,
+      register,
+      login,
+      logout,
+      clearAuth,
+      remove,
+      isInFavourites,
+      toggleFavourite,
+    ],
   );
+
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }

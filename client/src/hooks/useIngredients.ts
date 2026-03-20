@@ -1,11 +1,11 @@
-import { useContext, useMemo } from "react";
-import { IngredientsContext } from "../context/ingredients-context";
+import { useContext, useMemo } from 'react';
+import { IngredientsContext } from '../context/ingredients-context';
 
 export function useIngredients() {
   const ctx = useContext(IngredientsContext);
 
   if (!ctx) {
-    throw new Error("useIngredients must be used within IngredientsProvider");
+    throw new Error('useIngredients must be used within IngredientsProvider');
   }
 
   const stableIngredients = useMemo(() => {

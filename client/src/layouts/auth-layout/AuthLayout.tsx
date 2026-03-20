@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 
-import './AuthLayout.css'
+import './AuthLayout.css';
 
 export function AuthLayout() {
   return (
@@ -9,5 +9,5 @@ export function AuthLayout() {
         <Outlet />
       </main>
     </div>
-  )
+  );
 }

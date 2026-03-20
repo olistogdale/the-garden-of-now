@@ -1,6 +1,6 @@
-import type { SetStateAction } from "react"
+import type { SetStateAction } from 'react';
 
 export type PaginationUpdateT = {
-  page?: SetStateAction<number>,
-  limit?: number
-}
+  page?: SetStateAction<number>;
+  limit?: number;
+};
