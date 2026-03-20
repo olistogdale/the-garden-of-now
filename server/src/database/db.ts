@@ -1,13 +1,19 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 
-import { config } from '../config'
+import { config } from '../config';
 
 export async function connectDB(uri = config.mongoURI) {
-  await mongoose.connect(uri);
+  try {
+    await mongoose.connect(uri);
+    console.log('Mongoose connected.');
+  } catch (err) {
+    console.log('Mongoose failed to connect:', err);
+    throw err;
+  }
 }
 
 export async function disconnectDB() {
   await mongoose.disconnect();
 }
 
-export {mongoose}
+export { mongoose };

@@ -13,7 +13,7 @@ export const signAccessToken = function (userID: string) {
 };
 
 export const verifyAccessToken = function (token: string) {
-  if (token.trim().length === 0) throw Error('Invalid token.');
+  if (token.trim().length === 0) throw new Error('Invalid token.');
 
   return jwt.verify(token, config.jwtSecret) as JwtPayload;
 };
