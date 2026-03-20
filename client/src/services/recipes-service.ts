@@ -1,8 +1,8 @@
-import { API_URL } from '../config.ts';
+import { API_URL } from '../config';
 
-import { fetchRequest } from '../utilities/fetch-request.ts';
+import { fetchRequest } from '../utilities/fetch-request';
 
-import type { RecipesRequestT, RecipesResponseT, RecipeResponseT } from '../../../data/recipes/types/recipe-types.ts'
+import type { RecipesRequestT, RecipesResponseT, RecipeResponseT } from '../../../data/recipes/types/recipe-types'
 
 export function getRecipes(
   { ingredients, seed }: RecipesRequestT,
