@@ -58,6 +58,7 @@ export const getRecipes = async function (ctx: Context) {
   ];
 
   const trimmedSeed = seed.trim();
+  const startTime = performance.now();
 
   try {
     const [data] = await recipeModel.aggregate<RecipesFacetResultT>([
@@ -139,5 +140,9 @@ export const getRecipes = async function (ctx: Context) {
     console.log('Error fetching recipes:', err);
     ctx.status = 500;
     ctx.body = { error: 'Internal server error: could not fetch recipes.' };
+  } finally {
+    const duration = performance.now() - startTime;
+
+    console.info(`POST /recipes completed in ${duration.toFixed(1)}ms`);
   }
 };
