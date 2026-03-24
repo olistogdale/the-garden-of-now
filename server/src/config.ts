@@ -16,10 +16,40 @@ function parsePort(value: string): number {
   return number;
 }
 
+function parseBoolean(value: string | undefined, fallback: boolean): boolean {
+  if (value == null) return fallback;
+
+  const normalizedValue = value.trim().toLowerCase();
+
+  if (normalizedValue === 'true') return true;
+  if (normalizedValue === 'false') return false;
+
+  throw new Error('Invalid boolean env var value');
+}
+
+function parseSameSite(
+  value: string | undefined,
+  fallback: 'none' | 'lax',
+): 'none' | 'lax' {
+  if (value == null) return fallback;
+
+  const normalizedValue = value.trim().toLowerCase();
+
+  if (normalizedValue === 'none' || normalizedValue === 'lax') {
+    return normalizedValue;
+  }
+
+  throw new Error('Invalid COOKIE_SAME_SITE value');
+}
+
 const env = process.env.NODE_ENV ?? 'development';
 const isProd = env === 'production';
 
-const cookieSameSite: 'none' | 'lax' = isProd ? 'none' : 'lax';
+const cookieSecure = parseBoolean(process.env.COOKIE_SECURE, isProd);
+const cookieSameSite = parseSameSite(
+  process.env.COOKIE_SAME_SITE,
+  cookieSecure ? 'none' : 'lax',
+);
 
 export const config = {
   env,
@@ -31,5 +61,5 @@ export const config = {
   clientOrigin: requireEnv('CLIENT_ORIGIN'),
   cookieName: 'accessToken',
   cookieSameSite,
-  cookieSecure: isProd
+  cookieSecure,
 };
