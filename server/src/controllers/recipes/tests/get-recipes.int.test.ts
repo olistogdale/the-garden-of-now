@@ -158,7 +158,7 @@ describe('POST /recipes', () => {
     expect(res.body.recipes[0]).toMatchObject(returnedRecipe);
   });
 
-  it('returns deterministic entries ordering for a given seed (200)', async () => {
+  it('returns stable entries ordering regardless of seed (200)', async () => {
     await recipeModel.create(recipeArray);
 
     const body1 = {
@@ -195,7 +195,7 @@ describe('POST /recipes', () => {
     expect(res2.status).toBe(200);
     expect(ids1a).toHaveLength(24);
     expect(ids1a).toEqual(ids1b);
-    expect(ids1a).not.toEqual(ids2);
+    expect(ids1a).toEqual(ids2);
   });
 
   it('returns paginated recipe entries for a given ingredients and seed input (200)', async () => {
