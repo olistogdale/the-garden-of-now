@@ -7,6 +7,7 @@ import ingredientRouter from './routers/ingredient-router';
 import recipeRouter from './routers/recipe-router';
 import favouriteRouter from './routers/favourite-router';
 import profileRouter from './routers/profile-router';
+import healthRouter from './routers/health-router';
 import { config } from './config';
 
 export function createApp() {
@@ -26,6 +27,7 @@ export function createApp() {
   app.use(recipeRouter.routes());
   app.use(favouriteRouter.routes());
   app.use(profileRouter.routes());
+  app.use(healthRouter.routes());
 
   return app;
 }
