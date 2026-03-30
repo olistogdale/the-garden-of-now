@@ -6,12 +6,8 @@ import {
   mockGetIngredients,
   mockAuthUser,
   mockLogoutUser,
-  mockDeleteUser,
-  mockPatchPassword,
 } from '../../test/mock-services';
 import { renderApp } from '../../test/render-app';
-
-import type { ErrorWithStatusT } from '../../types/auth-types';
 
 describe('profile page', () => {
   it('allows authenticated users to access the page', async () => {
