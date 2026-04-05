@@ -1459,10 +1459,7 @@
       "proteinContent": "7 grams protein"
     },
     "recipeCategory": "Side dish",
-    "recipeIngredients": [
-      "250g gram (chickpea) flour",
-      "½ tsp rapeseed oil"
-    ],
+    "recipeIngredients": ["250g gram (chickpea) flour", "½ tsp rapeseed oil"],
     "recipeInstructions": [
       {
         "text": "Sift the flour into a bowl and make a well in the centre. Gradually whisk in 400ml cold water to create a smooth, thick batter. Set aside to rest for 30 mins."

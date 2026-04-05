@@ -1588,10 +1588,7 @@
       "proteinContent": "0.3 grams protein",
       "sodiumContent": "0.02 milligram of sodium"
     },
-    "recipeIngredients": [
-      "2 sweet potatoes (about 500g)",
-      "baby's milk"
-    ],
+    "recipeIngredients": ["2 sweet potatoes (about 500g)", "baby's milk"],
     "recipeInstructions": [
       {
         "text": "Heat the oven to 200C/180C fan/gas 6. Put the potatoes on a baking tray and roast in the oven for around 45 mins or until a knife inserts easily into the flesh."
@@ -3652,10 +3649,7 @@
       "proteinContent": "1 grams protein"
     },
     "recipeCategory": "Treat",
-    "recipeIngredients": [
-      "1 small watermelon",
-      "3 kiwis"
-    ],
+    "recipeIngredients": ["1 small watermelon", "3 kiwis"],
     "recipeInstructions": [
       {
         "text": "Halve 1 small watermelon and scoop the flesh out of one half into a bowl (you need about 375-400g). Pick out any black seeds. Purée the flesh using a hand blender or in a liquidiser. Fill ice lolly moulds three-quarters full with the purée, push the sticks in if you are using them, and freeze for at least 3 hrs, or overnight. Tip any remaining purée into an ice cube tray and freeze it."
@@ -8808,10 +8802,7 @@
       "proteinContent": "1 grams protein"
     },
     "recipeCategory": "Snack, Treat",
-    "recipeIngredients": [
-      "3 oranges",
-      "2 pears peeled and cored"
-    ],
+    "recipeIngredients": ["3 oranges", "2 pears peeled and cored"],
     "recipeInstructions": [
       {
         "text": "Finely grate ¼ tsp zest from one of the oranges, then peel them, roughly chop the flesh and put in a bowl (or food processor) with the zest and pears. Blitz until as smooth as you can get it, then pour into lolly containers, poke in sticks and freeze until solid."
@@ -8901,10 +8892,7 @@
       "proteinContent": "0.1 grams protein",
       "sodiumContent": "0.63 milligram of sodium"
     },
-    "recipeIngredients": [
-      "2 whole lemons or limes",
-      "75g sea salt"
-    ],
+    "recipeIngredients": ["2 whole lemons or limes", "75g sea salt"],
     "recipeInstructions": [
       {
         "text": "Juice 2 whole lemons or limes and keep the juice, skins and pulp. Cut all the fruit you’re using into equal-sized chunks. Layer the lemon and lime pieces with 75g flaky sea salt in a sterilised 500g jar. Pour in the juice to cover the shells, adding a few tbsp boiled cooled water to top up if needed. Press down well to remove any trapped air. Seal, shake, then add more salt if needed as some dissolves into the juice."

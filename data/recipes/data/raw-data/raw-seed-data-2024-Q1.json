@@ -7619,10 +7619,7 @@
       "sodiumContent": "0.11 milligram of sodium"
     },
     "recipeCategory": "Side dish",
-    "recipeIngredients": [
-      "1 spaghetti squash",
-      "1 tbsp rapeseed or olive oil"
-    ],
+    "recipeIngredients": ["1 spaghetti squash", "1 tbsp rapeseed or olive oil"],
     "recipeInstructions": [
       {
         "text": "Heat the oven to 180C/160C fan/gas 4. Cut the squash in half lengthways and scoop out the seeds. Brush a little oil over the cut surface and season with salt and pepper. Put the squash cut-side down on a baking tray lined with baking parchment and roast for 30 mins."
@@ -10114,10 +10111,7 @@
     "prepTime": "PT5M",
     "cookTime": "PT30M",
     "totalTime": "PT35M",
-    "recipeIngredients": [
-      "vegetable oil for the tin",
-      "small pineapple"
-    ],
+    "recipeIngredients": ["vegetable oil for the tin", "small pineapple"],
     "recipeInstructions": [
       {
         "text": "Heat the oven to 160C/140C fan/ gas 3. Lightly oil six holes of a muffin tin using the vegetable oil. Trim the pineapple to remove the skin, eyes and leaves. Cut 6 very thin slices from one end (you can use the rest in another recipe) and push them into the oiled tin to line the holes. Bake for 30 mins, until completely dry. Leave to cool, then remove and use to decorate a cake (see recipe for our carrot & pineapple cake below). Will keep for two days."

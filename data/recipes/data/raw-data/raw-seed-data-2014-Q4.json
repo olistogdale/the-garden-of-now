@@ -9724,10 +9724,7 @@
       "sodiumContent": "0.1 milligram of sodium"
     },
     "recipeCategory": "Side dish",
-    "recipeIngredients": [
-      "600g jasmine rice",
-      "2 pandan leaves knotted"
-    ],
+    "recipeIngredients": ["600g jasmine rice", "2 pandan leaves knotted"],
     "recipeInstructions": [
       {
         "text": "Put the rice in a large pan and cover with cold water. Swoosh the rice in the water, then drain the water away. Repeat until the water runs clear. Add the pandan leaves to the rice, season with a little salt, then add enough cold water to come a fingertip depth above the surface of the rice. Bring the pan to the boil, then reduce the heat and simmer for 10-15 mins or until most of the water has been absorbed and the surface of the rice looks pitted. Turn off the heat, cover and leave undisturbed for 30 mins."
@@ -13466,9 +13463,7 @@
       "sodiumContent": "0.1 milligram of sodium"
     },
     "recipeCategory": "Snack",
-    "recipeIngredients": [
-      "1 apple"
-    ],
+    "recipeIngredients": ["1 apple"],
     "recipeInstructions": [
       {
         "text": "Heat oven to 140C/120C fan/gas 1. Thinly slice the apple through the core – use a mandolin, if you have one, to get thin slices. Arrange the slices on a baking tray lined with parchment and bake for 40 mins. Cool until crisp."

@@ -3330,9 +3330,7 @@
       "sodiumContent": "0.3 milligram of sodium"
     },
     "recipeCategory": "Dinner, Lunch, Main course",
-    "recipeIngredients": [
-      "1 large chicken"
-    ],
+    "recipeIngredients": ["1 large chicken"],
     "recipeInstructions": [
       {
         "text": "Heat the slow cooker if necessary and add a splash of water to the base. Scrunch up some foil to make a trivet to sit in the base of the bowl to rest the chicken on. Put the chicken into the pot and season the skin. Cover and cook on Low for 5 hours or until the leg or wing feels very loose when you wiggle it. Tip the juices inside the chicken out as you lift it out."

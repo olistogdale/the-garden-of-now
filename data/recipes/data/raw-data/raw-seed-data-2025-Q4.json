@@ -4797,10 +4797,7 @@
       "sodiumContent": "0.11 milligram of sodium"
     },
     "recipeCategory": "Starter",
-    "recipeIngredients": [
-      "5 slices  white bread",
-      "20g melted butter"
-    ],
+    "recipeIngredients": ["5 slices  white bread", "20g melted butter"],
     "recipeInstructions": [
       {
         "text": "Using a small star-shaped cookie cutter, cut about 15 pieces out of the bread – you should be able to get around three from each slice. With the bread that’s left over, blitz in a food processor and freeze the crumbs to use another time."
@@ -4841,10 +4838,7 @@
       "proteinContent": "1 grams protein"
     },
     "recipeCategory": "Starter",
-    "recipeIngredients": [
-      "14 baby potatoes",
-      "1 tbsp  olive oil"
-    ],
+    "recipeIngredients": ["14 baby potatoes", "1 tbsp  olive oil"],
     "recipeInstructions": [
       {
         "text": "Heat the air fryer to 200C. Toss the potatoes and olive oil in a bowl and season well. Mix together to coat the potatoes, then tip into the air fryer. Cook at 200C for 20-30 mins, shaking every 10 mins, until the potatoes are soft inside and beginning to turn golden."

@@ -3452,9 +3452,7 @@
     "totalTime": "PT5M",
     "recipeYield": 20,
     "recipeCategory": "Dessert, Snack",
-    "recipeIngredients": [
-      "1 large watermelon"
-    ],
+    "recipeIngredients": ["1 large watermelon"],
     "recipeInstructions": [
       {
         "text": "Cut the watermelon into 2cm-thick slices. Cut each slice into a triangular wedge."

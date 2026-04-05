@@ -1,25 +1,25 @@
 'use strict';
 
 export type SeasonalIngredientT = {
-  _id: string,
-  name: string,
-  seasonality: string[],
-  foodGroup: string,
-  altNames?: string[]
-}
+  _id: string;
+  name: string;
+  seasonality: string[];
+  foodGroup: string;
+  altNames?: string[];
+};
 
 export type NonSeasonalIngredientT = {
-  _id: string,
-  name: string,
-  foodGroup: string,
-  altNames?: string[]
-}
+  _id: string;
+  name: string;
+  foodGroup: string;
+  altNames?: string[];
+};
 
 export type GenericIngredientT = {
-  name: string,
-  altNames?: string[]
-}
+  name: string;
+  altNames?: string[];
+};
 
 export type IngredientsResponseT = {
-  ingredients: string[]
-}
+  ingredients: string[];
+};

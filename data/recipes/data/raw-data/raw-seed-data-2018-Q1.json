@@ -254,10 +254,7 @@
       "sodiumContent": "0.2 milligram of sodium"
     },
     "recipeCategory": "Side dish",
-    "recipeIngredients": [
-      "200g asparagus",
-      "drizzle olive oil"
-    ],
+    "recipeIngredients": ["200g asparagus", "drizzle olive oil"],
     "recipeInstructions": [
       {
         "text": "Heat the oven to 200C/180C fan/gas 6. Snap any woody tips off the asparagus where they naturally break apart. Put on a roasting tray, drizzle with oil and season with salt and pepper. Roast for 12 mins until they are tender."

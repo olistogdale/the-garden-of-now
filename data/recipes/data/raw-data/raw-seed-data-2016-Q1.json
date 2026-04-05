@@ -2756,10 +2756,7 @@
       "sodiumContent": "0.2 milligram of sodium"
     },
     "recipeCategory": "Brunch, Lunch",
-    "recipeIngredients": [
-      "1 soft-boiled egg",
-      "7 spears of steamed asparagus"
-    ],
+    "recipeIngredients": ["1 soft-boiled egg", "7 spears of steamed asparagus"],
     "recipeInstructions": [
       {
         "text": "Cut the soft-boiled egg in half and serve with the steamed asparagus for dipping."
@@ -2863,10 +2860,7 @@
       "proteinContent": "2 grams protein"
     },
     "recipeCategory": "Dessert, Snack, Treat",
-    "recipeIngredients": [
-      "1 frozen banana",
-      "1 tsp cocoa powder"
-    ],
+    "recipeIngredients": ["1 frozen banana", "1 tsp cocoa powder"],
     "recipeInstructions": [
       {
         "text": "In a blender, blitz the frozen banana with the cocoa powder until smooth. Eat straight away."

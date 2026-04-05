@@ -2,9 +2,7 @@
   {
     "name": "’00’ flour",
     "foodGroup": "baking",
-    "altNames": [
-      "’00’ pasta flour"
-    ]
+    "altNames": ["’00’ pasta flour"]
   },
   {
     "name": "ale",
@@ -21,9 +19,7 @@
   {
     "name": "almond flour",
     "foodGroup": "baking",
-    "altNames": [
-      "ground almonds"
-    ]
+    "altNames": ["ground almonds"]
   },
   {
     "name": "almond milk",
@@ -32,9 +28,7 @@
   {
     "name": "amaretto",
     "foodGroup": "alcohol",
-    "altNames": [
-      "disaronno"
-    ]
+    "altNames": ["disaronno"]
   },
   {
     "name": "american-style pancake",
@@ -43,17 +37,12 @@
   {
     "name": "anchovy",
     "foodGroup": "cured fish",
-    "altNames": [
-      "anchovy fillet"
-    ]
+    "altNames": ["anchovy fillet"]
   },
   {
     "name": "apple chutney",
     "foodGroup": "condiments",
-    "altNames": [
-      "apple and pear chutney",
-      "apple & pear chutney"
-    ]
+    "altNames": ["apple and pear chutney", "apple & pear chutney"]
   },
   {
     "name": "apple juice",
@@ -78,16 +67,12 @@
   {
     "name": "aubergine pickle",
     "foodGroup": "condiments",
-    "altNames": [
-      "brinjal pickle"
-    ]
+    "altNames": ["brinjal pickle"]
   },
   {
     "name": "baguette",
     "foodGroup": "breads",
-    "altNames": [
-      "french stick"
-    ]
+    "altNames": ["french stick"]
   },
   {
     "name": "baking powder",
@@ -104,16 +89,12 @@
   {
     "name": "bbq sauce",
     "foodGroup": "condiments",
-    "altNames": [
-      "barbecue sauce"
-    ]
+    "altNames": ["barbecue sauce"]
   },
   {
     "name": "beef stock",
     "foodGroup": "stocks and gravies",
-    "altNames": [
-      "beef stock cube"
-    ]
+    "altNames": ["beef stock cube"]
   },
   {
     "name": "beer",
@@ -134,10 +115,7 @@
   {
     "name": "black pepper",
     "foodGroup": "herbs and spices",
-    "altNames": [
-      "black peppercorn",
-      "pepper"
-    ]
+    "altNames": ["black peppercorn", "pepper"]
   },
   {
     "name": "black rice",
@@ -162,18 +140,12 @@
   {
     "name": "brandy",
     "foodGroup": "alcohol",
-    "altNames": [
-      "cognac",
-      "armagnac"
-    ]
+    "altNames": ["cognac", "armagnac"]
   },
   {
     "name": "branston pickle",
     "foodGroup": "condiments",
-    "altNames": [
-      "ploughman’s chutney",
-      "ploughman’s pickle"
-    ]
+    "altNames": ["ploughman’s chutney", "ploughman’s pickle"]
   },
   {
     "name": "brazil nut",
@@ -213,17 +185,12 @@
   {
     "name": "brown lentil",
     "foodGroup": "pulses",
-    "altNames": [
-      "lentil"
-    ]
+    "altNames": ["lentil"]
   },
   {
     "name": "brown rice",
     "foodGroup": "grains",
-    "altNames": [
-      "brown basmati rice",
-      "wild rice"
-    ]
+    "altNames": ["brown basmati rice", "wild rice"]
   },
   {
     "name": "brown roll",
@@ -239,9 +206,7 @@
   {
     "name": "brown sauce",
     "foodGroup": "condiments",
-    "altNames": [
-      "hp sauce"
-    ]
+    "altNames": ["hp sauce"]
   },
   {
     "name": "brown sugar",
@@ -258,16 +223,12 @@
   {
     "name": "bulgur wheat",
     "foodGroup": "grains",
-    "altNames": [
-      "cracked wheat"
-    ]
+    "altNames": ["cracked wheat"]
   },
   {
     "name": "burger bun",
     "foodGroup": "breads",
-    "altNames": [
-      "brioche bun"
-    ]
+    "altNames": ["brioche bun"]
   },
   {
     "name": "burger cheese",
@@ -276,10 +237,7 @@
   {
     "name": "butter",
     "foodGroup": "dairy",
-    "altNames": [
-      "salted butter",
-      "unsalted butter"
-    ]
+    "altNames": ["salted butter", "unsalted butter"]
   },
   {
     "name": "butter bean",
@@ -296,9 +254,7 @@
   {
     "name": "cake flour",
     "foodGroup": "baking",
-    "altNames": [
-      "sponge flour"
-    ]
+    "altNames": ["sponge flour"]
   },
   {
     "name": "calvados",
@@ -319,9 +275,7 @@
   {
     "name": "caramel",
     "foodGroup": "baking",
-    "altNames": [
-      "caramel sauce"
-    ]
+    "altNames": ["caramel sauce"]
   },
   {
     "name": "caramelised onion chutney",
@@ -339,16 +293,12 @@
   {
     "name": "cardamom",
     "foodGroup": "herbs and spices",
-    "altNames": [
-      "cardamom pod"
-    ]
+    "altNames": ["cardamom pod"]
   },
   {
     "name": "cashew",
     "foodGroup": "nuts",
-    "altNames": [
-      "cashew nut"
-    ]
+    "altNames": ["cashew nut"]
   },
   {
     "name": "caster sugar",
@@ -373,11 +323,7 @@
   {
     "name": "chicken stock",
     "foodGroup": "stocks and gravies",
-    "altNames": [
-      "chicken stock cube",
-      "stock",
-      "stock cube"
-    ]
+    "altNames": ["chicken stock cube", "stock", "stock cube"]
   },
   {
     "name": "chickpea",
@@ -394,10 +340,7 @@
   {
     "name": "chilli powder",
     "foodGroup": "herbs and spices",
-    "altNames": [
-      "hot chilli powder",
-      "mild chilli powder"
-    ]
+    "altNames": ["hot chilli powder", "mild chilli powder"]
   },
   {
     "name": "chocolate chip cookie",
@@ -412,25 +355,17 @@
   {
     "name": "chocolate mint thin",
     "foodGroup": "confectionery",
-    "altNames": [
-      "after eight"
-    ]
+    "altNames": ["after eight"]
   },
   {
     "name": "chocolate spread",
     "foodGroup": "spreads",
-    "altNames": [
-      "chocolate hazelnut spread",
-      "nutella"
-    ]
+    "altNames": ["chocolate hazelnut spread", "nutella"]
   },
   {
     "name": "chopped tomato",
     "foodGroup": "canned vegetables",
-    "altNames": [
-      "tinned tomato",
-      "canned tomato"
-    ]
+    "altNames": ["tinned tomato", "canned tomato"]
   },
   {
     "name": "choux pastry",
@@ -439,9 +374,7 @@
   {
     "name": "ciabatta",
     "foodGroup": "breads",
-    "altNames": [
-      "ciabatta roll"
-    ]
+    "altNames": ["ciabatta roll"]
   },
   {
     "name": "cider",
@@ -450,16 +383,12 @@
   {
     "name": "cider vinegar",
     "foodGroup": "vinegar",
-    "altNames": [
-      "apple cider vinegar"
-    ]
+    "altNames": ["apple cider vinegar"]
   },
   {
     "name": "cinnamon",
     "foodGroup": "herbs and spices",
-    "altNames": [
-      "cinnamon stick"
-    ]
+    "altNames": ["cinnamon stick"]
   },
   {
     "name": "clotted cream",
@@ -468,16 +397,12 @@
   {
     "name": "cocoa",
     "foodGroup": "baking",
-    "altNames": [
-      "cocoa powder"
-    ]
+    "altNames": ["cocoa powder"]
   },
   {
     "name": "coconut cream",
     "foodGroup": "dairy",
-    "altNames": [
-      "creamed coconut"
-    ]
+    "altNames": ["creamed coconut"]
   },
   {
     "name": "coconut milk",
@@ -486,17 +411,12 @@
   {
     "name": "coffee",
     "foodGroup": "tea and coffee",
-    "altNames": [
-      "espresso"
-    ]
+    "altNames": ["espresso"]
   },
   {
     "name": "coffee liqueur",
     "foodGroup": "alcohol",
-    "altNames": [
-      "kahlúa",
-      "kahlua"
-    ]
+    "altNames": ["kahlúa", "kahlua"]
   },
   {
     "name": "conchiglie",
@@ -509,9 +429,7 @@
   {
     "name": "cooking oil",
     "foodGroup": "oil",
-    "altNames": [
-      "oil"
-    ]
+    "altNames": ["oil"]
   },
   {
     "name": "coppa",
@@ -524,9 +442,7 @@
   {
     "name": "corn flour",
     "foodGroup": "baking",
-    "altNames": [
-      "cornflour"
-    ]
+    "altNames": ["cornflour"]
   },
   {
     "name": "corned beef",
@@ -535,10 +451,7 @@
   {
     "name": "couscous",
     "foodGroup": "grains",
-    "altNames": [
-      "cous cous",
-      "cous-cous"
-    ]
+    "altNames": ["cous cous", "cous-cous"]
   },
   {
     "name": "cranberry sauce",
@@ -551,9 +464,7 @@
   {
     "name": "cumin",
     "foodGroup": "herbs and spices",
-    "altNames": [
-      "cumin seed"
-    ]
+    "altNames": ["cumin seed"]
   },
   {
     "name": "currant",
@@ -599,17 +510,12 @@
   {
     "name": "dijon mustard",
     "foodGroup": "condiments",
-    "altNames": [
-      "french mustard"
-    ]
+    "altNames": ["french mustard"]
   },
   {
     "name": "double cream",
     "foodGroup": "dairy",
-    "altNames": [
-      "extra thick double cream",
-      "extra thick cream"
-    ]
+    "altNames": ["extra thick double cream", "extra thick cream"]
   },
   {
     "name": "double gloucester",
@@ -626,18 +532,12 @@
   {
     "name": "dry sherry",
     "foodGroup": "alcohol",
-    "altNames": [
-      "fino sherry",
-      "manzanilla sherry"
-    ]
+    "altNames": ["fino sherry", "manzanilla sherry"]
   },
   {
     "name": "duck egg",
     "foodGroup": "eggs",
-    "altNames": [
-      "duck’s egg",
-      "ducks’ egg"
-    ]
+    "altNames": ["duck’s egg", "ducks’ egg"]
   },
   {
     "name": "duck fat",
@@ -650,12 +550,7 @@
   {
     "name": "egg",
     "foodGroup": "eggs",
-    "altNames": [
-      "chicken’s egg",
-      "chickens’ egg",
-      "egg white",
-      "egg yolk"
-    ]
+    "altNames": ["chicken’s egg", "chickens’ egg", "egg white", "egg yolk"]
   },
   {
     "name": "english muffin",
@@ -684,16 +579,12 @@
   {
     "name": "fish stock",
     "foodGroup": "stocks and gravies",
-    "altNames": [
-      "fish stock cube"
-    ]
+    "altNames": ["fish stock cube"]
   },
   {
     "name": "five spice",
     "foodGroup": "herbs and spices",
-    "altNames": [
-      "five-spice"
-    ]
+    "altNames": ["five-spice"]
   },
   {
     "name": "flageolet bean",
@@ -714,9 +605,7 @@
   {
     "name": "french’s mustard",
     "foodGroup": "condiments",
-    "altNames": [
-      "american mustard"
-    ]
+    "altNames": ["american mustard"]
   },
   {
     "name": "fromage frais",
@@ -729,9 +618,7 @@
   {
     "name": "galangal",
     "foodGroup": "herbs and spices",
-    "altNames": [
-      "galangal root"
-    ]
+    "altNames": ["galangal root"]
   },
   {
     "name": "garam masala",
@@ -740,25 +627,17 @@
   {
     "name": "garlic",
     "foodGroup": "herbs and spices",
-    "altNames": [
-      "garlic clove",
-      "garlic bulb"
-    ]
+    "altNames": ["garlic clove", "garlic bulb"]
   },
   {
     "name": "garlic paste",
     "foodGroup": "herbs and spices",
-    "altNames": [
-      "garlic purée"
-    ]
+    "altNames": ["garlic purée"]
   },
   {
     "name": "gelatine",
     "foodGroup": "baking",
-    "altNames": [
-      "leaf gelatine",
-      "powdered gelatine"
-    ]
+    "altNames": ["leaf gelatine", "powdered gelatine"]
   },
   {
     "name": "ghee",
@@ -775,18 +654,12 @@
   {
     "name": "ginger",
     "foodGroup": "herbs and spices",
-    "altNames": [
-      "ginger root",
-      "root ginger",
-      "stem ginger"
-    ]
+    "altNames": ["ginger root", "root ginger", "stem ginger"]
   },
   {
     "name": "gingernut biscuit",
     "foodGroup": "biscuits",
-    "altNames": [
-      "gingernuts"
-    ]
+    "altNames": ["gingernuts"]
   },
   {
     "name": "gnocchi",
@@ -811,16 +684,12 @@
   {
     "name": "gravy granules",
     "foodGroup": "stocks and gravies",
-    "altNames": [
-      "bisto"
-    ]
+    "altNames": ["bisto"]
   },
   {
     "name": "greek yogurt",
     "foodGroup": "dairy",
-    "altNames": [
-      "greek-style yogurt"
-    ]
+    "altNames": ["greek-style yogurt"]
   },
   {
     "name": "green chilli",
@@ -857,9 +726,7 @@
   {
     "name": "ham",
     "foodGroup": "cured meat",
-    "altNames": [
-      "roast ham"
-    ]
+    "altNames": ["roast ham"]
   },
   {
     "name": "haricot bean",
@@ -892,17 +759,12 @@
   {
     "name": "hot dog bun",
     "foodGroup": "breads",
-    "altNames": [
-      "hot-dog bun"
-    ]
+    "altNames": ["hot-dog bun"]
   },
   {
     "name": "hot sauce",
     "foodGroup": "condiments",
-    "altNames": [
-      "hot pepper sauce",
-      "tabasco sauce"
-    ]
+    "altNames": ["hot pepper sauce", "tabasco sauce"]
   },
   {
     "name": "icing sugar",
@@ -911,10 +773,7 @@
   {
     "name": "jasmine rice",
     "foodGroup": "grains",
-    "altNames": [
-      "thai rice",
-      "glutinous rice"
-    ]
+    "altNames": ["thai rice", "glutinous rice"]
   },
   {
     "name": "juniper berry",
@@ -927,9 +786,7 @@
   {
     "name": "kirsch",
     "foodGroup": "alcohol",
-    "altNames": [
-      "cherry liquer"
-    ]
+    "altNames": ["cherry liquer"]
   },
   {
     "name": "lager",
@@ -946,10 +803,7 @@
   {
     "name": "lemon",
     "foodGroup": "herbs and spices",
-    "altNames": [
-      "lemon juice",
-      "lemon zest"
-    ]
+    "altNames": ["lemon juice", "lemon zest"]
   },
   {
     "name": "lemongrass",
@@ -958,10 +812,7 @@
   {
     "name": "lime",
     "foodGroup": "herbs and spices",
-    "altNames": [
-      "lime juice",
-      "lime zest"
-    ]
+    "altNames": ["lime juice", "lime zest"]
   },
   {
     "name": "lime leaf",
@@ -982,11 +833,7 @@
   {
     "name": "long-grain rice",
     "foodGroup": "grains",
-    "altNames": [
-      "american rice",
-      "white rice",
-      "rice"
-    ]
+    "altNames": ["american rice", "white rice", "rice"]
   },
   {
     "name": "mace",
@@ -999,9 +846,7 @@
   {
     "name": "malt vinegar",
     "foodGroup": "vinegar",
-    "altNames": [
-      "vinegar"
-    ]
+    "altNames": ["vinegar"]
   },
   {
     "name": "mango chutney",
@@ -1018,9 +863,7 @@
   {
     "name": "marmalade",
     "foodGroup": "spreads",
-    "altNames": [
-      "orange marmalade"
-    ]
+    "altNames": ["orange marmalade"]
   },
   {
     "name": "marmite",
@@ -1045,10 +888,7 @@
   {
     "name": "medium-dry sherry",
     "foodGroup": "alcohol",
-    "altNames": [
-      "amontillado sherry",
-      "oloroso sherry"
-    ]
+    "altNames": ["amontillado sherry", "oloroso sherry"]
   },
   {
     "name": "milk",
@@ -1081,16 +921,12 @@
   {
     "name": "mixed peel",
     "foodGroup": "baking",
-    "altNames": [
-      "citrus peel"
-    ]
+    "altNames": ["citrus peel"]
   },
   {
     "name": "mixed spice",
     "foodGroup": "herbs and spices",
-    "altNames": [
-      "spice mix"
-    ]
+    "altNames": ["spice mix"]
   },
   {
     "name": "mozzarella",
@@ -1103,9 +939,7 @@
   {
     "name": "mustard",
     "foodGroup": "condiments",
-    "altNames": [
-      "english mustard"
-    ]
+    "altNames": ["english mustard"]
   },
   {
     "name": "mustard seed",
@@ -1122,9 +956,7 @@
   {
     "name": "noodle",
     "foodGroup": "noodles",
-    "altNames": [
-      "egg noodle"
-    ]
+    "altNames": ["egg noodle"]
   },
   {
     "name": "nutmeg",
@@ -1133,10 +965,7 @@
   {
     "name": "oat",
     "foodGroup": "baking",
-    "altNames": [
-      "porridge oat",
-      "rolled oat"
-    ]
+    "altNames": ["porridge oat", "rolled oat"]
   },
   {
     "name": "oat flour",
@@ -1149,24 +978,17 @@
   {
     "name": "oatcake",
     "foodGroup": "biscuits",
-    "altNames": [
-      "oat biscuit"
-    ]
+    "altNames": ["oat biscuit"]
   },
   {
     "name": "olive oil",
     "foodGroup": "oil",
-    "altNames": [
-      "extra virgin olive oil"
-    ]
+    "altNames": ["extra virgin olive oil"]
   },
   {
     "name": "orange",
     "foodGroup": "herbs and spices",
-    "altNames": [
-      "orange juice",
-      "orange zest"
-    ]
+    "altNames": ["orange juice", "orange zest"]
   },
   {
     "name": "oyster sauce",
@@ -1175,9 +997,7 @@
   {
     "name": "pancake",
     "foodGroup": "breads",
-    "altNames": [
-      "crepe"
-    ]
+    "altNames": ["crepe"]
   },
   {
     "name": "pappardelle",
@@ -1186,10 +1006,7 @@
   {
     "name": "paprika",
     "foodGroup": "herbs and spices",
-    "altNames": [
-      "sweet paprika",
-      "hot paprika"
-    ]
+    "altNames": ["sweet paprika", "hot paprika"]
   },
   {
     "name": "parmesan",
@@ -1210,9 +1027,7 @@
   {
     "name": "pecan",
     "foodGroup": "nuts",
-    "altNames": [
-      "pecan nut"
-    ]
+    "altNames": ["pecan nut"]
   },
   {
     "name": "penne",
@@ -1245,34 +1060,22 @@
   {
     "name": "pistachio",
     "foodGroup": "nuts",
-    "altNames": [
-      "pistachio nut"
-    ]
+    "altNames": ["pistachio nut"]
   },
   {
     "name": "pitta bread",
     "foodGroup": "breads",
-    "altNames": [
-      "pitta"
-    ]
+    "altNames": ["pitta"]
   },
   {
     "name": "plain flour",
     "foodGroup": "baking",
-    "altNames": [
-      "white flour",
-      "all-purpose flour",
-      "flour"
-    ]
+    "altNames": ["white flour", "all-purpose flour", "flour"]
   },
   {
     "name": "poppadum",
     "foodGroup": "crisps",
-    "altNames": [
-      "poppadom",
-      "pappadum",
-      "pappadom"
-    ]
+    "altNames": ["poppadom", "pappadum", "pappadom"]
   },
   {
     "name": "poppy seed",
@@ -1301,10 +1104,7 @@
   {
     "name": "quail egg",
     "foodGroup": "eggs",
-    "altNames": [
-      "quail’s egg",
-      "quails’ egg"
-    ]
+    "altNames": ["quail’s egg", "quails’ egg"]
   },
   {
     "name": "quinoa",
@@ -1313,9 +1113,7 @@
   {
     "name": "raisin",
     "foodGroup": "baking",
-    "altNames": [
-      "flame raisin"
-    ]
+    "altNames": ["flame raisin"]
   },
   {
     "name": "rapeseed oil",
@@ -1332,9 +1130,7 @@
   {
     "name": "red chilli",
     "foodGroup": "herbs and spices",
-    "altNames": [
-      "chilli"
-    ]
+    "altNames": ["chilli"]
   },
   {
     "name": "red leicester",
@@ -1347,9 +1143,7 @@
   {
     "name": "red vermouth",
     "foodGroup": "alcohol",
-    "altNames": [
-      "sweet vermouth"
-    ]
+    "altNames": ["sweet vermouth"]
   },
   {
     "name": "red wine",
@@ -1370,16 +1164,12 @@
   {
     "name": "rice noodle",
     "foodGroup": "noodles",
-    "altNames": [
-      "vermicelli noodle"
-    ]
+    "altNames": ["vermicelli noodle"]
   },
   {
     "name": "rice wine vinegar",
     "foodGroup": "vinegar",
-    "altNames": [
-      "rice vinegar"
-    ]
+    "altNames": ["rice vinegar"]
   },
   {
     "name": "ricotta",
@@ -1392,10 +1182,7 @@
   {
     "name": "risotto rice",
     "foodGroup": "grains",
-    "altNames": [
-      "carnaroli rice",
-      "arborio rice"
-    ]
+    "altNames": ["carnaroli rice", "arborio rice"]
   },
   {
     "name": "roasted pepper",
@@ -1420,10 +1207,7 @@
   {
     "name": "rum",
     "foodGroup": "alcohol",
-    "altNames": [
-      "white rum",
-      "dark rum"
-    ]
+    "altNames": ["white rum", "dark rum"]
   },
   {
     "name": "rye flour",
@@ -1452,9 +1236,7 @@
   {
     "name": "salted caramel",
     "foodGroup": "baking",
-    "altNames": [
-      "salted caramel sauce"
-    ]
+    "altNames": ["salted caramel sauce"]
   },
   {
     "name": "scone",
@@ -1511,16 +1293,12 @@
   {
     "name": "sourdough bread",
     "foodGroup": "breads",
-    "altNames": [
-      "sourdough loaf"
-    ]
+    "altNames": ["sourdough loaf"]
   },
   {
     "name": "soured cream",
     "foodGroup": "dairy",
-    "altNames": [
-      "sour cream"
-    ]
+    "altNames": ["sour cream"]
   },
   {
     "name": "soy milk",
@@ -1529,9 +1307,7 @@
   {
     "name": "soy sauce",
     "foodGroup": "condiments",
-    "altNames": [
-      "soya sauce"
-    ]
+    "altNames": ["soya sauce"]
   },
   {
     "name": "spaghetti",
@@ -1540,17 +1316,12 @@
   {
     "name": "sparkling water",
     "foodGroup": "water",
-    "altNames": [
-      "soda water"
-    ]
+    "altNames": ["soda water"]
   },
   {
     "name": "sparkling wine",
     "foodGroup": "alcohol",
-    "altNames": [
-      "champagne",
-      "prosecco"
-    ]
+    "altNames": ["champagne", "prosecco"]
   },
   {
     "name": "spelt flour",
@@ -1559,9 +1330,7 @@
   {
     "name": "sriracha sauce",
     "foodGroup": "condiments",
-    "altNames": [
-      "chilli sauce"
-    ]
+    "altNames": ["chilli sauce"]
   },
   {
     "name": "star anise",
@@ -1570,9 +1339,7 @@
   {
     "name": "stilton",
     "foodGroup": "cheese",
-    "altNames": [
-      "blue cheese"
-    ]
+    "altNames": ["blue cheese"]
   },
   {
     "name": "stout",
@@ -1589,9 +1356,7 @@
   {
     "name": "sugar syrup",
     "foodGroup": "baking",
-    "altNames": [
-      "corn syrup"
-    ]
+    "altNames": ["corn syrup"]
   },
   {
     "name": "sultana",
@@ -1616,10 +1381,7 @@
   {
     "name": "sweet sherry",
     "foodGroup": "alcohol",
-    "altNames": [
-      "cream sherry",
-      "pedro ximenez sherry"
-    ]
+    "altNames": ["cream sherry", "pedro ximenez sherry"]
   },
   {
     "name": "taco",
@@ -1648,9 +1410,7 @@
   {
     "name": "tea",
     "foodGroup": "tea and coffee",
-    "altNames": [
-      "black tea"
-    ]
+    "altNames": ["black tea"]
   },
   {
     "name": "thai basil",
@@ -1663,63 +1423,42 @@
   {
     "name": "tomato chutney",
     "foodGroup": "condiments",
-    "altNames": [
-      "tomato and chilli chutney",
-      "tomato & chilli chutney"
-    ]
+    "altNames": ["tomato and chilli chutney", "tomato & chilli chutney"]
   },
   {
     "name": "tomato ketchup",
     "foodGroup": "condiments",
-    "altNames": [
-      "ketchup"
-    ]
+    "altNames": ["ketchup"]
   },
   {
     "name": "tomato passata",
     "foodGroup": "canned vegetables",
-    "altNames": [
-      "passata"
-    ]
+    "altNames": ["passata"]
   },
   {
     "name": "tomato paste",
     "foodGroup": "herbs and spices",
-    "altNames": [
-      "tomato purée"
-    ]
+    "altNames": ["tomato purée"]
   },
   {
     "name": "tortilla",
     "foodGroup": "breads",
-    "altNames": [
-      "flour tortilla"
-    ]
+    "altNames": ["flour tortilla"]
   },
   {
     "name": "tortilla chip",
     "foodGroup": "crisps",
-    "altNames": [
-      "nacho chip",
-      "nacho"
-    ]
+    "altNames": ["nacho chip", "nacho"]
   },
   {
     "name": "treacle",
     "foodGroup": "baking",
-    "altNames": [
-      "black treacle"
-    ]
+    "altNames": ["black treacle"]
   },
   {
     "name": "triple sec",
     "foodGroup": "alcohol",
-    "altNames": [
-      "grand marnier",
-      "curacao",
-      "curaçao",
-      "cointreau"
-    ]
+    "altNames": ["grand marnier", "curacao", "curaçao", "cointreau"]
   },
   {
     "name": "turmeric",
@@ -1737,9 +1476,7 @@
   {
     "name": "vanilla paste",
     "foodGroup": "baking",
-    "altNames": [
-      "vanilla bean paste"
-    ]
+    "altNames": ["vanilla bean paste"]
   },
   {
     "name": "vegetable oil",
@@ -1748,9 +1485,7 @@
   {
     "name": "vegetable stock",
     "foodGroup": "stocks and gravies",
-    "altNames": [
-      "vegetable stock cube"
-    ]
+    "altNames": ["vegetable stock cube"]
   },
   {
     "name": "vermouth",
@@ -1767,10 +1502,7 @@
   {
     "name": "water",
     "foodGroup": "water",
-    "altNames": [
-      "ice",
-      "mineral water"
-    ]
+    "altNames": ["ice", "mineral water"]
   },
   {
     "name": "wensleydale",
@@ -1783,17 +1515,12 @@
   {
     "name": "whisky",
     "foodGroup": "alcohol",
-    "altNames": [
-      "whiskey"
-    ]
+    "altNames": ["whiskey"]
   },
   {
     "name": "white bread",
     "foodGroup": "breads",
-    "altNames": [
-      "white loaf",
-      "bread"
-    ]
+    "altNames": ["white loaf", "bread"]
   },
   {
     "name": "white chocolate",
@@ -1806,24 +1533,17 @@
   {
     "name": "white roll",
     "foodGroup": "breads",
-    "altNames": [
-      "white bap"
-    ]
+    "altNames": ["white bap"]
   },
   {
     "name": "white sugar",
     "foodGroup": "baking",
-    "altNames": [
-      "granulated sugar",
-      "sugar"
-    ]
+    "altNames": ["granulated sugar", "sugar"]
   },
   {
     "name": "white vermouth",
     "foodGroup": "alcohol",
-    "altNames": [
-      "dry vermouth"
-    ]
+    "altNames": ["dry vermouth"]
   },
   {
     "name": "white wine",

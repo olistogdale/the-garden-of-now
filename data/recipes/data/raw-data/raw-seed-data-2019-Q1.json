@@ -3413,9 +3413,7 @@
       "proteinContent": "1 grams protein"
     },
     "recipeCategory": "Drink",
-    "recipeIngredients": [
-      "150g whole almonds"
-    ],
+    "recipeIngredients": ["150g whole almonds"],
     "recipeInstructions": [
       {
         "text": "Put the almonds in a large bowl and cover with water, then cover the bowl and leave to soak overnight or for at least 4 hrs."

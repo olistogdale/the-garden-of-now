@@ -6454,11 +6454,7 @@
       "proteinContent": "0.5 grams protein"
     },
     "recipeCategory": "Cocktails, Drink",
-    "recipeIngredients": [
-      "60ml vodka",
-      "2 tbsp Kahlúa",
-      "1 tbsp cream"
-    ],
+    "recipeIngredients": ["60ml vodka", "2 tbsp Kahlúa", "1 tbsp cream"],
     "recipeInstructions": [
       {
         "text": "Mix together all the ingredients. Put some ice cubes in a small tumbler and pour the cocktail over the top."

@@ -5111,10 +5111,7 @@
       "sodiumContent": "0.01 milligram of sodium"
     },
     "recipeCategory": "Condiment",
-    "recipeIngredients": [
-      "100ml balsamic vinegar",
-      "2 tsp caster sugar"
-    ],
+    "recipeIngredients": ["100ml balsamic vinegar", "2 tsp caster sugar"],
     "recipeInstructions": [
       {
         "text": "Mix the vinegar and sugar in a small pan over a low heat and simmer for 4-6 mins until thickened and glossy. Leave to cool (it will thicken as it cools), then transfer to an airtight jar. Will keep for up to 2 weeks. Drizzle over a caprese or green salad."

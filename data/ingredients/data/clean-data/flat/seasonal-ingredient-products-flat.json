@@ -3,11 +3,7 @@
     "name": "bacon",
     "parentIngredient": "pork",
     "foodGroup": "meat",
-    "altNames": [
-      "back bacon",
-      "streaky bacon",
-      "lardons"
-    ]
+    "altNames": ["back bacon", "streaky bacon", "lardons"]
   },
   {
     "name": "bavette steak",
@@ -18,17 +14,13 @@
     "name": "beef back rib",
     "parentIngredient": "beef",
     "foodGroup": "meat",
-    "altNames": [
-      "back rib of beef"
-    ]
+    "altNames": ["back rib of beef"]
   },
   {
     "name": "beef brisket",
     "parentIngredient": "beef",
     "foodGroup": "meat",
-    "altNames": [
-      "brisket"
-    ]
+    "altNames": ["brisket"]
   },
   {
     "name": "beef burger",
@@ -39,19 +31,13 @@
     "name": "beef chuck",
     "parentIngredient": "beef",
     "foodGroup": "meat",
-    "altNames": [
-      "chuck steak"
-    ]
+    "altNames": ["chuck steak"]
   },
   {
     "name": "beef feather blade",
     "parentIngredient": "beef",
     "foodGroup": "meat",
-    "altNames": [
-      "beef blade",
-      "feather blade of beef",
-      "blade of beef"
-    ]
+    "altNames": ["beef blade", "feather blade of beef", "blade of beef"]
   },
   {
     "name": "beef fillet",
@@ -68,9 +54,7 @@
     "name": "beef flank",
     "parentIngredient": "beef",
     "foodGroup": "meat",
-    "altNames": [
-      "flank steak"
-    ]
+    "altNames": ["flank steak"]
   },
   {
     "name": "beef meatball",
@@ -81,9 +65,7 @@
     "name": "beef mince",
     "parentIngredient": "beef",
     "foodGroup": "meat",
-    "altNames": [
-      "steak mince"
-    ]
+    "altNames": ["steak mince"]
   },
   {
     "name": "beef rib",
@@ -101,10 +83,7 @@
     "name": "beef rump",
     "parentIngredient": "beef",
     "foodGroup": "meat",
-    "altNames": [
-      "rump of beef",
-      "rump steak"
-    ]
+    "altNames": ["rump of beef", "rump steak"]
   },
   {
     "name": "beef sausage",
@@ -115,58 +94,43 @@
     "name": "beef shin",
     "parentIngredient": "beef",
     "foodGroup": "meat",
-    "altNames": [
-      "shin of beef"
-    ]
+    "altNames": ["shin of beef"]
   },
   {
     "name": "beef short rib",
     "parentIngredient": "beef",
     "foodGroup": "meat",
-    "altNames": [
-      "short rib of beef"
-    ]
+    "altNames": ["short rib of beef"]
   },
   {
     "name": "beef silverside",
     "parentIngredient": "beef",
     "foodGroup": "meat",
-    "altNames": [
-      "silverside of beef"
-    ]
+    "altNames": ["silverside of beef"]
   },
   {
     "name": "beef sirloin",
     "parentIngredient": "beef",
     "foodGroup": "meat",
-    "altNames": [
-      "sirloin of beef",
-      "sirloin steak"
-    ]
+    "altNames": ["sirloin of beef", "sirloin steak"]
   },
   {
     "name": "beef skirt",
     "parentIngredient": "beef",
     "foodGroup": "meat",
-    "altNames": [
-      "skirt steak"
-    ]
+    "altNames": ["skirt steak"]
   },
   {
     "name": "beef striploin",
     "parentIngredient": "beef",
     "foodGroup": "meat",
-    "altNames": [
-      "striploin of beef"
-    ]
+    "altNames": ["striploin of beef"]
   },
   {
     "name": "beef topside",
     "parentIngredient": "beef",
     "foodGroup": "meat",
-    "altNames": [
-      "topside of beef"
-    ]
+    "altNames": ["topside of beef"]
   },
   {
     "name": "black pudding",
@@ -187,9 +151,7 @@
     "name": "chicken breast",
     "parentIngredient": "chicken",
     "foodGroup": "poultry",
-    "altNames": [
-      "chicken breast fillet"
-    ]
+    "altNames": ["chicken breast fillet"]
   },
   {
     "name": "chicken crown",
@@ -250,10 +212,7 @@
     "name": "chorizo sausage",
     "parentIngredient": "pork",
     "foodGroup": "meat",
-    "altNames": [
-      "chorizo",
-      "chorizo-style sausage"
-    ]
+    "altNames": ["chorizo", "chorizo-style sausage"]
   },
   {
     "name": "cod fillet",
@@ -264,10 +223,7 @@
     "name": "cod loin",
     "parentIngredient": "cod",
     "foodGroup": "fish",
-    "altNames": [
-      "cod loin steak",
-      "cod loin fillet"
-    ]
+    "altNames": ["cod loin steak", "cod loin fillet"]
   },
   {
     "name": "cod steak",
@@ -305,9 +261,7 @@
     "name": "duck breast",
     "parentIngredient": "duck",
     "foodGroup": "poultry",
-    "altNames": [
-      "duck breast fillet"
-    ]
+    "altNames": ["duck breast fillet"]
   },
   {
     "name": "duck crown",
@@ -328,9 +282,7 @@
     "name": "gammon",
     "parentIngredient": "pork",
     "foodGroup": "meat",
-    "altNames": [
-      "gammon steak"
-    ]
+    "altNames": ["gammon steak"]
   },
   {
     "name": "goat mince",
@@ -341,9 +293,7 @@
     "name": "goat shoulder",
     "parentIngredient": "goat",
     "foodGroup": "meat",
-    "altNames": [
-      "shoulder of goat"
-    ]
+    "altNames": ["shoulder of goat"]
   },
   {
     "name": "goose breast",
@@ -439,17 +389,13 @@
     "name": "hogget leg",
     "parentIngredient": "hogget",
     "foodGroup": "meat",
-    "altNames": [
-      "leg of hogget"
-    ]
+    "altNames": ["leg of hogget"]
   },
   {
     "name": "hogget shoulder",
     "parentIngredient": "hogget",
     "foodGroup": "meat",
-    "altNames": [
-      "shoulder of hogget"
-    ]
+    "altNames": ["shoulder of hogget"]
   },
   {
     "name": "john dory fillet",
@@ -460,9 +406,7 @@
     "name": "lamb breast",
     "parentIngredient": "lamb",
     "foodGroup": "meat",
-    "altNames": [
-      "breast of lamb"
-    ]
+    "altNames": ["breast of lamb"]
   },
   {
     "name": "lamb burger",
@@ -473,19 +417,13 @@
     "name": "lamb cannon",
     "parentIngredient": "lamb",
     "foodGroup": "meat",
-    "altNames": [
-      "cannon of lamb"
-    ]
+    "altNames": ["cannon of lamb"]
   },
   {
     "name": "lamb chop",
     "parentIngredient": "lamb",
     "foodGroup": "meat",
-    "altNames": [
-      "lamb loin chop",
-      "barnsley chop",
-      "lamb best end chop"
-    ]
+    "altNames": ["lamb loin chop", "barnsley chop", "lamb best end chop"]
   },
   {
     "name": "lamb cutlet",
@@ -496,9 +434,7 @@
     "name": "lamb fillet",
     "parentIngredient": "lamb",
     "foodGroup": "meat",
-    "altNames": [
-      "fillet of lamb"
-    ]
+    "altNames": ["fillet of lamb"]
   },
   {
     "name": "lamb heart",
@@ -509,25 +445,19 @@
     "name": "lamb leg",
     "parentIngredient": "lamb",
     "foodGroup": "meat",
-    "altNames": [
-      "leg of lamb"
-    ]
+    "altNames": ["leg of lamb"]
   },
   {
     "name": "lamb liver",
     "parentIngredient": "lamb",
     "foodGroup": "meat",
-    "altNames": [
-      "lamb's liver"
-    ]
+    "altNames": ["lamb's liver"]
   },
   {
     "name": "lamb loin",
     "parentIngredient": "lamb",
     "foodGroup": "meat",
-    "altNames": [
-      "loin of lamb"
-    ]
+    "altNames": ["loin of lamb"]
   },
   {
     "name": "lamb meatball",
@@ -543,25 +473,19 @@
     "name": "lamb neck",
     "parentIngredient": "lamb",
     "foodGroup": "meat",
-    "altNames": [
-      "lamb neck fillet"
-    ]
+    "altNames": ["lamb neck fillet"]
   },
   {
     "name": "lamb rack",
     "parentIngredient": "lamb",
     "foodGroup": "meat",
-    "altNames": [
-      "rack of lamb"
-    ]
+    "altNames": ["rack of lamb"]
   },
   {
     "name": "lamb rump",
     "parentIngredient": "lamb",
     "foodGroup": "meat",
-    "altNames": [
-      "rump of lamb"
-    ]
+    "altNames": ["rump of lamb"]
   },
   {
     "name": "lamb sausage",
@@ -577,9 +501,7 @@
     "name": "lamb shoulder",
     "parentIngredient": "lamb",
     "foodGroup": "meat",
-    "altNames": [
-      "shoulder of lamb"
-    ]
+    "altNames": ["shoulder of lamb"]
   },
   {
     "name": "lamb steak",
@@ -615,10 +537,7 @@
     "name": "merguez sausage",
     "parentIngredient": "lamb",
     "foodGroup": "meat",
-    "altNames": [
-      "merguez",
-      "merguez-style sausage"
-    ]
+    "altNames": ["merguez", "merguez-style sausage"]
   },
   {
     "name": "monkfish steak",
@@ -639,17 +558,13 @@
     "name": "mutton leg",
     "parentIngredient": "mutton",
     "foodGroup": "meat",
-    "altNames": [
-      "leg of mutton"
-    ]
+    "altNames": ["leg of mutton"]
   },
   {
     "name": "mutton shoulder",
     "parentIngredient": "mutton",
     "foodGroup": "meat",
-    "altNames": [
-      "shoulder of mutton"
-    ]
+    "altNames": ["shoulder of mutton"]
   },
   {
     "name": "onglet steak",
@@ -665,9 +580,7 @@
     "name": "ox heart",
     "parentIngredient": "beef",
     "foodGroup": "meat",
-    "altNames": [
-      "beef heart"
-    ]
+    "altNames": ["beef heart"]
   },
   {
     "name": "ox kidney",
@@ -678,9 +591,7 @@
     "name": "ox liver",
     "parentIngredient": "beef",
     "foodGroup": "meat",
-    "altNames": [
-      "beef liver"
-    ]
+    "altNames": ["beef liver"]
   },
   {
     "name": "ox tongue",
@@ -736,9 +647,7 @@
     "name": "polish sausage",
     "parentIngredient": "pork",
     "foodGroup": "meat",
-    "altNames": [
-      "kabanos"
-    ]
+    "altNames": ["kabanos"]
   },
   {
     "name": "pollock fillet",
@@ -749,9 +658,7 @@
     "name": "pork belly",
     "parentIngredient": "pork",
     "foodGroup": "meat",
-    "altNames": [
-      "belly of pork"
-    ]
+    "altNames": ["belly of pork"]
   },
   {
     "name": "pork cheek",
@@ -762,9 +669,7 @@
     "name": "pork chop",
     "parentIngredient": "pork",
     "foodGroup": "meat",
-    "altNames": [
-      "pork loin chop"
-    ]
+    "altNames": ["pork loin chop"]
   },
   {
     "name": "pork cutlet",
@@ -775,26 +680,19 @@
     "name": "pork fillet",
     "parentIngredient": "pork",
     "foodGroup": "meat",
-    "altNames": [
-      "fillet of pork"
-    ]
+    "altNames": ["fillet of pork"]
   },
   {
     "name": "pork leg",
     "parentIngredient": "pork",
     "foodGroup": "meat",
-    "altNames": [
-      "leg of pork",
-      "pork hock"
-    ]
+    "altNames": ["leg of pork", "pork hock"]
   },
   {
     "name": "pork loin",
     "parentIngredient": "pork",
     "foodGroup": "meat",
-    "altNames": [
-      "loin of pork"
-    ]
+    "altNames": ["loin of pork"]
   },
   {
     "name": "pork meatball",
@@ -810,42 +708,31 @@
     "name": "pork neck",
     "parentIngredient": "pork",
     "foodGroup": "meat",
-    "altNames": [
-      "neck of pork"
-    ]
+    "altNames": ["neck of pork"]
   },
   {
     "name": "pork rack",
     "parentIngredient": "pork",
     "foodGroup": "meat",
-    "altNames": [
-      "rack of pork"
-    ]
+    "altNames": ["rack of pork"]
   },
   {
     "name": "pork rib",
     "parentIngredient": "pork",
     "foodGroup": "meat",
-    "altNames": [
-      "rib of pork"
-    ]
+    "altNames": ["rib of pork"]
   },
   {
     "name": "pork sausage",
     "parentIngredient": "pork",
     "foodGroup": "meat",
-    "altNames": [
-      "chipolata"
-    ]
+    "altNames": ["chipolata"]
   },
   {
     "name": "pork shoulder",
     "parentIngredient": "pork",
     "foodGroup": "meat",
-    "altNames": [
-      "pork shoulder steak",
-      "shoulder of pork"
-    ]
+    "altNames": ["pork shoulder steak", "shoulder of pork"]
   },
   {
     "name": "pork steak",
@@ -856,9 +743,7 @@
     "name": "pork tenderloin",
     "parentIngredient": "pork",
     "foodGroup": "meat",
-    "altNames": [
-      "tenderloin of pork"
-    ]
+    "altNames": ["tenderloin of pork"]
   },
   {
     "name": "porterhouse steak",
@@ -919,9 +804,7 @@
     "name": "skate wing",
     "parentIngredient": "skate",
     "foodGroup": "fish",
-    "altNames": [
-      "ray wing"
-    ]
+    "altNames": ["ray wing"]
   },
   {
     "name": "t-bone steak",
@@ -952,9 +835,7 @@
     "name": "turkey breast",
     "parentIngredient": "turkey",
     "foodGroup": "poultry",
-    "altNames": [
-      "turkey breast fillet"
-    ]
+    "altNames": ["turkey breast fillet"]
   },
   {
     "name": "turkey crown",
@@ -990,9 +871,7 @@
     "name": "veal back rib",
     "parentIngredient": "veal",
     "foodGroup": "meat",
-    "altNames": [
-      "back rib of veal"
-    ]
+    "altNames": ["back rib of veal"]
   },
   {
     "name": "veal chop",
@@ -1018,10 +897,7 @@
     "name": "veal liver",
     "parentIngredient": "veal",
     "foodGroup": "meat",
-    "altNames": [
-      "calf’s liver",
-      "calves’ liver"
-    ]
+    "altNames": ["calf’s liver", "calves’ liver"]
   },
   {
     "name": "veal meatball",
@@ -1042,17 +918,13 @@
     "name": "veal shin",
     "parentIngredient": "veal",
     "foodGroup": "meat",
-    "altNames": [
-      "shin of veal"
-    ]
+    "altNames": ["shin of veal"]
   },
   {
     "name": "veal shoulder",
     "parentIngredient": "veal",
     "foodGroup": "meat",
-    "altNames": [
-      "shoulder of veal"
-    ]
+    "altNames": ["shoulder of veal"]
   },
   {
     "name": "veal steak",
@@ -1063,17 +935,13 @@
     "name": "venison haunch",
     "parentIngredient": "venison",
     "foodGroup": "meat",
-    "altNames": [
-      "haunch of venison"
-    ]
+    "altNames": ["haunch of venison"]
   },
   {
     "name": "venison loin",
     "parentIngredient": "venison",
     "foodGroup": "meat",
-    "altNames": [
-      "loin of venison"
-    ]
+    "altNames": ["loin of venison"]
   },
   {
     "name": "venison mince",
@@ -1089,9 +957,7 @@
     "name": "venison shoulder",
     "parentIngredient": "venison",
     "foodGroup": "meat",
-    "altNames": [
-      "shoulder of venison"
-    ]
+    "altNames": ["shoulder of venison"]
   },
   {
     "name": "venison steak",

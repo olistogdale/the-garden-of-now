@@ -8,9 +8,7 @@
     },
     {
       "name": "ham",
-      "altNames": [
-        "roast ham"
-      ]
+      "altNames": ["roast ham"]
     },
     {
       "name": "prosciutto"
@@ -46,17 +44,13 @@
     },
     {
       "name": "anchovy",
-      "altNames": [
-        "anchovy fillet"
-      ]
+      "altNames": ["anchovy fillet"]
     }
   ],
   "cheese": [
     {
       "name": "stilton",
-      "altNames": [
-        "blue cheese"
-      ]
+      "altNames": ["blue cheese"]
     },
     {
       "name": "cheddar"
@@ -107,9 +101,7 @@
   "oil": [
     {
       "name": "olive oil",
-      "altNames": [
-        "extra virgin olive oil"
-      ]
+      "altNames": ["extra virgin olive oil"]
     },
     {
       "name": "vegetable oil"
@@ -128,17 +120,13 @@
     },
     {
       "name": "cooking oil",
-      "altNames": [
-        "oil"
-      ]
+      "altNames": ["oil"]
     }
   ],
   "vinegar": [
     {
       "name": "malt vinegar",
-      "altNames": [
-        "vinegar"
-      ]
+      "altNames": ["vinegar"]
     },
     {
       "name": "red wine vinegar"
@@ -151,47 +139,35 @@
     },
     {
       "name": "cider vinegar",
-      "altNames": [
-        "apple cider vinegar"
-      ]
+      "altNames": ["apple cider vinegar"]
     },
     {
       "name": "balsamic vinegar"
     },
     {
       "name": "rice wine vinegar",
-      "altNames": [
-        "rice vinegar"
-      ]
+      "altNames": ["rice vinegar"]
     }
   ],
   "condiments": [
     {
       "name": "mustard",
-      "altNames": [
-        "english mustard"
-      ]
+      "altNames": ["english mustard"]
     },
     {
       "name": "french’s mustard",
-      "altNames": [
-        "american mustard"
-      ]
+      "altNames": ["american mustard"]
     },
     {
       "name": "dijon mustard",
-      "altNames": [
-        "french mustard"
-      ]
+      "altNames": ["french mustard"]
     },
     {
       "name": "wholegrain mustard"
     },
     {
       "name": "tomato ketchup",
-      "altNames": [
-        "ketchup"
-      ]
+      "altNames": ["ketchup"]
     },
     {
       "name": "mayonnaise"
@@ -209,24 +185,15 @@
     },
     {
       "name": "apple chutney",
-      "altNames": [
-        "apple and pear chutney",
-        "apple & pear chutney"
-      ]
+      "altNames": ["apple and pear chutney", "apple & pear chutney"]
     },
     {
       "name": "tomato chutney",
-      "altNames": [
-        "tomato and chilli chutney",
-        "tomato & chilli chutney"
-      ]
+      "altNames": ["tomato and chilli chutney", "tomato & chilli chutney"]
     },
     {
       "name": "branston pickle",
-      "altNames": [
-        "ploughman’s chutney",
-        "ploughman’s pickle"
-      ]
+      "altNames": ["ploughman’s chutney", "ploughman’s pickle"]
     },
     {
       "name": "piccalilli"
@@ -242,9 +209,7 @@
     },
     {
       "name": "aubergine pickle",
-      "altNames": [
-        "brinjal pickle"
-      ]
+      "altNames": ["brinjal pickle"]
     },
     {
       "name": "apple sauce"
@@ -266,31 +231,22 @@
     },
     {
       "name": "hot sauce",
-      "altNames": [
-        "hot pepper sauce",
-        "tabasco sauce"
-      ]
+      "altNames": ["hot pepper sauce", "tabasco sauce"]
     },
     {
       "name": "sriracha sauce",
-      "altNames": [
-        "chilli sauce"
-      ]
+      "altNames": ["chilli sauce"]
     },
     {
       "name": "sweet chilli sauce"
     },
     {
       "name": "bbq sauce",
-      "altNames": [
-        "barbecue sauce"
-      ]
+      "altNames": ["barbecue sauce"]
     },
     {
       "name": "brown sauce",
-      "altNames": [
-        "hp sauce"
-      ]
+      "altNames": ["hp sauce"]
     },
     {
       "name": "worcestershire sauce"
@@ -303,9 +259,7 @@
     },
     {
       "name": "soy sauce",
-      "altNames":[
-        "soya sauce"
-      ]
+      "altNames": ["soya sauce"]
     },
     {
       "name": "salad dressing"
@@ -320,10 +274,7 @@
     },
     {
       "name": "black pepper",
-      "altNames": [
-        "black peppercorn",
-        "pepper"
-      ]
+      "altNames": ["black peppercorn", "pepper"]
     },
     {
       "name": "white pepper"
@@ -351,9 +302,7 @@
     },
     {
       "name": "cardamom",
-      "altNames": [
-        "cardamom pod"
-      ]
+      "altNames": ["cardamom pod"]
     },
     {
       "name": "cayenne pepper"
@@ -363,38 +312,28 @@
     },
     {
       "name": "red chilli",
-      "altNames": [
-        "chilli"
-      ]
+      "altNames": ["chilli"]
     },
     {
       "name": "green chilli"
-
     },
     {
       "name": "chilli flakes"
     },
     {
       "name": "chilli powder",
-      "altNames": [
-        "hot chilli powder",
-        "mild chilli powder"
-      ]
+      "altNames": ["hot chilli powder", "mild chilli powder"]
     },
     {
       "name": "cinnamon",
-      "altNames": [
-        "cinnamon stick"
-      ]
+      "altNames": ["cinnamon stick"]
     },
     {
       "name": "coriander seed"
     },
     {
       "name": "cumin",
-      "altNames": [
-        "cumin seed"
-      ]
+      "altNames": ["cumin seed"]
     },
     {
       "name": "curry leaf"
@@ -413,39 +352,26 @@
     },
     {
       "name": "five spice",
-      "altNames": [
-        "five-spice"
-      ]
+      "altNames": ["five-spice"]
     },
     {
       "name": "galangal",
-      "altNames": [
-        "galangal root"
-      ]
+      "altNames": ["galangal root"]
     },
     {
       "name": "garam masala"
     },
     {
       "name": "garlic",
-      "altNames": [
-        "garlic clove",
-        "garlic bulb"
-      ]
+      "altNames": ["garlic clove", "garlic bulb"]
     },
     {
       "name": "garlic paste",
-      "altNames": [
-        "garlic purée"
-      ]
+      "altNames": ["garlic purée"]
     },
     {
       "name": "ginger",
-      "altNames": [
-        "ginger root",
-        "root ginger",
-        "stem ginger"
-      ]
+      "altNames": ["ginger root", "root ginger", "stem ginger"]
     },
     {
       "name": "harissa paste"
@@ -464,15 +390,13 @@
     },
     {
       "name": "mace"
-    },    
+    },
     {
       "name": "mustard seed"
     },
     {
       "name": "mixed spice",
-      "altNames": [
-        "spice mix"
-      ]
+      "altNames": ["spice mix"]
     },
     {
       "name": "nigella seed"
@@ -482,10 +406,7 @@
     },
     {
       "name": "paprika",
-      "altNames": [
-        "sweet paprika",
-        "hot paprika"
-      ]
+      "altNames": ["sweet paprika", "hot paprika"]
     },
     {
       "name": "poppy seed"
@@ -510,9 +431,7 @@
     },
     {
       "name": "tomato paste",
-      "altNames": [
-        "tomato purée"
-      ]
+      "altNames": ["tomato purée"]
     },
     {
       "name": "thai basil"
@@ -528,58 +447,37 @@
     },
     {
       "name": "lemon",
-      "altNames": [
-        "lemon juice",
-        "lemon zest"
-      ]
+      "altNames": ["lemon juice", "lemon zest"]
     },
     {
       "name": "lime",
-      "altNames": [
-        "lime juice",
-        "lime zest"
-      ]
+      "altNames": ["lime juice", "lime zest"]
     },
     {
       "name": "orange",
-      "altNames": [
-        "orange juice",
-        "orange zest"
-      ]
+      "altNames": ["orange juice", "orange zest"]
     }
   ],
   "stocksAndGravies": [
     {
       "name": "gravy granules",
-      "altNames": [
-        "bisto"
-      ]
+      "altNames": ["bisto"]
     },
     {
       "name": "vegetable stock",
-      "altNames": [
-        "vegetable stock cube"
-      ]
+      "altNames": ["vegetable stock cube"]
     },
     {
       "name": "beef stock",
-      "altNames": [
-        "beef stock cube"
-      ]
+      "altNames": ["beef stock cube"]
     },
     {
       "name": "chicken stock",
-      "altNames": [
-        "chicken stock cube",
-        "stock",
-        "stock cube"
-      ]
+      "altNames": ["chicken stock cube", "stock", "stock cube"]
     },
     {
       "name": "fish stock",
-      "altNames": [
-        "fish stock cube"
-      ]
+      "altNames": ["fish stock cube"]
     },
     {
       "name": "bovril"
@@ -642,16 +540,11 @@
     },
     {
       "name": "tomato passata",
-      "altNames": [
-        "passata"
-      ]
+      "altNames": ["passata"]
     },
     {
       "name": "chopped tomato",
-      "altNames": [
-        "tinned tomato",
-        "canned tomato"
-      ]
+      "altNames": ["tinned tomato", "canned tomato"]
     }
   ],
   "noodles": [
@@ -696,15 +589,11 @@
     },
     {
       "name": "noodle",
-      "altNames": [
-        "egg noodle"
-      ]
+      "altNames": ["egg noodle"]
     },
     {
       "name": "rice noodle",
-      "altNames": [
-        "vermicelli noodle"
-      ]
+      "altNames": ["vermicelli noodle"]
     }
   ],
   "nuts": [
@@ -713,9 +602,7 @@
     },
     {
       "name": "cashew",
-      "altNames": [
-        "cashew nut"
-      ]
+      "altNames": ["cashew nut"]
     },
     {
       "name": "almond"
@@ -725,15 +612,11 @@
     },
     {
       "name": "pistachio",
-      "altNames": [
-        "pistachio nut"
-      ]
+      "altNames": ["pistachio nut"]
     },
     {
       "name": "pecan",
-      "altNames": [
-        "pecan nut"
-      ]
+      "altNames": ["pecan nut"]
     },
     {
       "name": "brazil nut"
@@ -742,51 +625,33 @@
   "grains": [
     {
       "name": "long-grain rice",
-      "altNames": [
-        "american rice",
-        "white rice",
-        "rice"
-      ]
+      "altNames": ["american rice", "white rice", "rice"]
     },
     {
       "name": "basmati rice"
     },
     {
       "name": "jasmine rice",
-      "altNames": [
-        "thai rice",
-        "glutinous rice"
-      ]
+      "altNames": ["thai rice", "glutinous rice"]
     },
     {
       "name": "risotto rice",
-      "altNames": [
-        "carnaroli rice",
-        "arborio rice"
-      ]
+      "altNames": ["carnaroli rice", "arborio rice"]
     },
     {
       "name": "brown rice",
-      "altNames": [
-        "brown basmati rice",
-        "wild rice"
-      ]
+      "altNames": ["brown basmati rice", "wild rice"]
     },
     {
       "name": "black rice"
     },
     {
       "name": "couscous",
-      "altNames": [
-        "cous cous",
-        "cous-cous"
-      ]
+      "altNames": ["cous cous", "cous-cous"]
     },
     {
       "name": "bulgur wheat",
-      "altNames": [
-        "cracked wheat"
-      ]
+      "altNames": ["cracked wheat"]
     },
     {
       "name": "quinoa"
@@ -795,9 +660,7 @@
   "pulses": [
     {
       "name": "brown lentil",
-      "altNames": [
-        "lentil"
-      ]
+      "altNames": ["lentil"]
     },
     {
       "name": "red lentil"
@@ -818,16 +681,11 @@
   "breads": [
     {
       "name": "sourdough bread",
-      "altNames": [
-        "sourdough loaf"
-      ]
+      "altNames": ["sourdough loaf"]
     },
     {
       "name": "white bread",
-      "altNames": [
-        "white loaf",
-        "bread"
-      ]
+      "altNames": ["white loaf", "bread"]
     },
     {
       "name": "brown bread",
@@ -841,15 +699,11 @@
     },
     {
       "name": "pitta bread",
-      "altNames": [
-        "pitta"
-      ]
+      "altNames": ["pitta"]
     },
     {
       "name": "ciabatta",
-      "altNames": [
-        "ciabatta roll"
-      ]
+      "altNames": ["ciabatta roll"]
     },
     {
       "name": "focaccia"
@@ -862,9 +716,7 @@
     },
     {
       "name": "tortilla",
-      "altNames": [
-        "flour tortilla"
-      ]
+      "altNames": ["flour tortilla"]
     },
     {
       "name": "naan bread"
@@ -877,9 +729,7 @@
     },
     {
       "name": "pancake",
-      "altNames": [
-        "crepe"
-      ]
+      "altNames": ["crepe"]
     },
     {
       "name": "american-style pancake"
@@ -889,23 +739,17 @@
     },
     {
       "name": "burger bun",
-      "altNames": [
-        "brioche bun"
-      ]
+      "altNames": ["brioche bun"]
     },
     {
       "name": "hot dog bun",
-      "altNames": [
-        "hot-dog bun"
-      ] 
+      "altNames": ["hot-dog bun"]
     },
     {
       "name": "white roll",
-      "altNames": [
-        "white bap"
-      ]
+      "altNames": ["white bap"]
     },
-        {
+    {
       "name": "brown roll",
       "altNames": [
         "brown bap",
@@ -917,9 +761,7 @@
     },
     {
       "name": "baguette",
-      "altNames": [
-        "french stick"
-      ]
+      "altNames": ["french stick"]
     }
   ],
   "biscuits": [
@@ -933,15 +775,11 @@
     },
     {
       "name": "oatcake",
-      "altNames": [
-        "oat biscuit"
-      ]
+      "altNames": ["oat biscuit"]
     },
     {
       "name": "gingernut biscuit",
-      "altNames": [
-        "gingernuts"
-      ]
+      "altNames": ["gingernuts"]
     },
     {
       "name": "chocolate chip cookie",
@@ -956,21 +794,14 @@
   "crisps": [
     {
       "name": "poppadum",
-      "altNames": [
-        "poppadom",
-        "pappadum",
-        "pappadom"
-      ]
+      "altNames": ["poppadom", "pappadum", "pappadom"]
     },
     {
       "name": "prawn cracker"
     },
     {
       "name": "tortilla chip",
-      "altNames": [
-        "nacho chip",
-        "nacho"
-      ]
+      "altNames": ["nacho chip", "nacho"]
     },
     {
       "name": "taco"
@@ -994,10 +825,7 @@
     },
     {
       "name": "butter",
-      "altNames": [
-        "salted butter",
-        "unsalted butter"
-      ]
+      "altNames": ["salted butter", "unsalted butter"]
     },
     {
       "name": "buttermilk"
@@ -1034,37 +862,28 @@
     },
     {
       "name": "double cream",
-      "altNames": [
-        "extra thick double cream",
-        "extra thick cream"
-      ]
+      "altNames": ["extra thick double cream", "extra thick cream"]
     },
     {
       "name": "clotted cream"
     },
     {
       "name": "soured cream",
-      "altNames": [
-        "sour cream"
-      ]
+      "altNames": ["sour cream"]
     },
     {
       "name": "crème fraîche"
     },
     {
       "name": "coconut cream",
-      "altNames": [
-        "creamed coconut"
-      ]
+      "altNames": ["creamed coconut"]
     },
     {
       "name": "yogurt"
     },
     {
       "name": "greek yogurt",
-      "altNames": [
-        "greek-style yogurt"
-      ]
+      "altNames": ["greek-style yogurt"]
     },
     {
       "name": "fromage frais"
@@ -1076,26 +895,15 @@
   "eggs": [
     {
       "name": "egg",
-      "altNames": [
-        "chicken’s egg",
-        "chickens’ egg",
-        "egg white",
-        "egg yolk"
-      ]
+      "altNames": ["chicken’s egg", "chickens’ egg", "egg white", "egg yolk"]
     },
     {
       "name": "duck egg",
-      "altNames": [
-        "duck’s egg",
-        "ducks’ egg"
-      ]
+      "altNames": ["duck’s egg", "ducks’ egg"]
     },
     {
       "name": "quail egg",
-      "altNames": [
-        "quail’s egg",
-        "quails’ egg"
-      ]
+      "altNames": ["quail’s egg", "quails’ egg"]
     }
   ],
   "baking": [
@@ -1122,11 +930,7 @@
     },
     {
       "name": "plain flour",
-      "altNames": [
-        "white flour",
-        "all-purpose flour",
-        "flour"
-      ]
+      "altNames": ["white flour", "all-purpose flour", "flour"]
     },
     {
       "name": "self-raising flour"
@@ -1139,9 +943,7 @@
     },
     {
       "name": "cake flour",
-      "altNames": [
-        "sponge flour"
-      ]
+      "altNames": ["sponge flour"]
     },
     {
       "name": "bread flour"
@@ -1151,9 +953,7 @@
     },
     {
       "name": "’00’ flour",
-      "altNames": [
-        "’00’ pasta flour"
-      ]
+      "altNames": ["’00’ pasta flour"]
     },
     {
       "name": "semolina"
@@ -1175,32 +975,22 @@
     },
     {
       "name": "almond flour",
-      "altNames": [
-        "ground almonds"
-      ]
+      "altNames": ["ground almonds"]
     },
     {
       "name": "buckwheat flour"
     },
     {
       "name": "corn flour",
-      "altNames": [
-        "cornflour"
-      ]
+      "altNames": ["cornflour"]
     },
     {
       "name": "oat",
-      "altNames": [
-        "porridge oat",
-        "rolled oat"
-      ]
+      "altNames": ["porridge oat", "rolled oat"]
     },
     {
       "name": "white sugar",
-      "altNames": [
-        "granulated sugar",
-        "sugar"
-      ]
+      "altNames": ["granulated sugar", "sugar"]
     },
     {
       "name": "brown sugar"
@@ -1228,21 +1018,15 @@
     },
     {
       "name": "treacle",
-      "altNames": [
-        "black treacle"
-      ]
+      "altNames": ["black treacle"]
     },
     {
       "name": "sugar syrup",
-      "altNames": [
-        "corn syrup"
-      ]
+      "altNames": ["corn syrup"]
     },
     {
       "name": "mixed peel",
-      "altNames": [
-        "citrus peel"
-      ]
+      "altNames": ["citrus peel"]
     },
     {
       "name": "dessicated coconut"
@@ -1255,9 +1039,7 @@
     },
     {
       "name": "raisin",
-      "altNames": [
-        "flame raisin"
-      ]
+      "altNames": ["flame raisin"]
     },
     {
       "name": "currant"
@@ -1273,15 +1055,11 @@
     },
     {
       "name": "caramel",
-      "altNames": [
-        "caramel sauce"
-      ]
+      "altNames": ["caramel sauce"]
     },
     {
       "name": "salted caramel",
-      "altNames": [
-        "salted caramel sauce"
-      ]
+      "altNames": ["salted caramel sauce"]
     },
     {
       "name": "dulce de leche"
@@ -1296,22 +1074,15 @@
     },
     {
       "name": "vanilla paste",
-      "altNames": [
-        "vanilla bean paste"
-      ]
+      "altNames": ["vanilla bean paste"]
     },
     {
       "name": "cocoa",
-      "altNames": [
-        "cocoa powder"
-      ]
+      "altNames": ["cocoa powder"]
     },
     {
       "name": "gelatine",
-      "altNames": [
-        "leaf gelatine",
-        "powdered gelatine"
-      ]
+      "altNames": ["leaf gelatine", "powdered gelatine"]
     },
     {
       "name": "mincemeat"
@@ -1332,24 +1103,17 @@
     },
     {
       "name": "marmalade",
-      "altNames": [
-        "orange marmalade"
-      ]
+      "altNames": ["orange marmalade"]
     },
     {
       "name": "chocolate spread",
-      "altNames": [
-        "chocolate hazelnut spread",
-        "nutella"
-      ]
+      "altNames": ["chocolate hazelnut spread", "nutella"]
     }
   ],
   "teaAndCoffee": [
     {
       "name": "tea",
-      "altNames": [
-        "black tea"
-      ]
+      "altNames": ["black tea"]
     },
     {
       "name": "green tea"
@@ -1359,9 +1123,7 @@
     },
     {
       "name": "coffee",
-      "altNames": [
-        "espresso"
-      ]
+      "altNames": ["espresso"]
     }
   ],
   "confectionery": [
@@ -1382,9 +1144,7 @@
     },
     {
       "name": "chocolate mint thin",
-      "altNames": [
-        "after eight"
-      ]
+      "altNames": ["after eight"]
     },
     {
       "name": "hazelnut chocolate"
@@ -1417,16 +1177,11 @@
     },
     {
       "name": "rum",
-      "altNames": [
-        "white rum",
-        "dark rum"
-      ]
+      "altNames": ["white rum", "dark rum"]
     },
     {
       "name": "whisky",
-      "altNames": [
-        "whiskey"
-      ]
+      "altNames": ["whiskey"]
     },
     {
       "name": "vodka"
@@ -1439,24 +1194,15 @@
     },
     {
       "name": "dry sherry",
-      "altNames": [
-        "fino sherry",
-        "manzanilla sherry"
-      ]
+      "altNames": ["fino sherry", "manzanilla sherry"]
     },
     {
       "name": "medium-dry sherry",
-      "altNames": [
-        "amontillado sherry",
-        "oloroso sherry"
-      ]
+      "altNames": ["amontillado sherry", "oloroso sherry"]
     },
     {
       "name": "sweet sherry",
-      "altNames": [
-        "cream sherry",
-        "pedro ximenez sherry"
-      ]
+      "altNames": ["cream sherry", "pedro ximenez sherry"]
     },
     {
       "name": "port"
@@ -1466,15 +1212,11 @@
     },
     {
       "name": "red vermouth",
-      "altNames": [
-        "sweet vermouth"
-      ]
+      "altNames": ["sweet vermouth"]
     },
     {
       "name": "white vermouth",
-      "altNames": [
-        "dry vermouth"
-      ]
+      "altNames": ["dry vermouth"]
     },
     {
       "name": "rosé vermouth"
@@ -1484,16 +1226,11 @@
     },
     {
       "name": "sparkling wine",
-      "altNames": [
-        "champagne",
-        "prosecco"
-      ]
+      "altNames": ["champagne", "prosecco"]
     },
     {
       "name": "amaretto",
-      "altNames": [
-        "disaronno"
-      ]
+      "altNames": ["disaronno"]
     },
     {
       "name": "marsala"
@@ -1509,26 +1246,15 @@
     },
     {
       "name": "brandy",
-      "altNames": [
-        "cognac",
-        "armagnac"
-      ]
+      "altNames": ["cognac", "armagnac"]
     },
     {
       "name": "triple sec",
-      "altNames": [
-        "grand marnier",
-        "curacao",
-        "curaçao",
-        "cointreau"
-      ]
+      "altNames": ["grand marnier", "curacao", "curaçao", "cointreau"]
     },
     {
       "name": "coffee liqueur",
-      "altNames": [
-        "kahlúa",
-        "kahlua"
-      ]
+      "altNames": ["kahlúa", "kahlua"]
     },
     {
       "name": "limoncello"
@@ -1538,9 +1264,7 @@
     },
     {
       "name": "kirsch",
-      "altNames": [
-        "cherry liquer"
-      ]
+      "altNames": ["cherry liquer"]
     }
   ],
   "juice": [
@@ -1551,16 +1275,11 @@
   "water": [
     {
       "name": "water",
-      "altNames": [
-        "ice",
-        "mineral water"
-      ]
+      "altNames": ["ice", "mineral water"]
     },
     {
       "name": "sparkling water",
-      "altNames": [
-        "soda water"
-      ]
+      "altNames": ["soda water"]
     }
   ]
 }

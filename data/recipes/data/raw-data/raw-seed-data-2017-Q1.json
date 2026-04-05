@@ -9680,10 +9680,7 @@
       "sodiumContent": "0.1 milligram of sodium"
     },
     "recipeCategory": "Side dish",
-    "recipeIngredients": [
-      "1 pointed cabbage",
-      "25g butter"
-    ],
+    "recipeIngredients": ["1 pointed cabbage", "25g butter"],
     "recipeInstructions": [
       {
         "text": "Remove the outer leaves of the cabbage and cut it into six wedges. Heat the butter in a large frying pan until starting to brown, add the cabbage and cook until burnt on one side. Add more butter to the pan if you need to and use tongs to turn the cabbage and burn on the other side. Season with sea salt and serve."

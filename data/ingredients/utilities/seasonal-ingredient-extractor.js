@@ -12,7 +12,10 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const inputPath = path.join(__dirname, '../seed-data/ingredients-from-proto.json');
+const inputPath = path.join(
+  __dirname,
+  '../seed-data/ingredients-from-proto.json'
+);
 
 const rawData = fs.readFileSync(inputPath, 'utf8');
 const ingredients = JSON.parse(rawData);
@@ -32,10 +35,10 @@ const extractIngredients = function (array) {
     }
 
     return Array.from(list);
-  }
+  };
 
   for (let item of array) {
-    if (item.month === "universal") {
+    if (item.month === 'universal') {
       break;
       // const total = extractor(item.ingredients);
     }
@@ -47,14 +50,13 @@ const extractIngredients = function (array) {
     const fish = extractor(item.fish);
     const total = [...vegetables, ...fruit, ...nutsAndHerbs, ...meat, ...fish];
     for (let ingredient of total) {
-      totalList.add(ingredient)
+      totalList.add(ingredient);
     }
-
   }
 
   return Array.from(totalList);
-}
+};
 
 const ingredientsSorted = extractIngredients(ingredients).toSorted();
 
-ingredientsSorted.forEach(el => console.log(el));
+ingredientsSorted.forEach((el) => console.log(el));

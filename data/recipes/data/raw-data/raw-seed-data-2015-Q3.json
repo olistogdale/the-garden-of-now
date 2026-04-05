@@ -2920,10 +2920,7 @@
       "proteinContent": "2 grams protein"
     },
     "recipeCategory": "Side dish",
-    "recipeIngredients": [
-      "750g miniature new potatoes",
-      "2 tbsp olive oil"
-    ],
+    "recipeIngredients": ["750g miniature new potatoes", "2 tbsp olive oil"],
     "recipeInstructions": [
       {
         "text": "If your barbecue hasn’t already been heated, light and heat until the ashes turn grey. Put the potatoes in a large saucepan of cold water and bring to the boil. Once boiling, cook for 5 mins until slightly tender."
@@ -2960,9 +2957,7 @@
       "proteinContent": "1 grams protein"
     },
     "recipeCategory": "Side dish",
-    "recipeIngredients": [
-      "2 bunches of spring onions (about 20)"
-    ],
+    "recipeIngredients": ["2 bunches of spring onions (about 20)"],
     "recipeInstructions": [
       {
         "text": "If your barbecue hasn’t already been heated, light and heat until the ashes turn grey, or heat a griddle pan. Wash the spring onions and pat dry. Trim off the ends, then place the onions directly on the barbecue or in a hot griddle pan."

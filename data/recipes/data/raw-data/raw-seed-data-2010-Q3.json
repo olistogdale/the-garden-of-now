@@ -18172,10 +18172,7 @@
     "totalTime": "PT20M",
     "recipeYield": 2,
     "recipeCategory": "Dinner, Side dish, Supper",
-    "recipeIngredients": [
-      "450g new potato",
-      "olive oil"
-    ],
+    "recipeIngredients": ["450g new potato", "olive oil"],
     "recipeInstructions": [
       {
         "text": "Cook the potatoes in boiling water for about 15 mins until tender. Drain well and crush lightly with a fork. Mix in some salt and pepper and a splash of olive oil to moisten."

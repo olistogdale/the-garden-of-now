@@ -23,10 +23,7 @@
       "sodiumContent": "0.01 milligram of sodium"
     },
     "recipeCategory": "Cocktails, Drink",
-    "recipeIngredients": [
-      "porter or a light stout",
-      "champagne"
-    ],
+    "recipeIngredients": ["porter or a light stout", "champagne"],
     "recipeInstructions": [
       {
         "text": "Half-fill a champagne flute with porter or a light stout, then top up with chilled champagne."
@@ -2931,10 +2928,7 @@
       "sodiumContent": "0.01 milligram of sodium"
     },
     "recipeCategory": "Cocktails, Drink",
-    "recipeIngredients": [
-      "½  a very ripe mango",
-      "champagne"
-    ],
+    "recipeIngredients": ["½  a very ripe mango", "champagne"],
     "recipeInstructions": [
       {
         "text": "Peel and chop the mango and put it into a blender with 100ml champagne. Blend to a smooth purée, then divide between two champagne flutes."
@@ -2968,11 +2962,7 @@
       "sodiumContent": "0.01 milligram of sodium"
     },
     "recipeCategory": "Cocktails, Drink",
-    "recipeIngredients": [
-      "2 tsp lemon sorbet",
-      "1 tsp vodka",
-      "champagne"
-    ],
+    "recipeIngredients": ["2 tsp lemon sorbet", "1 tsp vodka", "champagne"],
     "recipeInstructions": [
       {
         "text": "Put the lemon sorbet into the bottom of a champagne flute."

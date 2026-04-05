@@ -14,10 +14,7 @@
     },
     {
       "name": "cod loin",
-      "altNames": [
-        "cod loin steak",
-        "cod loin fillet"
-      ],
+      "altNames": ["cod loin steak", "cod loin fillet"],
       "parentIngredient": "cod"
     },
     {
@@ -126,9 +123,7 @@
     },
     {
       "name": "skate wing",
-      "altNames": [
-        "ray wing"
-      ],
+      "altNames": ["ray wing"],
       "parentIngredient": "skate"
     },
     {
@@ -155,32 +150,22 @@
   "meat": [
     {
       "name": "beef striploin",
-      "altNames": [
-        "striploin of beef"
-      ],
+      "altNames": ["striploin of beef"],
       "parentIngredient": "beef"
     },
     {
       "name": "beef sirloin",
-      "altNames": [
-        "sirloin of beef",
-        "sirloin steak"
-      ],
+      "altNames": ["sirloin of beef", "sirloin steak"],
       "parentIngredient": "beef"
     },
     {
       "name": "beef shin",
-      "altNames": [
-        "shin of beef"
-      ],
+      "altNames": ["shin of beef"],
       "parentIngredient": "beef"
     },
     {
       "name": "beef rump",
-      "altNames": [
-        "rump of beef",
-        "rump steak"
-      ],
+      "altNames": ["rump of beef", "rump steak"],
       "parentIngredient": "beef"
     },
     {
@@ -196,16 +181,12 @@
     },
     {
       "name": "beef back rib",
-      "altNames": [
-        "back rib of beef"
-      ],
+      "altNames": ["back rib of beef"],
       "parentIngredient": "beef"
     },
     {
       "name": "beef short rib",
-      "altNames": [
-        "short rib of beef"
-      ],
+      "altNames": ["short rib of beef"],
       "parentIngredient": "beef"
     },
     {
@@ -220,60 +201,42 @@
     },
     {
       "name": "beef topside",
-      "altNames": [
-        "topside of beef"
-      ],
+      "altNames": ["topside of beef"],
       "parentIngredient": "beef"
     },
     {
       "name": "beef silverside",
-      "altNames": [
-        "silverside of beef"
-      ],
+      "altNames": ["silverside of beef"],
       "parentIngredient": "beef"
     },
     {
       "name": "beef feather blade",
-      "altNames": [
-        "beef blade",
-        "feather blade of beef",
-        "blade of beef"
-      ],
+      "altNames": ["beef blade", "feather blade of beef", "blade of beef"],
       "parentIngredient": "beef"
     },
     {
       "name": "beef mince",
-      "altNames": [
-        "steak mince"
-      ],
+      "altNames": ["steak mince"],
       "parentIngredient": "beef"
     },
     {
       "name": "beef skirt",
-      "altNames": [
-        "skirt steak"
-      ],
+      "altNames": ["skirt steak"],
       "parentIngredient": "beef"
     },
     {
       "name": "beef chuck",
-      "altNames": [
-        "chuck steak"
-      ],
+      "altNames": ["chuck steak"],
       "parentIngredient": "beef"
     },
     {
       "name": "beef flank",
-      "altNames": [
-        "flank steak"
-      ],
+      "altNames": ["flank steak"],
       "parentIngredient": "beef"
     },
     {
       "name": "beef brisket",
-      "altNames": [
-        "brisket"
-      ],
+      "altNames": ["brisket"],
       "parentIngredient": "beef"
     },
     {
@@ -310,16 +273,12 @@
     },
     {
       "name": "ox liver",
-      "altNames": [
-        "beef liver"
-      ],
+      "altNames": ["beef liver"],
       "parentIngredient": "beef"
     },
     {
       "name": "ox heart",
-      "altNames": [
-        "beef heart"
-      ],
+      "altNames": ["beef heart"],
       "parentIngredient": "beef"
     },
     {
@@ -336,65 +295,47 @@
     },
     {
       "name": "lamb leg",
-      "altNames": [
-        "leg of lamb"
-      ],
+      "altNames": ["leg of lamb"],
       "parentIngredient": "lamb"
     },
     {
       "name": "lamb shoulder",
-      "altNames": [
-        "shoulder of lamb"
-      ],
+      "altNames": ["shoulder of lamb"],
       "parentIngredient": "lamb"
     },
     {
       "name": "lamb rack",
-      "altNames": [
-        "rack of lamb"
-      ],
+      "altNames": ["rack of lamb"],
       "parentIngredient": "lamb"
     },
     {
       "name": "lamb loin",
-      "altNames": [
-        "loin of lamb"
-      ],
+      "altNames": ["loin of lamb"],
       "parentIngredient": "lamb"
     },
     {
       "name": "lamb cannon",
-      "altNames": [
-        "cannon of lamb"
-      ],
+      "altNames": ["cannon of lamb"],
       "parentIngredient": "lamb"
     },
     {
       "name": "lamb rump",
-      "altNames": [
-        "rump of lamb"
-      ],
+      "altNames": ["rump of lamb"],
       "parentIngredient": "lamb"
     },
     {
       "name": "lamb breast",
-      "altNames": [
-        "breast of lamb"
-      ],
+      "altNames": ["breast of lamb"],
       "parentIngredient": "lamb"
     },
     {
       "name": "lamb fillet",
-      "altNames": [
-        "fillet of lamb"
-      ],
+      "altNames": ["fillet of lamb"],
       "parentIngredient": "lamb"
     },
     {
       "name": "lamb liver",
-      "altNames": [
-        "lamb's liver"
-      ],
+      "altNames": ["lamb's liver"],
       "parentIngredient": "lamb"
     },
     {
@@ -407,9 +348,7 @@
     },
     {
       "name": "lamb neck",
-      "altNames": [
-        "lamb neck fillet"
-      ],
+      "altNames": ["lamb neck fillet"],
       "parentIngredient": "lamb"
     },
     {
@@ -426,11 +365,7 @@
     },
     {
       "name": "lamb chop",
-      "altNames": [
-        "lamb loin chop",
-        "barnsley chop",
-        "lamb best end chop"
-      ],
+      "altNames": ["lamb loin chop", "barnsley chop", "lamb best end chop"],
       "parentIngredient": "lamb"
     },
     {
@@ -443,10 +378,7 @@
     },
     {
       "name": "merguez sausage",
-      "altNames": [
-        "merguez",
-        "merguez-style sausage"
-      ],
+      "altNames": ["merguez", "merguez-style sausage"],
       "parentIngredient": "lamb"
     },
     {
@@ -455,16 +387,12 @@
     },
     {
       "name": "mutton leg",
-      "altNames": [
-        "leg of mutton"
-      ],
+      "altNames": ["leg of mutton"],
       "parentIngredient": "mutton"
     },
     {
       "name": "mutton shoulder",
-      "altNames": [
-        "shoulder of mutton"
-      ],
+      "altNames": ["shoulder of mutton"],
       "parentIngredient": "mutton"
     },
     {
@@ -473,23 +401,17 @@
     },
     {
       "name": "hogget leg",
-      "altNames": [
-        "leg of hogget"
-      ],
+      "altNames": ["leg of hogget"],
       "parentIngredient": "hogget"
     },
     {
       "name": "hogget shoulder",
-      "altNames": [
-        "shoulder of hogget"
-      ],
+      "altNames": ["shoulder of hogget"],
       "parentIngredient": "hogget"
     },
     {
       "name": "goat shoulder",
-      "altNames": [
-        "shoulder of goat"
-      ],
+      "altNames": ["shoulder of goat"],
       "parentIngredient": "goat"
     },
     {
@@ -498,67 +420,47 @@
     },
     {
       "name": "pork tenderloin",
-      "altNames": [
-        "tenderloin of pork"
-      ],
+      "altNames": ["tenderloin of pork"],
       "parentIngredient": "pork"
     },
     {
       "name": "pork neck",
-      "altNames": [
-        "neck of pork"
-      ],
+      "altNames": ["neck of pork"],
       "parentIngredient": "pork"
     },
     {
       "name": "pork shoulder",
-      "altNames": [
-        "pork shoulder steak",
-        "shoulder of pork"
-      ],
+      "altNames": ["pork shoulder steak", "shoulder of pork"],
       "parentIngredient": "pork"
     },
     {
       "name": "pork leg",
-      "altNames": [
-        "leg of pork",
-        "pork hock"
-      ],
+      "altNames": ["leg of pork", "pork hock"],
       "parentIngredient": "pork"
     },
     {
       "name": "pork rack",
-      "altNames": [
-        "rack of pork"
-      ],
+      "altNames": ["rack of pork"],
       "parentIngredient": "pork"
     },
     {
       "name": "pork loin",
-      "altNames": [
-        "loin of pork"
-      ],
+      "altNames": ["loin of pork"],
       "parentIngredient": "pork"
     },
     {
       "name": "pork belly",
-      "altNames": [
-        "belly of pork"
-      ],
+      "altNames": ["belly of pork"],
       "parentIngredient": "pork"
     },
     {
       "name": "pork rib",
-      "altNames": [
-        "rib of pork"
-      ],
+      "altNames": ["rib of pork"],
       "parentIngredient": "pork"
     },
     {
       "name": "pork fillet",
-      "altNames": [
-        "fillet of pork"
-      ],
+      "altNames": ["fillet of pork"],
       "parentIngredient": "pork"
     },
     {
@@ -567,9 +469,7 @@
     },
     {
       "name": "pork chop",
-      "altNames": [
-        "pork loin chop"
-      ],
+      "altNames": ["pork loin chop"],
       "parentIngredient": "pork"
     },
     {
@@ -590,18 +490,12 @@
     },
     {
       "name": "gammon",
-      "altNames": [
-        "gammon steak"
-      ],
+      "altNames": ["gammon steak"],
       "parentIngredient": "pork"
     },
     {
       "name": "bacon",
-      "altNames": [
-        "back bacon",
-        "streaky bacon",
-        "lardons"
-      ],
+      "altNames": ["back bacon", "streaky bacon", "lardons"],
       "parentIngredient": "pork"
     },
     {
@@ -610,24 +504,17 @@
     },
     {
       "name": "pork sausage",
-      "altNames": [
-        "chipolata"
-      ],
+      "altNames": ["chipolata"],
       "parentIngredient": "pork"
     },
     {
       "name": "chorizo sausage",
-      "altNames": [
-        "chorizo",
-        "chorizo-style sausage"
-      ],
+      "altNames": ["chorizo", "chorizo-style sausage"],
       "parentIngredient": "pork"
     },
     {
       "name": "polish sausage",
-      "altNames": [
-        "kabanos"
-      ],
+      "altNames": ["kabanos"],
       "parentIngredient": "pork"
     },
     {
@@ -648,9 +535,7 @@
     },
     {
       "name": "veal shin",
-      "altNames": [
-        "shin of veal"
-      ],
+      "altNames": ["shin of veal"],
       "parentIngredient": "veal"
     },
     {
@@ -659,16 +544,12 @@
     },
     {
       "name": "veal shoulder",
-      "altNames": [
-        "shoulder of veal"
-      ],
+      "altNames": ["shoulder of veal"],
       "parentIngredient": "veal"
     },
     {
       "name": "veal back rib",
-      "altNames": [
-        "back rib of veal"
-      ],
+      "altNames": ["back rib of veal"],
       "parentIngredient": "veal"
     },
     {
@@ -693,10 +574,7 @@
     },
     {
       "name": "veal liver",
-      "altNames": [
-        "calf’s liver",
-        "calves’ liver"
-      ],
+      "altNames": ["calf’s liver", "calves’ liver"],
       "parentIngredient": "veal"
     },
     {
@@ -709,23 +587,17 @@
     },
     {
       "name": "venison loin",
-      "altNames": [
-        "loin of venison"
-      ],
+      "altNames": ["loin of venison"],
       "parentIngredient": "venison"
     },
     {
       "name": "venison shoulder",
-      "altNames": [
-        "shoulder of venison"
-      ],
+      "altNames": ["shoulder of venison"],
       "parentIngredient": "venison"
     },
     {
       "name": "venison haunch",
-      "altNames": [
-        "haunch of venison"
-      ],
+      "altNames": ["haunch of venison"],
       "parentIngredient": "venison"
     },
     {
@@ -760,9 +632,7 @@
     },
     {
       "name": "chicken breast",
-      "altNames": [
-        "chicken breast fillet"
-      ],
+      "altNames": ["chicken breast fillet"],
       "parentIngredient": "chicken"
     },
     {
@@ -803,9 +673,7 @@
     },
     {
       "name": "duck breast",
-      "altNames": [
-        "duck breast fillet"
-      ],
+      "altNames": ["duck breast fillet"],
       "parentIngredient": "duck"
     },
     {
@@ -898,9 +766,7 @@
     },
     {
       "name": "turkey breast",
-      "altNames": [
-        "turkey breast fillet"
-      ],
+      "altNames": ["turkey breast fillet"],
       "parentIngredient": "turkey"
     },
     {

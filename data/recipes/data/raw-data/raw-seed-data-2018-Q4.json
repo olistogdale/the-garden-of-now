@@ -8494,9 +8494,7 @@
       "fiberContent": "1 grams fiber",
       "proteinContent": "1 grams protein"
     },
-    "recipeIngredients": [
-      "750g pumpkin or butternut squash"
-    ],
+    "recipeIngredients": ["750g pumpkin or butternut squash"],
     "recipeInstructions": [
       {
         "text": "To steam the pumpkin: Peel and seed it, then cut into evenly sized cubes. Put the cubes in a steamer or colander set over a pan of simmering water and cook for 10 mins. Test with the point of a knife and cook for a further 5 mins if not cooked through. Mash and leave to cool."

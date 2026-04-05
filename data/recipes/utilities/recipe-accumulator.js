@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -12,7 +12,10 @@ let recipesTotal = [];
 for (let i = 2008; i < 2026; i++) {
   for (let j = 1; j < 5; j++) {
     try {
-      const inputPath = path.join(__dirname, `../seed-data/raw-data/missing-raw-seed-data-${i}-Q${j}.json`);
+      const inputPath = path.join(
+        __dirname,
+        `../seed-data/raw-data/missing-raw-seed-data-${i}-Q${j}.json`
+      );
       const rawData = fs.readFileSync(inputPath, 'utf8');
       const recipes = JSON.parse(rawData);
       recipesTotal = recipesTotal.concat(recipes);
@@ -22,7 +25,12 @@ for (let i = 2008; i < 2026; i++) {
   }
 }
 
-const outputPath = path.join(__dirname, '../seed-data/raw-data/missing-raw-seed-data-total.json')
+const outputPath = path.join(
+  __dirname,
+  '../seed-data/raw-data/missing-raw-seed-data-total.json'
+);
 
 fs.writeFileSync(outputPath, JSON.stringify(recipesTotal, null, 2), 'utf8');
-console.log(`Recipes accumulated. This library contains ${recipesTotal.length} recipes.`)
+console.log(
+  `Recipes accumulated. This library contains ${recipesTotal.length} recipes.`
+);

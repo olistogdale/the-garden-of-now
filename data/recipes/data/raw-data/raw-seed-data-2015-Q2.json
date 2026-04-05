@@ -1000,9 +1000,7 @@
       "proteinContent": "4 grams protein"
     },
     "recipeCategory": "Side dish",
-    "recipeIngredients": [
-      "140g short or medium grain rice"
-    ],
+    "recipeIngredients": ["140g short or medium grain rice"],
     "recipeInstructions": [
       {
         "text": "In a medium saucepan with a tight-fitting lid, cover the rice with cold tap water. Swish the rice around until the water becomes cloudy, then slowly pour it out, using your hand to keep the rice from falling out of the pan. Repeat 2 or 3 more times until the water runs mostly clear, then drain well."

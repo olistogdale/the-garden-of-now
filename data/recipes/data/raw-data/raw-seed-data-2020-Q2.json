@@ -5390,10 +5390,7 @@
       "fiberContent": "1 grams fiber",
       "proteinContent": "1 grams protein"
     },
-    "recipeIngredients": [
-      "1 garlic bulb",
-      "1 tsp olive oil"
-    ],
+    "recipeIngredients": ["1 garlic bulb", "1 tsp olive oil"],
     "recipeInstructions": [
       {
         "text": "Heat the oven to 180C/160C fan/gas 4. Cut the top off the garlic bulb, exposing the tops of the garlic cloves. Put on a small square of foil, and rub with the olive oil. Season with salt and pepper. Scrunch up the foil to seal in the bulb."
@@ -5483,10 +5480,7 @@
       "sodiumContent": "0.2 milligram of sodium"
     },
     "recipeCategory": "Dinner, Supper",
-    "recipeIngredients": [
-      "500g pork neck",
-      "your chosen glaze (optional)"
-    ],
+    "recipeIngredients": ["500g pork neck", "your chosen glaze (optional)"],
     "recipeInstructions": [
       {
         "text": "Slice the pork neck into 4cm strips, then toss with your chosen glaze. Leave to marinate for 2 hrs, then thread onto three large skewers. Light the barbecue. Once the flames have died down, cook the skewers for 5 mins on each side (or, cook in a griddle pan set over a high heat). Brush with the rest of the glaze, then cook for a further 2-3 mins on each side, or until cooked through."
@@ -5552,10 +5546,7 @@
       "sodiumContent": "3.8 milligram of sodium"
     },
     "recipeCategory": "Dinner, Supper",
-    "recipeIngredients": [
-      "500g halloumi",
-      "your chosen glaze (optional)"
-    ],
+    "recipeIngredients": ["500g halloumi", "your chosen glaze (optional)"],
     "recipeInstructions": [
       {
         "text": "Slice the halloumi into large chunks and thread onto three skewers. Light the barbecue. Brush the skewers with your chosen glaze and, when the flames have died down, cook for 1-2 mins on each side (or, cook in a griddle pan set over a high heat). Brush with the remaining glaze and cook for another 1 min on each side."
@@ -8735,10 +8726,7 @@
       "sodiumContent": "0.01 milligram of sodium"
     },
     "recipeCategory": "Drink",
-    "recipeIngredients": [
-      "2-3 tsp honey",
-      "¼ lemon juiced, plus 1 slice"
-    ],
+    "recipeIngredients": ["2-3 tsp honey", "¼ lemon juiced, plus 1 slice"],
     "recipeInstructions": [
       {
         "text": "Mix the honey and lemon juice in the bottom of a cup while you boil the kettle. Pour over the hot water, add the lemon slice and stir well to combine. Add another teaspoon of honey if you prefer it sweeter."
@@ -9012,9 +9000,7 @@
     "totalTime": "PT15M",
     "recipeYield": "1 LOAF (12-15 SLICES)",
     "recipeCategory": "Side dish, Snack, Soup",
-    "recipeIngredients": [
-      "250g wholemeal rye flour"
-    ],
+    "recipeIngredients": ["250g wholemeal rye flour"],
     "recipeInstructions": [
       {
         "text": "Day 1: To begin your starter, mix 50g flour with 50g tepid water in a jar or, better still, a plastic container. Make sure all the flour is incorporated and leave, covered with a tea towel, at room temperature for 24 hrs."

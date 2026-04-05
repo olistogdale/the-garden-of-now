@@ -4860,12 +4860,7 @@
     "prepTime": "PT30M",
     "totalTime": "PT30M",
     "recipeCategory": "Condiment",
-    "recipeIngredients": [
-      "2 onions",
-      "½ tsp salt",
-      "½ tsp sugar",
-      "2 limes"
-    ],
+    "recipeIngredients": ["2 onions", "½ tsp salt", "½ tsp sugar", "2 limes"],
     "recipeInstructions": [
       {
         "text": "Halve and finely slice the onions. Mix with the salt, sugar and the lime juice. Leave to macerate for at lease 30 mins before serving. Will keep in an airtight container in the fridge for a week."

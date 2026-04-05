@@ -3280,10 +3280,7 @@
     "totalTime": "PT10M",
     "recipeYield": "Makes enough for 1 mousse recipe",
     "recipeCategory": "Dessert, Dinner",
-    "recipeIngredients": [
-      "3 egg whites",
-      "25g caster sugar"
-    ],
+    "recipeIngredients": ["3 egg whites", "25g caster sugar"],
     "recipeInstructions": [
       {
         "text": "Ensure the mixer bowl and whisk attachment are clean and grease-free. Whisk the egg whites until they form stiff peaks, then whisk in a third of the sugar for about 30 secs."

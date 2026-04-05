@@ -8991,10 +8991,7 @@
       "sodiumContent": "0.02 milligram of sodium"
     },
     "recipeCategory": "Side dish",
-    "recipeIngredients": [
-      "50g unsalted butter",
-      "500g baby new potatoes"
-    ],
+    "recipeIngredients": ["50g unsalted butter", "500g baby new potatoes"],
     "recipeInstructions": [
       {
         "text": "Melt butter in a large frying pan with a lid. When it is foaming, add potatoes. Shake well so they are covered in butter and in a single layer. Sprinkle over a little salt."

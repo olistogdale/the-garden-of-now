@@ -18,15 +18,33 @@ const __dirname = path.dirname(__filename);
 const cleanDataDir = path.join(__dirname, '../data/clean-data');
 
 const inputPaths = {
-  seasonalIngredients: path.join(cleanDataDir, 'nested/seasonal-ingredients.json'),
-  seasonalIngredientProducts: path.join(cleanDataDir, 'nested/seasonal-ingredient-products.json'),
-  nonSeasonalIngredients: path.join(cleanDataDir, 'nested/non-seasonal-ingredients.json'),
+  seasonalIngredients: path.join(
+    cleanDataDir,
+    'nested/seasonal-ingredients.json'
+  ),
+  seasonalIngredientProducts: path.join(
+    cleanDataDir,
+    'nested/seasonal-ingredient-products.json'
+  ),
+  nonSeasonalIngredients: path.join(
+    cleanDataDir,
+    'nested/non-seasonal-ingredients.json'
+  ),
 };
 
 const outputPaths = {
-  seasonalIngredients: path.join(cleanDataDir, 'flat/seasonal-ingredients-flat.json'),
-  seasonalIngredientProducts: path.join(cleanDataDir, 'flat/seasonal-ingredient-products-flat.json'),
-  nonSeasonalIngredients: path.join(cleanDataDir, 'flat/non-seasonal-ingredients-flat.json'),
+  seasonalIngredients: path.join(
+    cleanDataDir,
+    'flat/seasonal-ingredients-flat.json'
+  ),
+  seasonalIngredientProducts: path.join(
+    cleanDataDir,
+    'flat/seasonal-ingredient-products-flat.json'
+  ),
+  nonSeasonalIngredients: path.join(
+    cleanDataDir,
+    'flat/non-seasonal-ingredients-flat.json'
+  ),
 };
 
 const readJson = (filePath) => JSON.parse(fs.readFileSync(filePath, 'utf8'));
@@ -51,14 +69,19 @@ const flattenSeasonalIngredients = (dataByCategory) => {
       if (!existing) {
         byName.set(key, {
           name: ingredient.name,
-          seasonality: ingredient.seasonality ? [...ingredient.seasonality] : [],
+          seasonality: ingredient.seasonality
+            ? [...ingredient.seasonality]
+            : [],
           foodGroup: category,
           altNames: ingredient.altNames ? [...ingredient.altNames] : undefined,
         });
         continue;
       }
 
-      existing.ingredientFamily = uniq([...existing.ingredientFamily, category]);
+      existing.ingredientFamily = uniq([
+        ...existing.ingredientFamily,
+        category,
+      ]);
       existing.seasonality = uniq([
         ...existing.seasonality,
         ...(ingredient.seasonality || []),
@@ -89,7 +112,10 @@ const flattenNonSeasonalIngredients = (dataByCategory) => {
         continue;
       }
 
-      existing.ingredientFamily = uniq([...existing.ingredientFamily, category]);
+      existing.ingredientFamily = uniq([
+        ...existing.ingredientFamily,
+        category,
+      ]);
       existing.altNames = mergeAltNames(existing.altNames, ingredient.altNames);
     }
   }
@@ -117,7 +143,10 @@ const flattenSeasonalIngredientProducts = (dataByCategory) => {
         continue;
       }
 
-      existing.ingredientFamily = uniq([...existing.ingredientFamily, category]);
+      existing.ingredientFamily = uniq([
+        ...existing.ingredientFamily,
+        category,
+      ]);
       existing.altNames = mergeAltNames(existing.altNames, product.altNames);
     }
   }
@@ -128,7 +157,9 @@ const flattenSeasonalIngredientProducts = (dataByCategory) => {
 };
 
 const seasonalIngredients = readJson(inputPaths.seasonalIngredients);
-const seasonalIngredientProducts = readJson(inputPaths.seasonalIngredientProducts);
+const seasonalIngredientProducts = readJson(
+  inputPaths.seasonalIngredientProducts
+);
 const nonSeasonalIngredients = readJson(inputPaths.nonSeasonalIngredients);
 
 const seasonalIngredientsFlat = flattenSeasonalIngredients(seasonalIngredients);

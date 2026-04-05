@@ -12674,10 +12674,7 @@
       "sodiumContent": "0.1 milligram of sodium"
     },
     "recipeCategory": "Side dish",
-    "recipeIngredients": [
-      "450g radishes",
-      "2 tbsp olive oil"
-    ],
+    "recipeIngredients": ["450g radishes", "2 tbsp olive oil"],
     "recipeInstructions": [
       {
         "text": "Heat oven to 180C/160C fan/gas 4. Remove the leaves from the radishes and if they are nice and fresh, set aside. Halve the radishes and tip into a roasting tin with the olive oil."

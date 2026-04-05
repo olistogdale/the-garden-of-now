@@ -3187,10 +3187,7 @@
       "sodiumContent": "0.18 milligram of sodium"
     },
     "recipeCategory": "Breakfast, Lunch",
-    "recipeIngredients": [
-      "½ tsp vegetable or sunflower oil",
-      "2 eggs"
-    ],
+    "recipeIngredients": ["½ tsp vegetable or sunflower oil", "2 eggs"],
     "recipeInstructions": [
       {
         "text": "Oil two large ramekins (they need to be big enough to hold the eggs and water). Fill the ramekins three-quarters full with water, then put in the air fryer and heat at 200C for 5 mins. After this point, the water should be simmering."
@@ -6047,10 +6044,7 @@
       "proteinContent": "0.5 grams protein",
       "sodiumContent": "0.01 milligram of sodium"
     },
-    "recipeIngredients": [
-      "2 tbsp coffee liqueur",
-      "1 tbsp Baileys"
-    ],
+    "recipeIngredients": ["2 tbsp coffee liqueur", "1 tbsp Baileys"],
     "recipeInstructions": [
       {
         "text": "If you like, put the shot glass, coffee liqueur and Baileys in the fridge to chill for 30 mins-1 hr before making the drink."

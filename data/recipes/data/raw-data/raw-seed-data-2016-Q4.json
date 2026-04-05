@@ -5461,10 +5461,7 @@
       "sodiumContent": "0.3 milligram of sodium"
     },
     "recipeCategory": "Side dish",
-    "recipeIngredients": [
-      "500g baby carrots",
-      "1 tbsp butter"
-    ],
+    "recipeIngredients": ["500g baby carrots", "1 tbsp butter"],
     "recipeInstructions": [
       {
         "text": "Wash and peel the baby carrots, keeping the green tops intact. Put them in a medium saucepan and half-fill with salted water. Bring to the boil and cook for 4 mins or until just tender. Drain, then transfer to a serving dish, season and stir in the butter."
@@ -8963,10 +8960,7 @@
       "fiberContent": "1 grams fiber",
       "proteinContent": "4 grams protein"
     },
-    "recipeIngredients": [
-      "250g granulated sugar",
-      "200g toasted walnuts"
-    ],
+    "recipeIngredients": ["250g granulated sugar", "200g toasted walnuts"],
     "recipeInstructions": [
       {
         "text": "Put 250g granulated sugar and 50ml water in a pan and set over a medium heat. Cook until the sugar dissolves and is just beginning to colour. Add 200g toasted walnuts and stir until the sugar crystallises, covering the nuts. Pour onto a tray and leave to cool before breaking up to serve."
@@ -9269,10 +9263,7 @@
     "cookTime": "PT3H",
     "totalTime": "PT3H30M",
     "recipeYield": "makes 6",
-    "recipeIngredients": [
-      "6 egg yolks",
-      "fine salt"
-    ],
+    "recipeIngredients": ["6 egg yolks", "fine salt"],
     "recipeInstructions": [
       {
         "text": "Cover the base of a container about 2cm deep in fine salt (crunchy won’t work)."

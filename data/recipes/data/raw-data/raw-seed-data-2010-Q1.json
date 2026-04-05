@@ -10219,10 +10219,7 @@
     "totalTime": "PT15M",
     "recipeYield": "Makes enough for 3 mousse recipes",
     "recipeCategory": "Dessert, Dinner",
-    "recipeIngredients": [
-      "180g caster sugar",
-      "6 egg yolks"
-    ],
+    "recipeIngredients": ["180g caster sugar", "6 egg yolks"],
     "recipeInstructions": [
       {
         "text": "Dissolve the sugar in a medium saucepan with 120ml boiling water. When clear, bring to the boil and place a sugar thermometer in the pan."

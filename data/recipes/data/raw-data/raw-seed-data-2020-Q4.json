@@ -9196,9 +9196,7 @@
       "saturatedFatContent": "8 grams saturated fat",
       "sodiumContent": "0.01 milligram of sodium"
     },
-    "recipeIngredients": [
-      "250g unsalted butter"
-    ],
+    "recipeIngredients": ["250g unsalted butter"],
     "recipeInstructions": [
       {
         "text": "Heat the butter in a small, sturdy pan and cook over a low heat without stirring for 15-20 mins, or until the milk solids start to brown and the butter is golden. Turn the heat off and leave the pan undisturbed for a few minutes."
