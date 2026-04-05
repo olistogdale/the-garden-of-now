@@ -1,12 +1,12 @@
 'use strict';
 
-import {
-  FavouriteRequestT,
-  FavouriteResponseT,
-} from '../../../../data/users/types/user-types';
 import { userModel } from '../../models/user-model';
 
 import type { Context } from 'koa';
+import type {
+  FavouriteRequestT,
+  FavouriteResponseT,
+} from '../../../../data/users/types/user-types';
 
 export const postFavourite = async function (ctx: Context) {
   const userId = ctx.state.user.userId;

@@ -1,7 +1,8 @@
 'use strict';
 
 import { userModel } from '../../models/user-model';
-import {
+
+import type {
   PartialUserT,
   UserAuthResponseT,
 } from '../../../../data/users/types/user-types';

@@ -30,7 +30,7 @@ export const requireAuth: Middleware = async function (
 
     ctx.state.user = { userId };
     await next();
-  } catch (err) {
+  } catch {
     ctx.status = 401;
     ctx.body = {
       error: 'Invalid or expired token. Please provide a valid access token.',
