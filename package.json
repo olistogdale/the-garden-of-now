@@ -10,6 +10,7 @@
     "data"
   ],
   "scripts": {
+    "lint": "npm -w client run lint && npm -w server run lint",
     "test": "npm -w client test && npm -w server test",
     "coverage": "npm -w client coverage && npm -w server coverage",
     "format": "prettier --write .",
