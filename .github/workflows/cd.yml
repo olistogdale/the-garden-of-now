@@ -19,7 +19,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
       
-      - name: Set up Node.jobs
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -29,7 +29,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ vars.AWS_ROLE_ARN }}
-          aws-region: $ {{ vars.AWS_REGION }}
+          aws-region: ${{ vars.AWS_REGION }}
 
       - name: Install dependencies
         run: npm ci
@@ -38,11 +38,10 @@ jobs:
         run: npm -w client run build
 
       - name: Deploy client to S3
-        run: aws s3 sync client/dist s3://${{ vars.S3_BUCKET }}
+        run: aws s3 sync client/dist s3://${{ vars.S3_BUCKET }} --delete
 
-      
       - name: Invalidate CloudFront cache
-        run: aws cloudfront create-invalidation --distribution-id $ {{ vars.CLOUDFRONT_DISTRIBUTION_ID }}
+        run: aws cloudfront create-invalidation --distribution-id ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
 
   deploy-backend:
     runs-on: ubuntu-latest
@@ -74,7 +73,7 @@ jobs:
       - name: Download current task definition
         run: |
           aws ecs describe-task-definition \
-            --task-definition $ {{ vars.ECS_TASK_DEFINITION_FAMILY }} \
+            --task-definition ${{ vars.ECS_TASK_DEFINITION_FAMILY }} \
             --query taskDefinition \
             > task-definition.json
 
