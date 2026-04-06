@@ -12,6 +12,9 @@ jobs:
   test-and-build:
     runs-on: ubuntu-latest
 
+    env:
+      VITE_API_BASE_URL: /api
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -31,8 +34,11 @@ jobs:
       - name: Run linting
         run: npm run lint
 
-      - name: Run tests
-        run: npm run test
+      - name: Run client tests
+        run: npm run -w client test
+
+      - name: Run server tests
+        run: npm run -w server test -- --no-file-parallelism
 
       - name: Build client
         run: npm -w client run build
